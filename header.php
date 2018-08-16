@@ -103,8 +103,8 @@ body {
           About
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Our team</a>
-          <a class="dropdown-item" href="#">our partners</a>
+          <a class="dropdown-item" href="#team">Our team</a>
+          <a class="dropdown-item" href="#about">our partners</a>
         </div>
             </li>
             <li class="nav-item">
