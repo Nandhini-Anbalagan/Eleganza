@@ -1,6 +1,6 @@
 <?php include("header.php") ?>
     <!-- Services -->
-  
+
       <section id="services">
         <div class="container">
           <div class="row">
@@ -49,7 +49,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted">Architecture Aims At Eternity</h3>
           </div>
         </div>
         <div class="row">
@@ -60,11 +60,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/Eleganza_Beatuty.png" width="349" height="262" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
+              <h4>Fashion</h4>
+              <p class="text-muted">Beauty & Elegance</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -74,11 +74,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/ACC_2017_DSCF2382-1-1024x683.png" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
+              <h4>Food & Drink</h4>
+              <p class="text-muted">Cocktail Culture</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -88,11 +88,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/Maserati-Ghibli-GranSport-MY18-9.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
+              <h4>Automobile</h4>
+              <p class="text-muted">The Art of Driving</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -102,11 +102,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/ClaudiaBrown-1.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
+              <h4>People</h4>
+              <p class="text-muted">Biography Writing</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -116,11 +116,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/EleganzaMagazine_Travel_LaggodiBraies_photoby.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
+              <h4>Travel</h4>
+              <p class="text-muted">A Guide to ur journey</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -130,11 +130,11 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/bsv-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Entertainment</h4>
+              <p class="text-muted">VIP Events</p>
             </div>
           </div>
         </div>
@@ -347,7 +347,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="section-subheading text-muted">Seeking Guidance!! We're here to help you out!!</h3>
           </div>
         </div>
         <div class="row">
