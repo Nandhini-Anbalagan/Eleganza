@@ -1,41 +1,47 @@
 <?php include("header.php") ?>
     <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+  
+      <section id="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">We Provide</h2>
+
+            </div>
           </div>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Digital Publication</h4>
+              <p class="text-muted">Eleganza Magazine is the luxury lifestyle publication. Our aim is to bring something carefully curated and with real purpose.</p>
+            </div>
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Free Subscription</h4>
+              <p class="text-muted">Enjoy our free subscription facility!</p>
+            </div>
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa  fa-camera-retro fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Magazine Online</h4>
+              <p class="text-muted">Intriguing interviews, intelligent prose, striking photography, and simply the best in Travel, Automobiles, Design, Fashion, Art, Architecture, Culture and Fine dining.</p>
+            </div>
+          </div>
+          <center><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Get to Know About Us</a>
+          </center>
         </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <br/>
+        <br/>
+      </section>
+
 
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
