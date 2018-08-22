@@ -521,12 +521,12 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function getBuyerAgentLeads(){
-		$query = $this->myDB->query("SELECT * FROM agent_leads WHERE lead_status > 0 AND lead_type = 'home_buyers' ORDER BY lead_id DESC");
+		$query = $this->myDB->query("SELECT * FROM agent_leads WHERE lead_status > 0 AND lead_type = 'subscriber' ORDER BY lead_id DESC");
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 
 	public function getSellerAgentLeads(){
-		$query = $this->myDB->query("SELECT * FROM agent_leads WHERE lead_status > 0 AND lead_type = 'home_sellers' ORDER BY lead_id DESC");
+		$query = $this->myDB->query("SELECT * FROM agent_leads WHERE lead_status > 0 AND lead_type = 'sponsor' ORDER BY lead_id DESC");
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 
@@ -688,13 +688,13 @@ class DBManager extends MySQLConnection{
 			$query = $this->myDB->query("UPDATE agents SET user_id = $user_id WHERE agent_id = $agent_id");
 		}
 
-		if($data['lead_type'] == 'home_sellers'){
+		if($data['lead_type'] == 'sponsor'){
 			$this->myDB->query("INSERT INTO agent_landing_page(agent_fk) VALUES ($agent_id)");
-			$this->funnelPerAgent($agent_id, 'home_sellers');
-		}else if($data['lead_type'] == 'home_buyers'){
+			$this->funnelPerAgent($agent_id, 'sponsor');
+		}else if($data['lead_type'] == 'subscriber'){
 			$city = $data['lead_areas'];
 			$this->myDB->query("INSERT INTO buyers_landing_page(agent_fk, city) VALUES ($agent_id, '$city')");
-			$this->funnelPerAgent($agent_id, 'home_buyers');
+			$this->funnelPerAgent($agent_id, 'subscriber');
 		}
 
 		return $this->getAgentByID($agent_id);
@@ -806,7 +806,7 @@ class DBManager extends MySQLConnection{
 			JOIN areas ar ON am.area_fk = ar.area_id
 			JOIN invoices i ON i.agent_fk = a.agent_id
 			JOIN reccurent r ON r.agent_fk = a.agent_id
-			WHERE a.agent_status > 0 AND a.agent_slug = 'home_sellers'
+			WHERE a.agent_status > 0 AND a.agent_slug = 'sponsor'
 			AND invoice_id = (
 				SELECT MAX(invoice_id)
 				FROM invoices
@@ -1007,7 +1007,7 @@ class DBManager extends MySQLConnection{
 	public function addBuyerLead($email, $agent, $src, $lang, $funnelID){
 		$id = -1;
 
-		$query = $this->myDB->prepare("SELECT id FROM home_buyers WHERE email = ?");
+		$query = $this->myDB->prepare("SELECT id FROM subscriber WHERE email = ?");
 		$query->execute(array($email));
 		$result = $query->fetch(PDO::FETCH_ASSOC);
 
@@ -1025,15 +1025,15 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function updateBuyerLeadPartial($col, $val, $id){
-		$query = $this->myDB->prepare("UPDATE home_buyers SET {$col} = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE subscriber SET {$col} = ? WHERE id = ?");
 		$query->execute(array($val, $id));
 
-		$query = $this->myDB->prepare("SELECT * FROM home_buyers WHERE id = ? AND DATE(`date`) = DATE(NOW())");
+		$query = $this->myDB->prepare("SELECT * FROM subscriber WHERE id = ? AND DATE(`date`) = DATE(NOW())");
 		$query->execute(array($id));
 		$res = $query->fetch();
 
 		if($res['name'] != '' AND $res['email'] != '' AND $res['phone'] != '' AND $res['buying'] != ''){
-			$this->myDB->query("UPDATE home_buyers SET status = 1 WHERE id = " . $res['id']);
+			$this->myDB->query("UPDATE subscriber SET status = 1 WHERE id = " . $res['id']);
 			return $res;
 		}
 	}
@@ -1045,13 +1045,13 @@ class DBManager extends MySQLConnection{
 	public function addAddressLead($address, $agent, $src, $lang, $funnelID){
 		$id = -1;
 
-		$query = $this->myDB->prepare("SELECT id FROM home_sellers WHERE address = ?");
+		$query = $this->myDB->prepare("SELECT id FROM sponsor WHERE address = ?");
 		$query->execute(array($address));
 		$result = $query->fetch(PDO::FETCH_ASSOC);
 
 		if($result){
 			$id = $result['id'];
-			$this->myDB->query("UPDATE home_sellers SET `date` = now(), comments = '', funnels = $funnelID, agent_fk = $agent WHERE id = $id");
+			$this->myDB->query("UPDATE sponsor SET `date` = now(), comments = '', funnels = $funnelID, agent_fk = $agent WHERE id = $id");
 		}else{
 			$query = $this->myDB->prepare("INSERT INTO sponsor (address, funnels, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?, ?)");
 			$query->execute(array($address, $funnelID, $agent, $src, 'Seller', $lang));
@@ -1063,10 +1063,10 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function addManualLead($array){
-		if($array['type'] == 'home_sellers'){
+		if($array['type'] == 'sponsor'){
 			$query = $this->myDB->prepare("INSERT INTO sponsor (agent_fk, address, name, phone, email, selling, source, type, comments, status, lang) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			$query->execute(array($array['agent_id'], $array['address'], $array['name'], $array['phone'], $array['email'], $array['selling'], 'm', $array['type'], $array['notes'], $array['status'], $array['lang']));
-		}else if($array['type'] == 'home_buyers'){ //TODO
+		}else if($array['type'] == 'subscriber'){ //TODO
 			$query = $this->myDB->prepare("INSERT INTO sponsor (agent_fk, address, name, phone, email, selling, source, type, comments, status, lang) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			$query->execute(array($array['agent_id'], $array['address'], $array['name'], $array['phone'], $array['email'], $array['selling'], 'm', $array['type'], $array['notes'], $array['status'], $array['lang']));
 		}
@@ -1084,22 +1084,22 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function updateHomeLeadsPartial($col, $val, $id){
-		$query = $this->myDB->prepare("UPDATE home_sellers SET {$col} = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE sponsor SET {$col} = ? WHERE id = ?");
 		$query->execute(array($val, $id));
 
-		$query = $this->myDB->prepare("SELECT * FROM home_sellers WHERE id = ? AND DATE(`date`) = DATE(NOW())");
+		$query = $this->myDB->prepare("SELECT * FROM sponsor WHERE id = ? AND DATE(`date`) = DATE(NOW())");
 		$query->execute(array($id));
 		$res = $query->fetch();
 
 		if($res['name'] != '' AND $res['email'] != '' AND $res['phone'] != '' AND $res['selling'] != ''){
-			$this->myDB->query("UPDATE home_sellers SET status = 1 WHERE id = $id");
+			$this->myDB->query("UPDATE sponsor SET status = 1 WHERE id = $id");
 			return $res;
 		}
 	}
 
 	public function updateHomeLead($arr){
 		$address = $arr['street'] . ", " . $arr['city'] . ", " . $arr['province'] . " " . $arr['postal'];
-		$query = $this->myDB->prepare("UPDATE home_sellers SET name = ?, phone = ?, email = ?, selling = ?, lang = ?, address = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE sponsor SET name = ?, phone = ?, email = ?, selling = ?, lang = ?, address = ? WHERE id = ?");
 		$query->execute(array($arr['name'], $arr['phone'], $arr['email'], $arr['selling'], $arr['lang'], $address, $arr['id']));
 
 		$query = $this->myDB->prepare("UPDATE home_sellers_meta SET value_range = ?, value_epp = ?, beds = ?, baths = ?, sqft = ?, buying_frame = ?, price_range = ?, neighborhood = ?, prequalified = ?, lender = ?, lender_phone = ?, lender_email = ?, loan_type = ?, credit = ?, planning_sell = ?, alert_setup = ?, other_contact = ?, other_contact_phone = ?, other_contact_email = ? WHERE home_lead_fk = ?");
@@ -1107,11 +1107,11 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function updateLeadFunnel($id, $funnel){
-		$this->myDB->query("UPDATE home_sellers SET funnels = $funnel WHERE id = $id");
+		$this->myDB->query("UPDATE sponsor SET funnels = $funnel WHERE id = $id");
 	}
 
 	public function updateLeadPartial($arr){
-		$query = $this->myDB->prepare("UPDATE home_sellers SET name = ?, phone = ?, email = ?, lang = ?, address = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE sponsor SET name = ?, phone = ?, email = ?, lang = ?, address = ? WHERE id = ?");
 		$query->execute(array($arr['name'], $arr['phone'], $arr['email'], $arr['lang'], $arr['address'], $arr['lead_id']));
 
 		return 1;
@@ -1187,7 +1187,7 @@ class DBManager extends MySQLConnection{
 
 		array_push($whereArray, $id);
 
-		$query = $this->myDB->prepare("SELECT * FROM home_sellers WHERE $whereClause $trail");
+		$query = $this->myDB->prepare("SELECT * FROM sponsor WHERE $whereClause $trail");
 		$query->execute($whereArray);
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
@@ -1219,7 +1219,7 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function getSingleAgentsLead($id){
-		$query = $this->myDB->query("SELECT * FROM home_sellers hs JOIN home_sellers_meta AS hm ON hm.home_lead_fk = hs.id WHERE hs.id = $id");
+		$query = $this->myDB->query("SELECT * FROM sponsor hs JOIN home_sellers_meta AS hm ON hm.home_lead_fk = hs.id WHERE hs.id = $id");
 		return $query->fetch(PDO::FETCH_ASSOC);
 	}
 
@@ -1254,27 +1254,27 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function addCommentsHomeLeads($arr){
-		$query = $this->myDB->prepare("UPDATE home_sellers SET comments = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE sponsor SET comments = ? WHERE id = ?");
 		$query->execute(array($arr['comments'], $arr['id']));
 	}
 
 	public function updateSelling($arr){
-		$query = $this->myDB->prepare("UPDATE home_sellers SET selling = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE sponsor SET selling = ? WHERE id = ?");
 		$query->execute(array($arr['text'], $arr['id']));
 	}
 
 	public function updateFunnelSwitch($arr){
-		$query = $this->myDB->prepare("UPDATE home_sellers SET funnel_switch = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE sponsor SET funnel_switch = ? WHERE id = ?");
 		$query->execute(array($arr['switch'], $arr['id']));
 	}
 
 	public function updateStatus($arr){
-		$query = $this->myDB->prepare("UPDATE home_sellers SET status = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE sponsor SET status = ? WHERE id = ?");
 		$query->execute(array($arr['status'], $arr['id']));
 	}
 
 	public function updateType($arr){
-		$query = $this->myDB->prepare("UPDATE home_sellers SET type = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE sponsor SET type = ? WHERE id = ?");
 		$query->execute(array($arr['text'], $arr['id']));
 	}
 
@@ -1283,11 +1283,11 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function deleteBulkLeadsAddress($ids){
-		$query = $this->myDB->query("UPDATE home_sellers SET status = 0 WHERE id IN ($ids)");
+		$query = $this->myDB->query("UPDATE sponsor SET status = 0 WHERE id IN ($ids)");
 	}
 
 	public function deleteSingleLead($id){
-		$query = $this->myDB->query("UPDATE home_sellers SET status = 0 WHERE id  = $id");
+		$query = $this->myDB->query("UPDATE sponsor SET status = 0 WHERE id  = $id");
 	}
 
 	public function agentLeadStats($id, $table, $date = "All"){
@@ -1323,7 +1323,7 @@ class DBManager extends MySQLConnection{
 		$stats['partial'] = COUNT($query->fetchAll(PDO::FETCH_ASSOC));
 
 		if($table == "sponsor"){
-			$query = $this->myDB->prepare("SELECT id FROM home_sellers WHERE $whereDate agent_fk = ? AND (status = -1 OR status > 0)");
+			$query = $this->myDB->prepare("SELECT id FROM sponsor WHERE $whereDate agent_fk = ? AND (status = -1 OR status > 0)");
 			$query->execute($whereArray);
 			$stats['address'] = COUNT($query->fetchAll(PDO::FETCH_ASSOC));
 		}
@@ -1756,7 +1756,7 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function getEvaluations($agent){
-		$query = $this->myDB->query("SELECT *, e.comments com FROM evaluations e JOIN home_sellers h ON e.lead_fk = h.id WHERE e.agent_fk = $agent AND e.status = 1");
+		$query = $this->myDB->query("SELECT *, e.comments com FROM evaluations e JOIN sponsor h ON e.lead_fk = h.id WHERE e.agent_fk = $agent AND e.status = 1");
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 
@@ -1766,7 +1766,7 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function getEvaluation($id){
-		$query = $this->myDB->query("SELECT *, e.comments com FROM evaluations e JOIN home_sellers h ON e.lead_fk = h.id WHERE e.id_e = $id AND e.status = 1");
+		$query = $this->myDB->query("SELECT *, e.comments com FROM evaluations e JOIN sponsor h ON e.lead_fk = h.id WHERE e.id_e = $id AND e.status = 1");
 		return $query->fetch(PDO::FETCH_ASSOC);
 	}
 
