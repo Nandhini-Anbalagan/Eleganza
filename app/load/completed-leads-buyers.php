@@ -3,9 +3,9 @@ if(file_exists('../head.php'))
 	require_once('../head.php');
 
 if(isset($_GET['range']))
-	$leads = $db->filterDateAgentsLead($_SESSION['user']['agent_id'], 'home_buyers', $_GET['range']);
+	$leads = $db->filterDateAgentsLead($_SESSION['user']['agent_id'], 'subscriber', $_GET['range']);
 else
-	$leads = $db->getAgentsLead($_SESSION['user']['agent_id'], 'home_buyers');
+	$leads = $db->getAgentsLead($_SESSION['user']['agent_id'], 'subscriber');
 
 $status = $db->getAgentStatus($_SESSION['user']['agent_id']);
 $blackLists = $db->getBlacklists();

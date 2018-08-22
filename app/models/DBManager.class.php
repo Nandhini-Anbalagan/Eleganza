@@ -1165,7 +1165,7 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function getAgentsLeadAddresses($id){
-		$query = $this->myDB->query("SELECT * FROM home_sellers WHERE agent_fk = $id AND (status = -1 OR status > 0) ORDER BY id DESC");
+		$query = $this->myDB->query("SELECT * FROM sponsor WHERE agent_fk = $id AND (status = -1 OR status > 0) ORDER BY id DESC");
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 
@@ -1602,7 +1602,7 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function getAgentTasks($id, $status){
-		$query = $this->myDB->query("SELECT *, t.status AS task_status FROM tasks t JOIN home_sellers h ON t.lead_fk = h.id WHERE t.agent_fk = $id AND t.status = $status ORDER BY dateTime DESC, importance DESC");
+		$query = $this->myDB->query("SELECT *, t.status AS task_status FROM tasks t JOIN sponsor h ON t.lead_fk = h.id WHERE t.agent_fk = $id AND t.status = $status ORDER BY dateTime DESC, importance DESC");
 
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
