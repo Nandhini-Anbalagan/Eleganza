@@ -160,7 +160,7 @@ $postCaseAgentSingleEdit = Tokenizer::add('post-case-agent-singleEdit', 30, 'sin
 					+ '<input type="hidden" name="id" value="' + $(e.relatedTarget).data('id') + '">'
 					+ '<input type="hidden" name="name" value="' + $(e.relatedTarget).data('name') + '">'
 					+ '<input type="hidden" name="campaign" value="' + $(e.relatedTarget).data('campaign') + '">'
-					+ '<input type="hidden" name="type" value="home_buyers">'
+					+ '<input type="hidden" name="type" value="subscriber">'
 					+ '<input type="hidden" name="range" value="' + range + '">');
 				$('#<?php echo $dynamicFormId; ?>').submit();
 				$('#<?php echo $dynamicFormId; ?>').empty();

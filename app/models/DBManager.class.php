@@ -755,12 +755,12 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function getBuyerAgents(){
-		$query = $this->myDB->query("SELECT a.*, u.user_id, u.status, GROUP_CONCAT(area_name) assigned_area FROM agents a JOIN users u ON u.user_id = a.user_id LEFT JOIN area_mapping am ON am.agent_fk = a.internal_id LEFT JOIN areas ar ON am.area_fk = ar.area_id WHERE a.agent_status > 0 AND a.agent_slug = 'home_buyers' GROUP BY a.agent_id ORDER BY a.agent_id DESC");
+		$query = $this->myDB->query("SELECT a.*, u.user_id, u.status, GROUP_CONCAT(area_name) assigned_area FROM agents a JOIN users u ON u.user_id = a.user_id LEFT JOIN area_mapping am ON am.agent_fk = a.internal_id LEFT JOIN areas ar ON am.area_fk = ar.area_id WHERE a.agent_status > 0 AND a.agent_slug = 'subscriber' GROUP BY a.agent_id ORDER BY a.agent_id DESC");
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 
 	public function getSellerAgents(){
-		$query = $this->myDB->query("SELECT a.*, u.user_id, u.status, GROUP_CONCAT(area_name) assigned_area FROM agents a JOIN users u ON u.user_id = a.user_id LEFT JOIN area_mapping am ON am.agent_fk = a.internal_id LEFT JOIN areas ar ON am.area_fk = ar.area_id WHERE a.agent_status > 0 AND a.agent_slug = 'home_sellers' GROUP BY a.agent_id ORDER BY a.agent_id DESC");
+		$query = $this->myDB->query("SELECT a.*, u.user_id, u.status, GROUP_CONCAT(area_name) assigned_area FROM agents a JOIN users u ON u.user_id = a.user_id LEFT JOIN area_mapping am ON am.agent_fk = a.internal_id LEFT JOIN areas ar ON am.area_fk = ar.area_id WHERE a.agent_status > 0 AND a.agent_slug = 'sponsor' GROUP BY a.agent_id ORDER BY a.agent_id DESC");
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 
@@ -826,7 +826,7 @@ class DBManager extends MySQLConnection{
 			JOIN invoices i ON i.agent_fk = a.agent_id
 			JOIN reccurent r ON r.agent_fk = a.agent_id
 			WHERE a.agent_status > 0
-			AND a.agent_slug = 'home_buyers'
+			AND a.agent_slug = 'subscriber'
 			AND invoice_id = (
 				SELECT MAX(invoice_id)
 				FROM invoices
