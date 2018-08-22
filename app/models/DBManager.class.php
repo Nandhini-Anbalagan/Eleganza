@@ -1322,7 +1322,7 @@ class DBManager extends MySQLConnection{
 		$query->execute($whereArray);
 		$stats['partial'] = COUNT($query->fetchAll(PDO::FETCH_ASSOC));
 
-		if($table == "home_sellers"){
+		if($table == "sponsor"){
 			$query = $this->myDB->prepare("SELECT id FROM home_sellers WHERE $whereDate agent_fk = ? AND (status = -1 OR status > 0)");
 			$query->execute($whereArray);
 			$stats['address'] = COUNT($query->fetchAll(PDO::FETCH_ASSOC));
