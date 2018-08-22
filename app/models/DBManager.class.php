@@ -29,7 +29,7 @@ class DBManager extends MySQLConnection{
 	*/
 
 	public function addUser($arr){
-		$query = $this->myDB->prepare("INSERT INTO users VALUES(DEFAULT, DEFAULT, ?, ?, ?, ?, ?, ?,NULL, DEFAULT, DEFAULT, 0)");
+		$query = $this->myDB->prepare("INSERT INTO users(user_id,main_user,username,password,email,name,user_country,level,last_login,changed_password,status,domain_status) VALUES(DEFAULT, DEFAULT, ?, ?, ?, ?, ?, ?,NULL, DEFAULT, DEFAULT, 0)");
 		if($query->execute(array(trim($arr['username']), md5($arr['password']), trim($arr['email']), trim($arr['name']), $arr['country'], $arr['level']))){
 			$this->write_to_log("User added [Username: " . $arr['username']. "]", $_SESSION['user']['username']);return true;
 		}else

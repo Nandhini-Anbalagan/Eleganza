@@ -16,7 +16,7 @@
 						<ul class="submenu">
 							<li class="<?php echo $page == 'completed-leads'?'active':''; ?>"><a href="completed-leads"><?php echo $tr['completed_leads'] ." (" . $stats['completed'] . ")" ?></a></li>
 							<li class="<?php echo $page == 'partial-leads'?'active':''; ?>"><a href="partial-leads"><?php echo $tr['partial_leads'] ." (" . $stats['partial'] . ")" ?></a></li>
-							<?php if($_SESSION['user']['agent_slug'] == 'home_sellers'): ?>
+							<?php if($_SESSION['user']['agent_slug'] == 'sponsor'): ?>
 							<li class="<?php echo $page == 'address-capture'?'active':''; ?>"><a href="address-capture">
 							<?php echo $tr['address_capture'] ." (" . $stats['address'] . ")" ?></a></li>
 							<li class="<?php echo $page == 'tasks'?'active':''; ?>"><a href="tasks"><?php echo $tr['task'] . " (".COUNT($db->getUpcomingTasks()).")" ?></a></li>
@@ -30,7 +30,7 @@
 						<a href="funnels"><i class="md md-description"></i><?php echo $tr['funnels'] ?></a>
 					</li>
 
-					<?php if($_SESSION['user']['agent_slug'] == 'home_sellers'): ?>
+					<?php if($_SESSION['user']['agent_slug'] == 'sponsor'): ?>
 					<li class="<?php echo $page == 'evaluation'?'active':''; ?>">
 						<a href="evaluation"><i class="md md-receipt"></i><?php echo $tr['evaluation'] ?></a>
 					</li>
@@ -56,9 +56,9 @@
 						<?php
 
 							foreach ($areas as $value) {
-								if ($value['agent_slug'] == "home_buyers")
+								if ($value['agent_slug'] == "subscriber")
 									$bull = 'b';
-								else if ($value['agent_slug'] == "home_sellers")
+								else if ($value['agent_slug'] == "sponsor")
 									$bull = 's';
 								if($value['agent_id'] != $_SESSION['user']['agent_id'])
 									echo '<li><a href="?switchAccount='.IDObfuscator::encode($value['agent_id']).'"><img style="width: 20px;" src="assets/img/button_'. $bull .'.png" alt="buyer">'.explode(",", $value['area_name'])[0].'</a></li>';
@@ -147,15 +147,15 @@
 		<div class="col-sm-12">
 			<?php if($_SESSION['user']["level"] == 10){
 				$bull = 's';
-				if ($_SESSION['user']['agent_slug'] == "home_buyers")
+				if ($_SESSION['user']['agent_slug'] == "subscriber")
 					$bull = 'b';
-				else if ($_SESSION['user']['agent_slug'] == "home_sellers")
+				else if ($_SESSION['user']['agent_slug'] == "sponsor")
 					$bull = 's';
 			?>
 				<div class="avatar" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['add_avatar'] ?>" style="background-image: url(uploads/avatars/<?php echo trim($_SESSION['user']['agent_avatar']) ?>)"></div>
 				<h1 class="text-danger m-b-0"><?php echo $_SESSION['user']['agent_name'] ?></h1>
 				<h3 class="m-t-0"><?php echo $_SESSION['user']['area_name'] ?></h3>
-				<h4 class=""><img style="width: 30px;" src="assets/img/button_<?php echo $bull ?>.png" alt="buyer"><?php echo $tr[$_SESSION['user']["agent_slug"]] ?></h4>
+				<h4 class=""><img style="width: 30px;" src="assets/img/button_<?php echo $bull ?>.png" alt="subscriber"><?php echo $tr[$_SESSION['user']["agent_slug"]] ?></h4>
 			<?php } ?>
 		</div>
 	</div>

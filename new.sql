@@ -351,3 +351,22 @@ CREATE TABLE unbeleadsablev1.`users` (
   `status` smallint(5) unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=178 DEFAULT CHARSET=utf8mb4;
+
+
+CREATE TABLE unbeleadsablev1.`subscriber` (
+  `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
+  `agent_fk` int(10) unsigned NOT NULL,
+  `name` varchar(150) NOT NULL DEFAULT '',
+  `phone` varchar(25) NOT NULL DEFAULT '',
+  `email` varchar(50) NOT NULL DEFAULT '',
+  `address` varchar(255) NOT NULL,
+  `funnels` tinyint(3) unsigned DEFAULT NULL,
+  `funnel_switch` tinyint(1) DEFAULT '1',
+  `source` varchar(30) NOT NULL,
+  `type` varchar(30) NOT NULL DEFAULT 'subscriber',
+  `comments` text,
+  `status` tinyint(3) NOT NULL DEFAULT '-1',
+  `lang` varchar(1) NOT NULL DEFAULT 'e',
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1
