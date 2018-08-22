@@ -1,4 +1,4 @@
-INSERT INTO unbeleadsablev1.`users` (`user_id`,`main_user`,`username`,`password`,`email`,`name`,`user_country`,`level`,`last_login`,`changed_password`,`status`) VALUES (176,NULL,'NANDHINI','a6235d809e3f4888bc228c7239f47105','nandhini@unbeleadsable.com','Nandhini','CA',100,'2018-08-14 09:34:13',1,1);
+﻿INSERT INTO unbeleadsablev1.`users` (`user_id`,`main_user`,`username`,`password`,`email`,`name`,`user_country`,`level`,`last_login`,`changed_password`,`status`) VALUES (176,NULL,'NANDHINI','a6235d809e3f4888bc228c7239f47105','nandhini@unbeleadsable.com','Nandhini','CA',100,'2018-08-14 09:34:13',1,1);
 
 CREATE TABLE unbeleadsablev1.`agent_leads` (
   `lead_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -370,3 +370,29 @@ CREATE TABLE unbeleadsablev1.`subscriber` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1
+
+CREATE TABLE `sponsor` (
+  `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
+ 
+ `agent_fk` int(10) unsigned NOT NULL,
+  `address` varchar(255) NOT NULL,
+
+  `name` varchar(150) NOT NULL DEFAULT '',
+  `phone` varchar(25) NOT NULL DEFAULT '',
+
+  `email` varchar(50) NOT NULL DEFAULT '',
+  `funnels` tinyint(3) unsigned DEFAULT NULL,
+
+  `funnel_switch` tinyint(1) DEFAULT '1',
+  `source` varchar(30) NOT NULL,
+  
+`type` varchar(30) NOT NULL DEFAULT 'sponsor',
+  `comments` text NOT NULL,
+
+  `status` tinyint(3) NOT NULL DEFAULT '-1',
+  `lang` varchar(1) NOT NULL DEFAULT 'e',
+ 
+ `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ 
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=79440 DEFAULT CHARSET=latin1
