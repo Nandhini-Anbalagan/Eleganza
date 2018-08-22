@@ -6,7 +6,7 @@
 ?>
 
 <div class="m-b-30" id="landingAgentPage">
-	<h2 class="page-title"><?php echo $tr['landing_page'] ?> 
+	<h2 class="page-title"><?php echo $tr['landing_page'] ?>
 		<?php if($_SESSION['user']['level'] > 50){ ?>
 		<span class="small"><a href="javascript:void(0)" title="<?php echo $tr['edit_title'] ?>" class="on-default edit"><i class="fa fa-pencil"></i> &nbsp; <?php echo $tr['edit'] ?></a></span>
 		<?php } ?>
@@ -22,10 +22,10 @@
 						<label for="city_en"><?php echo $tr['city'] ?></label>
 						<input type="text" class="form-control" id="city_en" name="city_en" placeholder="<?php echo $tr['city'] ?>" required>
 					</div>
-					<div class="form-group">
+		<!--			<div class="form-group">
 						<label for="title_en"><?php echo $tr['title'] ?></label>
 						<input type="text" class="form-control" id="title_en" name="title_en" placeholder="<?php echo $tr['title'] ?>" required>
-					</div>
+					</div> -
 					<div class="form-group">
 						<label for="sub_title_1_en"><?php echo $tr['sub_title'] ?> 1</label>
 						<input type="text" class="form-control" id="sub_title_1_en" name="sub_title_1_en" placeholder="<?php echo $tr['sub_title'] ?> 1" required>
@@ -33,14 +33,14 @@
 					<div class="form-group">
 						<label for="sub_title_2_en"><?php echo $tr['sub_title'] ?> 2</label>
 						<input type="text" class="form-control" id="sub_title_2_en" name="sub_title_2_en" placeholder="<?php echo $tr['sub_title'] ?> 2" required>
-					</div>
+					</div>-->
 					<div class="form-group">
 						<label for="agent_title_en"><?php echo $tr['agent_title'] ?></label>
 						<input type="text" class="form-control" id="agent_title_en" name="agent_title_en" placeholder="<?php echo $tr['agent_title'] ?>" required>
 					</div>
 					<div class="form-group">
 						<label for="final_text_en"><?php echo $tr['final_text'] ?></label>
-						<textarea class="form-control" id="final_text_en" name="final_text_en" placeholder="<?php echo $tr['final_text'] ?>" rows="7" required></textarea>           
+						<textarea class="form-control" id="final_text_en" name="final_text_en" placeholder="<?php echo $tr['final_text'] ?>" rows="7" required></textarea>
 					</div>
 					<div class="form-group">
 							<label class="col-sm-12 control-label"><?php echo $tr['background'] ?>s</label>
@@ -79,7 +79,7 @@
 								</div>
 							</div>
 						</div>
-					
+
 				</div>
 
 				<div class="col-md-6">
@@ -88,7 +88,7 @@
 						<label for="city_fr"><?php echo $tr['city'] ?></label>
 						<input type="text" class="form-control" id="city_fr" name="city_fr" placeholder="<?php echo $tr['city'] ?>" required>
 					</div>
-					<div class="form-group">
+			<!--		<div class="form-group">
 						<label for="title_fr"><?php echo $tr['title'] ?></label>
 						<input type="text" class="form-control" id="title_fr" name="title_fr" placeholder="<?php echo $tr['title'] ?>" required>
 					</div>
@@ -99,14 +99,14 @@
 					<div class="form-group">
 						<label for="sub_title_2_fr"><?php echo $tr['sub_title'] ?> 2</label>
 						<input type="text" class="form-control" id="sub_title_2_fr" name="sub_title_2_fr" placeholder="<?php echo $tr['sub_title'] ?> 2" required>
-					</div>
+					</div> -->
 					<div class="form-group">
 						<label for="agent_title_fr"><?php echo $tr['agent_title'] ?></label>
 						<input type="text" class="form-control" id="agent_title_fr" name="agent_title_fr" placeholder="<?php echo $tr['agent_title'] ?>" required>
 					</div>
 					<div class="form-group">
 						<label for="final_text_fr">Final Text</label>
-						<textarea class="form-control" id="final_text_fr" name="final_text_fr" placeholder="Final Text" rows="7" required></textarea>           
+						<textarea class="form-control" id="final_text_fr" name="final_text_fr" placeholder="Final Text" rows="7" required></textarea>
 					</div>
 					<div class="form-group">
 						<input type="file" class="filestyle" data-buttonbefore="true">
@@ -118,23 +118,23 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</form>
 
 	<div class="row" id="view">
 		<div class="col-md-6">
 			<h3><?php echo $tr['english'] ?></h3>
 			<h4><?php echo $tr['city'] ?>: <span target="city_en" class="small"></span></h4>
-			<h4><?php echo $tr['title'] ?>: <span target="title_en" class="small"></span></h4>
-			<h4><?php echo $tr['sub_title'] ?> 1: <span target="sub_title_1_en" class="small"></span></h4>
-			<h4><?php echo $tr['sub_title'] ?> 2: <span target="sub_title_2_en" class="small"></span></h4>
+		<!--	<h4><?php echo $tr['title'] ?>: <span target="title_en" class="small"></span></h4> -->
+	<!--		<h4><?php echo $tr['sub_title'] ?> 1: <span target="sub_title_1_en" class="small"></span></h4>
+			<h4><?php echo $tr['sub_title'] ?> 2: <span target="sub_title_2_en" class="small"></span></h4> -->
 			<h4><?php echo $tr['agent_name'] ?>: <span target="agent_name" class="small"></span></h4>
 			<h4><?php echo $tr['agent_phone'] ?>: <span target="agent_phone" class="small"></span></h4>
 			<h4><?php echo $tr['agent_email'] ?>: <span target="agent_email" class="small"></span></h4>
 			<h4><?php echo $tr['agent_title'] ?>: <span target="agent_title_en" class="small"></span></h4>
 			<h4><?php echo $tr['final_text'] ?>: <span target="final_text_en" class="small"></span></h4>
 			<br>
-			<h3><?php echo $tr['home_eval_link'] ?></h3>
+			<h3><?php echo $tr['sponsor_link'] ?></h3>
 			<h4 class="clickable"><?php echo $tr['website'] ?>: <span target="homeEval_web_en" class="small" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['click_copy'] ?>"></span></h4>
 			<h4 class="clickable"><?php echo $tr['facebook'] ?>: <span target="homeEval_facebook_en" class="small" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['click_copy'] ?>"></span></h4>
 			<h4 class="clickable"><?php echo $tr['google_adword'] ?>: <span target="homeEval_google_en" class="small" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['click_copy'] ?>"></span></h4>
@@ -142,16 +142,16 @@
 		<div class="col-md-6">
 			<h3><?php echo $tr['francais'] ?></h3>
 			<h4><?php echo $tr['city'] ?>: <span target="city_fr" class="small"></span></h4>
-			<h4><?php echo $tr['title'] ?>: <span target="title_fr" class="small"></span></h4>
-			<h4><?php echo $tr['sub_title'] ?> 1: <span target="sub_title_1_fr" class="small"></span></h4>
-			<h4><?php echo $tr['sub_title'] ?> 2: <span target="sub_title_2_fr" class="small"></span></h4>
+		<!--	<h4><?php echo $tr['title'] ?>: <span target="title_fr" class="small"></span></h4> -->
+	<!--		<h4><?php echo $tr['sub_title'] ?> 1: <span target="sub_title_1_fr" class="small"></span></h4>
+			<h4><?php echo $tr['sub_title'] ?> 2: <span target="sub_title_2_fr" class="small"></span></h4> -->
 			<h4><?php echo $tr['agent_name'] ?>: <span target="agent_name" class="small"></span></h4>
 			<h4><?php echo $tr['agent_phone'] ?>: <span target="agent_phone" class="small"></span></h4>
 			<h4><?php echo $tr['agent_email'] ?>: <span target="agent_email" class="small"></span></h4>
 			<h4><?php echo $tr['agent_title'] ?>: <span target="agent_title_fr" class="small"></span></h4>
 			<h4><?php echo $tr['final_text'] ?>: <span target="final_text_fr" class="small"></span></h4>
 			<br>
-			<h3><?php echo $tr['home_eval_link'] ?></h3>
+			<h3><?php echo $tr['sponsor_link'] ?></h3>
 			<h4 class="clickable"><?php echo $tr['website'] ?>: <span target="homeEval_web_fr" class="small" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['click_copy'] ?>"></span></h4>
 			<h4 class="clickable"><?php echo $tr['facebook'] ?>: <span target="homeEval_facebook_fr" class="small" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['click_copy'] ?>"></span></h4>
 			<h4 class="clickable"><?php echo $tr['google_adword'] ?>: <span target="homeEval_google_fr" class="small" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['click_copy'] ?>"></span></h4>
