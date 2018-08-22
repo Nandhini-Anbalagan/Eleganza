@@ -3,9 +3,9 @@ if(file_exists('../head.php'))
 	require_once('../head.php');
 
 if(isset($_GET['range']))
-	$leads = $db->filterDateAgentsLead($_SESSION['user']['agent_id'], 'home_sellers', $_GET['range']);
+	$leads = $db->filterDateAgentsLead($_SESSION['user']['agent_id'], 'sponsor', $_GET['range']);
 else
-	$leads = $db->getAgentsLead($_SESSION['user']['agent_id'], 'home_sellers');
+	$leads = $db->getAgentsLead($_SESSION['user']['agent_id'], 'sponsor');
 
 $status = $db->getAgentStatus($_SESSION['user']['agent_id']);
 $blackLists = $db->getBlacklists();
@@ -45,7 +45,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 			$street = $address[0];
 			array_shift($address);
 			$sta_name = $_SESSION['user']['agent_lang'] == "EN"?'name_en':'name_fr';
-			
+
 			if($l['status'] != -1)
 				$sta = $db->getStatus($l['status'])[$sta_name];
 			else
