@@ -1014,9 +1014,9 @@ class DBManager extends MySQLConnection{
 
 		if($result){
 			$id = $result['id'];
-			$this->myDB->query("UPDATE home_buyers SET `date` = now(), comments = '', agent_fk = $agent WHERE id = $id");
+			$this->myDB->query("UPDATE subscriber SET `date` = now(), comments = '', agent_fk = $agent WHERE id = $id");
 		}else{
-			$query = $this->myDB->prepare("INSERT INTO home_buyers (email, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?)");
+			$query = $this->myDB->prepare("INSERT INTO subscriber (email, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?)");
 			$query->execute(array($email, $agent, $src, 'Buyer', $lang));
 			$id = $this->myDB->lastInsertId();
 			//$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
@@ -1054,10 +1054,10 @@ class DBManager extends MySQLConnection{
 			$id = $result['id'];
 			$this->myDB->query("UPDATE home_sellers SET `date` = now(), comments = '', funnels = $funnelID, agent_fk = $agent WHERE id = $id");
 		}else{
-			$query = $this->myDB->prepare("INSERT INTO home_sellers (address, funnels, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?, ?)");
+			$query = $this->myDB->prepare("INSERT INTO sponsor (address, funnels, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?, ?)");
 			$query->execute(array($address, $funnelID, $agent, $src, 'Seller', $lang));
 			$id = $this->myDB->lastInsertId();
-			$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
+	//	$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
 		}
 
 		return $id;
@@ -1065,22 +1065,22 @@ class DBManager extends MySQLConnection{
 
 	public function addManualLead($array){
 		if($array['type'] == 'home_sellers'){
-			$query = $this->myDB->prepare("INSERT INTO home_sellers (agent_fk, address, name, phone, email, selling, source, type, comments, status, lang) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			$query = $this->myDB->prepare("INSERT INTO sponsor (agent_fk, address, name, phone, email, selling, source, type, comments, status, lang) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			$query->execute(array($array['agent_id'], $array['address'], $array['name'], $array['phone'], $array['email'], $array['selling'], 'm', $array['type'], $array['notes'], $array['status'], $array['lang']));
 		}else if($array['type'] == 'home_buyers'){ //TODO
-			$query = $this->myDB->prepare("INSERT INTO home_sellers (agent_fk, address, name, phone, email, selling, source, type, comments, status, lang) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			$query = $this->myDB->prepare("INSERT INTO sponsor (agent_fk, address, name, phone, email, selling, source, type, comments, status, lang) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			$query->execute(array($array['agent_id'], $array['address'], $array['name'], $array['phone'], $array['email'], $array['selling'], 'm', $array['type'], $array['notes'], $array['status'], $array['lang']));
 		}
 
-		$id = $this->myDB->lastInsertId();
-		$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
+//		$id = $this->myDB->lastInsertId();
+	//	$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
 	}
 
 	public function addImportLeads($array, $meta){
-		$query = $this->myDB->prepare("INSERT INTO home_sellers VALUES(:id,:agent_fk,:address,:name,:phone,:email,:funnels,:funnel_switch,:selling,:source,:type,:comments,:status,:lang,:dateAdded)");
+		$query = $this->myDB->prepare("INSERT INTO sponsor VALUES(:id,:agent_fk,:address,:name,:phone,:email,:funnels,:funnel_switch,:selling,:source,:type,:comments,:status,:lang,:dateAdded)");
 		$query->execute($array);
 		$meta['home_lead_fk'] = $this->myDB->lastInsertId();
-		$query = $this->myDB->prepare("INSERT INTO home_sellers_meta VALUES(:value_range,:value_epp,:beds,:baths,:sqft,:buying_frame,:price_range,:neighborhood,:prequalified,:lender,:lender_phone,:lender_email,:loan_type,:credit,:planning_sell,:alert_setup,:other_contact,:other_contact_phone,:other_contact_email,:home_lead_fk)");
+	//	$query = $this->myDB->prepare("INSERT INTO home_sellers_meta VALUES(:value_range,:value_epp,:beds,:baths,:sqft,:buying_frame,:price_range,:neighborhood,:prequalified,:lender,:lender_phone,:lender_email,:loan_type,:credit,:planning_sell,:alert_setup,:other_contact,:other_contact_phone,:other_contact_email,:home_lead_fk)");
 		$query->execute($meta);
 	}
 

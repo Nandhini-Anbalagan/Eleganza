@@ -50,7 +50,7 @@
 					<form onsubmit="return validate(this);">
 						<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-agentLead', 20, 'agentLead'); ?>">
 						<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-agent-requestNewArea', 20, 'requestNewArea'); ?>">
-						<input type="hidden" name="buyer_option" value="subscriber">
+						<input type="hidden" name="buyer_option" value="seller">
 						<div class="form-group">
 							<label for="desiredArea"><?php echo $tr['desire_area'] ?></label>
 							<input type="text" id="desiredArea" name="desiredArea" class="form-control" />
