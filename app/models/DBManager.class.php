@@ -29,8 +29,7 @@ class DBManager extends MySQLConnection{
 	*/
 
 	public function addUser($arr){
-		$query = $this->myDB->prepare("INSERT INTO users VALUES(DEFAULT, DEFAULT, ?, ?, ?, ?, ?, ?, 0, NULL, DEFAULT, DEFAULT)");
-
+		$query = $this->myDB->prepare("INSERT INTO users VALUES(DEFAULT, DEFAULT, ?, ?, ?, ?, ?, ?,NULL, DEFAULT, DEFAULT, 0)");
 		if($query->execute(array(trim($arr['username']), md5($arr['password']), trim($arr['email']), trim($arr['name']), $arr['country'], $arr['level']))){
 			$this->write_to_log("User added [Username: " . $arr['username']. "]", $_SESSION['user']['username']);return true;
 		}else
@@ -676,12 +675,12 @@ class DBManager extends MySQLConnection{
 		$signature = "<p><b>". $data['lead_name'] . "</b></p><p>" . $data['lead_email'] . "</p><p>" . $data['lead_phone'] . "</p><p>" . $data['lead_agency']."</p>";
 
 		$query = $this->myDB->query("UPDATE area_mapping SET agent_type = 2 WHERE agent_fk = '" . $data['internal_id']. "'");
-		$query = $this->myDB->prepare("INSERT INTO agents(internal_id, agent_name, agent_email, agent_phone, agent_address, agent_areas, agent_agency, agent_license, agent_board, agent_ref, agent_lang, agent_comments, agent_signature, ad_campaign, agent_slug) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		$query->execute(array($data['internal_id'], $data['lead_name'], $data['lead_email'], $data['lead_phone'], $address, $data['lead_areas'], $data['lead_agency'],$data['lead_license'], $data['lead_board'], $data['lead_ref'], $data['lead_lang'], $data['lead_comments'], $signature, $ad, $data['lead_type']));
+		$query = $this->myDB->prepare("INSERT INTO agents(internal_id, agent_name, agent_email, agent_phone, agent_address, agent_areas, agent_agency, agent_license, agent_board, agent_ref, agent_lang, agent_comments, agent_signature, ad_campaign, agent_slug,agent_country) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)");
+		$query->execute(array($data['internal_id'], $data['lead_name'], $data['lead_email'], $data['lead_phone'], $address, $data['lead_areas'], $data['lead_agency'],$data['lead_license'], $data['lead_board'], $data['lead_ref'], $data['lead_lang'], $data['lead_comments'], $signature, $ad, $data['lead_type'],$data['lead_country']));
 		$agent_id = $this->myDB->lastInsertId();
 
 		if($data['user_id'] == 0){
-			$this->addUser(array('username' => str_replace(array(" ", "-"), "", strtolower($data['lead_name'])).$agent_id, 'password' => $password, 'email' => $data['lead_email'], 'name' => $data['lead_name'], 'level' => 10));
+			$this->addUser(array('username' => str_replace(array(" ", "-"), "", strtolower($data['lead_name'])).$agent_id, 'password' => $password, 'email' => $data['lead_email'], 'name' => $data['lead_name'], 'level' => 10,'country' => $data['lead_country']));
 			$user_id = $this->myDB->lastInsertId();
 			$query = $this->myDB->query("UPDATE agents SET user_id = $user_id WHERE agent_id = $agent_id");
 		}else{

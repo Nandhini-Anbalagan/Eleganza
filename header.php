@@ -1,8 +1,12 @@
+<?php
+	$page = rtrim(basename($_SERVER['PHP_SELF']), ".php");
+	require_once('app/models/Config.class.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
-
+<base href="<?php echo substr(Config::WEBSITE_URL, 0, -3)  ?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -128,3 +132,4 @@ body {
         </div>
       </div>
     </header>
+    <?php include("contactUsPopup.php") ?>
