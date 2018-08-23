@@ -1016,7 +1016,7 @@ class DBManager extends MySQLConnection{
 			$this->myDB->query("UPDATE subscriber SET `date` = now(), comments = '', agent_fk = $agent WHERE id = $id");
 		}else{
 			$query = $this->myDB->prepare("INSERT INTO subscriber (email, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?)");
-			$query->execute(array($email, $agent, $src, 'Buyer', $lang));
+			$query->execute(array($email, $agent, $src, 'subscriber', $lang));
 			$id = $this->myDB->lastInsertId();
 			//$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
 		}
@@ -1054,7 +1054,7 @@ class DBManager extends MySQLConnection{
 			$this->myDB->query("UPDATE sponsor SET `date` = now(), comments = '', funnels = $funnelID, agent_fk = $agent WHERE id = $id");
 		}else{
 			$query = $this->myDB->prepare("INSERT INTO sponsor (address, funnels, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?, ?)");
-			$query->execute(array($address, $funnelID, $agent, $src, 'Seller', $lang));
+			$query->execute(array($address, $funnelID, $agent, $src, 'sponsor', $lang));
 			$id = $this->myDB->lastInsertId();
 	//	$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
 		}

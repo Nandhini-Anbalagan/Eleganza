@@ -133,7 +133,7 @@ $(document).ready(function() {
     $('html, body').scrollTo($('#sign'), 'fast');
     $.ajax({
       type: 'POST',
-      url: 'https://unbeleadsable.com/core.php',
+      url: 'http://localhost:8010/Eleganza/core.php',
       data: $('#signUpForm').serialize(),
       datatype: 'json',
       success: function(res) {
@@ -162,7 +162,7 @@ $(document).ready(function() {
 			$('html, body').scrollTo($('#contact'), 'fast');
 			$.ajax({
 				type: 'POST',
-				url: 'https://unbeleadsable.com/core.php',
+				url: 'http://localhost:8010/Eleganza/core.php',
 				data: $('#contactForm' + value2).serialize(),
 				datatype: 'json',
 				success: function(res) {
@@ -209,7 +209,7 @@ $(document).ready(function() {
     $('html, body').scrollTo($('#payment'), 'fast');
     $.ajax({
       type: 'POST',
-      url: 'https://unbeleadsable.com/core.php',
+      url: 'http://localhost:8010/Eleganza/core.php',
       data: $('#payForm').serialize(),
       datatype: 'json',
       success: function(res) {

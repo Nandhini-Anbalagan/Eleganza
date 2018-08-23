@@ -95,7 +95,7 @@ function executeAction(action, data){
 			modal.find('select[name="lang"]').select2("val", data['language']);
 
 			tinymce.get("edit-content-textarea").setContent(data['content'].replace(/&lt;/g, '<').replace(/&gt;/g, '>'), {format: 'raw'});
-			
+
 			var interval = data['interval'], frame = -1;
 
 			if(interval == 0){
@@ -172,7 +172,7 @@ function executeAction(action, data){
 			modal.find('input[name="username"]').val(data['username']);
 			modal.find('input[name="email"]').val(data['email']);
 			modal.find("#currentPassword").html("<b>Current (MD5)</b> : " + data['password']);
-			
+
 			break;
 		case "get-single-edit-agent-lead":
 			var modal = $('#edit-modal');
@@ -300,9 +300,9 @@ function executeAction(action, data){
 			content.find('span[target="agent_email"]').html(data['agent_email']);
 			content.find('span[target="agent_title_en"]').html(data['agent_title_en']);
 			content.find('span[target="final_text_en"]').html(data['final_text_en']);
-			content.find('span[target="homeEval_web_en"]').html("https://unbeleadsable.com/home-evaluation/?a="+data['agent_fk']+"&l=e&s=w");
-			content.find('span[target="homeEval_facebook_en"]').html("https://unbeleadsable.com/home-evaluation/?a="+data['agent_fk']+"&l=e&s=f");
-			content.find('span[target="homeEval_google_en"]').html("https://unbeleadsable.com/home-evaluation/?a="+data['agent_fk']+"&l=e&s=g");
+			content.find('span[target="homeEval_web_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=w");
+			content.find('span[target="homeEval_facebook_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=f");
+			content.find('span[target="homeEval_google_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=g");
 
 			//French Section
 			content.find('span[target="city_fr"]').html(data['city_fr']);
@@ -314,9 +314,9 @@ function executeAction(action, data){
 			content.find('span[target="agent_email"]').html(data['agent_email']);
 			content.find('span[target="agent_title_fr"]').html(data['agent_title_fr']);
 			content.find('span[target="final_text_fr"]').html(data['final_text_fr']);
-			content.find('span[target="homeEval_web_fr"]').html("https://unbeleadsable.com/home-evaluation/?a="+data['agent_fk']+"&l=f&s=w");
-			content.find('span[target="homeEval_facebook_fr"]').html("https://unbeleadsable.com/home-evaluation/?a="+data['agent_fk']+"&l=f&s=f");
-			content.find('span[target="homeEval_google_fr"]').html("https://unbeleadsable.com/home-evaluation/?a="+data['agent_fk']+"&l=f&s=g");
+			content.find('span[target="homeEval_web_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=w");
+			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=f");
+			content.find('span[target="homeEval_google_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=g");
 			//Background Image
 			content.find('img[target="background"]').attr("src", "uploads/landings/" + data['bg_img']);
 
@@ -363,9 +363,9 @@ function executeAction(action, data){
 			content.find('span[target="phone_label_en"]').html(data['phone_label_en']);
 			content.find('span[target="phone_field_en"]').html(data['phone_field_en']);
 			content.find('span[target="thank_you_en"]').html(data['thank_you_en']);
-			content.find('span[target="homeEval_web_en"]').html("https://unbeleadsable.com/home-listings/?a="+data['agent_fk']+"&l=e&s=w");
-			content.find('span[target="homeEval_facebook_en"]').html("https://unbeleadsable.com/home-listings/?a="+data['agent_fk']+"&l=e&s=f");
-			content.find('span[target="homeEval_google_en"]').html("https://unbeleadsable.com/home-listings/?a="+data['agent_fk']+"&l=e&s=g");
+			content.find('span[target="homeEval_web_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=w");
+			content.find('span[target="homeEval_facebook_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=f");
+			content.find('span[target="homeEval_google_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=g");
 
 			//French Section
 			content.find('span[target="city_fr"]').html(data['city']);
@@ -380,9 +380,9 @@ function executeAction(action, data){
 			content.find('span[target="phone_label_fr"]').html(data['phone_label_fr']);
 			content.find('span[target="phone_field_fr"]').html(data['phone_field_fr']);
 			content.find('span[target="thank_you_fr"]').html(data['thank_you_fr']);
-			content.find('span[target="homeEval_web_fr"]').html("https://unbeleadsable.com/home-listings/?a="+data['agent_fk']+"&l=f&s=w");
-			content.find('span[target="homeEval_facebook_fr"]').html("https://unbeleadsable.com/home-listings/?a="+data['agent_fk']+"&l=f&s=f");
-			content.find('span[target="homeEval_google_fr"]').html("https://unbeleadsable.com/home-listings/?a="+data['agent_fk']+"&l=f&s=g");
+			content.find('span[target="homeEval_web_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=w");
+			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=f");
+			content.find('span[target="homeEval_google_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=g");
 			//Background Image
 			content.find('img[target="background"]').attr("src", "uploads/landings/" + data['bg_img']);
 
@@ -596,28 +596,28 @@ function executeAction(action, data){
 *	@layout:			Default: top-full-width (top-full-width | top-left | top-center | top-right | bottom-left | bottom-center | bottom-right | bottom-full-width)
 *	@type:				Default: warning (success | info | warning | error)
 *	@duration:			Duration of the notification in miliseconds. Default: 30000 (30 seconds)
-*   @isKiller:          True if the last toast will be cleared.  
-*   @hasCloseButton:    True to show the close button. Default: false      
-*   @callback:          Name of the callback action for the function executeAction.  
+*   @isKiller:          True if the last toast will be cleared.
+*   @hasCloseButton:    True to show the close button. Default: false
+*   @callback:          Name of the callback action for the function executeAction.
 *	Last updated: 		2015-12-28
 */
 function generateNotification(message, layout, type, duration, isKiller, hasCloseButton, callback){
 	// List of possible layouts and types
 	var layouts = ["top-full-width", "top-left", "top-center", "top-right", "bottom-left", "bottom-center", "bottom-right", "bottom-full-width"];
 	var types = ["success", "info", "warning", "error"];
-	
+
 	// Check if the layout exist. If it doesn't, set it to top.
 	if($.type(layout) !== "string" || $.inArray(layout, layouts) == -1)
 		layout = "top-full-width";
-	
+
 	// Check if the type exist. If it doesn't, set it to warning.
 	if($.type(type) !== "string" || $.inArray(type, types) == -1)
 		type = "warning";
-	
+
 	// If duration is not set, set it to 30 seconds.
 	if($.type(duration) !== "number" || duration < 0)
 		duration = 30000;
-	
+
 	// Set killer to true.
 	if(($.type(isKiller) !== "boolean" && lastToast != null) || isKiller === true)
 		clearToast();
@@ -625,7 +625,7 @@ function generateNotification(message, layout, type, duration, isKiller, hasClos
 	// Set the close button to false
 	if($.type(hasCloseButton) !== "boolean" || hasCloseButton === false)
 		hasCloseButton = false;
-	
+
 	// Set the toast options
 	toastr.options = {
 		"closeButton" : hasCloseButton,
@@ -639,7 +639,7 @@ function generateNotification(message, layout, type, duration, isKiller, hasClos
 		"showDuration" : 300,
 		"hideDuration" : 300
 	};
-	
+
 	// Set the callback if there's one
 	if($.type(callback) === "string")
 		toastr.options.onclick = function(){ executeAction(callback); };
@@ -677,7 +677,7 @@ function generateRandomString(length, hasNumbers, intBegin, hasSymbols, symbolBe
 	var symbols = "!@#$%^&*()-_+=";
 	var result = "";
 	var invalidStart = "";
-	
+
 	// Set the default length to 20
 	if(isNaN(length))
 		length = 20;
@@ -697,21 +697,21 @@ function generateRandomString(length, hasNumbers, intBegin, hasSymbols, symbolBe
 
 		characters += symbols
 	}else{ hasSymbols = false; }
-	
+
 	// Calculate the invalid start
 	if(!intBegin)
 		invalidStart += digits;
 
 	if(!symbolBegin)
 		invalidStart += symbols;
-	
+
 	do{
 		result += characters[generateRandomNumber(0, characters.length - 1)];
-		
+
 		if(result.length == 1 && invalidStart.indexOf(result) !== -1)
 			result = generateRandomString(length, hasNumbers, intBegin, hasSymbols, symbolBegin);
 	}while(result.length < length);
-	
+
 	return result;
 }
 
@@ -742,24 +742,24 @@ function validate(pForm, pContinue, pDisable){
 	// Check if pContinue is set and has a valid value. If not, set it to false.
 	if($.type(pContinue) !== "boolean")
 		pContinue = false;
-	
+
 	// Check if pDisable is set and has a valid value. If not, set it to true
 	if($.type(pDisable) !== "boolean")
 		pDisable = true;
-	
+
 	// Send the request to the core
 	$.ajax({
 		url: 'core.php',
 		type: 'POST',
 		data: new FormData(pForm),
 		dataType: 'json',
-		contentType: false,      
-		cache: false,             
+		contentType: false,
+		cache: false,
 		processData:false,
 		beforeSend: function(){
 			// Close all notifications
 			toastr.clear();
-			
+
 			// Add the readonly attribute to each input and disable the buttons
 			if(pDisable){
 				$('input[type="submit"], button[type="submit"], input').attr('disabled', true);
@@ -784,12 +784,12 @@ function validate(pForm, pContinue, pDisable){
 			if($.type(data['reset']) === "boolean" && data['reset'] == true){
 				$(pForm).trigger('reset');
 				$(pForm).find('select').select2("val", "");
-			} 
-				
-			
+			}
+
+
 			// Set the remove-disable property
 			removeDisable = data['remove-disable'];
-			
+
 			// Check if there's a redirect
 			if($.type(data['redirect']) === "boolean" && data['redirect'] == true)
 				setTimeout(function(){
@@ -798,7 +798,7 @@ function validate(pForm, pContinue, pDisable){
 					else
 						window.location.href = data['destination'];
 				}, data['delay']);
-			
+
 			// Check if there's a callback
 			if(data['callback'] != null && data['callback'] != "undefined")
 				executeAction(data['callback'], data['callback-data']);

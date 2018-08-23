@@ -2,7 +2,7 @@
 <?php require_once('load/top-menu.php'); ?>
 <?php require_once('load/misc/dynamic-form.php'); ?>
 
-<?php 
+<?php
 $agents = $db->getAgents();
 
 
@@ -10,9 +10,9 @@ $agents = $db->getAgents();
 # Tokenizer container
 $postActionLanding = Tokenizer::add('post-action-landing', 20, 'landing');
 
-if($_SESSION['user']['agent_slug'] == "home_sellers")
+if($_SESSION['user']['agent_slug'] == "sponsor")
 	$postCaseLandingView = Tokenizer::add('post-case-landing-view-seller', 30, 'view-seller');
-else if($_SESSION['user']['agent_slug'] == "home_buyers")
+else if($_SESSION['user']['agent_slug'] == "subscriber")
 	$postCaseLandingView = Tokenizer::add('post-case-landing-view-buyer', 30, 'view-buyer');
 
 $postCaseLandingPic = Tokenizer::add('post-case-landing-picture', 30, 'picture');

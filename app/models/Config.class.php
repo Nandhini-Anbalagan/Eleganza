@@ -11,7 +11,7 @@
 abstract class Config{
 		#--------------------------- Website Properties ---------------------------#
 		# Website url with the trailing slash
-		CONST WEBSITE_URL = "http://localhost:8010/Eleganza/app";
+		CONST WEBSITE_URL = "https://eleganza.test/app";
 
 		# Website title / Name of the website
 		CONST WEBSITE_TITLE = "Unbeleadsable";
