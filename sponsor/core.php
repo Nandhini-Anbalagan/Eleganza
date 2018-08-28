@@ -2,9 +2,7 @@
 	define('HE_LOG_FILE', "{$_SERVER['DOCUMENT_ROOT']}/home-evaluation/registration.log");
 	include("../app/head.php");
 
-	if(isset($_POST['action']) && $_POST['action'] == 'addAddress'){
-		if($_POST['apt'] != "")
-			$_POST['address'] = "#".$_POST['apt'] . " " . $_POST['address'];
+	if(isset($_POST['action']) && $_POST['action'] == 'insertField'){
 
 		$frenchID = $db->getFunnelCatByTitle('Home Evaluation FR', $_POST['agent'])['id'];
 		$englishID = $db->getFunnelCatByTitle('Home Evaluation EN', $_POST['agent'])['id'];
@@ -13,8 +11,7 @@
 			$funnelID = $englishID;
 		else
 			$funnelID = $frenchID;
-
-		echo $db->addAddressLead($_POST['address'], $_POST['agent'], $_POST['src'], $_POST['lang'], $funnelID);
+    echo $db->insertField($_POST['industry'], $_POST['agent'], $_POST['src'], $_POST['lang'], $funnelID););
 		exit();
 	}else if(isset($_POST['action']) && $_POST['action'] == 'updateField'){
 		$res = $db->updateHomeLeadsPartial($_POST['name'], $_POST['val'], $_POST['id']);

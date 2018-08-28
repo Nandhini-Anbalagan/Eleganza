@@ -1,3 +1,17 @@
+<?php
+	session_start();
+
+	if (!empty($_GET))
+		$_SESSION['got'] = $_GET;
+
+	if(!empty($_SESSION['got'])){
+		include("../app/head.php");
+		$agent = $db->getSellerLandingPage($_SESSION['got']['a']);
+
+		$final_text_en = explode(" - ", $agent['final_text_en']);
+		$final_text_fr = explode(" - ", $agent['final_text_fr']);
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,14 +50,14 @@
             <form>
               <div class="form-row">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <select class="form-control form-control-lg">
+                  <select class="form-control form-control-lg" id="industry">
                    <option>Service Industry</option>
                    <option>Manufacturing Industry</option>
                    <option>Retail Industry</option>
                   </select>
                 </div>
                 <div class="col-12 col-md-3">
-                  <button type="button" onclick="window.location = 'index3.php'" class="btn btn-block btn-lg btn-primary">Submit!</button>
+                  <button type="button" onclick="window.location = 'index3.php'" id="submit" class="btn btn-block btn-lg btn-primary">Submit!</button>
                 </div>
               </div>
             </form>
@@ -54,7 +68,13 @@
     <!-- Bootstrap core JavaScript -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script>
+     $('#submit').on('click', function(){
+       var industry = $('#industry :selected').text();
+       if(next_step)
+       $.post("core.php", {action: "insertField", industry: industry, agent: <?php echo $agent['agent_fk'], src: "<?php echo $_SESSION['got']['s'] ?>", lang: "<?php echo $_SESSION['got']['l'] ?>"});
+     });
+    </script>
   </body>
 
 </html>
