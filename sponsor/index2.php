@@ -7,7 +7,6 @@
 	if(!empty($_SESSION['got'])){
 		include("../app/head.php");
 		$agent = $db->getSellerLandingPage($_SESSION['got']['a']);
-
 		$final_text_en = explode(" - ", $agent['final_text_en']);
 		$final_text_fr = explode(" - ", $agent['final_text_fr']);
 	}
