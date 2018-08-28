@@ -1,6 +1,6 @@
 (function($) {
-  
-  "use strict";  
+
+  "use strict";
 
   $(window).on('load', function() {
 
@@ -17,17 +17,6 @@
         }
     });
 
-    /* slicknav mobile menu active  */
-    $('.mobile-menu').slicknav({
-      prependTo: '.navbar-header',
-      parentTag: 'liner',
-      allowParentLinks: true,
-      duplicate: true,
-      label: '',
-      closedSymbol: '<i class="icon-arrow-right"></i>',
-      openedSymbol: '<i class="icon-arrow-down"></i>',
-    });
-
     /* ==========================================================================
     countdown timer
     ========================================================================== */
@@ -39,18 +28,6 @@
       +'<div class="time-entry seconds"><span>%S</span> Seconds</div> '));
     });
 
-    /* WOW Scroll Spy
-    ========================================================*/
-     var wow = new WOW({
-      //disabled for mobile
-        mobile: false
-    });
-    wow.init();
-
-    // one page navigation 
-    $('.onepage-nev').onePageNav({
-            currentClass: 'active'
-    }); 
 
     /* Back Top Link active
     ========================================================*/
@@ -72,6 +49,6 @@
         return false;
       });
 
-  });      
+  });
 
 }(jQuery));

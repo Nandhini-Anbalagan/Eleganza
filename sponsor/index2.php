@@ -71,8 +71,10 @@
     <script>
      $('#submit').on('click', function(){
        var industry = $('#industry :selected').text();
-       if(next_step)
-       $.post("core.php", {action: "insertField", industry: industry, agent: <?php echo $agent['agent_fk'], src: "<?php echo $_SESSION['got']['s'] ?>", lang: "<?php echo $_SESSION['got']['l'] ?>"});
+       $.post("core.php", {action: "insertField", industry: industry, agent: <?php echo $agent['agent_fk']?>, src: "<?php echo $_SESSION['got']['s'] ?>", lang: "<?php echo $_SESSION['got']['l'] ?>"}).done(function(data){
+						lead_id = data.trim();
+						console.log(lead_id);
+					});
      });
     </script>
   </body>
