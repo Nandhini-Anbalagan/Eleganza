@@ -32,27 +32,37 @@
 <body>
 
   <div id="h" style="zoom: 80%;">
-    <div class="container" style="padding:80px">
+    <div class="container" style="padding:120px">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 color-text" style="background-color: rgba(255,255,255,0.6)">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-sm-offset-1color-text" style="background-color: rgba(255,255,255,0.6)">
           <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
             <h3>Leave us your name and email to receive your FREE industry specific lead generation tips and information on how to partner with Eleganza Media for your next campaign.</h3>
 
-            <div class="col-md-7 col-md-offset-3 form-group">
-              <input type="text" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >
+            <div class="col-xs-6 col-sm-6 col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-rule="required" data-msg="Please enter at least 4 chars" >
               <div class="validate"></div>
             </div>
-            <div class="col-md-7 col-md-offset-3 form-group">
-              <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+            <div class="col-xs-6 col-sm-6 col-md-6 form-group">
+             <input type="phoneno" required name="phoneno" id="phoneno" class="form-control input-sm" placeholder="phoneno" data-rule="minlen:8" data-rule="required" data-msg="Please enter at least 8 chars">
               <div class="validate"></div>
             </div>
-            <div class="col-md-7 col-md-offset-3 form-group">
-              <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+            <div class="col-xs-12 form-group">
+              <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-rule="required" data-msg="Please enter a valid email">
               <div class="validate"></div>
             </div>
 
-            <div class="col-md-7 col-md-offset-3 form-group">
-              <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+            <div class="col-xs-6 col-sm-6 col-md-6 form-group">
+              <input type="text" name="area" class="form-control" id="contact-area" placeholder="Your area" data-rule="area" data-rule="required" data-msg="Please enter a valid area">
+              <div class="validate"></div>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-6 form-group">
+              <input type="text" name="company" class="form-control" id="contact-company" placeholder="Your company" data-rule="company" data-rule="required" data-msg="Please enter a valid company">
+              <div class="validate"></div>
+            </div>
+
+            <div class="col-xs-12 form-group">
+              <input type="text" name="message" class="form-control" id="contact-subject" placeholder="Your message" data-msg="Please enter at least 8 chars of subject">
               <div class="validate"></div>
             </div>
 
@@ -63,7 +73,7 @@
             <div class="form-send">
               <button type="submit" class="btn btn-large">Send Message</button>
             </div>
-
+</br>
           </form>
         </div>
       </div>
