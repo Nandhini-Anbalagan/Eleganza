@@ -396,3 +396,6 @@ CREATE TABLE `sponsor` (
  
  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=79440 DEFAULT CHARSET=latin1
+
+ALTER TABLE unbeleadsablev1.`sponsor` 
+ADD (`messages` varchar(255), `company` varchar(100));
