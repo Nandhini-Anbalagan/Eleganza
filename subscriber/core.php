@@ -1,13 +1,13 @@
 <?php
-	define('HE_LOG_FILE', "{$_SERVER['DOCUMENT_ROOT']}/home-listings/registration.log");
+	define('HE_LOG_FILE', "{$_SERVER['DOCUMENT_ROOT']}/subscriber/registration.log");
 	include("../app/head.php");
 
 	if(isset($_POST['action']) && $_POST['action'] == 'addSubscriber'){
-		$id = $db->addSubscriber($_POST['name'],$_POST['mail'],$_POST['email'],$_POST['tel'], $_POST['agent'], $_POST['src'], $_POST['lang'], 12);
-		$_SESSION['current_lead'] = $id;
-		echo $id;
-		if($id && !isset($_SESSION['emailSent'])){
-			$agent = $db->getAgentLandingPage($_SESSION['got']['a']);
+		$res = $db->addSubscriber($_POST['name'],$_POST['mail'],$_POST['email'],$_POST['tel'], $_POST['agent'], $_POST['src'], $_POST['lang'], 12);
+		$_SESSION['current_lead'] = $res['id'];
+		echo  $res['id'];
+		if($res && !isset($_SESSION['emailSent'])){
+			$agent = $db->getBuyerLandingPage(IDObfuscator::decode($_SESSION['got']['a']));
 
 			$to = $agent['agent_email'];
 			$from = "support@unbeleadsable.com";
@@ -20,8 +20,7 @@
 				$message .= "<b>Name: </b>".$res['name']."
 							<br><b>Email: </b>".$res['email']."
 							<br><b>Phone: </b>".$res['phone']."
-							<br><b>Bed(s): </b>".$res['address']."
-							<br><b>Buying In: </b>".Functions::getSellingIn($res['buying'], 'EN');
+							<br><b>Address: </b>".$res['address'];
 				$message .= "<br><br>To login in your account in order to view your leads <a href='".WEBSITE_URL."'>Click here</a>.<br>";
 			}else if($agent['agent_lang'] == "FR"){
 				$subject = "Nouveau prospect (Acheteur)";
@@ -29,8 +28,7 @@
 				$message .= "<b>Nom: </b>".$res['name']."
 							<br><b>Courriel: </b>".$res['email']."
 							<br><b>Téléphone: </b>".$res['phone']."
-							<br><b>Chambre(s): </b>".$res['address']."
-							<br><b>Date d'achat: </b>".Functions::getSellingIn($res['selling'], 'FR');
+							<br><b>Address(s): </b>".$res['address'];
 				$message .= "<br><br>Pour vous connecter à votre compte afin de voir vos prospects <a href='".WEBSITE_URL."'>Cliquez ici</a>.<br>";
 			}
 
@@ -46,9 +44,9 @@
 			$to = "+1".str_replace(array(" ", "(", ")", "-", "."), array("", "", "", "", ""), $agent['agent_phone']);
 
 			if($agent['agent_lang'] == "EN")
-				$body = "New leads registration\nName: ".$res['name']."\nPhone: ".$res['phone']."\nEmail: ".$res['email']."\nAddress: ".$res['address'] ."\nSelling In: " .Functions::getSellingIn($res['selling'], 'EN'). "\n\nUnbeleadsable";
+				$body = "New leads registration\nName: ".$res['name']."\nPhone: ".$res['phone']."\nEmail: ".$res['email']."\nAddress: ".$res['address'] . "\n\nUnbeleadsable";
 			else
-				$body = "Un nouveau prospect\nNom: ".$res['name']."\nTéléphone: ".$res['phone']."\nCourriel: ".$res['email']."\nAdresse: ".$res['address'] ."\nDate de vente: ".Functions::getSellingIn($res['selling'], 'FR'). "\n\nUnbeleadsable";
+				$body = "Un nouveau prospect\nNom: ".$res['name']."\nTéléphone: ".$res['phone']."\nCourriel: ".$res['email']."\nAdresse: ".$res['address'] . "\n\nUnbeleadsable";
 
 			$data = array (
 				'From' => $from,
@@ -71,7 +69,7 @@
 			curl_close($x);
 
 			$_SESSION['emailSent'] = true;
-			$db->addMessageHistory("Lead Generated", "Landing Page: Default", "N/A", $res['id']);
+			$db->addMessageHistory("Lead Generated", "Landing Page: Default", 'N/A', $res['id']);
 
 			//Log entry
 			$text = '[' . date ('m/d/Y g:i A') . '] - '. $res['name'] . "; " . $res['email'] . "; " . $res['phone'] . "; " . $res['address'] . " :: (" . $agent['agent_name'] . ")";
