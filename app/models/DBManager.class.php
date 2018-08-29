@@ -1044,18 +1044,18 @@ class DBManager extends MySQLConnection{
 	*/
 	public function insertField($industry, $agent, $src, $lang, $funnelID){
 		$id = -1;
-			$query = $this->myDB->prepare("SELECT id FROM sponsor WHERE industry = ?");
-			$query->execute(array($industry));
-			$result = $query->fetch(PDO::FETCH_ASSOC);
-			if($result){
-				$id = $result['id'];
-				$this->myDB->query("UPDATE sponsor SET `date` = now(), comments = '', funnels = $funnelID, agent_fk = $agent WHERE id = $id");
-			}else{
+			// $query = $this->myDB->prepare("SELECT id FROM sponsor WHERE industry = ?");
+			// $query->execute(array($industry));
+			// $result = $query->fetch(PDO::FETCH_ASSOC);
+			// if($result){
+			// 	$id = $result['id'];
+			// 	$this->myDB->query("UPDATE sponsor SET `date` = now(), comments = '', funnels = $funnelID, agent_fk = $agent WHERE id = $id");
+			// }else{
 				$query = $this->myDB->prepare("INSERT INTO sponsor (industry, funnels, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?, ?)");
 				$query->execute(array($industry, $funnelID, $agent, $src, 'sponsor', $lang));
 				$id = $this->myDB->lastInsertId();
 		//	$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
-			}
+			//}
 
 			return $id;
 	}
@@ -1100,6 +1100,11 @@ class DBManager extends MySQLConnection{
 		$query->execute($meta);
 	}
 
+  public function updateEntries($name, $phoneno, $email, $area, $company, $subject,$id){
+		$query = $this->myDB->prepare("UPDATE sponsor SET name = ?, phone = ?, email = ?, address = ?, company = ?, messages = ?  WHERE id = ?");
+		$query->execute(array($name, $phoneno, $email, $area, $company, $subject,$id));
+    return 1;
+	}
 	public function updateHomeLeadsPartial($col, $val, $id){
 		$query = $this->myDB->prepare("UPDATE sponsor SET {$col} = ? WHERE id = ?");
 		$query->execute(array($val, $id));

@@ -56,7 +56,7 @@
                   </select>
                 </div>
                 <div class="col-12 col-md-3">
-                  <button type="button" onclick="window.location = 'index3.php'" id="submit" class="btn btn-block btn-lg btn-primary">Submit!</button>
+                  <button type="button" id="submit" class="btn btn-block btn-lg btn-primary">Submit!</button>
                 </div>
               </div>
             </form>
@@ -72,7 +72,7 @@
        var industry = $('#industry :selected').text();
        $.post("core.php", {action: "insertField", industry: industry, agent: <?php echo $agent['agent_fk']?>, src: "<?php echo $_SESSION['got']['s'] ?>", lang: "<?php echo $_SESSION['got']['l'] ?>"}).done(function(data){
 						lead_id = data.trim();
-						console.log(lead_id);
+						window.location="index3.php?lead="+lead_id;
 					});
      });
     </script>

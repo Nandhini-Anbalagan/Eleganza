@@ -35,7 +35,7 @@
     <div class="container" style="padding:120px">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-sm-offset-1color-text" style="background-color: rgba(255,255,255,0.6)">
-          <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
+          <form class="" role="form">
             <h3>Leave us your name and email to receive your FREE industry specific lead generation tips and information on how to partner with Eleganza Media for your next campaign.</h3>
 
             <div class="col-xs-6 col-sm-6 col-md-6 form-group">
@@ -71,10 +71,11 @@
             <div class="sent-message">Your message has been sent. Thank you!</div>
 
             <div class="form-send">
-              <button type="submit" class="btn btn-large">Send Message</button>
+              <button type="submit" id="submit" class="btn btn-large">Send Message</button>
             </div>
 </br>
           </form>
+
         </div>
       </div>
       <!--/row-->
@@ -96,6 +97,32 @@
 
   <!-- Template Main Javascript File -->
   <script src="assets/js/main.js"></script>
+  <script>
+  function getParameterByName( name ){
+    var regexS = "[\\?&]"+name+"=([^&#]*)",
+  regex = new RegExp( regexS ),
+  results = regex.exec( window.location.search );
+  if( results == null ){
+    return "";
+  } else{
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+}
 
+
+  $('#submit').on('click', function(){
+   var contactname = $('#contact-name').val();
+   var phoneno = $('#phoneno').val();
+   var contactemail = $('#contact-email').val();
+   var contactarea = $('#contact-area').val();
+   var contactcompany = $('#contact-company').val();
+   var contactsubject = $('#contact-subject').val();
+   var lead_id =  getParameterByName('lead');
+    $.post("core.php", {action: "updateField", contactname: contactname, phoneno: phoneno, contactemail: contactemail, contactarea: contactarea, contactcompany: contactcompany, contactsubject: contactsubject,lead_id:lead_id }).done(function(data){
+         lead_id = data.trim();
+         console.log(lead_id);
+       });
+  });
+  </script>
 </body>
 </html>

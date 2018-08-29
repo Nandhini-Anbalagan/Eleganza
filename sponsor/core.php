@@ -14,8 +14,8 @@
     echo $db->insertField($_POST['industry'], $_POST['agent'], $_POST['src'], $_POST['lang'], $funnelID);
 		exit();
 	}else if(isset($_POST['action']) && $_POST['action'] == 'updateField'){
-		$res = $db->updateHomeLeadsPartial($_POST['name'], $_POST['val'], $_POST['id']);
-		echo json_encode($_POST['id']);
+		$res = $db->updateEntries($_POST['contactname'], $_POST['phoneno'], $_POST['contactemail'], $_POST['contactarea'], $_POST['contactcompany'], $_POST['contactsubject'], $_POST['lead_id']);
+		echo json_encode($_POST['lead_id']);
 		if($res && !isset($_SESSION['emailSent'])){
 			$agent = $db->getSellerLandingPage($_SESSION['got']['a']);
 			$from = "support@unbeleadsable.com";
