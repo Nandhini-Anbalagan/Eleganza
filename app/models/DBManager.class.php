@@ -1038,6 +1038,28 @@ class DBManager extends MySQLConnection{
 		}
 	}
 
+/**
+ADD SUBSCRIBER
+*/
+	public function addSubscriber($name,$mail,$email,$tel, $agent, $src, $lang, $funnelID){
+		$id = -1;
+
+		$query = $this->myDB->prepare("SELECT id FROM subscriber WHERE email = ?");
+		$query->execute(array($email));
+		$result = $query->fetch(PDO::FETCH_ASSOC);
+
+		if($result){
+			$id = $result['id'];
+			$this->myDB->query("UPDATE subscriber SET `date` = now(), comments = '', agent_fk = $agent WHERE id = $id");
+		}else{
+			$query = $this->myDB->prepare("INSERT INTO subscriber (name,funnels,address,email,phone, agent_fk, source, type, lang) VALUES(?, ?, ?, ?, ?,?,?,?,?)");
+			$query->execute(array($name,$funnelID,$mail,$email,$tel, $agent, $src, 'subscriber', $lang));
+			$id = $this->myDB->lastInsertId();
+			//$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
+		}
+
+		return $id;
+	}
 
 	/**
 	HOME SELLER LEADS
