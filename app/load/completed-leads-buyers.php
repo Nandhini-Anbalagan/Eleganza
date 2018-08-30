@@ -30,8 +30,8 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 			<th class="text-uppercase"><?php echo $tr['name_contact'] ?></th>
 			<th class="text-uppercase" width="5px"><?php echo $tr['funnels'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['notes'] ?></th>
-			<th class="text-uppercase"><?php echo $tr['buying_in'] ?></th>
-			<th class="text-uppercase"><?php echo $tr['no_beds'] ?></th>
+			<!-- <th class="text-uppercase"><?php echo $tr['buying_in'] ?></th>
+			<th class="text-uppercase"><?php echo $tr['no_beds'] ?></th>-->
 			<th class="text-uppercase"><?php echo $tr['source'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['date'] ?></th>
 		</tr>
@@ -85,7 +85,7 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 					<textarea class="form-control" name="comments" data-id="<?php echo $l['id'] ?>"><?php echo $l['comments'] ?></textarea>
 				</form>
 			</td>
-			<td><?php echo Functions::getSellingIn($l['buying'], $agent['agent_lang']); ?>
+			<!-- <td><?php echo Functions::getSellingIn($l['buying'], $agent['agent_lang']); ?>
 				<br>
 				<div class="btn-group dropdown">
 					<button type="button" class="btn btn-white btn-xs dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"><i class="caret"></i></button>
@@ -110,7 +110,7 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 					</ul>
 				</div>
 			</td>
-			<td class="text-center"><?php echo $l['bedrooms'] ?></td>
+			<td class="text-center"><?php echo $l['bedrooms'] ?></td> -->
 			<td><?php echo Functions::getSource($l['source']) ?></td>
 			<td  data-order="<?php echo date_format(date_create($l['date']), 'Ymd') ?>"><?php echo date_format(date_create($l['date']), 'F jS Y') . "<br>" . date_format(date_create($l['date']), 'h:i A') ?></td>
 		</tr>

@@ -52,18 +52,18 @@ $postCaseAreaSingle = Tokenizer::add('post-case-area-single', 30, 'single');
 						foreach ($agentsMapping as $v){
 
 							if($v['mapping_type'] == "1") {
-								if ($v['lead_type'] == "home_buyers")
+								if ($v['lead_type'] == "subscriber")
 									$bull = 'b';
-								else if ($v['lead_type'] == "home_sellers")
+								else if ($v['lead_type'] == "sponsor")
 									$bull = 's';
 								else
 									$bull = 's';
 								echo "<img style='width: 20px;' src='assets/img/button_$bull.png' alt='buyer'>";
 								echo '<span class="label label-table label-primary">' . $v['lead_name'] . '</span><br>';
 							}else {
-								if ($v['agent_slug'] == "home_buyers")
+								if ($v['agent_slug'] == "subscriber")
 									$bull = 'b';
-								else if ($v['agent_slug'] == "home_sellers")
+								else if ($v['agent_slug'] == "sponsor")
 									$bull = 's';
 								else
 									$bull = 's';
@@ -124,9 +124,9 @@ $postCaseAreaSingle = Tokenizer::add('post-case-area-single', 30, 'single');
 								<select class="select2 select2-multiple" name="agents[]" multiple="multiple" multiple data-placeholder="Choose ...">
 									<optgroup label="Leads">
 										<?php foreach ($leads as $l) {
-											if ($l['lead_type'] == "home_buyers")
+											if ($l['lead_type'] == "subscriber")
 												$bull = 'b';
-											else if ($l['lead_type'] == "home_sellers")
+											else if ($l['lead_type'] == "sponsor")
 												$bull = 's';
 											else
 												$bull = 's';
@@ -136,9 +136,9 @@ $postCaseAreaSingle = Tokenizer::add('post-case-area-single', 30, 'single');
 
 									<optgroup label="Agents">
 										<?php foreach ($agents as $a) {
-											if ($a['agent_slug'] == "home_buyers")
+											if ($a['agent_slug'] == "subscriber")
 												$bull = 'b';
-											else if ($a['agent_slug'] == "home_sellers")
+											else if ($a['agent_slug'] == "sponsor")
 												$bull = 's';
 											else
 												$bull = 's';
@@ -198,9 +198,9 @@ $postCaseAreaSingle = Tokenizer::add('post-case-area-single', 30, 'single');
 								<select class="select2 select2-multiple" name="agents[]" multiple="multiple" multiple data-placeholder="Choose ...">
 									<optgroup label="Leads">
 										<?php foreach ($leads as $l) {
-											if ($l['lead_type'] == "home_buyers")
+											if ($l['lead_type'] == "subscriber")
 												$bull = 'b';
-											else if ($l['lead_type'] == "home_sellers")
+											else if ($l['lead_type'] == "sponsor")
 												$bull = 's';
 											else
 												$bull = 's';
@@ -210,9 +210,9 @@ $postCaseAreaSingle = Tokenizer::add('post-case-area-single', 30, 'single');
 
 									<optgroup label="Agents">
 										<?php foreach ($agents as $a) {
-											if ($a['agent_slug'] == "home_buyers")
+											if ($a['agent_slug'] == "subscriber")
 												$bull = 'b';
-											else if ($a['agent_slug'] == "home_sellers")
+											else if ($a['agent_slug'] == "sponsor")
 												$bull = 's';
 											else
 												$bull = 's';

@@ -50,7 +50,7 @@
 					<form onsubmit="return validate(this);">
 						<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-agentLead', 20, 'agentLead'); ?>">
 						<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-agent-requestNewArea', 20, 'requestNewArea'); ?>">
-						<input type="hidden" name="buyer_option" value="seller">
+						<input type="hidden" name="buyer_option" value="subscriber">
 						<div class="form-group">
 							<label for="desiredArea"><?php echo $tr['desire_area'] ?></label>
 							<input type="text" id="desiredArea" name="desiredArea" class="form-control" />
@@ -235,7 +235,8 @@
 		<script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
 
 <!--		<script src="https://maps.google.com/maps/api/js?key=AIzaSyDSOaCXDTQy_VXFflgZg19OwFqLIUmZ1eM&amp;libraries=places&language=en&sensor=false"></script>-->
-		<script src="https://maps.google.com/maps/api/js?key=AIzaSyB8hEM4oF88dSUvW3MidSqSlbDf4oxwRXI&amp;libraries=places&language=en&sensor=false"></script>
+		<!-- <script src="https://maps.google.com/maps/api/js?key=AIzaSyB8hEM4oF88dSUvW3MidSqSlbDf4oxwRXI&amp;libraries=places&language=en&sensor=false"></script> -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8hEM4oF88dSUvW3MidSqSlbDf4oxwRXI&amp;libraries=places"></script>
 		<script>
 			google.maps.event.addDomListener(window, 'load', function(){
 				var input = document.getElementById('address');

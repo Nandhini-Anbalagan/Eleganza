@@ -264,7 +264,9 @@ function executeAction(action, data){
 			modal.find('input[name="id"]').val(data['area_id']);
 			modal.find('input[name="areaName"]').val(data['area_name']);
 			modal.find('input[name="latlng"]').val(data['area_latlng']);
-			var agents = data['area_agents'].split(",");
+			var agents=[]
+			if( data['area_agents'] !=null)
+			 agents= data['area_agents'].split(",");
 
 			var str = [];
 			for(var i=0; i<agents.length; i++)

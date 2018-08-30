@@ -1057,9 +1057,15 @@ ADD SUBSCRIBER
 			$id = $this->myDB->lastInsertId();
 			//$this->myDB->query("INSERT INTO home_sellers_meta(home_lead_fk) VALUES($id)");
 		}
+
 		$query = $this->myDB->prepare("SELECT * FROM subscriber WHERE id = ?");
 		$query->execute(array($id));
 		$res = $query->fetch();
+
+		if($res['name'] != '' AND $res['address'] != '' AND $res['mail'] != ''){
+					$this->myDB->query("UPDATE subscriber SET status = 1 WHERE id = " . $res['id']);
+					return $res;
+				}
 
 		return $res;
 	}
