@@ -1133,8 +1133,18 @@ ADD SUBSCRIBER
 
   public function updateEntries($name, $phoneno, $email, $area, $company, $subject,$id){
 		$query = $this->myDB->prepare("UPDATE sponsor SET name = ?, phone = ?, email = ?, address = ?, company = ?, messages = ?  WHERE id = ?");
-		$query->execute(array($name, $phoneno, $email, $area, $company, $subject,$id));
-    return 1;
+		$res = $query->execute(array($name, $phoneno, $email, $area, $company, $subject,$id));
+
+		$query = $this->myDB->prepare("SELECT * FROM sponsor WHERE id = ?");
+	  $query->execute(array($id));
+		$res = $query->fetch();
+
+		if($res['name'] != '' AND $res['phone'] != '' AND $res['email'] != ''){
+					$this->myDB->query("UPDATE sponsor SET status = 1 WHERE id = " . $res['id']);
+					return $res;
+				}
+
+		return $res;
 	}
 	public function updateHomeLeadsPartial($col, $val, $id){
 		$query = $this->myDB->prepare("UPDATE sponsor SET {$col} = ? WHERE id = ?");
@@ -1181,7 +1191,9 @@ ADD SUBSCRIBER
 	public function getAgentsLead($id, $table){
 		$query = $this->myDB->query("SELECT * FROM $table WHERE name != '' AND email != '' AND phone != '' AND agent_fk = $id AND status > 0 ORDER BY `date` DESC");
 		return $query->fetchAll(PDO::FETCH_ASSOC);
+
 	}
+
 
 	public function getAgentArchievedLead($id, $table){
 		$query = $this->myDB->query("SELECT * FROM $table WHERE agent_fk = $id AND status = 0 ORDER BY id DESC");

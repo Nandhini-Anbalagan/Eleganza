@@ -34,7 +34,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 			<th class="text-uppercase" width="5px"><?php echo $tr['funnels'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['notes'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['address'] ?></th>
-			<th class="text-uppercase"><?php echo $tr['selling_in'] ?></th>
+			<!-- <th class="text-uppercase"><?php echo $tr['selling_in'] ?></th> -->
 			<th class="text-uppercase"><?php echo $tr['source'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['date'] ?></th>
 		</tr>
@@ -125,7 +125,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 				</form>
 			</td>
 			<td><a href="https://www.google.com/maps/place/<?php echo str_replace(array(',',' ','#'), array('','+','%23'),$add); ?>" target="_blank"> <?php echo $street . "<br>" . implode(",", $address) ?></a></td>
-			<td><?php echo Functions::getSellingIn($l['selling'], $agent['agent_lang']); ?>
+			<!-- <td><?php echo Functions::getSellingIn($l['selling'], $agent['agent_lang']); ?>
 				<br>
 				<div class="btn-group dropdown">
 					<button type="button" class="btn btn-white btn-xs dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"><i class="caret"></i></button>
@@ -149,7 +149,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 						<?php } ?>
 					</ul>
 				</div>
-			</td>
+			</td> -->
 			<td><?php echo Functions::getSource($l['source']) ?></td>
 			<td  data-order="<?php echo date_format(date_create($l['date']), 'Ymd') ?>"><?php echo date_format(date_create($l['date']), 'F jS Y') . "<br>" . date_format(date_create($l['date']), 'h:i A') ?></td>
 		</tr>
