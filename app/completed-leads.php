@@ -21,7 +21,7 @@
 					</ul>
 				</div>
 				<a id="daterange" class="pull-right btn btn-success" style="margin-right: 10px;"><span class="fa fa-filter"></span> <?php echo $tr['filter'] ?></a>
-				<?php if($_SESSION['user']['agent_slug'] == "home_sellers"): ?>
+				<?php if($_SESSION['user']['agent_slug'] == "sponsor"): ?>
 				<a class="pull-right btn btn-warning" data-toggle="modal" data-target="#add-new-lead-modal" style="margin-right: 10px;"><span class="fa fa-plus"></span> <?php echo $tr['add_new_lead'] ?></a>
 				<?php endif; ?>
 				<a href="archived-leads" class="pull-right btn btn-primary" style="margin-right: 10px;"><span class="fa fa-clock-o"></span> Archives</a>
@@ -31,7 +31,7 @@
 						<div class="col-md-12">
 							<div id="completed-leads-wrapper">
 								<?php
-									if($_SESSION['user']['agent_slug'] == "home_sellers")
+									if($_SESSION['user']['agent_slug'] == "sponsor")
 										require_once('load/completed-leads.php');
 									else
 										require_once('load/completed-leads-buyers.php');
@@ -135,11 +135,11 @@
 							<label class="control-label col-sm-3" for="type"><?php echo $tr['type'] ?></label>
 							<div class="col-sm-5">
 								<select class="form-control fancy" name="type" id="type">
-									<option><?php echo $tr['seller'] ?></option>
-									<option><?php echo $tr['buyer'] ?></option>
-									<option><?php echo $tr['buyer_seller'] ?></option>
-									<option><?php echo $tr['reft'] ?></option>
-									<option><?php echo $tr['rental'] ?></option>
+									<option><?php echo $tr['subscriber'] ?></option>
+									<option><?php echo $tr['sponsor'] ?></option>
+									<option><?php echo $tr['subscriber_sponsor'] ?></option>
+									<!-- <option><?php echo $tr['reft'] ?></option>
+									<option><?php echo $tr['rental'] ?></option> -->
 								</select>
 							</div>
 						</div>

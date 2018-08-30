@@ -67,11 +67,11 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 					<div class="dropdown">
 						<button type="button" class="btn btn-block btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $l['type'] ?> <span class="caret"></span></button>
 						<ul class="dropdown-menu type">
-							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['seller'] ?></a></li>
-							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['buyer'] ?></a></li>
-							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['buyer_seller'] ?></a></li>
-							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['reft'] ?></a></li>
-							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['rental'] ?></a></li>
+							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber'] ?></a></li>
+							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['sponsor'] ?></a></li>
+							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber_sponsor'] ?></a></li>
+							<!-- <li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['reft'] ?></a></li>
+							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['rental'] ?></a></li> -->
 						</ul>
 					</div>
 				</div>
@@ -139,6 +139,7 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 				+ '<input type="hidden" name="switch" value="' + $(this).prop("checked") + '">');
 			$('#<?php echo $dynamicFormId; ?>').submit();
 			$('#<?php echo $dynamicFormId; ?>').empty();
+			alert('case');
 		});
 	});
 
