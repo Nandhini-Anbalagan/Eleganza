@@ -25,9 +25,9 @@ $postCaseLandingPic = Tokenizer::add('post-case-landing-picture', 30, 'picture')
 				<div class="card-box">
 					<div id="landings-wrapper">
 						<?php
-							if($_SESSION['user']['agent_slug'] == "home_sellers")
+							if($_SESSION['user']['agent_slug'] == "sponsor")
 								require_once('load/seller_landings.php');
-							else if($_SESSION['user']['agent_slug'] == "home_buyers")
+							else if($_SESSION['user']['agent_slug'] == "subscriber")
 								require_once('load/buyer_landings.php');
 						?>
 					</div>
