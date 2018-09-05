@@ -1,10 +1,10 @@
-<?php 
+<?php
 if(file_exists('../head.php'))
 	require_once('../head.php');
 if(isset($_GET['range']))
-	$leads = $db->filterDateAgentsPartialLead($_SESSION['user']['agent_id'], 'home_sellers', $_GET['range']);
+	$leads = $db->filterDateAgentsPartialLead($_SESSION['user']['agent_id'], 'sponsor', $_GET['range']);
 else
-	$leads = $db->getAgentsPartialLead($_SESSION['user']['agent_id'], 'home_sellers'); 
+	$leads = $db->getAgentsPartialLead($_SESSION['user']['agent_id'], 'sponsor');
 
 ?>
 
@@ -18,13 +18,13 @@ else
 			<th><?php echo $tr['name_contact'] ?></th>
 			<th class="no-sort"><?php echo $tr['notes'] ?></th>
 			<th class="no-sort"><?php echo $tr['address'] ?></th>
-			<th><?php echo $tr['selling_in'] ?></th>
+			<!-- <th><?php echo $tr['selling_in'] ?></th> -->
 			<th><?php echo $tr['source'] ?></th>
 			<th><?php echo $tr['date'] ?></th>
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach ($leads as $l) { 
+		<?php foreach ($leads as $l) {
 			$address = explode(",", $l['address']);
 			$street = $address[0];
 			array_shift($address);
@@ -60,7 +60,7 @@ else
 					</form>
 				</td>
 				<td><a href="https://www.google.com/maps/place/<?php echo str_replace(array(',',' ','#'), array('','+','%23'),$add); ?>" target="_blank"> <?php echo $street . "<br>" . implode(",", $address) ?></a></td>
-				<td><?php echo Functions::getSellingIn($l['selling'], $agent['agent_lang']); ?> 
+				<!-- <td><?php echo Functions::getSellingIn($l['selling'], $agent['agent_lang']); ?>
 				<br>
 				<div class="btn-group dropdown">
 					<button type="button" class="btn btn-white btn-xs dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"><i class="caret"></i></button>
@@ -72,7 +72,7 @@ else
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="3">6-12 months</a></li>
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="4">12+ months</a></li>
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="5">Just curious</a></li>
-						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="6">Refinancing</a></li> 
+						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="6">Refinancing</a></li>
 						<?php }else{ ?>
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="0">Non séléctionné</a></li>
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="1">1-3 Mois</a></li>
@@ -84,7 +84,7 @@ else
 						<?php } ?>
 					</ul>
 				</div>
-			</td>
+			</td> -->
 				<td><?php echo Functions::getSource($l['source']) ?></td>
 				<td  data-order="<?php echo date_format(date_create($l['date']), 'Ymd') ?>"><?php echo date_format(date_create($l['date']), 'F jS Y') . "<br>" . date_format(date_create($l['date']), 'h:i A') ?></td>
 			</tr>
@@ -118,7 +118,7 @@ else
 		});
 
 		$('body').on('click','.selling li a', function(e){
-			e.preventDefault(); 
+			e.preventDefault();
 			$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-agentLead', 20, 'agentLead'); ?>">'
 				+ '<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-case-agentLead-selling', 20, 'selling'); ?>">'
 				+ '<input type="hidden" name="id" value="' + $(this).data('id') + '">'

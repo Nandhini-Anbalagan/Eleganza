@@ -43,11 +43,11 @@
 								<input type="text" id="address" name="address" class="form-control"  placeholder="Address">
 							</div>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label class="control-label col-sm-3" for="selling"><?php echo $tr['selling_in'] ?></label>
-							<div class="col-sm-9"> 
+							<div class="col-sm-9">
 
-								<select class="form-control input-sm fancy" name="selling" id="selling"> 
+								<select class="form-control input-sm fancy" name="selling" id="selling">
 									<?php if($_SESSION['user']['agent_lang'] == "EN"){ ?>
 									<option value="0">Not Selected</option>
 									<option value="1">1-3 months</option>
@@ -55,7 +55,7 @@
 									<option value="3">6-12 months</option>
 									<option value="4">12+ months</option>
 									<option value="5">Just curious</option>
-									<option value="6">Refinancing</option> 
+									<option value="6">Refinancing</option>
 									<?php }else{ ?>
 									<option value="0">Non séléctionné</option>
 									<option value="1">1-3 Mois</option>
@@ -67,18 +67,18 @@
 									<?php } ?>
 								</select>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="form-group">
 							<label class="control-label col-sm-3" for="lang"><?php echo $tr['language'] ?></label>
-							<div class="col-sm-5"> 
-								<select class="form-control input-sm fancy" name="lang" id="lang"> 
+							<div class="col-sm-5">
+								<select class="form-control input-sm fancy" name="lang" id="lang">
 									<option value="e">English</option>
 									<option value="f">Français</option>
 								</select>
 							</div>
 						</div>
-						
+
 						<div class="form-group">
 							<div class="col-sm-12 text-center">
 								<button type="submit" class="btn btn-success waves-effect waves-light" name="status"><?php echo $tr['save'] ?></button>

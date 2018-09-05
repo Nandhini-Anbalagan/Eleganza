@@ -29,9 +29,9 @@
 						<div class="col-md-12">
 							<div id="partial-leads-wrapper">
 								<?php
-									if($_SESSION['user']['agent_slug'] == "home_sellers")
+									if($_SESSION['user']['agent_slug'] == "sponsor")
 										require_once('load/partial-leads.php');
-									else if($_SESSION['user']['agent_slug'] == "home_buyers")
+									else if($_SESSION['user']['agent_slug'] == "subscriber")
 										require_once('load/partial-leads-buyers.php');
 								?>
 							</div>
@@ -105,7 +105,7 @@
 	});
 
 	$('body').on('click','.selling li a', function(e){
-		e.preventDefault(); 
+		e.preventDefault();
 		$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-agentLead', 20, 'agentLead'); ?>">'
 			+ '<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-case-agentLead-selling', 20, 'selling'); ?>">'
 			+ '<input type="hidden" name="id" value="' + $(this).data('id') + '">'
@@ -149,11 +149,11 @@
 		$('input:checkbox',"#partial_datatable").each(function () {
 			if(this.checked && $(this).val() != "on" && $(this).parents('tr').find('td:nth-child(3) a').html() != "" && emails.indexOf($(this).parents('tr').find('td:nth-child(3) a').html()) === -1)
 				emails += $(this).parents('tr').find('td:nth-child(3) a span.email').html() + ",";
-			
+
 		});
-		
+
 		emails = emails.substring(0, emails.length - 1);
-		
+
 		if(emails != ""){
 			$('#compose-modal').modal('show');
 			$('[name="to"]').val(emails);
@@ -169,14 +169,14 @@
 			},
 			<?php } ?>
 			"aoColumnDefs": [{
-			  "bSortable": false, 
+			  "bSortable": false,
 			  "aTargets": [0,1,3,4,6]
 			}],
 			"aaSorting": [],
 			"bStateSave": true
 		});
 	}
-	
+
 </script>
 <?php require_once('footer.php'); ?>
 <?php require_once('foot.php'); ?>

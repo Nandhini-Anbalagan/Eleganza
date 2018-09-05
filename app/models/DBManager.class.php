@@ -1284,7 +1284,7 @@ ADD SUBSCRIBER
 	}
 
 	public function getSingleAgentsLead($id){
-		$query = $this->myDB->query("SELECT * FROM sponsor hs JOIN home_sellers_meta AS hm ON hm.home_lead_fk = hs.id WHERE hs.id = $id");
+		$query = $this->myDB->query("SELECT * FROM sponsor hs WHERE hs.id = $id");
 		return $query->fetch(PDO::FETCH_ASSOC);
 	}
 

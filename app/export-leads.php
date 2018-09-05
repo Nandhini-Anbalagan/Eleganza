@@ -20,11 +20,11 @@ $data = '<tr>
 	<td>'. $tr['language'] .'</td>
 	</tr>';
 
-if ($_GET['type'] == "completed" || $_GET['type'] == "all"){ 
+if ($_GET['type'] == "completed" || $_GET['type'] == "all"){
 	$leads = $db->getAgentsLead($_SESSION['user']['agent_id'],$_SESSION['user']['agent_slug']);
 	$data .= "<tr><td>Completed Leads</td></tr>";
 
-	foreach ($leads as $l) { 
+	foreach ($leads as $l) {
 		$address = explode(",", $l['address']);
 		$street = $address[0];
 		array_shift($address);
@@ -50,11 +50,11 @@ if ($_GET['type'] == "completed" || $_GET['type'] == "all"){
 
 }
 
-if ($_GET['type'] == "partial" || $_GET['type'] == "all"){ 
+if ($_GET['type'] == "partial" || $_GET['type'] == "all"){
 	$leads = $db->getAgentsPartialLead($_SESSION['user']['agent_id'],$_SESSION['user']['agent_slug']);
 	$data .= "<tr><td>Partial Leads</td></tr>";
 
-	foreach ($leads as $l) { 
+	foreach ($leads as $l) {
 		$address = explode(",", $l['address']);
 		$street = $address[0];
 		array_shift($address);
@@ -78,11 +78,11 @@ if ($_GET['type'] == "partial" || $_GET['type'] == "all"){
 	$data .= "<tr></tr>";
 }
 
-if ($_GET['type'] == "addresses" || $_GET['type'] == "all"){ 
+if ($_GET['type'] == "addresses" || $_GET['type'] == "all"){
 	$leads = $db->getAgentsLeadAddresses($_SESSION['user']['agent_id']);
 	$data .= "<tr><td>Addresses</td></tr>";
 
-	foreach ($leads as $l) { 
+	foreach ($leads as $l) {
 		$address = explode(",", $l['address']);
 		$street = $address[0];
 		array_shift($address);

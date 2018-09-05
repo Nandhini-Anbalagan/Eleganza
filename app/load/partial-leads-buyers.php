@@ -1,10 +1,10 @@
-<?php 
+<?php
 if(file_exists('../head.php'))
 	require_once('../head.php');
 if(isset($_GET['range']))
-	$leads = $db->filterDateAgentsPartialLead($_SESSION['user']['agent_id'], "home_buyers", $_GET['range']);
+	$leads = $db->filterDateAgentsPartialLead($_SESSION['user']['agent_id'], "subscriber", $_GET['range']);
 else
-	$leads = $db->getAgentsPartialLead($_SESSION['user']['agent_id'], "home_buyers");
+	$leads = $db->getAgentsPartialLead($_SESSION['user']['agent_id'], "subscriber");
 
 ?>
 
@@ -23,7 +23,7 @@ else
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach ($leads as $l) { 
+		<?php foreach ($leads as $l) {
 			/*$address = explode(",", $l['address']);
 			$street = $address[0];
 			array_shift($address);
@@ -58,7 +58,7 @@ else
 						<textarea class="form-control" name="comments" data-id="<?php echo $l['id'] ?>"><?php echo $l['comments'] ?></textarea>
 					</form>
 				</td>
-				<td><?php echo Functions::getSellingIn($l['buying'], $agent['agent_lang']); ?> 
+				<td><?php echo Functions::getSellingIn($l['buying'], $agent['agent_lang']); ?>
 				<br>
 				<div class="btn-group dropdown">
 					<button type="button" class="btn btn-white btn-xs dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"><i class="caret"></i></button>
@@ -70,7 +70,7 @@ else
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="3">6-12 months</a></li>
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="4">12+ months</a></li>
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="5">Just curious</a></li>
-						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="6">Refinancing</a></li> 
+						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="6">Refinancing</a></li>
 						<?php }else{ ?>
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="0">Non séléctionné</a></li>
 						<li><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="1">1-3 Mois</a></li>
@@ -116,7 +116,7 @@ else
 		});
 
 		$('body').on('click','.selling li a', function(e){
-			e.preventDefault(); 
+			e.preventDefault();
 			$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-agentLead', 20, 'agentLead'); ?>">'
 				+ '<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-case-agentLead-selling', 20, 'selling'); ?>">'
 				+ '<input type="hidden" name="id" value="' + $(this).data('id') + '">'

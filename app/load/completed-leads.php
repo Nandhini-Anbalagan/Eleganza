@@ -97,9 +97,9 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 					<div class="dropdown">
 						<button type="button" class="btn btn-block btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $l['type'] ?> <span class="caret"></span></button>
 						<ul class="dropdown-menu danger type">
-							<li class="<?php echo $l['type'] == $tr['seller']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['seller'] ?></a></li>
-							<li class="<?php echo $l['type'] == $tr['buyer']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['buyer'] ?></a></li>
-							<li class="<?php echo $l['type'] == $tr['buyer_seller']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['buyer_seller'] ?></a></li>
+							<li class="<?php echo $l['type'] == $tr['sponsor']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['sponsor'] ?></a></li>
+							<li class="<?php echo $l['type'] == $tr['subscriber']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber'] ?></a></li>
+							<li class="<?php echo $l['type'] == $tr['subscriber_sponsor']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber_sponsor'] ?></a></li>
 							<li class="<?php echo $l['type'] == $tr['reft']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['reft'] ?></a></li>
 							<li class="<?php echo $l['type'] == $tr['rental']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['rental'] ?></a></li>
 						</ul>
