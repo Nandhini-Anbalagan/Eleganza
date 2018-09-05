@@ -11,15 +11,16 @@
 				<div class="p-20">
 					<h4 class="page-title"><?php echo $tr['settings'] ?></h4>
 					<div class="list-group mail-list  m-t-20">
+						<input type="hidden" value ="<?php echo $_GET['settings'] ?>"/>
 						<a href="settings" class="list-group-item b-0 <?php echo !isset($_GET['section'])?'active':'' ?>"><b><i class="fa fa-download m-r-10"></i><?php echo $tr['account_settings'] ?></b></a>
-						<a href="settings/lead_statues" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "lead_statues")?'active':'' ?>"><b><i class="fa fa-star-o m-r-10"></i><?php echo $tr['lead_statues'] ?></a>
+						<a href="settings?section=lead_statues" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "lead_statues")?'active':'' ?>"><b><i class="fa fa-star-o m-r-10"></i><?php echo $tr['lead_statues'] ?></a>
 						<?php if(!isset($_SESSION['teammate'])){ ?>
-						<a href="settings/subscription_payment" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "subscription_payment")?'active':'' ?>"><b><i class="fa fa-money m-r-10"></i><?php echo $tr['subscription_payment'] ?></b></a>
-						<a href="settings/payment_history" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "payment_history")?'active':'' ?>"><b><i class="fa fa-trash-o m-r-10"></i><?php echo $tr['payment_history'] ?></b></a>
-						<a href="settings/team" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "team")?'active':'' ?>"><b><i class="fa fa-users m-r-10"></i><?php echo $tr['team'] ?></b></a>
+						<a href="settings?section=subscription_payment" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "subscription_payment")?'active':'' ?>"><b><i class="fa fa-money m-r-10"></i><?php echo $tr['subscription_payment'] ?></b></a>
+						<a href="settings?section=payment_history" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "payment_history")?'active':'' ?>"><b><i class="fa fa-trash-o m-r-10"></i><?php echo $tr['payment_history'] ?></b></a>
+						<a href="settings?section=team" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "team")?'active':'' ?>"><b><i class="fa fa-users m-r-10"></i><?php echo $tr['team'] ?></b></a>
 						<?php } ?>
-						<a href="settings/upload_leads" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "upload_leads")?'active':'' ?>"><b><i class="fa fa-upload m-r-10"></i><?php echo $tr['upload_leads'] ?></b></a>
-						<a href="settings/trainings" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "trainings")?'active':'' ?>"><i class="fa fa-book m-r-10"></i><?php echo $tr['trainings'] ?></b></a>
+						<a href="settings?section=upload_leads" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "upload_leads")?'active':'' ?>"><b><i class="fa fa-upload m-r-10"></i><?php echo $tr['upload_leads'] ?></b></a>
+						<a href="settings?section=trainings" class="list-group-item b-0 <?php echo (isset($_GET['section']) AND $_GET['section'] == "trainings")?'active':'' ?>"><i class="fa fa-book m-r-10"></i><?php echo $tr['trainings'] ?></b></a>
 					</div>
 				</div>
 			</div>

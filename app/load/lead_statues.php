@@ -35,7 +35,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php 
+					<?php
 					foreach ($db->getAgentStatus($_SESSION['user']['agent_id']) as $value) {
 						?>
 						<tr>
@@ -69,7 +69,7 @@
 				</table>
 			</div>
 
-<script>	
+<script>
 
 $('body').on('click', '.cancel, .edit', function(e){
 	e.preventDefault();
@@ -83,13 +83,13 @@ $('body').on('click', '.delete', function(e){
 	var actionCase = $(this).data('case');
 	var name = $(this).data('name');
 
-	swal({   
-		title: "Are you sure?",   
-		text: "You will not be able to recover this " + status + "!",   
-		type: "warning",   
-		showCancelButton: true,   
+	swal({
+		title: "Are you sure?",
+		text: "You will not be able to recover this " + status + "!",
+ "warning",
+		showCancelButton: true,
 		confirmButtonColor: "#DD6B55",
-		confirmButtonText: "Yes, delete it!",   
+		confirmButtonText: "Yes, delete it!",
 		closeOnConfirm: false
 	}, function(){
 		$("#<?php echo Tokenizer::get('dynamic-form-id', Tokenizer::GET_TOKEN); ?>").append(
