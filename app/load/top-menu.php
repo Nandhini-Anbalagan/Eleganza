@@ -40,7 +40,7 @@
 						<a href="settings"><i class="md md-settings"></i><?php echo $tr['settings'] ?></a>
 					</li>
 					<li>
-						<a href="<?php echo isset($_SESSION['admin'])?'?backAdmin':'core/logout' ?>"><i class="md md-exit-to-app"></i><?php echo $tr['log_out'] ?></a>
+						<a href="<?php echo isset($_SESSION['admin'])?'?backAdmin':'logout' ?>"><i class="md md-exit-to-app"></i><?php echo $tr['log_out'] ?></a>
 					</li>
 				</ul>
 			</div>
@@ -84,7 +84,7 @@
 						<a href="agents"><i class="md md-perm-identity"></i>Customer</a>
 					</li>
 					<li>
-						<a href="core/logout"><i class="md md-exit-to-app"></i>Log Out</a>
+						<a href="logout"><i class="md md-exit-to-app"></i>Log Out</a>
 					</li>
 				</ul>
 			</div>
@@ -133,7 +133,7 @@
 					</li>
 					<?php endif ?>
 					<li>
-						<a href="core/logout"><i class="md md-exit-to-app"></i>Log Out</a>
+						<a href="logout"><i class="md md-exit-to-app"></i>Log Out</a>
 					</li>
 				</ul>
 			</div>
