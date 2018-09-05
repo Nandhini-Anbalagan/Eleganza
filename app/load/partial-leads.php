@@ -5,7 +5,7 @@ if(isset($_GET['range']))
 	$leads = $db->filterDateAgentsPartialLead($_SESSION['user']['agent_id'], 'sponsor', $_GET['range']);
 else
 	$leads = $db->getAgentsPartialLead($_SESSION['user']['agent_id'], 'sponsor');
-
+echo "string";
 ?>
 
 <table id="partial_datatable" class="table table-striped table-responsive table-bordered">
