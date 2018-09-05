@@ -57,7 +57,7 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 								else
 									$active = $k == 0?'active':'';
 
-								echo '<li class="'.$active.'"><a href="javascript:void(0)" data-status="'.$s['id'].'" data-lead="'.$l['id'].'">'.$s['name_en'].'</a></li>';
+								echo '<li class="'.$active.'"><a href="javascript:void(0)" data-status="'.$s['id'].'"data-type=subscriber data-lead="'.$l['id'].'">'.$s['name_en'].'</a></li>';
 							}
 
 						?>

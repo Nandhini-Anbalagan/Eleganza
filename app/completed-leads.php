@@ -198,7 +198,8 @@
 			$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-agentLead', 20, 'agentLead'); ?>">'
 				+ '<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-case-agentLead-status', 20, 'status'); ?>">'
 				+ '<input type="hidden" name="id" value="' + $(this).data('lead') + '">'
-				+ '<input type="hidden" name="status" value="' + $(this).data('status') + '">');
+				+ '<input type="hidden" name="status" value="' + $(this).data('status') + '">'
+			+ '<input type="hidden" name="type" value="' + $(this).data('type') + '">');
 			$('#<?php echo $dynamicFormId; ?>').submit();
 			$('#<?php echo $dynamicFormId; ?>').empty();
 		});
