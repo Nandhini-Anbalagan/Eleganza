@@ -361,3 +361,4 @@ CREATE TABLE `sponsor` (
 
 ALTER TABLE unbeleadsablev1.`sponsor`
 ADD (`messages` varchar(255), `company` varchar(100));
+ 
