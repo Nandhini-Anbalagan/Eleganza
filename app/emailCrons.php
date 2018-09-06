@@ -15,7 +15,7 @@ spl_autoload_register(function ($class) {
 });
 
 $db = new DBManager();
-$leads = $db->getLeadsForCron("home_sellers");
+$leads = $db->getLeadsForCron("sponsor");
 $test = 0;
 
 foreach ($leads as $l) {
@@ -50,7 +50,7 @@ foreach ($leads as $l) {
 	}
 }
 
-$leads = $db->getLeadsForCron("home_buyers");
+$leads = $db->getLeadsForCron("subscriber");
 
 foreach ($leads as $l) {
 	if(!$db->getBlacklistEmail($l['email'])){

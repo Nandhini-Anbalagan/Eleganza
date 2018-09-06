@@ -189,44 +189,6 @@ CREATE TABLE unbeleadsablev1.`funnels_sent` (
   UNIQUE KEY `lead` (`lead`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12694 DEFAULT CHARSET=latin1;
 
-CREATE TABLE unbeleadsablev1.`home_buyers` (
-  `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
-  `agent_fk` int(10) unsigned NOT NULL,
-  `name` varchar(150) NOT NULL DEFAULT '',
-  `phone` varchar(25) NOT NULL DEFAULT '',
-  `email` varchar(50) NOT NULL DEFAULT '',
-  `funnels` tinyint(3) unsigned DEFAULT NULL,
-  `funnel_switch` tinyint(1) DEFAULT '1',
-  `buying` varchar(200) DEFAULT NULL,
-  `bedrooms` varchar(10) DEFAULT NULL,
-  `source` varchar(30) NOT NULL,
-  `type` varchar(30) NOT NULL DEFAULT 'Buyer',
-  `comments` text,
-  `status` tinyint(3) NOT NULL DEFAULT '-1',
-  `lang` varchar(1) NOT NULL DEFAULT 'e',
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
-
-CREATE TABLE unbeleadsablev1.`home_sellers` (
-  `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
-  `agent_fk` int(10) unsigned NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `name` varchar(150) NOT NULL DEFAULT '',
-  `phone` varchar(25) NOT NULL DEFAULT '',
-  `email` varchar(50) NOT NULL DEFAULT '',
-  `funnels` tinyint(3) unsigned DEFAULT NULL,
-  `funnel_switch` tinyint(1) DEFAULT '1',
-  `selling` varchar(200) DEFAULT NULL,
-  `source` varchar(30) NOT NULL,
-  `type` varchar(30) NOT NULL DEFAULT 'Seller',
-  `comments` text NOT NULL,
-  `status` tinyint(3) NOT NULL DEFAULT '-1',
-  `lang` varchar(1) NOT NULL DEFAULT 'e',
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=79440 DEFAULT CHARSET=latin1;
-
 
 CREATE TABLE `home_sellers_meta` (
   `value_range` varchar(100) DEFAULT NULL,
@@ -373,7 +335,7 @@ CREATE TABLE unbeleadsablev1.`subscriber` (
 
 CREATE TABLE `sponsor` (
   `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
- 
+
  `agent_fk` int(10) unsigned NOT NULL,
   `address` varchar(255) NOT NULL,
 
@@ -385,17 +347,17 @@ CREATE TABLE `sponsor` (
 
   `funnel_switch` tinyint(1) DEFAULT '1',
   `source` varchar(30) NOT NULL,
-  
+
 `type` varchar(30) NOT NULL DEFAULT 'sponsor',
   `comments` text NOT NULL,
 
   `status` tinyint(3) NOT NULL DEFAULT '-1',
   `lang` varchar(1) NOT NULL DEFAULT 'e',
- 
+
  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
- 
+
  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=79440 DEFAULT CHARSET=latin1
 
-ALTER TABLE unbeleadsablev1.`sponsor` 
+ALTER TABLE unbeleadsablev1.`sponsor`
 ADD (`messages` varchar(255), `company` varchar(100));

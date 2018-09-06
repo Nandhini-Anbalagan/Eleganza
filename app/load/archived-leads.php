@@ -1,4 +1,4 @@
-<?php 
+<?php
 if(file_exists('../head.php'))
 	require_once('../head.php');
 
@@ -13,7 +13,7 @@ if(file_exists('../head.php'))
 				<tr>
 					<th width="10px" class="no-sort"><input id="selectAll" data-toggle="tooltip" data-placement="right" data-original-title="Select All" type="checkbox" class="styledCheckbox"></th>
 					<th><?php echo $tr['name_contact'] ?></th>
-					<?php if($_SESSION['user']['agent_slug'] == "home_sellers"): ?>
+					<?php if($_SESSION['user']['agent_slug'] == "sponsor"): ?>
 					<th class="no-sort"><?php echo $tr['address'] ?></th>
 					<?php endif ?>
 					<th class="no-sort"><?php echo $tr['notes'] ?></th>
@@ -23,12 +23,12 @@ if(file_exists('../head.php'))
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($archieved as $l) { 
-					if($_SESSION['user']['agent_slug'] == "home_sellers"):
+				<?php foreach ($archieved as $l) {
+					if($_SESSION['user']['agent_slug'] == "sponsor"):
 						$address = explode(",", $l['address']);
 						$street = $address[0];
 						array_shift($address);
-						
+
 						$noApt = explode(" ", $l['address']);
 
 						if(strpos($noApt[0], "#") === 0)
@@ -36,7 +36,7 @@ if(file_exists('../head.php'))
 
 						$add = implode(" ", $noApt);
 
-						
+
 						$a = explode(",", $add);
 						$s = $a[0];
 						$c = count($a)>0?$a[count($a) - 1]:'';
@@ -49,8 +49,8 @@ if(file_exists('../head.php'))
 							<input type="checkbox" class="styledCheckbox" value="<?php echo $l['id'] ?>">
 						</td>
 						<td style="position: relative" data-name="<?php echo $l['name'] ?>" data-lang="<?php echo $l['lang'] ?>" data-email="<?php echo $l['email'] ?>"><span class="<?php echo $l['lang'] == 'e'?'en':'fr' ?>"></span><a href="lead/<?php echo IDObfuscator::encode($l['id']) ?>"><span style="color: #E51937;font-weight:bold"><?php echo $l['name'] . "</span><br>" . $l['phone'] . "<br><span class='email'>" .  $l['email'] ."</span>" ?></a></td>
-						
-						<?php if($_SESSION['user']['agent_slug'] == "home_sellers"): ?>
+
+						<?php if($_SESSION['user']['agent_slug'] == "sponsor"): ?>
 						<td><?php echo $street . "<br>" . implode(",", $address) ?></td>
 						<?php endif ?>
 						<td>

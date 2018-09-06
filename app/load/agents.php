@@ -74,9 +74,9 @@ $totalAgents = count($agents);
 				if($value['status'] == 2 || $value['agent_status'] == 3)
 					$bg = 'background-color: rgba(229, 25, 55, 0.3)!important';
 
-				if ($value['agent_slug'] == "home_buyers")
+				if ($value['agent_slug'] == "subscriber")
 					$bull = 'b';
-				else if ($value['agent_slug'] == "home_sellers")
+				else if ($value['agent_slug'] == "sponsor")
 					$bull = 's';
 				?>
 				<tr style="<?php echo $bg ?>">

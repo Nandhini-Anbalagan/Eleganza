@@ -1,6 +1,6 @@
 <?php isset($_SESSION['teammate'])?die("Access Denied"):'' ?>
 
-<?php 
+<?php
 	$dynamicFormId = Tokenizer::get('dynamic-form-id', Tokenizer::GET_TOKEN);
 	$postActionPayments = Tokenizer::add('post-action-payments', 20, 'payments');
 	$postCaseMailTo = Tokenizer::add('post-case-mailTo', 30, 'mailTo');
@@ -26,7 +26,7 @@
 		</thead>
 
 		<tbody>
-			<?php foreach ($db->getAgentInvoice($_SESSION['user']['agent_id']) AS $value) { 
+			<?php foreach ($db->getAgentInvoice($_SESSION['user']['agent_id']) AS $value) {
 				$desc = "";
 				$desc .= $value['install'] > 0?'Installation, ':'';
 				$desc .= $value['monthly'] > 0?'Montly Payment, ':'';
@@ -52,14 +52,14 @@
 	$('a.mailTo').on('click', function(e){
 			e.preventDefault();
 			var id = $(this).data('id');
-			swal({   
-				title: "Are you sure?",   
-				text: "You want to send this invoice to your email? ",   
-				type: "warning",   
-				showCancelButton: true,   
-				confirmButtonColor: "#DD6B55",   
-				confirmButtonText: "Yes, send it!",   
-				closeOnConfirm: false 
+			swal({
+				title: "Are you sure?",
+				text: "You want to send this invoice to your email? ",
+				type: "warning",
+				showCancelButton: true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Yes, send it!",
+				closeOnConfirm: false
 			}, function(){
 				$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo $postActionPayments; ?>">'
 					+ '<input type="hidden" name="case" value="<?php echo $postCaseMailTo; ?>">'
@@ -69,4 +69,3 @@
 			});
 		});
 </script>
-

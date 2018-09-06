@@ -1127,7 +1127,6 @@ ADD SUBSCRIBER
 		$query = $this->myDB->prepare("INSERT INTO sponsor VALUES(:id,:agent_fk,:address,:name,:phone,:email,:funnels,:funnel_switch,:selling,:source,:type,:comments,:status,:lang,:dateAdded)");
 		$query->execute($array);
 		$meta['home_lead_fk'] = $this->myDB->lastInsertId();
-	//	$query = $this->myDB->prepare("INSERT INTO home_sellers_meta VALUES(:value_range,:value_epp,:beds,:baths,:sqft,:buying_frame,:price_range,:neighborhood,:prequalified,:lender,:lender_phone,:lender_email,:loan_type,:credit,:planning_sell,:alert_setup,:other_contact,:other_contact_phone,:other_contact_email,:home_lead_fk)");
 		$query->execute($meta);
 	}
 
