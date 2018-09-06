@@ -48,7 +48,7 @@
             and revenue by targeting the right audience!
           </p>
             <div class="button-group">
-              <a href="index2.php" class="btn btn-common">Find out more</a>
+              <button onclick="redirectPage()" class="btn btn-common">Find out more</button>
               <a href="#" class="btn btn-border">Reach Us</a>
             </div>
             <div class="social mt-4">
@@ -96,6 +96,19 @@
               { src: "assets/img/slider.png" }
           ]
       });
+      function getParameterByName( name ){
+        var regexS = "[\\?&]"+name+"=([^&#]*)",
+      regex = new RegExp( regexS ),
+      results = regex.exec( window.location.search );
+      if( results == null ){
+        return "";
+      } else{
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+    }
+    function redirectPage(){
+      window.location="index2.php?a="+getParameterByName("a")+"&l="+getParameterByName("e")+"&s="+getParameterByName("s");
+    }
     </script>
 
   </body>
