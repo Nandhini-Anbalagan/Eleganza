@@ -1282,6 +1282,11 @@ ADD SUBSCRIBER
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	public function getSingleAgentsLeadGeneric($id,$table){
+		$query = $this->myDB->query("SELECT * FROM $table hs WHERE hs.id = $id");
+		return $query->fetch(PDO::FETCH_ASSOC);
+	}
+
 	public function getSingleAgentsLead($id){
 		$query = $this->myDB->query("SELECT * FROM sponsor hs WHERE hs.id = $id");
 		return $query->fetch(PDO::FETCH_ASSOC);

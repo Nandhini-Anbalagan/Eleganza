@@ -175,6 +175,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 			$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-agentLead', 20, 'agentLead'); ?>">'
 				+ '<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-case-agentLead-pause', 20, 'pause'); ?>">'
 				+ '<input type="hidden" name="id" value="' + $(this).data('id') + '">'
+				+ '<input type="hidden" name="agenttype" value="' + $(this).data('agenttype') + '">'
 				+ '<input type="hidden" name="switch" value="' + $(this).prop("checked") + '">');
 			$('#<?php echo $dynamicFormId; ?>').submit();
 			$('#<?php echo $dynamicFormId; ?>').empty();

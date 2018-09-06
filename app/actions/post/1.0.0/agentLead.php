@@ -199,7 +199,7 @@ switch ($_POST['case']) {
 	case "pause":
 		$resultObj['no-message'] = true;
 		if(isset($_POST['id'])){
-			$lead = $db->getSingleAgentsLead($_POST['id']);
+			$lead = $db->getSingleAgentsLeadGeneric($_POST['id'],$_POST['agenttype']);
 			if($lead){
 				if($_POST['switch'] == 'true'){
 					$db->removeBlacklist($lead['email']);
