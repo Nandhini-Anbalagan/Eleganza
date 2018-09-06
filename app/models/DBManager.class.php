@@ -1062,7 +1062,7 @@ ADD SUBSCRIBER
 		$query->execute(array($id));
 		$res = $query->fetch();
 
-		if($res['name'] != '' AND $res['address'] != '' AND $res['mail'] != ''){
+		if($res['name'] != '' AND $res['address'] != '' AND $res['email'] != ''){
 					$this->myDB->query("UPDATE subscriber SET status = 1 WHERE id = " . $res['id']);
 					return $res;
 				}
