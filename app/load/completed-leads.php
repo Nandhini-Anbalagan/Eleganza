@@ -87,7 +87,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 								else
 									$active = $k == 0?'active':'';
 
-								echo '<li class="'.$active.'"><a href="javascript:void(0)" data-status="'.$s['id'].'" data-lead="'.$l['id'].'">'.$s[$sta_name].'</a></li>';
+								echo '<li class="'.$active.'"><a href="javascript:void(0)" data-status="'.$s['id'].'" data-agenttype="sponsor" data-lead="'.$l['id'].'">'.$s[$sta_name].'</a></li>';
 							}
 
 						?>
@@ -97,23 +97,23 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 					<div class="dropdown">
 						<button type="button" class="btn btn-block btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $l['type'] ?> <span class="caret"></span></button>
 						<ul class="dropdown-menu danger type">
-							<li class="<?php echo $l['type'] == $tr['sponsor']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['sponsor'] ?></a></li>
-							<li class="<?php echo $l['type'] == $tr['subscriber']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber'] ?></a></li>
-							<li class="<?php echo $l['type'] == $tr['subscriber_sponsor']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber_sponsor'] ?></a></li>
-							<li class="<?php echo $l['type'] == $tr['reft']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['reft'] ?></a></li>
-							<li class="<?php echo $l['type'] == $tr['rental']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['rental'] ?></a></li>
+							<li class="<?php echo $l['type'] == $tr['sponsor']?'active':'' ?>"><a href="javascript:void(0)" data-agenttype="sponsor" data-id="<?php echo $l['id'] ?>"><?php echo $tr['sponsor'] ?></a></li>
+							<li class="<?php echo $l['type'] == $tr['subscriber']?'active':'' ?>"><a href="javascript:void(0)" data-agenttype="sponsor" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber'] ?></a></li>
+							<li class="<?php echo $l['type'] == $tr['subscriber_sponsor']?'active':'' ?>"><a href="javascript:void(0)" data-agenttype="sponsor" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber_sponsor'] ?></a></li>
+							<li class="<?php echo $l['type'] == $tr['reft']?'active':'' ?>"><a href="javascript:void(0)" data-agenttype="sponsor" data-id="<?php echo $l['id'] ?>"><?php echo $tr['reft'] ?></a></li>
+							<li class="<?php echo $l['type'] == $tr['rental']?'active':'' ?>"><a href="javascript:void(0)" data-agenttype="sponsor" data-id="<?php echo $l['id'] ?>"><?php echo $tr['rental'] ?></a></li>
 						</ul>
 					</div>
 				</div>
 			</td>
 			<td style="position: relative" data-name="<?php echo $l['name'] ?>" data-lang="<?php echo $l['lang'] ?>" data-email="<?php echo $l['email'] ?>"><span class="<?php echo $l['lang'] == 'e'?'en':'fr' ?>"></span><?php echo $evalSent ?><a href="lead/<?php echo IDObfuscator::encode($l['id']) ?>"><span style="color: #E51937;font-weight:bold"><?php echo $l['name'] . "</span><br>" . $l['phone'] . "<br><span class='email'>" .  $l['email'] ."</span>" ?></a></td>
 			<td align="center">
-				<input type="checkbox" class="funnel" data-id="<?php echo $l['id'] ?>" <?php echo Functions::search_array($l['email'], $blackLists)?'':'checked'; ?> data-plugin="switchery" data-color="#81C868" data-size="small"/>
+				<input type="checkbox" class="funnel" data-agenttype="sponsor" data-id="<?php echo $l['id'] ?>" <?php echo Functions::search_array($l['email'], $blackLists)?'':'checked'; ?> data-plugin="switchery" data-color="#81C868" data-size="small"/>
 				<div class="btn-group dropdown">
 					<button type="button" class="btn btn-white btn-xs dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"><i class="caret"></i></button>
 					<ul class="dropdown-menu danger selectFunnel" role="menu">
 						<?php foreach ($funnelCat as $funnel) { ?>
-						<li class="<?php echo $l['funnels'] == $funnel['id']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>" data-value="<?php echo $funnel['id'] ?>"><?php echo $funnel['title'] ?></a></li>
+						<li class="<?php echo $l['funnels'] == $funnel['id']?'active':'' ?>"><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?> " data-agenttype="sponsor"  data-value="<?php echo $funnel['id'] ?>"><?php echo $funnel['title'] ?></a></li>
 						<?php } ?>
 						<li><a class="notMe" href="funnels"><?php echo $tr['create_new_funnel'] ?></a></li>
 					</ul>
@@ -121,7 +121,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 			</td>
 			<td>
 				<form>
-					<textarea class="form-control" name="comments" data-id="<?php echo $l['id'] ?>"><?php echo $l['comments'] ?></textarea>
+					<textarea class="form-control" name="comments" data-agenttype="sponsor"  data-id="<?php echo $l['id'] ?>"><?php echo $l['comments'] ?></textarea>
 				</form>
 			</td>
 			<td><a href="https://www.google.com/maps/place/<?php echo str_replace(array(',',' ','#'), array('','+','%23'),$add); ?>" target="_blank"> <?php echo $street . "<br>" . implode(",", $address) ?></a></td>

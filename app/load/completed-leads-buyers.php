@@ -57,7 +57,7 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 								else
 									$active = $k == 0?'active':'';
 
-								echo '<li class="'.$active.'"><a href="javascript:void(0)" data-status="'.$s['id'].'"data-type=subscriber data-lead="'.$l['id'].'">'.$s['name_en'].'</a></li>';
+								echo '<li class="'.$active.'"><a href="javascript:void(0)" data-agenttype="subscriber" data-status="'.$s['id'].'"data-type=subscriber data-lead="'.$l['id'].'">'.$s['name_en'].'</a></li>';
 							}
 
 						?>
@@ -67,9 +67,9 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 					<div class="dropdown">
 						<button type="button" class="btn btn-block btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $l['type'] ?> <span class="caret"></span></button>
 						<ul class="dropdown-menu type">
-							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber'] ?></a></li>
-							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['sponsor'] ?></a></li>
-							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber_sponsor'] ?></a></li>
+							<li class=""><a href="javascript:void(0)" data-agenttype="subscriber" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber'] ?></a></li>
+							<li class=""><a href="javascript:void(0)" data-agenttype="subscriber" data-id="<?php echo $l['id'] ?>"><?php echo $tr['sponsor'] ?></a></li>
+							<li class=""><a href="javascript:void(0)" data-agenttype="subscriber" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber_sponsor'] ?></a></li>
 							<!-- <li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['reft'] ?></a></li>
 							<li class=""><a href="javascript:void(0)" data-id="<?php echo $l['id'] ?>"><?php echo $tr['rental'] ?></a></li> -->
 						</ul>
@@ -78,11 +78,11 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 			</td>
 			<td style="position: relative" data-name="<?php echo $l['name'] ?>" data-lang="<?php echo $l['lang'] ?>" data-email="<?php echo $l['email'] ?>"><span class="<?php echo $l['lang'] == 'e'?'en':'fr' ?>"></span><span style="color: #E51937;font-weight:bold"><?php echo $l['name'] . "</span><br>" . $l['phone'] . "<br><span class='email'>" .  $l['email'] ."</span>" ?></td>
 			<td align="center">
-				<input type="checkbox" class="funnel" data-id="<?php echo $l['id'] ?>" <?php echo Functions::search_array($l['email'], $blackLists)?'':'checked'; ?> data-plugin="switchery" data-color="#81C868" data-size="small"/>
+				<input type="checkbox" class="funnel" data-agenttype="subscriber" data-id="<?php echo $l['id'] ?>" <?php echo Functions::search_array($l['email'], $blackLists)?'':'checked'; ?> data-plugin="switchery" data-color="#81C868" data-size="small"/>
 			</td>
 			<td>
 				<form>
-					<textarea class="form-control" name="comments" data-id="<?php echo $l['id'] ?>"><?php echo $l['comments'] ?></textarea>
+					<textarea class="form-control" name="comments" data-agenttype="subscriber" data-id="<?php echo $l['id'] ?>"><?php echo $l['comments'] ?></textarea>
 				</form>
 			</td>
 			<!-- <td><?php echo Functions::getSellingIn($l['buying'], $agent['agent_lang']); ?>

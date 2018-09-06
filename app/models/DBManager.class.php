@@ -1318,7 +1318,8 @@ ADD SUBSCRIBER
 	}
 
 	public function addCommentsHomeLeads($arr){
-		$query = $this->myDB->prepare("UPDATE sponsor SET comments = ? WHERE id = ?");
+		$updatequer="UPDATE ".$arr['agenttype']." SET comments = ? WHERE id = ?";
+		$query = $this->myDB->prepare($updatequer);
 		$query->execute(array($arr['comments'], $arr['id']));
 	}
 
@@ -1328,17 +1329,20 @@ ADD SUBSCRIBER
 	}
 
 	public function updateFunnelSwitch($arr){
-		$query = $this->myDB->prepare("UPDATE sponsor SET funnel_switch = ? WHERE id = ?");
+		$updatequer="UPDATE ".$arr['agenttype']." SET funnel_switch = ? WHERE id = ?";
+		$query = $this->myDB->prepare($updatequer);
 		$query->execute(array($arr['switch'], $arr['id']));
 	}
 
 	public function updateStatus($arr){
-		$query = $this->myDB->prepare("UPDATE sponsor SET status = ? WHERE id = ?");
+		$updatequer="UPDATE ".$arr['agenttype']." SET status = ? WHERE id = ?";
+		$query = $this->myDB->prepare($updatequer);
 		$query->execute(array($arr['status'], $arr['id']));
 	}
 
 	public function updateType($arr){
-		$query = $this->myDB->prepare("UPDATE sponsor SET type = ? WHERE id = ?");
+		$updatequer="UPDATE ".$arr['agenttype']." SET type = ? WHERE id = ?";
+		$query = $this->myDB->prepare($updatequer);
 		$query->execute(array($arr['text'], $arr['id']));
 	}
 
