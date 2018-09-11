@@ -126,7 +126,8 @@ body {
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">ELEGANZA MAGAZINE | ONLINE</div>
+          <div class="intro-lead-in">ELEGANZA MEDIA ONLINE</div>
+					<div class="intro-mid">LEAD GENERATION SOFTWARE | MARKETING FUNNEL MANAGEMENT</div>
           <div class="intro-heading text-uppercase">Fashion | Luxury | Travel | Design | Beauty | Automobile | Food & Drink</div>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
         </div>

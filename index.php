@@ -1,46 +1,99 @@
 <?php include("header.php") ?>
     <!-- Services -->
 
-      <section id="services">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">We Provide</h2>
-
-            </div>
-          </div>
-          <div class="row text-center">
-            <div class="col-md-4">
-              <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-              </span>
-              <h4 class="service-heading">Digital Publication</h4>
-              <p class="text-muted">Eleganza Magazine is the luxury lifestyle publication. Our aim is to bring something carefully curated and with real purpose.</p>
-            </div>
-            <div class="col-md-4">
-              <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-              </span>
-              <h4 class="service-heading">Free Subscription</h4>
-              <p class="text-muted">Enjoy our free subscription facility!</p>
-            </div>
-            <div class="col-md-4">
-              <span class="fa-stack fa-4x">
-                <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                <i class="fa  fa-camera-retro fa-stack-1x fa-inverse"></i>
-              </span>
-              <h4 class="service-heading">Magazine Online</h4>
-              <p class="text-muted">Intriguing interviews, intelligent prose, striking photography, and simply the best in Travel, Automobiles, Design, Fashion, Art, Architecture, Culture and Fine dining.</p>
-            </div>
-          </div>
-          <center><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Get to Know About Us</a>
-          </center>
+    <section class="bg-white" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-heading text-center">Features</h2>
+        <p class="section-lead text-center"><b>Your Net worth is Your Network! Start Building Your Client Database</b></p>
+        <div class="divider">
+          <i class="fa fa-user bg-white"></i>
         </div>
-        <br/>
-        <br/>
-      </section>
+      </div>
+      <div class="row wow fadeInUp">
+        <div class="col-sm-6 feature-item">
+          <div class="feature-icon">
+            <i class="fa fa-language"></i>
+          </div>
+          <div class="feature-desc">
+            <h3 class="service-heading">Multi-Language Platform</h3>
+            <p>Set your language preference once and then navigate the back-end data in the language of your choice. Widen the pool of potential sellers by offering international prospects a platform that is optimized for their use; landing ​pages that indicate end-user language preferences, enabling you to better communicate with prospective leads.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 feature-item">
+          <div class="feature-icon">
+            <i class="fa fa-laptop"></i>
+          </div>
+          <div class="feature-desc">
+            <h3 class="service-heading">Landing Pages</h3>
+            <p>We make it easy for you to generate leads and manage them!<br>Highly optimized landing pages that ensure maximum lead conversion rates. Your dedicated Unbeleadsable webpage will turn your traffic into leads, and capture home addresses, contact information, and selling timeframe.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row wow fadeInUp">
+        <div class="col-sm-6 feature-item">
+          <div class="feature-icon">
+            <i class="fa fa-envelope"></i>
+          </div>
+          <div class="feature-desc">
+            <h3 class="service-heading">411 Data</h3>
+            <p>An automated quick and easy lookup tool to convert an incomplete lead profile to a completed contact lead for your database.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 feature-item">
+          <div class="feature-icon">
+            <i class="fa fa-file-text-o"></i>
+          </div>
+          <div class="feature-desc">
+            <h3 class="service-heading">Address Captures</h3>
+            <p>Automated address capture feature enabling you to create mailings lists and also convert leads to maximize your sales possibilities!</p>
+          </div>
+        </div>
+      </div>
+      <div class="row wow fadeInUp">
+        <div class="col-sm-6 feature-item">
+          <div class="feature-icon">
+            <i class="fa fa-address-book"></i>
+          </div>
+          <div class="feature-desc">
+            <h3 class="service-heading">Easy To Use CRM</h3>
+            <p>Simple preset with quick access CRM and lead management system.</p>
+          </div>
+        </div>
+          <div class="col-sm-6 feature-item">
+            <div class="feature-icon">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div class="feature-desc">
+              <h3 class="service-heading">Welcome and setup calls</h3>
+              <p>Exclusive Facebook discussion and HOW-TO forum for members and Customer support call system</p>
+            </div>
+          </div>
+        </div>
+      <div class="row wow fadeInUp">
+        <div class="col-sm-6 feature-item">
+          <div class="feature-icon hidden-xxs">
+            <i class="fa fa-archive"></i>
+          </div>
+          <div class="feature-desc">
+            <h3 class="service-heading">Automated Email/SMS Follow-ups</h3>
+            <p>Preset follow-up funnels. Email/SMS funnels that’s keep you in constant contact with your leads. Automated Email Campaigns Designed to Convert Your Leads. Fully Automated emails (that get results!)</p>
+          </div>
+        </div>
+        <div class="col-sm-6 feature-item">
+          <div class="feature-icon">
+            <i class="fa fa-users"></i>
+          </div>
+          <div class="feature-desc">
+            <h3 class="service-heading">A Support Community For You!</h3>
+            <p>A dedicated help community looking to build relationships between professionals to maximize their knowledgebase and help with lead optimization!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
 
     <!-- Portfolio Grid -->
