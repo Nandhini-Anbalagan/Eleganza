@@ -82,7 +82,9 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 					<td class="actions text-center">
 						<a href="#" title="View Lead" class="viewLead" data-toggle="modal" data-target="#view-modal" data-id="<?php echo $value['lead_id'] ?>"><i class="fa fa-eye"></i></a>
 						<?php if($_SESSION['user']["level"] > 50){ ?>
+							<?php if($value['lead_type'] == 'sponsor'): ?>
 						<a href="#" data-id="<?php echo $value['lead_id'] ?>" title="Auto Convert Lead" class="text-success auto-convert"><i class="fa fa-check"></i></a>
+            <?php endif ?>
 						<?php } ?>
 						<a href="#" title="Send Email to Lead" class="sendEmail"><i class="fa fa-envelope"></i></a>
 						<a href="#" data-toggle="modal" data-target="#edit-modal" data-id="<?php echo $value['lead_id'] ?>" title="Edit Lead" class="edit-row"><i class="fa fa-pencil"></i></a>
