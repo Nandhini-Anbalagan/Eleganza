@@ -93,11 +93,10 @@ $totalAgents = count($agents);
 					<td class="actions text-center">
 						<a title="View Lead" class="viewAgent" data-toggle="modal" data-target="#view-modal" data-id="<?php echo $value['agent_id'] ?>"><i class="fa fa-eye"></i></a>
 						<?php if($_SESSION['user']["level"] > 20){ ?>
+						<a href="?mockUser=<?php echo IDObfuscator::encode($value['agent_id']) ?>" title="View Agent's Account" class="on-default edit-row"><i class="fa fa-globe"></i></a>
 						<a title="Send Email to agent" class="on-default sendEmail"><i class="fa fa-envelope"></i></a>
 						<a data-toggle="modal" data-target="#edit-modal" data-id="<?php echo $value['agent_id'] ?>" title="Edit agent" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-            <?php if($value['agent_slug'] == 'sponsor'): ?>
-							<a href="?mockUser=<?php echo IDObfuscator::encode($value['agent_id']) ?>" title="View Agent's Account" class="on-default edit-row"><i class="fa fa-globe"></i></a>
-						<?php endif ?>
+
 						<?php if($value['agent_status'] == 3): ?>
 							<a data-name="<?php echo $value['agent_name'] ?>" data-agent="<?php echo $value['agent_id'] ?>" data-user="<?php echo $value['user_id'] ?>" title="UnLock agent" class="on-default unlock-row"><i class="fa fa-lock"></i></a>
 						<?php else: ?>
