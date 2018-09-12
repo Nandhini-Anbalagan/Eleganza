@@ -95,7 +95,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 					</div>
 					<br>
 					<div class="dropdown">
-						<button type="button" class="btn btn-block btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $l['type'] ?> <span class="caret"></span></button>
+						<button type="button" class="btn btn-block btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo ($l['type'] == "sponsor")?$tr['sponsor']:$tr['subscriber'] ?> <span class="caret"></span></button>
 						<ul class="dropdown-menu danger type">
 							<li class="<?php echo $l['type'] == $tr['sponsor']?'active':'' ?>"><a href="javascript:void(0)" data-agenttype="sponsor" data-id="<?php echo $l['id'] ?>"><?php echo $tr['sponsor'] ?></a></li>
 							<li class="<?php echo $l['type'] == $tr['subscriber']?'active':'' ?>"><a href="javascript:void(0)" data-agenttype="sponsor" data-id="<?php echo $l['id'] ?>"><?php echo $tr['subscriber'] ?></a></li>

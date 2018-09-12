@@ -148,7 +148,7 @@ $zeAgent = isset($_SESSION['user']['agent_id'])?$_SESSION['user']['agent_id']:0;
 												<select name="type" id="type" class="form-control fancy">
 													<option value="">--Select Type--</option>
 													<option value="subscriber">Subscriber</option>
-													<option value="sponsor">Sponsor</option>
+													<option value="sponsor">Advertiser</option>
 												</select>
 											</div>
 										</div>
@@ -193,7 +193,7 @@ $zeAgent = isset($_SESSION['user']['agent_id'])?$_SESSION['user']['agent_id']:0;
 												<select name="type" id="editType" class="form-control fancy">
 													<option value="">--Select Type--</option>
 													<option value="subscriber">Subscriber</option>
-													<option value="sponsor">Sponsor</option>
+													<option value="sponsor">Advertiser</option>
 												</select>
 											</div>
 										</div>

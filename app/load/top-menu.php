@@ -16,7 +16,7 @@
 						<ul class="submenu">
 							<li class="<?php echo $page == 'completed-leads'?'active':''; ?>"><a href="completed-leads"><?php echo $tr['completed_leads'] ." (" . $stats['completed'] . ")" ?></a></li>
 							<li class="<?php echo $page == 'partial-leads'?'active':''; ?>"><a href="partial-leads"><?php echo $tr['partial_leads'] ." (" . $stats['partial'] . ")" ?></a></li>
-							<?php if($_SESSION['user']['agent_slug'] == 'sponsor'): ?>
+							<?php if($_SESSION['user']['agent_slug'] == 'advertiser'): ?>
 							<li class="<?php echo $page == 'address-capture'?'active':''; ?>"><a href="address-capture">
 							<?php echo $tr['address_capture'] ." (" . $stats['address'] . ")" ?></a></li>
 							<li class="<?php echo $page == 'tasks'?'active':''; ?>"><a href="tasks"><?php echo $tr['task'] . " (".COUNT($db->getUpcomingTasks()).")" ?></a></li>
@@ -30,7 +30,7 @@
 						<a href="funnels"><i class="md md-description"></i><?php echo $tr['funnels'] ?></a>
 					</li>
 
-					<?php if($_SESSION['user']['agent_slug'] == 'sponsor'): ?>
+					<?php if($_SESSION['user']['agent_slug'] == 'advertiser'): ?>
 					<li class="<?php echo $page == 'evaluation'?'active':''; ?>">
 						<a href="evaluation"><i class="md md-receipt"></i><?php echo $tr['evaluation'] ?></a>
 					</li>
@@ -58,7 +58,7 @@
 							foreach ($areas as $value) {
 								if ($value['agent_slug'] == "subscriber")
 									$bull = 'b';
-								else if ($value['agent_slug'] == "sponsor")
+								else if ($value['agent_slug'] == "advertiser")
 									$bull = 's';
 								if($value['agent_id'] != $_SESSION['user']['agent_id'])
 									echo '<li><a href="?switchAccount='.IDObfuscator::encode($value['agent_id']).'"><img style="width: 20px;" src="assets/img/button_'. $bull .'.png" alt="buyer">'.explode(",", $value['area_name'])[0].'</a></li>';
@@ -105,7 +105,7 @@
 						<a href="agent_budget" class="dropdown-toggle" data-toggle="dropdown"><i class="md md-shopping-basket"></i>Budgets</a>
 						<ul class="dropdown-menu">
 							<li><a href="agent_buyer_budget"><img style="width: 20px;" src="assets/img/sub.png" alt="buyer"> Subscriber</a></li>
-							<li><a href="agent_seller_budget"><img style="width: 20px;" src="assets/img/sub.png" alt="buyer"> Sponsor</a></li>
+							<li><a href="agent_seller_budget"><img style="width: 20px;" src="assets/img/sub.png" alt="buyer"> Advertiser</a></li>
 						</ul>
 					</li>
 					<?php if($_SESSION['user']["level"] != 0): ?>
@@ -117,7 +117,7 @@
 						<a href="landings" class="dropdown-toggle" data-toggle="dropdown"><i class="md md-extension"></i>Landing Pages</a>
 						<ul class="dropdown-menu">
 							<li><a href="buyer_landings"><img style="width: 20px;" src="assets/img/sub.png" alt="buyer"> Subscriber</a></li>
-							<li><a href="seller_landings"><img style="width: 20px;" src="assets/img/sub.png" alt="buyer"> Sponsor</a></li>
+							<li><a href="seller_landings"><img style="width: 20px;" src="assets/img/sub.png" alt="buyer"> Advertiser</a></li>
 						</ul>
 					</li>
 					<li class="<?php echo $page == 'emails' || $page == "templates" || $page == "groups" ?'active':''; ?>">
@@ -149,7 +149,7 @@
 				$bull = 's';
 				if ($_SESSION['user']['agent_slug'] == "subscriber")
 					$bull = 'b';
-				else if ($_SESSION['user']['agent_slug'] == "sponsor")
+				else if ($_SESSION['user']['agent_slug'] == "advertiser")
 					$bull = 's';
 			?>
 				<div class="avatar" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['add_avatar'] ?>" style="background-image: url(uploads/avatars/<?php echo trim($_SESSION['user']['agent_avatar']) ?>)"></div>

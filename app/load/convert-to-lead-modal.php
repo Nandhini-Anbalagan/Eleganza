@@ -23,7 +23,7 @@
 								<div class="col-sm-4">
 									<div>
 										<label class="radio-label">
-											Sponsor
+											Advertiser
 											<input type="radio" class="radio-custom" name="subscriber" value="sponsor">
 										</label>
 									</div>
