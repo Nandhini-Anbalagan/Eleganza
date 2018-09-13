@@ -9,9 +9,15 @@ if(isset($_GET['filter'])){
 			$agents = $db->getBuyerAgents();
 	}else if($_GET['filter'] =='sponsor'){
 		$agents = $db->getSellerAgents();
-	}else{
+	}else if($_GET['filter'] =='Active'){
 		$agents = $db->getAgents();
-	}
+	}else if($_GET['filter'] =='Innactive'){
+$agents = $db->getdeactivatedAgents();
+}else if($_GET['filter'] =='All'){
+$agents = $db->getallAgents();
+}else{
+	$agents = $db->getAgents();
+}
 }else if($_SESSION['user']['level'] >= 50)
 	$agents = $db->getAgents();
 else
@@ -35,11 +41,11 @@ $totalAgents = count($agents);
 	<a href="#" class="btn btn-danger waves-effect waves-light m-l-5 pull-right" data-toggle="modal" data-target="#allEmaillModal"><i class="fa fa-envelope"></i>&nbsp;Email All Customers</a>
 	<div class="btn-group pull-right m-l-5">
 	<button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Filter Status<span class="m-l-5"><i class="fa fa-filter"></i></span></button>
-		<ul class="dropdown-menu" role="menu">
-			<li><a class="filter troll" href="#" data-status="1"><span class="m-r-5 text-success"><i class="fa fa-check"></i></span>Active</a></li>
-			<li><a class="filter troll" href="#" data-status="1"><span class="m-r-5 text-warning"><i class="fa fa-ban"></i></span>Error</a></li>
-			<li><a class="filter troll" href="#" data-status="1"><span class="m-r-5 text-danger"><i class="fa fa-times"></i></span>Innactive</a></li>
-			<li><a class="filter troll" href="#" data-status="1"><b><span class="m-r-5 text-inverse"><i class="fa fa-signal"></i></span>All</b></a></li>
+		<ul class="dropdown-menu" id="status" role="menu">
+			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-success"><i class="fa fa-check"></i></span>Active</a></li>
+			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-warning"><i class="fa fa-ban"></i></span>Error</a></li>
+			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-danger"><i class="fa fa-times"></i></span>Innactive</a></li>
+			<li><a class="filter troll" data-status="1"><b><span class="m-r-5 text-inverse"><i class="fa fa-signal"></i></span>All</b></a></li>
 		</ul>
 	</div>
 	<?php } ?>
@@ -48,7 +54,7 @@ $totalAgents = count($agents);
 		<ul class="dropdown-menu" id="myUL" role="menu">
 			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-success"><i class="fa fa-usd"></i></span>Subscriber</a></li>
 			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-primary"><i class="fa fa-shopping-cart"></i></span>Advertiser</a></li>
-			<li><a class="filter troll" data-status="1"><b><span class="m-r-5 text-inverse"><i class="fa fa-signal"></i></span>All</b></a></li>
+			<li><a class="filter troll" data-status="1"><b><span class="m-r-5 text-inverse"><i class="fa fa-signal"></i></span>Both</b></a></li>
 		</ul>
 	</div>
 </div>
@@ -383,11 +389,21 @@ $totalAgents = count($agents);
 				window.location='agents?filter=subscriber';
 			}else if(anchortext == 'Advertiser'){
 				window.location='agents?filter=sponsor';
-			}else if(anchortext == 'All'){
+			}else if(anchortext == 'Both'){
 				window.location='agents?filter=both';
 			}
 
 		});
+			$('#status li a').click(function(e){
+				var anchortext=$(this).text();
+				if(anchortext == 'Active'){
+					window.location='agents?filter=Active';
+				}else if(anchortext == 'Innactive'){
+					window.location='agents?filter=Innactive';
+				}else if(anchortext == 'All'){
+					window.location='agents?filter=All';
+				}
+			});
 
 		$('#view-modal').on('show.bs.modal', function(e) {
 			$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo $postActionAgent; ?>">'
