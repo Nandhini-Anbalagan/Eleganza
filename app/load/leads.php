@@ -3,7 +3,15 @@ if(file_exists("../head.php")){
 	include("../head.php");
 	$dynamicFormId = Tokenizer::get('dynamic-form-id', Tokenizer::GET_TOKEN);
 }
-if($_SESSION['user']['level'] >= 50)
+if(isset($_GET['filter'])){
+	if($_GET['filter'] =='subscriber'){
+			$leads = $db->getBuyerAgentLeads();
+	}else if($_GET['filter'] =='sponsor'){
+		$leads = $db->getSellerAgentLeads();
+	}else{
+		$leads = $db->getAgentLeads();
+	}
+}else if($_SESSION['user']['level'] >= 50)
 	$leads = $db->getAgentLeads();
 else
 	$leads = $db->getAgentLeadsByCountry($_SESSION['user']['user_country']);
@@ -28,11 +36,11 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 	<h2 class="page-title pull-left">New Customer Leads <span class="text-muted font-13">(Total of <span class="users-count"><?php echo $totalLeads; ?> Lead<?php echo $totalLeads > 1 ? 's' : '' ?></span>)</span></h2>
 	<button class="btn btn-danger waves-effect waves-light pull-right m-l-5" data-toggle="modal" data-target="#convert-lead-modal">New lead <i class="fa fa-user-plus"></i></button>
 	<div class="btn-group pull-right">
-	<button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Filter Type<span class="m-l-5"><i class="fa fa-filter"></i></span></button>
-		<ul class="dropdown-menu" role="menu">
-			<li><a class="filter troll" href="#" data-status="1"><span class="m-r-5 text-success"><i class="fa fa-usd"></i></span>Subscriber</a></li>
-			<li><a class="filter troll" href="#" data-status="1"><span class="m-r-5 text-primary"><i class="fa fa-shopping-cart"></i></span>Advertiser</a></li>
-			<li><a class="filter troll" href="#" data-status="1"><b><span class="m-r-5 text-inverse"><i class="fa fa-signal"></i></span>Both</b></a></li>
+	<button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" id="myInput" data-toggle="dropdown" aria-expanded="false">Filter Type<span class="m-l-5"><i class="fa fa-filter"></i></span></button>
+		<ul class="dropdown-menu" id="myUL" role="menu">
+			<li><a class="filter troll" data-status="1"><b><span class="m-r-5 text-inverse"><i class="fa fa-signal"></i></span>Both</b></a></li>
+			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-success"><i class="fa fa-usd"></i></span>Subscriber</a></li>
+			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-primary"><i class="fa fa-shopping-cart"></i></span>Advertiser</a></li>
 		</ul>
 	</div>
 </div>
@@ -300,6 +308,18 @@ $(document).ready(function(){
 			+ '<input type="hidden" name="id" value="' + $(e.relatedTarget).data('id') + '">');
 		$('#<?php echo $dynamicFormId; ?>').submit();
 		$('#<?php echo $dynamicFormId; ?>').empty();
+	});
+
+	$('#myUL li a').click(function(e){
+		var anchortext=$(this).text();
+		if(anchortext == 'Subscriber'){
+			window.location='leads?filter=subscriber';
+		}else if(anchortext == 'Advertiser'){
+			window.location='leads?filter=sponsor';
+		}else if(anchortext == 'Both'){
+			window.location='leads?filter=both';
+		}
+
 	});
 
 	$('#edit-modal').on('show.bs.modal', function(e) {
