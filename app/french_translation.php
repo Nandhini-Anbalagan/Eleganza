@@ -243,6 +243,7 @@
 		"archieved_leads" => "Prospects Archivés",
 		"delete_forver" => "Supprimer à jamais",
 		"recover" => "Récupérer les sélectionnés",
-		"no_beds" => "# de Chambre"
+		"no_beds" => "# de Chambre",
+		"subscription" => "État de l'abonnement"
 	);
 ?>

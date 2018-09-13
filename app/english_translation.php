@@ -244,6 +244,7 @@
 		"archieved_leads" => "Archieved Leads",
 		"delete_forver" => "Delete Selected Forever",
 		"recover" => "Recover Selected",
-		"no_beds" => "# of Bedrooms"
+		"no_beds" => "# of Bedrooms",
+		"subscription" => "Subscription Status"
 	);
 ?>

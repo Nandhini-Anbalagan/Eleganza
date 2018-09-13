@@ -17,7 +17,7 @@ else
 			<th><?php echo $tr['action'] ?></th>
 			<th><?php echo $tr['name_contact'] ?></th>
 			<th class="no-sort"><?php echo $tr['notes'] ?></th>
-			<th><?php echo $tr['selling_in'] ?></th>
+			<!-- <th><?php echo $tr['selling_in'] ?></th> -->
 			<th><?php echo $tr['source'] ?></th>
 			<th><?php echo $tr['date'] ?></th>
 		</tr>
@@ -58,7 +58,7 @@ else
 						<textarea class="form-control" name="comments" data-id="<?php echo $l['id'] ?>"><?php echo $l['comments'] ?></textarea>
 					</form>
 				</td>
-				<td><?php echo Functions::getSellingIn($l['buying'], $agent['agent_lang']); ?>
+				<!-- <td><?php echo Functions::getSellingIn($l['buying'], $agent['agent_lang']); ?>
 				<br>
 				<div class="btn-group dropdown">
 					<button type="button" class="btn btn-white btn-xs dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"><i class="caret"></i></button>
@@ -82,7 +82,7 @@ else
 						<?php } ?>
 					</ul>
 				</div>
-			</td>
+			</td> -->
 				<td><?php echo Functions::getSource($l['source']) ?></td>
 				<td  data-order="<?php echo date_format(date_create($l['date']), 'Ymd') ?>"><?php echo date_format(date_create($l['date']), 'F jS Y') ?></td>
 			</tr>

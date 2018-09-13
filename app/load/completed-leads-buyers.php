@@ -1,7 +1,8 @@
 <?php
 if(file_exists('../head.php'))
 	require_once('../head.php');
-
+	$eleganza=new Eleganza();
+$eleganza->updateSubscriptionStatus($db,$_SESSION['user']['agent_id']);
 if(isset($_GET['range']))
 	$leads = $db->filterDateAgentsLead($_SESSION['user']['agent_id'], 'subscriber', $_GET['range']);
 else
@@ -30,6 +31,7 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 			<th class="text-uppercase"><?php echo $tr['name_contact'] ?></th>
 			<th class="text-uppercase" width="5px"><?php echo $tr['funnels'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['notes'] ?></th>
+			<th class="text-uppercase"><?php echo $tr['subscription'] ?></th>
 			<!-- <th class="text-uppercase"><?php echo $tr['buying_in'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['no_beds'] ?></th>-->
 			<th class="text-uppercase"><?php echo $tr['source'] ?></th>
@@ -111,6 +113,7 @@ foreach ($db->getEvaluationsSent() as $key => $value){
 				</div>
 			</td>
 			<td class="text-center"><?php echo $l['bedrooms'] ?></td> -->
+			<td><?php echo $l['order_status'] ?></td>
 			<td><?php echo Functions::getSource($l['source']) ?></td>
 			<td  data-order="<?php echo date_format(date_create($l['date']), 'Ymd') ?>"><?php echo date_format(date_create($l['date']), 'F jS Y') . "<br>" . date_format(date_create($l['date']), 'h:i A') ?></td>
 		</tr>

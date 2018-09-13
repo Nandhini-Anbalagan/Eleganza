@@ -329,13 +329,23 @@
 				range = sDate;
 
 			$("#smallRange").text(picker.chosenLabel + " (" + range +")");
+			<?php if($_SESSION['user']['agent_slug'] == "sponsor"): ?>
 			$('#completed-leads-wrapper').load("load/completed-leads.php?range="+encodeURI(range));
+			<?php endif; ?>
+			<?php if($_SESSION['user']['agent_slug'] == "subscriber"): ?>
+			$('#completed-leads-wrapper').load("load/completed-leads-buyers.php?range="+encodeURI(range));
+			<?php endif; ?>
 			return false;
 		});
 
 		$('#daterange').on('cancel.daterangepicker', function(ev, picker) {
 			$("#smallRange").text("<?php echo $tr['all'] ?>");
+			<?php if($_SESSION['user']['agent_slug'] == "sponsor"): ?>
 			$('#completed-leads-wrapper').load("load/completed-leads.php");
+			<?php endif; ?>
+			<?php if($_SESSION['user']['agent_slug'] == "subscriber"): ?>
+			$('#completed-leads-wrapper').load("load/completed-leads-buyers.php");
+			<?php endif; ?>
 		});
 	});
 </script>
