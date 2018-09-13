@@ -4,7 +4,15 @@ if(file_exists("../head.php")){
 	$dynamicFormId = Tokenizer::get('dynamic-form-id', Tokenizer::GET_TOKEN);
 }
 
-if($_SESSION['user']['level'] >= 50)
+if(isset($_GET['filter'])){
+	if($_GET['filter'] =='subscriber'){
+			$agents = $db->getBuyerAgents();
+	}else if($_GET['filter'] =='sponsor'){
+		$agents = $db->getSellerAgents();
+	}else{
+		$agents = $db->getAgents();
+	}
+}else if($_SESSION['user']['level'] >= 50)
 	$agents = $db->getAgents();
 else
 	$agents = $db->getAgentsByCountry($_SESSION['user']['user_country']);
@@ -37,10 +45,10 @@ $totalAgents = count($agents);
 	<?php } ?>
 	<div class="btn-group pull-right m-l-5">
 	<button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Filter Type<span class="m-l-5"><i class="fa fa-filter"></i></span></button>
-		<ul class="dropdown-menu" role="menu">
-			<li><a class="filter troll" href="#" data-status="1"><span class="m-r-5 text-success"><i class="fa fa-usd"></i></span>Subscriber</a></li>
-			<li><a class="filter troll" href="#" data-status="1"><span class="m-r-5 text-primary"><i class="fa fa-shopping-cart"></i></span>Advertiser</a></li>
-			<li><a class="filter troll" href="#" data-status="1"><b><span class="m-r-5 text-inverse"><i class="fa fa-signal"></i></span>All</b></a></li>
+		<ul class="dropdown-menu" id="myUL" role="menu">
+			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-success"><i class="fa fa-usd"></i></span>Subscriber</a></li>
+			<li><a class="filter troll" data-status="1"><span class="m-r-5 text-primary"><i class="fa fa-shopping-cart"></i></span>Advertiser</a></li>
+			<li><a class="filter troll" data-status="1"><b><span class="m-r-5 text-inverse"><i class="fa fa-signal"></i></span>All</b></a></li>
 		</ul>
 	</div>
 </div>
@@ -368,6 +376,17 @@ $totalAgents = count($agents);
 			autoWidth: false,
 			responsive: true,
 			"bStateSave": true
+		});
+		$('#myUL li a').click(function(e){
+			var anchortext=$(this).text();
+			if(anchortext == 'Subscriber'){
+				window.location='agents?filter=subscriber';
+			}else if(anchortext == 'Advertiser'){
+				window.location='agents?filter=sponsor';
+			}else if(anchortext == 'All'){
+				window.location='agents?filter=both';
+			}
+
 		});
 
 		$('#view-modal').on('show.bs.modal', function(e) {
