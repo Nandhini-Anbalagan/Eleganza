@@ -568,8 +568,8 @@ class DBManager extends MySQLConnection{
 		// 	$error = $query ->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'], 'subscriber'));
 		// }
 		//if($data['seller_option'] == 1){
-			$query= $this->myDB->prepare("INSERT INTO agent_leads VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)");
-			$error = $query->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'],'sponsor'));
+			$query= $this->myDB->prepare("INSERT INTO agent_leads VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT,?)");
+			$error = $query->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'],'sponsor',$data['industry']));
 		//}
 		return $error;
 	}

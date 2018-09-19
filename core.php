@@ -49,6 +49,7 @@
 				$message .= "Name: " . $_POST['name'] . "<br>";
 				$message .= "Email: " . $_POST['email'] . "<br>";
 				$message .= "Phone: " . $_POST['phone'] . "<br>";
+				$message .= "Industry: " . $_POST['industry'] . "<br>";
 				$message .= "Area: " . $_POST['areas'] . "<br>";
 				$message .= "Province: " . $_POST['state'] . "<br>";
 				$message .= "Agency: " . $_POST['agency'] . "<br>";
@@ -135,7 +136,11 @@
 		$message .= "Name: " . $_POST['name'] . "<br>";
 		$message .= "Email: " . $_POST['email'] . "<br>";
 		$message .= "Phone: " . $_POST['phone'] . "<br>";
-		$message .= "Message: <br>" . $_POST['message'] . "<br>";
+		$message .= "Industry: " . $_POST['industry'] . "<br>";
+		$message .= "Area: " . $_POST['areas'] . "<br>";
+		$message .= "State: " . $_POST['state'] . "<br>";
+		$message .= "Agency: " . $_POST['agency'] . "<br>";
+		$message .= "Reference: " . $_POST['ref'] . "<br>";
 		$message .= "<br>Thank, you";
 
 		Functions::sendEmail($from, $to, $subject, $message);

@@ -325,12 +325,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-sm-12">
             <form id="contactForm" name="sentMessage" novalidate="novalidate">
               <input type="hidden" name="signUp">
 							<input type="hidden" name="lang" value="EN">
+              <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-12">
                   <div class="form-group">
                     <input class="form-control" id="name"  name="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
                     <p class="help-block text-danger"></p>
@@ -339,12 +340,25 @@
                     <input class="form-control" id="email" type="email" name="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
                     <p class="help-block text-danger"></p>
                   </div>
+                </div>
+                <div class="col-sm-6">
                   <div class="form-group">
                     <input class="form-control" id="phone" type="tel" name="phone" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
-                <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <select class="form-control" name="industry" id="industry">
+                       <option value="SI">Service Industry</option>
+                       <option value="SI">Manufacturing Industry</option>
+                       <option value="SI">Retail Industry</option>
+                      </select>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group">
@@ -445,14 +459,14 @@
                   <div id="success"></div>a
                   <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" >Send Message</button>
                 </div>
-              </div>
+
               <div class="col-xs-12 text-center">
 								<div id="success">Registration successful! Please verify your email for further instructions.</div>
 								<div id="error"></div>
 							</div>
             </form>
           </div>
+          </div>
         </div>
-      </div>
     </section>
     <?php include("footer.php") ?>
