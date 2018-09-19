@@ -10,7 +10,7 @@ define('PAYPAL_LOG_FILE', "{$_SERVER['DOCUMENT_ROOT']}/app/models/paypal/log");
 //FEES
 define("INSTALLATION","49.99");
 define("SUBSCRIPTION","99.99");
-define("PTP_CURRENCY_CODE","USD"); 
+define("PTP_CURRENCY_CODE","USD");
 
 /*******************************************************************************************************
     GENERAL SCRIPT CONFIGURATION VARIABLES
@@ -19,7 +19,7 @@ define("PTP_CURRENCY_CODE","USD");
 //OPTIONS
 $admin_email = "support@unbeleadsable.com";
 $redirect_non_https = false;
-$enable_paypal = false; 
+$enable_paypal = false;
 $liveMode = true;
 //5147076288
 
@@ -69,4 +69,3 @@ Expiration Date: 07/2018
 Security Code: 148
 ****************************************************/
 ?>
-

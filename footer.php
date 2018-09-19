@@ -244,12 +244,9 @@
   </div>
 </div>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Core Js -->
+<script src="assets/js/jquery-1.8.2.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
 
 <!-- Contact form JavaScript -->
 <script src="js/jqBootstrapValidation.js"></script>

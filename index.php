@@ -342,12 +342,102 @@
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
+                <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="form-group">
+											<input class="form-control" type="text" name="areas" id="inputAreas1" placeholder="Enter desired city, town or Zip/Postal code" required>
+										</div>
+
+										<div class="form-group">
+											<select class="form-control" name="state" id="state" required>
+												<option value="" disabled selected> State/Province </option>
+												<optgroup label="Canada">
+													<option value="Alberta,CA">Alberta</option>
+													<option value="British Columbia,CA">British Columbia</option>
+													<option value="Manitoba,CA">Manitoba</option>
+													<option value="New Brunswick,CA">New Brunswick</option>
+													<option value="Newfoundland and Labrador,CA">Newfoundland and Labrador</option>
+													<option value="Nova Scotia,CA">Nova Scotia</option>
+													<option value="Northwest Territories,CA">Northwest Territories</option>
+													<option value="Nunavut,CA">Nunavut</option>
+													<option value="Ontario,CA">Ontario</option>
+													<option value="Prince Edward Island,CA">Prince Edward Island</option>
+													<option value="Quebec,CA">Quebec</option>
+													<option value="Saskatchewan,CA">Saskatchewan</option>
+													<option value="Yukon,CA">Yukon</option>
+												</optgroup>
+
+
+												<optgroup label="United States">
+													<option value="Alabama,US">Alabama</option>
+													<option value="Alaska,US">Alaska</option>
+													<option value="Arizona,US">Arizona</option>
+													<option value="Arkansas,US">Arkansas</option>
+													<option value="California,US">California</option>
+													<option value="Colorado,US">Colorado</option>
+													<option value="Connecticut,US">Connecticut</option>
+													<option value="Delaware,US">Delaware</option>
+													<option value="District of Columbia,US">District of Columbia</option>
+													<option value="Florida,US">Florida</option>
+													<option value="Georgia,US">Georgia</option>
+													<option value="Hawaii,US">Hawaii</option>
+													<option value="Idaho,US">Idaho</option>
+													<option value="Illinois,US">Illinois</option>
+													<option value="Indiana,US">Indiana</option>
+													<option value="Iowa,US">Iowa</option>
+													<option value="Kansas,US">Kansas</option>
+													<option value="Kentucky,US">Kentucky</option>
+													<option value="Louisiana,US">Louisiana</option>
+													<option value="Maine,US">Maine</option>
+													<option value="Maryland,US">Maryland</option>
+													<option value="Massachusetts,US">Massachusetts</option>
+													<option value="Michigan,US">Michigan</option>
+													<option value="Minnesota,US">Minnesota</option>
+													<option value="Mississippi,US">Mississippi</option>
+													<option value="Missouri,US">Missouri</option>
+													<option value="Montana,US">Montana</option>
+													<option value="Nebraska,US">Nebraska</option>
+													<option value="Nevada,US">Nevada</option>
+													<option value="New Hampshire,US">New Hampshire</option>
+													<option value="New Jersey,US">New Jersey</option>
+													<option value="New Mexico,US">New Mexico</option>
+													<option value="New York,US">New York</option>
+													<option value="North Carolina,US">North Carolina</option>
+													<option value="North Dakota,US">North Dakota</option>
+													<option value="Ohio,US">Ohio</option>
+													<option value="Oklahoma,US">Oklahoma</option>
+													<option value="Oregon,US">Oregon</option>
+													<option value="Pennsylvania,US">Pennsylvania</option>
+													<option value="Rhode Island,US">Rhode Island</option>
+													<option value="South Carolina,US">South Carolina</option>
+													<option value="South Dakota,US">South Dakota</option>
+													<option value="Tennessee,US">Tennessee</option>
+													<option value="Texas,US">Texas</option>
+													<option value="Utah,US">Utah</option>
+													<option value="Vermont,US">Vermont</option>
+													<option value="Virginia,US">Virginia</option>
+													<option value="Washington,US">Washington</option>
+													<option value="West Virginia,US">West Virginia</option>
+													<option value="Wisconsin,US">Wisconsin</option>
+													<option value="Wyoming,US">Wyoming</option>
+												</optgroup>
+
+											</select>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input class="form-control" type="text" name="agency" id="inputAgency1" placeholder="Enter your Agency" required>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input class="form-control" type="text" name="ref" id="inputRef1" placeholder="Refence Code (optional)">
+										</div>
+									</div>
+								</div>
+							</div>
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>a

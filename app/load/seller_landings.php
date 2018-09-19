@@ -8,7 +8,7 @@
 <div class="m-b-30" id="landingAgentPage">
 	<h2 class="page-title"><?php echo $tr['landing_page'] ?>
 		<?php if($_SESSION['user']['level'] > 50){ ?>
-		<span class="small"><a href="javascript:void(0)" title="<?php echo $tr['edit_title'] ?>" class="on-default edit"><i class="fa fa-pencil"></i> &nbsp; <?php echo $tr['edit'] ?></a></span>
+		<!-- <span class="small"><a href="javascript:void(0)" title="<?php echo $tr['edit_title'] ?>" class="on-default edit"><i class="fa fa-pencil"></i> &nbsp; <?php echo $tr['edit'] ?></a></span> -->
 		<?php } ?>
 	</h2>
 		<form role="form" id="landingForm" class="p-t-20" style="display: none" onsubmit="return validate(this);">

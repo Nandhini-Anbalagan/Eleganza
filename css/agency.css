@@ -237,7 +237,7 @@ font-style: italic;
 margin: 20px 0 30px;
 font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color:#6c757d!important;
-  
+
   }
 .section-header{
   margin-bottom: 75px;
@@ -740,11 +740,18 @@ section#contact .form-group {
 
 section#contact .form-group input,
 section#contact .form-group textarea {
-  padding: 20px;
+  padding: 15px;
 }
 
 section#contact .form-group input.form-control {
   height: auto;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 20px);
+    font-weight: 600;
+    font-size: 18px;
+    color: #ced4da;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 section#contact .form-group textarea.form-control {
@@ -757,7 +764,8 @@ section#contact .form-control:focus {
 }
 
 section#contact ::-webkit-input-placeholder {
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 18px;
   color: #ced4da;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

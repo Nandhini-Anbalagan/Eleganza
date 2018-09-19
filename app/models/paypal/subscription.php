@@ -40,14 +40,14 @@ if(verifyCC()){
 
 	if(!$error){
 		$adminSuccess .= "<li>Automatic monthly payment for $fname $lname (#$agent_id)<br><b>Sector: $area</b><br><b>Amount of:</b> $" . ($_POST['subscription']+$amount) . " USD.<br><b>Invoice:</b> <a href='".WEBSITE_URL."/app/receipt/".$response['transactionID']."'>".$response['transactionID']."</a><br><br></li>";
-	
+
 	ob_start();
 ?>
 <!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
- 
+
 	<style>
 	.invoice-box{
 		max-width:800px;
@@ -60,59 +60,59 @@ if(verifyCC()){
 		font-family:'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
 		color:#555;
 	}
-	
+
 	.invoice-box table{
 		width:100%;
 		line-height:inherit;
 		text-align:left;
 	}
-	
+
 	.invoice-box table td{
 		padding:5px;
 		vertical-align:top;
 	}
-	
+
 	.invoice-box table tr td:nth-child(2){
 		text-align:right;
 	}
-	
+
 	.invoice-box table tr.top table td{
 		padding-bottom:20px;
 	}
-	
+
 	.invoice-box table tr.top table td.title{
 		font-size:45px;
 		line-height:45px;
 		color:#333;
 	}
-	
+
 	.invoice-box table tr.information table td{
 		padding-bottom:40px;
 	}
-	
+
 	.invoice-box table tr.heading td{
 		background:#eee;
 		border-bottom:1px solid #ddd;
 		font-weight:bold;
 	}
-	
+
 	.invoice-box table tr.details td{
 		padding-bottom:20px;
 	}
-	
+
 	.invoice-box table tr.item td{
 		border-bottom:1px solid #eee;
 	}
-	
+
 	.invoice-box table tr.item.last td{
 		border-bottom:none;
 	}
-	
+
 	.invoice-box table tr.total td:nth-child(2){
 		border-top:2px solid #eee;
 		font-weight:bold;
 	}
-	
+
 	</style>
 </head>
 
@@ -133,7 +133,7 @@ if(verifyCC()){
 					</table>
 				</td>
 			</tr>
-			
+
 			<tr class="information">
 				<td colspan="2">
 					<table>
@@ -158,44 +158,44 @@ if(verifyCC()){
 					</table>
 				</td>
 			</tr>
-			
+
 			<tr class="heading">
 				<td colspan="2">
 					<?php echo $lang == "EN"?'Payment Method':'Méthode de paiement'; ?>
 				</td>
 			</tr>
-			
+
 			<tr class="details">
 				<td colspan="2">
 					<?php echo $cctype . " **** **** **** " . substr(str_replace(array("-", " "), "", $ccn), -4) ?>
 				</td>
 			</tr>
-			
+
 			<tr class="heading">
 				<td>
 					Description
 				</td>
-				
+
 				<td>
 					<?php echo $lang == "EN"?'Amount':'Montant'; ?>
 				</td>
 			</tr>
-			
+
 			<tr class="item last">
 				<td>
 					<?php echo $lang == "EN"?'Monthly Subscription Fee':'Frais d\'abonnement mensuel'; ?>
 				</td>
-				
+
 				<td>
 					$<?php echo $_POST['subscription'] . " USD" ?>
 				</td>
 			</tr>
-			
+
 			<tr class="item">
 				<td>
 					<?php echo $lang == "EN"?'Monthly Ad Campaign Budget':'Budge mensuel de campagnes publicitaires'; ?>
 				</td>
-				
+
 				<td>
 					$<?php echo ($_POST['subscription'] - $amount) . " USD" ?>
 				</td>
@@ -204,7 +204,7 @@ if(verifyCC()){
 				<td align="right">
 					<b>Total</b>
 				</td>
-				
+
 				<td>
 					$<?php echo ($_POST['subscription'] + $amount) . " USD" ?>
 				</td>
@@ -214,12 +214,12 @@ if(verifyCC()){
 </body>
 </html>
 
-	<?php 
-			
+	<?php
+
 		$ob = ob_get_clean();
 		$subj = $lang == "EN"?'Automatic payments for Unbeleadsable on ':'Paiements automatiques à Unbeleasable en date du ';
 		Functions::sendEmail("support@unbeleadsable.com",$email,$subj. date('Y-m-d'),$ob);
-	   
+
 		//Add Invoice and Invoice details
 		$db->addInvoice(array('invoice_num'=>$response['transactionID'],'install'=>0,'monthly'=>$_POST['subscription'],'ads'=>$amount,'agent_id'=>$agent_id));
 
@@ -233,10 +233,10 @@ if(verifyCC()){
 	}else{
 		if($errorCode == 6)
 			$gatewayError .= "<li><strong>$fname  $lname </strong>(#$agent_id)<br><b>Sector:</b> $area<br>$messTran</li>";
-			
-		$mess = $messTran;  
-	}     
-}  
+
+		$mess = $messTran;
+	}
+}
 
 $adminSuccess .= "</ol>";
 $gatewayError .= "</ol>";
@@ -294,7 +294,7 @@ function verifyCC(){
 	}
 
 	return $continue;
-} 
+}
 
 function switchCC($type){
 	$t = "";
@@ -302,7 +302,7 @@ function switchCC($type){
 		case 'VISA':
 			$t = "V";
 			break;
-		
+
 		case 'MASTERCARD':
 			$t = "M";
 			break;
@@ -332,16 +332,16 @@ function payment($amount, $desc){
 	$paymentType =urlencode("Sale");
 	$tt = explode(" ",trim($GLOBALS['ccname']));
 	$return = array();
-	
+
 	if(is_array($tt)){
 		$firstName =urlencode( $tt[0]);
-		
+
 		if(isset($tt[2]))
-			$temp = $tt[1]." ".$tt[2]; 
+			$temp = $tt[1]." ".$tt[2];
 		else
 			if(isset($tt[1]))
-				$temp = $tt[1]; 
-			else 
+				$temp = $tt[1];
+			else
 				$temp = "";
 		$lastName =urlencode($temp);
 	}else{
@@ -372,7 +372,7 @@ function payment($amount, $desc){
 
 	if(!$getAuthModeFromConstantFile)
 		$AuthMode = "3TOKEN";
-	else 
+	else
 		if(!empty($API_UserName) && !empty($API_Password) && !empty($API_Signature) && !empty($subject))
 			$AuthMode = "THIRDPARTY";
 		else if(!empty($API_UserName) && !empty($API_Password) && !empty($API_Signature))
@@ -381,7 +381,7 @@ function payment($amount, $desc){
 			$AuthMode = "FIRSTPARTY";
 
 	switch($AuthMode) {
-		case "3TOKEN" : 
+		case "3TOKEN" :
 			$nvpHeader = "&PWD=".urlencode($API_Password)."&USER=".urlencode($API_UserName)."&SIGNATURE=".urlencode($API_Signature);
 			break;
 		case "FIRSTPARTY" :
@@ -389,14 +389,15 @@ function payment($amount, $desc){
 			break;
 		case "THIRDPARTY" :
 			$nvpHeader = "&PWD=".urlencode($API_Password)."&USER=".urlencode($API_UserName)."&SIGNATURE=".urlencode($API_Signature)."&SUBJECT=".urlencode($subject);
-			break;     
+			break;
 	}
 
 	$nvpstr = $nvpHeader.$nvpstr;
 
 	/* Make the API call to PayPal, using API signature. The API response is stored in an associative array called $resArray */
-	$resArray=hash_call("doDirectPayment",$nvpstr);
-
+	// $resArray=hash_call("doDirectPayment",$nvpstr);
+$resArray["ACK"]="SUCCESS";
+$resArray["TRANSACTIONID"]=123445;
 	/* Display the API response back to the browser.
 	   If the response from PayPal was a success, display the response parameters'
 	   If the response was an error, display the errors received using APIError.php.*/
@@ -404,8 +405,8 @@ function payment($amount, $desc){
 
 	if($ack!="SUCCESS" && $ack!="SUCCESSWITHWARNING")  {
 		$_SESSION['reshash']=$resArray;
-		$resArray=$_SESSION['reshash']; 
-		if(isset($_SESSION['curl_error_no'])) { 
+		$resArray=$_SESSION['reshash'];
+		if(isset($_SESSION['curl_error_no'])) {
 			$errorCode= $_SESSION['curl_error_no'] ;
 			$errorMessage=$_SESSION['curl_error_msg'] ;
 
@@ -415,24 +416,24 @@ function payment($amount, $desc){
 		}else{
 			$count=0;
 
-			while(isset($resArray["L_SHORTMESSAGE".$count])) {       
+			while(isset($resArray["L_SHORTMESSAGE".$count])) {
 				$errorCode    = $resArray["L_ERRORCODE".$count];
 				$shortMessage = $resArray["L_SHORTMESSAGE".$count];
-				$longMessage  = $resArray["L_LONGMESSAGE".$count]; 
-				$count=$count+1;                   
-				
+				$longMessage  = $resArray["L_LONGMESSAGE".$count];
+				$count=$count+1;
+
 				$GLOBALS['messTran'] .= "Merchant Gateway Response: " . $longMessage . " (" . $errorCode . ")<br/>";
 				$GLOBALS['errorCode'] = $errorCode;
 			}
 
 			$GLOBALS['error'] = true;
 		}
-	}else{ 
+	}else{
 		$GLOBALS['error'] = false;
 
 		$msg = "Recurring payment was successfully received through PayPal ";
 		$msg .= "from " . $GLOBALS['fname'] . " " . $GLOBALS['lname'] . "  on " . date('m/d/Y') . " at " . date('g:i A') . ".<br />Payment total is: $" . number_format($amount, 2);
-		$msg .= "<br />Payment was made for \"" . $desc . "\"";   
+		$msg .= "<br />Payment was made for \"" . $desc . "\"";
 		$msg .= "<br />Transaction Number: \"" . $resArray["TRANSACTIONID"] . "\"";
 		$return['transactionID'] = $resArray["TRANSACTIONID"];
 
