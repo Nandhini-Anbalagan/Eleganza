@@ -87,7 +87,7 @@
 		});
 
 		$('select[name="template"]').on('change', function(){
-			$.get("core/email/preview/"+$(this).val(), function(data){
+			$.get("core?action=email&case=preview&id="+$(this).val(), function(data){
 				tinymce.get('compose-textarea').setContent(data);
 			});
 

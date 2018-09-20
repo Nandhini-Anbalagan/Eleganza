@@ -46,9 +46,9 @@
 					$resultObj['error'] = "Invalid Lead.";
 			}else
 				$resultObj['error'] = "Unknown Lead.";
-				
+
 			if($resultObj['error'] != "-1"){
-				$resultObj['callback-data'] = array("message" => $resultObj['error'] . " Updating list...", 
+				$resultObj['callback-data'] = array("message" => $resultObj['error'] . " Updating list...",
 					"type" => "error",
 					"next-action" => "reload-leads");
 			}
@@ -61,7 +61,7 @@
 
 				$lead = $db->getAgentLeadsByID($_POST['id']);
 				if($lead){
-					
+
 					$pass = Functions::encode(strtolower($lead['lead_name']));
 					$agent = $db->createAgent($_POST['id'], "", 0, $pass);
 
@@ -95,7 +95,7 @@
 						"message" => $lead['lead_name'] . " has been converted to agent.",
 						"type" => "success",
 						"next-action" => "reload-leads");
-						
+
 						Tokenizer::delete(array('post-action-lead', 'post-case-lead-convert'));
 
 					}
@@ -103,9 +103,9 @@
 					$resultObj['error'] = "Invalid Lead.";
 			}else
 				$resultObj['error'] = "Unknown Lead.";
-				
+
 			if($resultObj['error'] != "-1"){
-				$resultObj['callback-data'] = array("message" => $resultObj['error'] . " Updating list...", 
+				$resultObj['callback-data'] = array("message" => $resultObj['error'] . " Updating list...",
 					"type" => "error",
 					"next-action" => "reload-leads");
 			}
@@ -117,11 +117,11 @@
 					$resultObj['error'] = Config::UNEXPECTED_DB_ERROR;
 				else
 					$resultObj['success'] = $_POST['name'] . " deleted successfully.";
-			}else if(Functions::isValidFields($_POST, 
+			}else if(Functions::isValidFields($_POST,
 				array('name', 'email', 'phone', 'areas'),
 				array(5, 'email', 9, 'empty'),
 				$resultObj['error'])){
-				
+
 				$lead = $db->getAgentLeadsByID($_POST['id']);
 				if($lead){
 					if(!$db->editAgentLeads($_POST))
@@ -131,7 +131,34 @@
 				}else
 					$resultObj['error'] = "Invalid Lead.";
 			}
-			
+
+			if($resultObj['error'] == "-1"){
+				$resultObj['callback'] = "reload-leads";
+				Tokenizer::delete(array('post-action-lead','post-action-lead-edit'));
+			}
+		break;
+
+		case "edit-fee":
+			if(isset($_POST['deleteLead'])){
+				if(!$db->deleteAgentLeads($_POST['id']))
+					$resultObj['error'] = Config::UNEXPECTED_DB_ERROR;
+				else
+					$resultObj['success'] = $_POST['name'] . " deleted successfully.";
+			}else if(Functions::isValidFields($_POST,
+				array('install', 'monthly'),
+				array('empty', 'empty'),
+				$resultObj['error'])){
+
+				$lead = $db->getAgentLeadsByID($_POST['id']);
+				if($lead){
+					if(!$db->editAgentLeadsFee($_POST))
+						$resultObj['error'] = Config::UNEXPECTED_DB_ERROR;
+					else
+						$resultObj['success'] =  "Fee configured successfully.";
+				}else
+					$resultObj['error'] = "Invalid Lead.";
+			}
+
 			if($resultObj['error'] == "-1"){
 				$resultObj['callback'] = "reload-leads";
 				Tokenizer::delete(array('post-action-lead','post-action-lead-edit'));

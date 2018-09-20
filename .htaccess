@@ -1,6 +1,7 @@
 RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTPS} !=on
+#RewriteCond %{SERVER_NAME} =eleganza.test
 RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 #Undermaintenance Block
@@ -10,11 +11,11 @@ RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 #RewriteRule .* /app/maintenance [R=302,L]
 
 # Rewrite the url single invoice
-RewriteRule ^payment/([^~,]+)/?$ new_payment.php?id=$1
+RewriteRule ^payment/([^~,]+)/([^~,]+)/([^~,]+)/?$ new_payment.php?id=$1&install=$2&monthly=$3
 RewriteRule ^paiement/([^~,]+)/?$ fr/paiement.php?id=$1
 
 # Remove PHP Extension
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
+#RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f

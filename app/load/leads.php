@@ -91,6 +91,7 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 						<a href="#" title="View Lead" class="viewLead" data-toggle="modal" data-target="#view-modal" data-id="<?php echo $value['lead_id'] ?>"><i class="fa fa-eye"></i></a>
 						<?php if($_SESSION['user']["level"] > 50){ ?>
 						<a href="#" data-id="<?php echo $value['lead_id'] ?>" title="Auto Convert Lead" class="text-success auto-convert"><i class="fa fa-check"></i></a>
+						<a href="#" data-toggle="modal" data-target="#configfee" data-id="<?php echo $value['lead_id'] ?>" title="Configure Fee" class="config-fee" data-id="<?php echo $value['lead_id'] ?>"><i class="fa fa-usd"></i></a>
 						<?php } ?>
 						<a href="#" title="Send Email to Lead" class="sendEmail"><i class="fa fa-envelope"></i></a>
 						<a href="#" data-toggle="modal" data-target="#edit-modal" data-id="<?php echo $value['lead_id'] ?>" title="Edit Lead" class="edit-row"><i class="fa fa-pencil"></i></a>
@@ -171,6 +172,45 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 						</div>
 					</div>
 					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="configfee" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog">
+		<div class="modal-content p-0 b-0">
+			<div class="panel panel-color panel-primary">
+				<div class="panel-heading">
+					<button type="button" class="close m-t-5" data-dismiss="modal" aria-hidden="true">×</button>
+					<h2 class="panel-title text-center">Configure Fee</h2>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal" role="form" data-parsley-validate="" novalidate>
+						<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-lead', 20, 'lead'); ?>">
+						<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-case-lead-edit', 30, 'edit-fee'); ?>">
+						<input type="hidden" name="id" value="">
+
+						<div class="form-group">
+							<label for="setupfee"class="col-sm-4 control-label">Setup Fee</label>
+							<div class="col-sm-7">
+								<input type="number" min="0" step="0.01" id="install" name="install" class="form-control" placeholder="0.00">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="subscriptionfee"class="col-sm-4 control-label">Subscription Fee</label>
+							<div class="col-sm-7">
+								<input type="number" min="0" step="0.01" id="monthly" name="monthly" class="form-control" placeholder="0.00">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-4 col-sm-8">
+								<button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+								<button type="reset" class="btn btn-danger waves-effect waves-light m-l-5" data-dismiss="modal">Cancel</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -323,6 +363,14 @@ $(document).ready(function(){
 	});
 
 	$('#edit-modal').on('show.bs.modal', function(e) {
+		$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo $postActionLead; ?>">'
+			+ '<input type="hidden" name="case" value="<?php echo $postCaseLeadSingleEdit; ?>">'
+			+ '<input type="hidden" name="id" value="' + $(e.relatedTarget).data('id') + '">');
+		$('#<?php echo $dynamicFormId; ?>').submit();
+		$('#<?php echo $dynamicFormId; ?>').empty();
+	});
+
+	$('#configfee').on('show.bs.modal', function(e) {
 		$('#<?php echo $dynamicFormId; ?>').append('<input type="hidden" name="action" value="<?php echo $postActionLead; ?>">'
 			+ '<input type="hidden" name="case" value="<?php echo $postCaseLeadSingleEdit; ?>">'
 			+ '<input type="hidden" name="id" value="' + $(e.relatedTarget).data('id') + '">');

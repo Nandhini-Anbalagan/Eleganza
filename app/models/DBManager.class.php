@@ -568,8 +568,8 @@ class DBManager extends MySQLConnection{
 		// 	$error = $query ->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'], 'subscriber'));
 		// }
 		//if($data['seller_option'] == 1){
-			$query= $this->myDB->prepare("INSERT INTO agent_leads VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT,?)");
-			$error = $query->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'],'sponsor',$data['industry']));
+			$query= $this->myDB->prepare("INSERT INTO agent_leads VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT,?,?,?)");
+			$error = $query->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'],'sponsor',$data['industry'],49.99,99.99));
 		//}
 		return $error;
 	}
@@ -577,6 +577,11 @@ class DBManager extends MySQLConnection{
 	public function editAgentLeads($data){
 		$query = $this->myDB->prepare("UPDATE agent_leads SET lead_name = ?, lead_email = ?, lead_phone = ?, lead_areas = ?, lead_agency = ?, lead_license = ?, lead_board = ?, lead_ref = ?, lead_comments = ?, lead_lang = ? WHERE lead_id = ?");
 		return $query->execute(array($data['name'], $data['email'], $data['phone'], $data['areas'], $data['agency'], $data['license'], $data['board'], $data['ref'], $data['comments'], $data['lang'], $data['id']));
+	}
+
+	public function editAgentLeadsFee($data){
+		$query = $this->myDB->prepare("UPDATE agent_leads SET install = ?, monthly = ? WHERE lead_id = ?");
+		return $query->execute(array($data['install'], $data['monthly'], $data['id']));
 	}
 
 	public function UpdateAgentLeadsStatus($id, $lead){

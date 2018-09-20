@@ -14,14 +14,16 @@ date_default_timezone_set('America/Montreal');
 $db = new DBManager();
 $lang = "EN";
 
-$lead = $db->getAgentLeadsByID(IDObfuscator::decode($_GET['id']));
+$lead = $db->getAgentLeadsByID(IDObfuscator::decode(  $_GET['id']));
 $name = explode(" ",$lead['lead_name']);
 $last = array_pop($name);
 $first = implode(" ", $name);
 
 if(!isset($mess)){ $mess = ""; }
 
-//REQUEST VARIABLES 
+//REQUEST VARIABLES
+$setupfee=IDObfuscator::decode($_GET['install']);
+$subscriptionfee=IDObfuscator::decode($_GET['monthly']);
 $amount = (!empty($_REQUEST["amount"]))?strip_tags(str_replace("'","`",$_REQUEST["amount"])):'150';
 $fname = (!empty($_REQUEST["fname"]))?strip_tags(str_replace("'","`",$_REQUEST["fname"])):$first;
 $lname = (!empty($_REQUEST["lname"]))?strip_tags(str_replace("'","`",$_REQUEST["lname"])):$last;
@@ -32,11 +34,11 @@ $country = (!empty($_REQUEST["country"]))?strip_tags(str_replace("'","`",$_REQUE
 $state = (!empty($_REQUEST["state"]))?strip_tags(str_replace("'","`",$_REQUEST["state"])):'';
 $zip = (!empty($_REQUEST["zip"]))?strip_tags(str_replace("'","`",$_REQUEST["zip"])):'';
 
-//FORM SUBMISSION PROCESSING 
+//FORM SUBMISSION PROCESSING
 if(!empty($_POST["process"]) && $_POST["process"]=="yes")
   require_once("app/models/paypal/form.processing.php");
 
-include_once "app/models/paypal/javascript.validation.php"; 
+include_once "app/models/paypal/javascript.validation.php";
 
 ?>
 
@@ -53,14 +55,14 @@ include_once "app/models/paypal/javascript.validation.php";
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Pricing</h2>
-          <p class="section-lead">Real Estate Seller Leads Pricing Plan</p>  
-          <div class="divider"></div>        
+          <p class="section-lead">Real Estate Seller Leads Pricing Plan</p>
+          <div class="divider"></div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="pricing-table wow fadeInUp">
               <div class="panel-heading">
-                <h4 class="plan-title">Setup Fees 
+                <h4 class="plan-title">Setup Fees
                   <span class="hidden-sm">One Time Payment</span>
                 </h4>
                 <p class="plan-price">
@@ -70,7 +72,7 @@ include_once "app/models/paypal/javascript.validation.php";
               <div class="panel-body">
                 <ul class="plan-features">
                   <li>Landing Page</li>
-                  <li>Panel Configuration</li> 
+                  <li>Panel Configuration</li>
                   <li>And much more</li>
                 </ul>
               </div>
@@ -82,7 +84,7 @@ include_once "app/models/paypal/javascript.validation.php";
           <div class="col-sm-4">
             <div class="pricing-table emphasized wow fadeInDown">
               <div class="panel-heading">
-                <h4 class="plan-title">Subscription Fee 
+                <h4 class="plan-title">Subscription Fee
                   <span class="hidden-sm">Recurring Every Month</span>
                 </h4>
                 <p class="plan-price">
@@ -95,7 +97,7 @@ include_once "app/models/paypal/javascript.validation.php";
                   <li>Follow-up</li>
                   <li>Marketing Tools</li>
                   <li>Supportive Community</li>
-                  <li>And much more</li> 
+                  <li>And much more</li>
                 </ul>
               </div>
               <div class="panel-footer">
@@ -106,7 +108,7 @@ include_once "app/models/paypal/javascript.validation.php";
           <div class="col-sm-4">
             <div class="pricing-table wow fadeInUp">
               <div class="panel-heading">
-                <h4 class="plan-title">Ad Campaign 
+                <h4 class="plan-title">Ad Campaign
                   <span class="hidden-sm">Get more leads on Social Media</span>
                 </h4>
                 <p class="plan-price">
@@ -125,7 +127,7 @@ include_once "app/models/paypal/javascript.validation.php";
               </div>
             </div>
           </div>
-        </div>   
+        </div>
       </div>
     </section>
 	<section class="container-fluid">
@@ -143,12 +145,12 @@ include_once "app/models/paypal/javascript.validation.php";
 	              <table class="table_custom" style="width: 100%">
 	                <tr>
 	                  <td><h4>Setup Fees <small>One Time Payment</small></h4></td>
-	                  <td><h4>$<?php echo INSTALLATION ?> USD</h4></td>
+	                  <td><h4>$<?php echo $setupfee ?> USD</h4></td>
 	                </tr>
 
 	                <tr>
 	                  <td><h4>Subscription Fee <small>Recurring Every Month</small></h4></td>
-	                  <td><h4>$<?php echo SUBSCRIPTION ?> USD</h4></td>
+	                  <td><h4>$<?php echo $subscriptionfee ?> USD</h4></td>
 	                </tr>
 
 	                <tr>
@@ -186,8 +188,8 @@ include_once "app/models/paypal/javascript.validation.php";
 	                </div>
 	                <div class="form-group">
 	                  <label>Country:</label>
-	                  <select class="form-control" name="country" id="country" onchange="checkFieldBack(this);"> 
-	                   <option value="">Please Select</option> 
+	                  <select class="form-control" name="country" id="country" onchange="checkFieldBack(this);">
+	                   <option value="">Please Select</option>
 	                   <option value="US" <?php echo $country=="US"?"selected":""?>>United States</option>
 	                   <option value="CA" <?php echo $country=="CA"?"selected":""?>>Canada</option>
 	                 </select>
@@ -351,17 +353,16 @@ include_once "app/models/paypal/javascript.validation.php";
 	          <i class="fa fa-next"></i> Proceed
 	          </button>
 	          <!-- <input type="submit" name="submit" value="Proceed" class="button" style="width:100%;"/> -->
-	          <input type="hidden" name="process" value="yes" />  
+	          <input type="hidden" name="process" value="yes" />
 	        </div>
 	        <!-- CREDIT CARD BLOCK -->
-	        </form> 
+	        </form>
 	      <?php else: ?>
 	      <h2>Sorry, agent ID not recognized...</h2>
-	      <?php endif ?>      
+	      <?php endif ?>
 	      </div>
 	    </div>
 	  </div>
 	</section>
 
 <?php include("footer.php") ?>
-  

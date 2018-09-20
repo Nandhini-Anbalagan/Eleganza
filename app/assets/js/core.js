@@ -187,6 +187,10 @@ function executeAction(action, data){
 			modal.find('input[name="ref"]').val(data['lead_ref']);
 			modal.find('textarea[name="comments"]').val(data['lead_comments']);
 			modal.find('select[name="lang"]').select2("val", data['lead_lang']);
+			var configureFeeModal=$("#configfee");
+			configureFeeModal.find('input[name="id"]').val(data['lead_id']);
+			configureFeeModal.find('input[name="install"]').val(data['install']);
+			configureFeeModal.find('input[name="monthly"]').val(data['monthly']);
 			break;
 		case "get-single-view-agent-lead":
 			var modal = $('#view-modal');

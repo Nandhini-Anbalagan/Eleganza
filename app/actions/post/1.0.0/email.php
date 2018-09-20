@@ -201,7 +201,7 @@
 				$resultObj['error'] = "The email cannot be empty.";
 			else{
 				$content = str_replace("&lt;p&gt;&nbsp;&lt;/p&gt;", "", $_POST['content']);
-				$content = str_replace("../cdn/attached/", "https://unbeleadsable.com/cdn/attached/", $content);
+				$content = str_replace("../cdn/attached/", "https://eleganza.test/cdn/attached/", $content);
 
 				$to = array();
 
@@ -232,11 +232,12 @@
 
 					if($agent){
 						$_POST['content'] = str_replace(
-							array('[lead_name]', '[lead_email]', '[lead_phone]', '[lead_areas]', '[id]'),
-							array($agent['lead_name'], $agent['lead_email'], $agent['lead_phone'], $agent['lead_areas'], IDObfuscator::encode($agent['lead_id'])),
+							array('[lead_name]', '[lead_email]', '[lead_phone]', '[lead_areas]', '[id]','[install]','[monthly]'),
+							array($agent['lead_name'], $agent['lead_email'], $agent['lead_phone'], $agent['lead_areas'], IDObfuscator::encode($agent['lead_id']), IDObfuscator::encode($agent['install']), IDObfuscator::encode($agent['monthly'])),
 							$_POST['content']
 						);
 					}
+					print_r($_POST['content']);
 
 					$msg = '<table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action" itemscope itemtype="http://schema.org/ConfirmAction" style="font-family: \'Helvetica Neue\',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background-color: #fff; margin: 0; border: 1px solid #e9e9e9;" bgcolor="#fff">
 						<tr style="font-family: \'Helvetica Neue\',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
