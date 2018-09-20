@@ -680,8 +680,8 @@ class DBManager extends MySQLConnection{
 		$signature = "<p><b>". $data['lead_name'] . "</b></p><p>" . $data['lead_email'] . "</p><p>" . $data['lead_phone'] . "</p><p>" . $data['lead_agency']."</p>";
 
 		$query = $this->myDB->query("UPDATE area_mapping SET agent_type = 2 WHERE agent_fk = '" . $data['internal_id']. "'");
-		$query = $this->myDB->prepare("INSERT INTO agents(internal_id, agent_name, agent_email, agent_phone, agent_address, agent_areas, agent_agency, agent_license, agent_board, agent_ref, agent_lang, agent_comments, agent_signature, ad_campaign, agent_slug,agent_country,industry) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)");
-		$query->execute(array($data['internal_id'], $data['lead_name'], $data['lead_email'], $data['lead_phone'], $address, $data['lead_areas'], $data['lead_agency'],$data['lead_license'], $data['lead_board'], $data['lead_ref'], $data['lead_lang'], $data['lead_comments'], $signature, $ad, $data['lead_type'],$data['lead_country'],$data['industry']));
+		$query = $this->myDB->prepare("INSERT INTO agents(internal_id, agent_name, agent_email, agent_phone, agent_address, agent_areas, agent_agency, agent_license, agent_board, agent_ref, agent_lang, agent_comments, agent_signature, ad_campaign, agent_slug,agent_country,industry,install,monthly) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?)");
+		$query->execute(array($data['internal_id'], $data['lead_name'], $data['lead_email'], $data['lead_phone'], $address, $data['lead_areas'], $data['lead_agency'],$data['lead_license'], $data['lead_board'], $data['lead_ref'], $data['lead_lang'], $data['lead_comments'], $signature, $ad, $data['lead_type'],$data['lead_country'],$data['industry'],$data['install'],$data['monthly']));
 		$agent_id = $this->myDB->lastInsertId();
 
 		if($data['user_id'] == 0){

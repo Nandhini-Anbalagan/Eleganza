@@ -6,7 +6,7 @@ require_once 'app/models/phpMailer/vendor/autoload.php';
 spl_autoload_register(function ($class) {
     require_once("app/models/$class.class.php");
 });
-
+require_once("app/models/Config.class.php");
 require_once("app/models/paypal/config.php");
 
 date_default_timezone_set('America/Montreal');
@@ -33,7 +33,7 @@ $city = (!empty($_REQUEST["city"]))?strip_tags(str_replace("'","`",$_REQUEST["ci
 $country = (!empty($_REQUEST["country"]))?strip_tags(str_replace("'","`",$_REQUEST["country"])):'CA';
 $state = (!empty($_REQUEST["state"]))?strip_tags(str_replace("'","`",$_REQUEST["state"])):'';
 $zip = (!empty($_REQUEST["zip"]))?strip_tags(str_replace("'","`",$_REQUEST["zip"])):'';
-
+$industry=$lead['industry'];
 //FORM SUBMISSION PROCESSING
 if(!empty($_POST["process"]) && $_POST["process"]=="yes")
   require_once("app/models/paypal/form.processing.php");
@@ -41,7 +41,16 @@ if(!empty($_POST["process"]) && $_POST["process"]=="yes")
 include_once "app/models/paypal/javascript.validation.php";
 
 ?>
-
+<script>
+$('link[rel=stylesheet][href~="agency.css"]').remove();
+</script>
+<style>
+select.form-control:not([size]):not([multiple]) {
+    height: auto !important;
+}
+</style>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/flatbook_custom.css">
 
   <!-- HEADER
   ============================================== -->
@@ -66,7 +75,7 @@ include_once "app/models/paypal/javascript.validation.php";
                   <span class="hidden-sm">One Time Payment</span>
                 </h4>
                 <p class="plan-price">
-                  <sup>$</sup>49.99 USD
+                  <sup>$</sup><?php echo $setupfee ?> USD
                 </p>
               </div>
               <div class="panel-body">
@@ -88,7 +97,7 @@ include_once "app/models/paypal/javascript.validation.php";
                   <span class="hidden-sm">Recurring Every Month</span>
                 </h4>
                 <p class="plan-price">
-                  <sup>$</sup>99.99 USD
+                  <sup>$</sup><?php echo $subscriptionfee ?> USD
                 </p>
               </div>
               <div class="panel-body">
@@ -282,6 +291,14 @@ include_once "app/models/paypal/javascript.validation.php";
 	             <div class="form-group">
 	               <label>ZIP/Postal Code:</label>
 	               <input class="form-control" name="zip" id="zip" type="text" class="small-field"  value="<?php echo $zip;?>" onkeyup="checkFieldBack(this);" />
+	             </div>
+               <div class="form-group">
+	               <label>Industry:</label>
+                 <select class="form-control" name="industry" id="industry">
+ 								 <option <?php echo $industry=="SI"?"selected":""?> value="SI">Service Industry</option>
+ 								 <option <?php echo $industry=="MI"?"selected":""?> value="MI">Manufacturing Industry</option>
+ 								 <option <?php echo $industry=="RI"?"selected":""?> value="RI">Retail Industry</option>
+ 								</select>
 	             </div>
 	        </div>
 	         </div>

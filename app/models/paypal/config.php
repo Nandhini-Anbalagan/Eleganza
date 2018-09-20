@@ -1,6 +1,6 @@
 <?php
-if(session_status() == PHP_SESSION_NONE)
-    session_start();
+// if(session_status() == PHP_SESSION_NONE)
+//     session_start();
 
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -20,7 +20,7 @@ define("PTP_CURRENCY_CODE","USD");
 $admin_email = "support@unbeleadsable.com";
 $redirect_non_https = false;
 $enable_paypal = false;
-$liveMode = true;
+$liveMode = false;
 //5147076288
 
 if(!$liveMode){//TEST MODE

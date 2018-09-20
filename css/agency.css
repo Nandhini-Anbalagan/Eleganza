@@ -746,13 +746,13 @@ section#contact .form-group textarea {
 section#contact .form-group input.form-control {
   height: auto;
 }
-select.form-control:not([size]):not([multiple]) {
+/* select.form-control:not([size]):not([multiple]) {
     height: calc(2.25rem + 20px);
     font-weight: 600;
     font-size: 18px;
     color: #ced4da;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+} */
 
 section#contact .form-group textarea.form-control {
   height: 248px;

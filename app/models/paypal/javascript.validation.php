@@ -19,7 +19,8 @@ $reqFields=array(
 	"city",
 	"state",
 	"zip",
-	"email"
+	"email",
+	"industry"
 );
 
 $reqFields_cc=array(

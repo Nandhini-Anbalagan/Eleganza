@@ -60,7 +60,7 @@ header.home-header .header-image .header-model{
 }
 
 .pricing-table .panel-heading .plan-price, .pricing-table.emphasized .panel-heading .plan-price{
-	font-size: 55px;
+	font-size: 55px !important;
 }
 
 .plan-title span{
