@@ -18,7 +18,7 @@ echo "string";
 			<th><?php echo $tr['name_contact'] ?></th>
 			<th class="no-sort"><?php echo $tr['notes'] ?></th>
 			<th class="no-sort"><?php echo $tr['address'] ?></th>
-			<!-- <th><?php echo $tr['selling_in'] ?></th> -->
+			<th><?php echo $tr['industry'] ?></th>
 			<th><?php echo $tr['source'] ?></th>
 			<th><?php echo $tr['date'] ?></th>
 		</tr>
@@ -85,6 +85,8 @@ echo "string";
 					</ul>
 				</div>
 			</td> -->
+			<td><?php echo $l['industry'] ?></td>
+
 				<td><?php echo Functions::getSource($l['source']) ?></td>
 				<td  data-order="<?php echo date_format(date_create($l['date']), 'Ymd') ?>"><?php echo date_format(date_create($l['date']), 'F jS Y') . "<br>" . date_format(date_create($l['date']), 'h:i A') ?></td>
 			</tr>

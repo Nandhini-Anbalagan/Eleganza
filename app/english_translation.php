@@ -245,6 +245,7 @@
 		"delete_forver" => "Delete Selected Forever",
 		"recover" => "Recover Selected",
 		"no_beds" => "# of Bedrooms",
-		"subscription" => "Subscription Status"
+		"subscription" => "Subscription Status",
+		"industry" => "Industry"
 	);
 ?>

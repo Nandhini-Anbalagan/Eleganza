@@ -34,7 +34,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 			<th class="text-uppercase" width="5px"><?php echo $tr['funnels'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['notes'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['address'] ?></th>
-			<!-- <th class="text-uppercase"><?php echo $tr['selling_in'] ?></th> -->
+			<th class="text-uppercase"><?php echo $tr['industry'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['source'] ?></th>
 			<th class="text-uppercase"><?php echo $tr['date'] ?></th>
 		</tr>
@@ -150,6 +150,7 @@ $funnelCat = $db->getFunnelCategories($_SESSION['user']['agent_id']);
 					</ul>
 				</div>
 			</td> -->
+			<td><?php echo $l['industry'] ?></td>
 			<td><?php echo Functions::getSource($l['source']) ?></td>
 			<td  data-order="<?php echo date_format(date_create($l['date']), 'Ymd') ?>"><?php echo date_format(date_create($l['date']), 'F jS Y') . "<br>" . date_format(date_create($l['date']), 'h:i A') ?></td>
 		</tr>

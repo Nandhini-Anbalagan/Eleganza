@@ -132,6 +132,7 @@
 			<h4><?php echo $tr['agent_phone'] ?>: <span target="agent_phone" class="small"></span></h4>
 			<h4><?php echo $tr['agent_email'] ?>: <span target="agent_email" class="small"></span></h4>
 			<h4><?php echo $tr['agent_title'] ?>: <span target="agent_title_en" class="small"></span></h4>
+			<h4><?php echo $tr['industry'] ?>: <span target="industry" class="small"></span></h4>
 			<h4><?php echo $tr['final_text'] ?>: <span target="final_text_en" class="small"></span></h4>
 			<br>
 			<h3><?php echo $tr['sponsor_link'] ?></h3>
@@ -149,6 +150,7 @@
 			<h4><?php echo $tr['agent_phone'] ?>: <span target="agent_phone" class="small"></span></h4>
 			<h4><?php echo $tr['agent_email'] ?>: <span target="agent_email" class="small"></span></h4>
 			<h4><?php echo $tr['agent_title'] ?>: <span target="agent_title_fr" class="small"></span></h4>
+			<h4><?php echo $tr['industry'] ?>: <span target="industry" class="small"></span></h4>
 			<h4><?php echo $tr['final_text'] ?>: <span target="final_text_fr" class="small"></span></h4>
 			<br>
 			<h3><?php echo $tr['sponsor_link'] ?></h3>

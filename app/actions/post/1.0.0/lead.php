@@ -118,8 +118,8 @@
 				else
 					$resultObj['success'] = $_POST['name'] . " deleted successfully.";
 			}else if(Functions::isValidFields($_POST,
-				array('name', 'email', 'phone', 'areas'),
-				array(5, 'email', 9, 'empty'),
+				array('name', 'email', 'phone', 'areas', 'industry'),
+				array(5, 'email', 9, 'empty', 'industry'),
 				$resultObj['error'])){
 
 				$lead = $db->getAgentLeadsByID($_POST['id']);

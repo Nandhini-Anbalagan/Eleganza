@@ -307,7 +307,8 @@ function executeAction(action, data){
 			content.find('span[target="agent_phone"]').html(data['agent_phone']);
 			content.find('span[target="agent_email"]').html(data['agent_email']);
 			content.find('span[target="agent_title_en"]').html(data['agent_title_en']);
-			content.find('span[target="final_text_en"]').html(data['final_text_en']);
+			//content.find('span[target="final_text_en"]').html(data['final_text_en']);
+			content.find('span[target="industry"]').html((data['industry']=='SI')?"Service Industry":((data['industry']=='MI')?"Manufacturing Industry":"Retail Industry"));
 			content.find('span[target="homeEval_web_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=w");
 			content.find('span[target="homeEval_facebook_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=f");
 			content.find('span[target="homeEval_google_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=g");
