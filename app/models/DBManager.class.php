@@ -680,8 +680,8 @@ class DBManager extends MySQLConnection{
 		$signature = "<p><b>". $data['lead_name'] . "</b></p><p>" . $data['lead_email'] . "</p><p>" . $data['lead_phone'] . "</p><p>" . $data['lead_agency']."</p>";
 
 		$query = $this->myDB->query("UPDATE area_mapping SET agent_type = 2 WHERE agent_fk = '" . $data['internal_id']. "'");
-		$query = $this->myDB->prepare("INSERT INTO agents(internal_id, agent_name, agent_email, agent_phone, agent_address, agent_areas, agent_agency, agent_license, agent_board, agent_ref, agent_lang, agent_comments, agent_signature, ad_campaign, agent_slug,agent_country) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)");
-		$query->execute(array($data['internal_id'], $data['lead_name'], $data['lead_email'], $data['lead_phone'], $address, $data['lead_areas'], $data['lead_agency'],$data['lead_license'], $data['lead_board'], $data['lead_ref'], $data['lead_lang'], $data['lead_comments'], $signature, $ad, $data['lead_type'],$data['lead_country']));
+		$query = $this->myDB->prepare("INSERT INTO agents(internal_id, agent_name, agent_email, agent_phone, agent_address, agent_areas, agent_agency, agent_license, agent_board, agent_ref, agent_lang, agent_comments, agent_signature, ad_campaign, agent_slug,agent_country,industry) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)");
+		$query->execute(array($data['internal_id'], $data['lead_name'], $data['lead_email'], $data['lead_phone'], $address, $data['lead_areas'], $data['lead_agency'],$data['lead_license'], $data['lead_board'], $data['lead_ref'], $data['lead_lang'], $data['lead_comments'], $signature, $ad, $data['lead_type'],$data['lead_country'],$data['industry']));
 		$agent_id = $this->myDB->lastInsertId();
 
 		if($data['user_id'] == 0){
@@ -789,8 +789,8 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function editAgent($data){
-		$query = $this->myDB->prepare("UPDATE agents SET agent_name = ?, agent_email = ?, agent_address = ?, agent_phone = ?, agent_avatar = ?, agent_areas = ?, agent_agency = ?, agent_license = ?, agent_board = ?, agent_ref = ?, campaign_id = ?, agent_comments = ?, agent_lang = ?, agent_signature = ?, phone_alert =?, email_alert = ? WHERE agent_id = ?");
-		$this->write_to_log("User edited [data: " . implode(",", $data). "]", $_SESSION['user']['username']);return $query->execute(array($data['name'], $data['email'], $data['address'], $data['phone'], $data['avatar'], $data['areas'], $data['agency'], $data['license'], $data['board'], $data['ref'], $data['camp'], $data['comments'], $data['lang'], $data['signature'], $data['phone_notification'], $data['email_notification'], $data['id']));
+		$query = $this->myDB->prepare("UPDATE agents SET agent_name = ?, agent_email = ?, agent_address = ?, agent_phone = ?, agent_avatar = ?, agent_areas = ?, agent_agency = ?, agent_license = ?, agent_board = ?, agent_ref = ?, campaign_id = ?, agent_comments = ?, agent_lang = ?, agent_signature = ?, phone_alert =?, email_alert = ?,industry=? WHERE agent_id = ?");
+		$this->write_to_log("User edited [data: " . implode(",", $data). "]", $_SESSION['user']['username']);return $query->execute(array($data['name'], $data['email'], $data['address'], $data['phone'], $data['avatar'], $data['areas'], $data['agency'], $data['license'], $data['board'], $data['ref'], $data['camp'], $data['comments'], $data['lang'], $data['signature'], $data['phone_notification'], $data['email_notification'],$data['industry'], $data['id']));
 	}
 
 	public function upadateAdBudget($amount){

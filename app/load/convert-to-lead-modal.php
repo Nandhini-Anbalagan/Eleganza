@@ -157,6 +157,18 @@
 									</div>
 								</div>
 								<div class="col-sm-12">
+								<div class="form-group">
+									<label for="industry"class="col-sm-4 control-label">Industry</label>
+									<div class="col-sm-7">
+										<select class="form-control" name="industry" id="industry">
+										 <option value="SI">Service Industry</option>
+										 <option value="MI">Manufacturing Industry</option>
+										 <option value="RI">Retail Industry</option>
+										</select>
+									</div>
+								</div>
+							</div>
+								<div class="col-sm-12">
 									<div class="form-group">
 										<label for="inputRef1" class="control-label col-sm-4">Reference Code</label>
 										<div class="col-sm-8">

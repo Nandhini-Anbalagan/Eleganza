@@ -277,8 +277,13 @@ $totalAgents = count($agents);
 							<div class="form-group">
 								<label for="industry"class="col-sm-4 control-label">Industry</label>
 								<div class="col-sm-7">
-									<input type="text" id="industry" name="industry" class="form-control" placeholder="Industry">
+									<select class="form-control" name="industry" id="industry">
+									 <option value="SI">Service Industry</option>
+									 <option value="MI">Manufacturing Industry</option>
+									 <option value="RI">Retail Industry</option>
+									</select>
 								</div>
+							</div>
 							<div class="form-group">
 								<label for="ref" class="col-sm-4 control-label">Reference</label>
 								<div class="col-sm-7">

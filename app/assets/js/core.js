@@ -232,6 +232,7 @@ function executeAction(action, data){
 			modal.find('input[name="phone_notification"]').val(data['phone_alert']);
 			modal.find('input[name="email_notification"]').val(data['email_alert']);
 			modal.find('input[name="avatar"]').val(data['avatar']);
+			modal.find('select[name="industry"]').select2("val", data['industry']);
 			break;
 		case "get-single-edit-partial-lead":
 			var modal = $('#edit-modal');
@@ -257,7 +258,7 @@ function executeAction(action, data){
 			modal.find('td[target="camp"]').html(data['campaign_id']);
 			modal.find('td[target="comments"]').html(data['agent_comments']);
 			modal.find('td[target="language"]').html(data['agent_lang']);
-
+			modal.find('td[target="industry"]').html((data['industry']=='SI')?"Service Industry":((data['industry']=='MI')?"Manufacturing Industry":"Retail Industry"));
 			var d = new Date(data['agent_date']);
 			var n = d.toDateString();
 
