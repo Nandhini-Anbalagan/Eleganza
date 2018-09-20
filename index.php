@@ -351,8 +351,8 @@
                     <div class="form-group">
                       <select class="form-control" name="industry" id="industry">
                        <option value="SI">Service Industry</option>
-                       <option value="SI">Manufacturing Industry</option>
-                       <option value="SI">Retail Industry</option>
+                       <option value="MI">Manufacturing Industry</option>
+                       <option value="RI">Retail Industry</option>
                       </select>
                     </div>
                 </div>

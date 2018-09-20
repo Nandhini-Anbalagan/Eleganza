@@ -187,6 +187,7 @@ function executeAction(action, data){
 			modal.find('input[name="ref"]').val(data['lead_ref']);
 			modal.find('textarea[name="comments"]').val(data['lead_comments']);
 			modal.find('select[name="lang"]').select2("val", data['lead_lang']);
+			modal.find('select[name="industry"]').select2("val", data['industry']);
 			var configureFeeModal=$("#configfee");
 			configureFeeModal.find('input[name="id"]').val(data['lead_id']);
 			configureFeeModal.find('input[name="install"]').val(data['install']);
@@ -205,7 +206,7 @@ function executeAction(action, data){
 			modal.find('td[target="language"]').html(data['lead_lang']);
 			modal.find('td[target="ref"]').html(data['lead_ref']);
 			modal.find('td[target="status"]').html(data['status_name']);
-
+			modal.find('td[target="industry"]').html((data['industry']=='SI')?"Service Industry":((data['industry']=='MI')?"Manufacturing Industry":"Retail Industry"));
 			var d = new Date(data['lead_date']);
 			var n = d.toDateString();
 

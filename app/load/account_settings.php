@@ -1,7 +1,7 @@
-<?php 
+<?php
 	# Tokenizer container
 	$postActionAgentLead = Tokenizer::add('post-action-agentLead', 20, 'agentLead');
-	$postFile = Tokenizer::add('post-case-avatar', 30, 'avatar');  
+	$postFile = Tokenizer::add('post-case-avatar', 30, 'avatar');
 ?>
 <h2 class="page-title"><?php echo $tr['account_settings'] ?></h2>
 <br>
@@ -45,6 +45,10 @@
 	<div class="form-group">
 		<label class="control-label">Board</label>
 		<input type="text" name="board" class="form-control" value="<?php echo $_SESSION['user']['agent_board'] ?>">
+	</div>
+	<div class="form-group">
+		<label class="control-label">Industry</label>
+		<input type="text" name="industry" class="form-control" value="<?php echo $_SESSION['user']['industry'] ?>">
 	</div>
 
 	<div class="form-group well">

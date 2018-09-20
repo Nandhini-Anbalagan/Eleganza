@@ -174,6 +174,10 @@ $totalAgents = count($agents);
 											<td target="board"></td>
 										</tr>
 										<tr>
+											<th>Industry</th>
+											<td target="industry"></td>
+										</tr>
+										<tr>
 											<th>Reference</th>
 											<td target="ref"></td>
 										</tr>
@@ -270,6 +274,11 @@ $totalAgents = count($agents);
 									<input type="text" id="board" name="board" class="form-control" placeholder="Board">
 								</div>
 							</div>
+							<div class="form-group">
+								<label for="industry"class="col-sm-4 control-label">Industry</label>
+								<div class="col-sm-7">
+									<input type="text" id="industry" name="industry" class="form-control" placeholder="Industry">
+								</div>
 							<div class="form-group">
 								<label for="ref" class="col-sm-4 control-label">Reference</label>
 								<div class="col-sm-7">

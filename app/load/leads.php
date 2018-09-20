@@ -152,6 +152,10 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 										<td target="board"></td>
 									</tr>
 									<tr>
+										<th>Industry</th>
+										<td target="industry"></td>
+									</tr>
+									<tr>
 										<th>Reference Code</th>
 										<td target="ref"></td>
 									</tr>
@@ -188,7 +192,7 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 				<div class="panel-body">
 					<form class="form-horizontal" role="form" data-parsley-validate="" novalidate>
 						<input type="hidden" name="action" value="<?php echo Tokenizer::add('post-action-lead', 20, 'lead'); ?>">
-						<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-case-lead-edit', 30, 'edit-fee'); ?>">
+						<input type="hidden" name="case" value="<?php echo Tokenizer::add('post-action-lead-edit-fee', 30, 'edit-fee'); ?>">
 						<input type="hidden" name="id" value="">
 
 						<div class="form-group">
@@ -271,6 +275,16 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 							<label for="board"class="col-sm-4 control-label">Board</label>
 							<div class="col-sm-7">
 								<input type="text" id="board" name="board" class="form-control" placeholder="Board">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="industry"class="col-sm-4 control-label">Industry</label>
+							<div class="col-sm-7">
+								<select class="form-control" name="industry" id="industry">
+								 <option value="SI">Service Industry</option>
+								 <option value="MI">Manufacturing Industry</option>
+								 <option value="RI">Retail Industry</option>
+								</select>
 							</div>
 						</div>
 						 <div class="form-group">

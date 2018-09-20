@@ -575,8 +575,8 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function editAgentLeads($data){
-		$query = $this->myDB->prepare("UPDATE agent_leads SET lead_name = ?, lead_email = ?, lead_phone = ?, lead_areas = ?, lead_agency = ?, lead_license = ?, lead_board = ?, lead_ref = ?, lead_comments = ?, lead_lang = ? WHERE lead_id = ?");
-		return $query->execute(array($data['name'], $data['email'], $data['phone'], $data['areas'], $data['agency'], $data['license'], $data['board'], $data['ref'], $data['comments'], $data['lang'], $data['id']));
+		$query = $this->myDB->prepare("UPDATE agent_leads SET lead_name = ?, lead_email = ?, lead_phone = ?, lead_areas = ?, lead_agency = ?, lead_license = ?, lead_board = ?, industry = ?, lead_ref = ?, lead_comments = ?, lead_lang = ? WHERE lead_id = ?");
+		return $query->execute(array($data['name'], $data['email'], $data['phone'], $data['areas'], $data['agency'], $data['license'], $data['board'], $data['industry'], $data['ref'], $data['comments'], $data['lang'], $data['id']));
 	}
 
 	public function editAgentLeadsFee($data){

@@ -144,11 +144,7 @@
 					$resultObj['error'] = Config::UNEXPECTED_DB_ERROR;
 				else
 					$resultObj['success'] = $_POST['name'] . " deleted successfully.";
-			}else if(Functions::isValidFields($_POST,
-				array('install', 'monthly'),
-				array('empty', 'empty'),
-				$resultObj['error'])){
-
+			}else {
 				$lead = $db->getAgentLeadsByID($_POST['id']);
 				if($lead){
 					if(!$db->editAgentLeadsFee($_POST))
@@ -161,7 +157,7 @@
 
 			if($resultObj['error'] == "-1"){
 				$resultObj['callback'] = "reload-leads";
-				Tokenizer::delete(array('post-action-lead','post-action-lead-edit'));
+				Tokenizer::delete(array('post-action-lead','post-action-lead-edit-fee'));
 			}
 		break;
 
