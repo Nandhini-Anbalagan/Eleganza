@@ -19,6 +19,7 @@
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -89,7 +90,7 @@ body {
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Eleganza</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" class="logo"><img src="<?php echo  Config::WEBSITE_URL . "/assets/img/tiny_logo.png" ?>" width="240" alt="Logo"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -124,13 +125,15 @@ body {
 
     <!-- Header -->
     <header class="masthead">
+			<div id="overlay"></div>
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">ELEGANZA MEDIA ONLINE</div>
+          <div class="intro-lead-in"><img src="<?php echo  Config::WEBSITE_URL . "/assets/img/tiny_logo.png" ?>" alt="Logo"></div>
 					<div class="intro-mid">LEAD GENERATION SOFTWARE | MARKETING FUNNEL MANAGEMENT</div>
           <div class="intro-heading text-uppercase">Fashion | Luxury | Travel | Design | Beauty | Automobile | Food & Drink</div>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
         </div>
       </div>
     </header>
+
     <?php include("contactUsPopup.php") ?>

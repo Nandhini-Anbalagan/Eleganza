@@ -135,7 +135,6 @@ ul li, ol li {
 
 .btn {
   font-size: 14px;
-  padding: 12px 20px;
   border-radius: 0px;
   cursor: pointer;
   font-weight: 400;
@@ -184,7 +183,6 @@ ul li, ol li {
 }
 
 .btn-lg {
-  padding: 14px 33px;
   text-transform: uppercase;
   font-size: 16px;
 }
@@ -646,7 +644,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .countdown-timer .heading-count h2 {
   font-size: 42px;
   color: #fff;
-  line-height: 30px;
+  line-height: 50px;
   margin-bottom: 15px;
 }
 
@@ -661,7 +659,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .countdown-timer .btn {
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 .time-count div {
@@ -1143,7 +1141,6 @@ a.back-to-top:hover, a.back-to-top:focus {
   color: #333;
   background: #fafafa;
   border: 1px solid #ddd;
-  padding: 12px 18px;
   border-radius: 0px;
   font-weight: 400;
   transition: all 500ms ease;

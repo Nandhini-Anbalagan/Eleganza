@@ -22,13 +22,14 @@ Follow me on Twitter @maridlcrmn
     }
   }
   body{
-    background: #ebeff2 url(../img/architectural-design-architecture-buildings-618079.jpg);
+  background: #ebeff2 url(../img/bg.jpg);
 	margin: 0;
 	overflow-x: hidden;
 	color: #797979;
-	background-size: cover;.
+	background-size: auto;.
 	background-position: bottom center;
 	background-attachment: fixed;
+	background-repeat: repeat;
   }
 
 .btn { position: relative; text-align: center; z-index: 2; padding: 4px 20px; margin: 10px auto; }

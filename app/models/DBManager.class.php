@@ -563,14 +563,14 @@ class DBManager extends MySQLConnection{
 
 	public function addToAgentLeads($data, $user_id = 0){
 		$error = false;
-		// if($data['buyer_option'] == 1){
-		// 	$query = $this->myDB->prepare("INSERT INTO agent_leads VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)");
-		// 	$error = $query ->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'], 'subscriber'));
-		// }
-		//if($data['seller_option'] == 1){
+		 if($data['buyer_option'] == 1){
+		 	$query = $this->myDB->prepare("INSERT INTO agent_leads VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT,?,?,?)");
+		 	$error = $query ->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'], 'subscriber',$data['industry'],49.99,99.99));
+		 }
+		if($data['seller_option'] == 1){
 			$query= $this->myDB->prepare("INSERT INTO agent_leads VALUES(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT,?,?,?)");
 			$error = $query->execute(array(uniqid(), $user_id, $data['name'], $data['email'], $data['phone'], $data['areas'] . ", " . $data['state'], $data['agency'], $data['lang'], $data['ref'], $data['country'],'sponsor',$data['industry'],49.99,99.99));
-		//}
+		}
 		return $error;
 	}
 

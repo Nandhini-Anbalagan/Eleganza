@@ -396,6 +396,7 @@ function payment($amount, $desc){
 
 	/* Make the API call to PayPal, using API signature. The API response is stored in an associative array called $resArray */
 	// $resArray=hash_call("doDirectPayment",$nvpstr);
+	//PayPal CHanges Thiagu
 $resArray["ACK"]="SUCCESS";
 $resArray["TRANSACTIONID"]=123445;
 	/* Display the API response back to the browser.

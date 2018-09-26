@@ -5,7 +5,7 @@
  */
 body {
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 p {
@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 section {
@@ -41,14 +41,14 @@ section {
   font-size: 16px;
 font-style: italic;
 margin: 20px 0 30px;
-font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-family:  Arial, sans-serif;
 }
 
 section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family:  Arial, sans-serif;
 }
 
 section h3.service-heading {
@@ -58,7 +58,7 @@ section h3.service-heading {
   line-height: 1.2;
   color: inherit;display: block;
 
-font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-family:  Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -68,7 +68,7 @@ font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .btn {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family:  Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -122,12 +122,12 @@ img::-moz-selection {
   color: white;
   border: 0;
   background-color: #fed136;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family:  Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
   color: #fed136;
-  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+  font-family: Lato;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -135,12 +135,12 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-size: 90%;
-  font-weight: 400;
+  font-size: 100%;
+  font-weight: 600;
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato';
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -176,7 +176,25 @@ img::-moz-selection {
     padding: 12px 0;
   }
 }
-
+#overlay {
+    -moz-animation: overlay 1.5s 1.5s forwards;
+    -webkit-animation: overlay 1.5s 1.5s forwards;
+    -ms-animation: overlay 1.5s 1.5s forwards;
+    animation: overlay 1.5s 1.5s forwards;
+    background-attachment: fixed, fixed;
+    background-image: url(images/overlay-pattern.png), url(images/overlay.svg);
+    background-position: top left, center center;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background: rgba(39,62,84,0.82);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
 header.masthead {
   text-align: center;
   color: white;
@@ -188,6 +206,8 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  z-index: 1;
+  filter: alpha(opacity=50);
 }
 
 header.masthead .intro-text {
@@ -200,7 +220,7 @@ header.masthead .intro-text .intro-lead-in {
   font-style: italic;
   line-height: 22px;
   margin-bottom: 25p1
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato';
 }
 
 header.masthead .intro-text .intro-heading {
@@ -208,7 +228,7 @@ header.masthead .intro-text .intro-heading {
 
   line-height: 50px;
   margin-bottom: 25px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lato';
 }
 .divider {
   margin: 0 5px;
