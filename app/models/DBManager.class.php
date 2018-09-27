@@ -674,7 +674,8 @@ class DBManager extends MySQLConnection{
 	*/
 	public function createAgent($id, $address, $ad, $password){
 		$data = $this->getAgentLeadsByID($id);
-
+		$industry=$data["industry"];
+		$city = $data['lead_areas'];
 		$this->myDB->query("UPDATE agent_leads SET lead_status = -1 WHERE lead_id = $id");
 
 		$signature = "<p><b>". $data['lead_name'] . "</b></p><p>" . $data['lead_email'] . "</p><p>" . $data['lead_phone'] . "</p><p>" . $data['lead_agency']."</p>";
@@ -694,10 +695,22 @@ class DBManager extends MySQLConnection{
 		}
 
 		if($data['lead_type'] == 'sponsor'){
-			$this->myDB->query("INSERT INTO advertiser_landing_page(agent_fk) VALUES ($agent_id)");
+			if($industry == 'SI'){
+				$bgimg1='adsidefault1.jpg';
+				$bgimg2='adsidefault2.jpg';
+				$bgimg3='adsidefault3.jpg';
+			}else if($industry == 'MI'){
+				$bgimg1='admidefault1.jpg';
+				$bgimg2='admidefault2.jpg';
+				$bgimg3='admidefault3.jpg';
+			}else {
+				$bgimg1='adridefault1.jpg';
+				$bgimg2='adridefault2.jpg';
+				$bgimg3='adridefault3.jpg';
+			}
+			$this->myDB->query("INSERT INTO advertiser_landing_page(agent_fk,city_en,industry,bg_img1,bg_img2,bg_img3) VALUES ($agent_id,'$city','$industry','$bgimg1','$bgimg2','$bgimg3')");
 			$this->funnelPerAgent($agent_id, 'sponsor');
 		}else if($data['lead_type'] == 'subscriber'){
-			$city = $data['lead_areas'];
 			$this->myDB->query("INSERT INTO subscriber_landing_page(agent_fk, city_en) VALUES ($agent_id, '$city')");
 			$this->funnelPerAgent($agent_id, 'subscriber');
 		}
@@ -1005,8 +1018,8 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function editSellerLandingPage($data){
-		$query = $this->myDB->prepare("UPDATE advertiser_landing_page SET city_fr = ?, city_en = ?, title_fr = ?, title_en = ?, sub_title_1_fr = ?, sub_title_1_en = ?, sub_title_2_fr = ?, sub_title_2_en = ?, bg_img = ?, agent_title_fr = ?, agent_title_en = ?, final_text_fr = ?, final_text_en = ? WHERE id = ?");
-		return $query->execute(array($data['city_fr'], $data['city_en'], $data['title_fr'], $data['title_en'], $data['sub_title_1_fr'], $data['sub_title_1_en'], $data['sub_title_2_fr'], $data['sub_title_2_en'], $data['defaultBackground'], $data['agent_title_fr'], $data['agent_title_en'], $data['final_text_fr'], $data['final_text_en'], $data['id']));
+		$query = $this->myDB->prepare("UPDATE advertiser_landing_page SET city_fr=?,city_en=?,LP1_EN_TITLE=?,LP1_EN_SUB2=?,LP1_EN_BTN=?,LP1_EN_FB_URL=?,LP1_EN_TW_URL=?,LP1_EN_INS_URL=?,LP1_EN_GP_URL=?,LP2_EN_TITLE=?,LP2_EN_FB_URL=?,LP2_EN_TW_URL=?,LP2_EN_INS_URL=?,LP2_EN_GP_URL=?,LP3_EN_TITLE=?,LP3_EN_BTN=?,LP3_EN_FB_URL=?,LP3_EN_TW_URL=?,LP3_EN_INS_URL=?,LP3_EN_GP_URL=?,LP1_FR_TITLE=?,LP1_FR_SUB2=?,LP1_FR_BTN=?,LP1_FR_FB_URL=?,LP1_FR_TW_URL=?,LP1_FR_INS_URL=?,LP1_FR_GP_URL=?,LP2_FR_TITLE=?,LP2_FR_FB_URL=?,LP2_FR_TW_URL=?,LP2_FR_INS_URL=?,LP2_FR_GP_URL=?,LP3_FR_TITLE=?,LP3_FR_BTN=?,LP3_FR_FB_URL=?,LP3_FR_TW_URL=?,LP3_FR_INS_URL=?,LP3_FR_GP_URL=?,bg_img1=?,bg_img2=?,bg_img3=?,LP3_EN_NAME_LBL=?,LP3_EN_PHONE_LBL=?,LP3_EN_EMAIL_LBL=?,LP3_EN_AREA_LBL=?,LP3_EN_COMPANY_LBL=?,LP3_EN_MESSAGE_LBL=?,LP3_FR_NAME_LBL=?,LP3_FR_PHONE_LBL=?,LP3_FR_EMAIL_LBL=?,LP3_FR_AREA_LBL=?,LP3_FR_COMPANY_LBL=?,LP3_FR_MESSAGE_LBL=? WHERE id = ?");
+		return $query->execute(array($data['city_fr'],$data['city_en'],$data['LP1_EN_TITLE'],$data['LP1_EN_SUB2'],$data['LP1_EN_BTN'],$data['LP1_EN_FB_URL'],$data['LP1_EN_TW_URL'],$data['LP1_EN_INS_URL'],$data['LP1_EN_GP_URL'],$data['LP2_EN_TITLE'],$data['LP2_EN_FB_URL'],$data['LP2_EN_TW_URL'],$data['LP2_EN_INS_URL'],$data['LP2_EN_GP_URL'],$data['LP3_EN_TITLE'],$data['LP3_EN_BTN'],$data['LP3_EN_FB_URL'],$data['LP3_EN_TW_URL'],$data['LP3_EN_INS_URL'],$data['LP3_EN_GP_URL'],$data['LP1_FR_TITLE'],$data['LP1_FR_SUB2'],$data['LP1_FR_BTN'],$data['LP1_FR_FB_URL'],$data['LP1_FR_TW_URL'],$data['LP1_FR_INS_URL'],$data['LP1_FR_GP_URL'],$data['LP2_FR_TITLE'],$data['LP2_FR_FB_URL'],$data['LP2_FR_TW_URL'],$data['LP2_FR_INS_URL'],$data['LP2_FR_GP_URL'],$data['LP3_FR_TITLE'],$data['LP3_FR_BTN'],$data['LP3_FR_FB_URL'],$data['LP3_FR_TW_URL'],$data['LP3_FR_INS_URL'],$data['LP3_FR_GP_URL'],$data['defaultBackground1'],$data['defaultBackground2'],$data['defaultBackground3'],$data['LP3_EN_NAME_LBL'],$data['LP3_EN_PHONE_LBL'],$data['LP3_EN_EMAIL_LBL'],$data['LP3_EN_AREA_LBL'],$data['LP3_EN_COMPANY_LBL'],$data['LP3_EN_MESSAGE_LBL'],$data['LP3_FR_NAME_LBL'],$data['LP3_FR_PHONE_LBL'],$data['LP3_FR_EMAIL_LBL'],$data['LP3_FR_AREA_LBL'],$data['LP3_FR_COMPANY_LBL'],$data['LP3_FR_MESSAGE_LBL'], $data['id']));
 	}
 
 	public function editBuyerLandingPage($data){

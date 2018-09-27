@@ -303,15 +303,15 @@ function executeAction(action, data){
 			content.find('span[target="LP1_EN_TITLE"]').html(data['LP1_EN_TITLE']);
 			content.find('span[target="LP1_EN_SUB2"]').html(data['LP1_EN_SUB2']);
 			content.find('span[target="LP1_EN_BTN"]').html(data['LP1_EN_BTN']);
-			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
-			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
-			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
-			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP1_EN_FB_URL"]').html(data['LP1_EN_FB_URL']);
+			content.find('span[target="LP1_EN_TW_URL"]').html(data['LP1_EN_TW_URL']);
+			content.find('span[target="LP1_EN_INS_URL"]').html(data['LP1_EN_INS_URL']);
+			content.find('span[target="LP1_EN_GP_URL"]').html(data['LP1_EN_GP_URL']);
 			content.find('span[target="LP2_EN_TITLE"]').html(data['LP2_EN_TITLE']);
-			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
-			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
-			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
-			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP2_EN_FB_URL"]').html(data['LP2_EN_FB_URL']);
+			content.find('span[target="LP2_EN_TW_URL"]').html(data['LP2_EN_TW_URL']);
+			content.find('span[target="LP2_EN_INS_URL"]').html(data['LP2_EN_INS_URL']);
+			content.find('span[target="LP2_EN_GP_URL"]').html(data['LP2_EN_GP_URL']);
 			content.find('span[target="LP3_EN_TITLE"]').html(data['LP3_EN_TITLE']);
 			content.find('span[target="LP3_EN_NAME_LBL"]').html(data['LP3_EN_NAME_LBL']);
 			content.find('span[target="LP3_EN_PHONE_LBL"]').html(data['LP3_EN_PHONE_LBL']);
@@ -334,15 +334,15 @@ function executeAction(action, data){
 			content.find('span[target="LP1_FR_TITLE"]').html(data['LP1_FR_TITLE']);
 			content.find('span[target="LP1_FR_SUB2"]').html(data['LP1_FR_SUB2']);
 			content.find('span[target="LP1_FR_BTN"]').html(data['LP1_FR_BTN']);
-			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
-			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
-			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
-			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP1_FR_FB_URL"]').html(data['LP1_FR_FB_URL']);
+			content.find('span[target="LP1_FR_TW_URL"]').html(data['LP1_FR_TW_URL']);
+			content.find('span[target="LP1_FR_INS_URL"]').html(data['LP1_FR_INS_URL']);
+			content.find('span[target="LP1_FR_GP_URL"]').html(data['LP1_FR_GP_URL']);
 			content.find('span[target="LP2_FR_TITLE"]').html(data['LP2_FR_TITLE']);
-			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
-			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
-			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
-			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP2_FR_FB_URL"]').html(data['LP2_FR_FB_URL']);
+			content.find('span[target="LP2_FR_TW_URL"]').html(data['LP2_FR_TW_URL']);
+			content.find('span[target="LP2_FR_INS_URL"]').html(data['LP2_FR_INS_URL']);
+			content.find('span[target="LP2_FR_GP_URL"]').html(data['LP2_FR_GP_URL']);
 			content.find('span[target="LP3_FR_TITLE"]').html(data['LP3_FR_TITLE']);
 			content.find('span[target="LP3_FR_NAME_LBL"]').html(data['LP3_FR_NAME_LBL']);
 			content.find('span[target="LP3_FR_PHONE_LBL"]').html(data['LP3_FR_PHONE_LBL']);
@@ -351,16 +351,19 @@ function executeAction(action, data){
 			content.find('span[target="LP3_FR_COMPANY_LBL"]').html(data['LP3_FR_COMPANY_LBL']);
 			content.find('span[target="LP3_FR_MESSAGE_LBL"]').html(data['LP3_FR_MESSAGE_LBL']);
 			content.find('span[target="LP3_FR_BTN"]').html(data['LP3_FR_BTN']);
-			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
-			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
-			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
-			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP3_FR_FB_URL"]').html(data['LP3_FR_FB_URL']);
+			content.find('span[target="LP3_FR_TW_URL"]').html(data['LP3_FR_TW_URL']);
+			content.find('span[target="LP3_FR_INS_URL"]').html(data['LP3_FR_INS_URL']);
+			content.find('span[target="LP3_FR_GP_URL"]').html(data['LP3_FR_GP_URL']);
 			content.find('span[target="industry"]').html((data['industry']=='SI')?"Service Industry":((data['industry']=='MI')?"Manufacturing Industry":"Retail Industry"));
 			content.find('span[target="homeEval_web_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=w");
 			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=f");
 			content.find('span[target="homeEval_google_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=g");
 			//Background Image
-			content.find('img[target="background"]').attr("src", "uploads/landings/" + data['bg_img']);
+			content.find('img[target="background1"]').attr("src", "uploads/landings/" + data['bg_img1']);
+			content.find('img[target="background2"]').attr("src", "uploads/landings/" + data['bg_img2']);
+			content.find('img[target="background3"]').attr("src", "uploads/landings/" + data['bg_img3']);
+
 
 			//Form English Section
 			form.find('input[name="id"]').val(data['id']);
@@ -368,16 +371,16 @@ function executeAction(action, data){
 			form.find('input[name="LP1_EN_TITLE"]').val(data['LP1_EN_TITLE']);
 			form.find('input[name="LP1_EN_SUB2"]').val(data['LP1_EN_SUB2']);
 			form.find('input[name="LP1_EN_BTN"]').val(data['LP1_EN_BTN']);
-			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
-			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
-			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
-			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
+			form.find('input[name="LP1_EN_FB_URL"]').val(data['LP1_EN_FB_URL']);
+			form.find('input[name="LP1_EN_TW_URL"]').val(data['LP1_EN_TW_URL']);
+			form.find('input[name="LP1_EN_INS_URL"]').val(data['LP1_EN_INS_URL']);
+			form.find('input[name="LP1_EN_GP_URL"]').val(data['LP1_EN_GP_URL']);
 
 			form.find('input[name="LP2_EN_TITLE"]').val(data['LP2_EN_TITLE']);
-			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
-			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
-			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
-			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
+			form.find('input[name="LP2_EN_FB_URL"]').val(data['LP2_EN_FB_URL']);
+			form.find('input[name="LP2_EN_TW_URL"]').val(data['LP2_EN_TW_URL']);
+			form.find('input[name="LP2_EN_INS_URL"]').val(data['LP2_EN_INS_URL']);
+			form.find('input[name="LP2_EN_GP_URL"]').val(data['LP2_EN_GP_URL']);
 
 			form.find('input[name="LP3_EN_TITLE"]').val(data['LP3_EN_TITLE']);
 			form.find('input[name="LP3_EN_NAME_LBL"]').val(data['LP3_EN_NAME_LBL']);
@@ -397,16 +400,16 @@ function executeAction(action, data){
 			form.find('input[name="LP1_FR_TITLE"]').val(data['LP1_FR_TITLE']);
 			form.find('input[name="LP1_FR_SUB2"]').val(data['LP1_FR_SUB2']);
 			form.find('input[name="LP1_FR_BTN"]').val(data['LP1_FR_BTN']);
-			form.find('input[name="LP3_FR_FB_URL"]').val(data['LP3_FR_FB_URL']);
-			form.find('input[name="LP3_FR_TW_URL"]').val(data['LP3_EN_TW_URL']);
-			form.find('input[name="LP3_FR_INS_URL"]').val(data['LP3_EN_INS_URL']);
-			form.find('input[name="LP3_FR_GP_URL"]').val(data['LP3_EN_GP_URL']);
+			form.find('input[name="LP1_FR_FB_URL"]').val(data['LP1_FR_FB_URL']);
+			form.find('input[name="LP1_FR_TW_URL"]').val(data['LP1_FR_TW_URL']);
+			form.find('input[name="LP1_FR_INS_URL"]').val(data['LP1_FR_INS_URL']);
+			form.find('input[name="LP1_FR_GP_URL"]').val(data['LP1_FR_GP_URL']);
 
 			form.find('input[name="LP2_FR_TITLE"]').val(data['LP2_FR_TITLE']);
-			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
-			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
-			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
-			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
+			form.find('input[name="LP2_FR_FB_URL"]').val(data['LP2_FR_FB_URL']);
+			form.find('input[name="LP2_FR_TW_URL"]').val(data['LP2_FR_TW_URL']);
+			form.find('input[name="LP2_FR_INS_URL"]').val(data['LP2_FR_INS_URL']);
+			form.find('input[name="LP2_FR_GP_URL"]').val(data['LP2_FR_GP_URL']);
 
 			form.find('input[name="LP3_FR_TITLE"]').val(data['LP3_FR_TITLE']);
 			form.find('input[name="LP3_FR_NAME_LBL"]').val(data['LP3_FR_NAME_LBL']);
@@ -416,13 +419,15 @@ function executeAction(action, data){
 			form.find('input[name="LP3_FR_COMPANY_LBL"]').val(data['LP3_FR_COMPANY_LBL']);
 			form.find('input[name="LP3_FR_MESSAGE_LBL"]').val(data['LP3_FR_MESSAGE_LBL']);
 			form.find('input[name="LP3_FR_BTN"]').val(data['LP3_FR_BTN']);
-			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
-			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
-			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
-			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
+			form.find('input[name="LP3_FR_FB_URL"]').val(data['LP3_FR_FB_URL']);
+			form.find('input[name="LP3_FR_TW_URL"]').val(data['LP3_FR_TW_URL']);
+			form.find('input[name="LP3_FR_INS_URL"]').val(data['LP3_FR_INS_URL']);
+			form.find('input[name="LP3_FR_GP_URL"]').val(data['LP3_FR_GP_URL']);
 
 			//Form Background Image
-			form.find('input:radio[name="defaultBackground"]').val([data['bg_img']]);
+			form.find('input:radio[name="defaultBackground1"]').val([data['bg_img1']]);
+			form.find('input:radio[name="defaultBackground2"]').val([data['bg_img2']]);
+			form.find('input:radio[name="defaultBackground3"]').val([data['bg_img3']]);
 			break;
 		case "get-buyer-landing-page":
 			var content = $('#landingAgentPage');
@@ -525,7 +530,9 @@ function executeAction(action, data){
 			form.find('input[name="LP3_FR_SUB3"]').val(data['LP3_FR_SUB3']);
 
 			//Form Background Image
-			form.find('input:radio[name="defaultBackground"]').val([data['bg_img']]);
+			form.find('input:radio[name="defaultBackground1"]').val([data['bg_img1']]);
+			form.find('input:radio[name="defaultBackground2"]').val([data['bg_img2']]);
+			form.find('input:radio[name="defaultBackground3"]').val([data['bg_img3']]);
 			break;
 		case "show-evaluation-preview":
 			$('#preview-wrapper').html(data);

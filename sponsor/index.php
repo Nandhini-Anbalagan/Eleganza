@@ -220,11 +220,11 @@
           timer: false,
           delay: 6000,
           transitionDuration: 2000,
-          transition: "blur",
-          slides: [
-              { src: "assets/img/bg.jpg" },
-              { src: "assets/img/slide.png" },
-              { src: "assets/img/slider.png" }
+					transition: "zoomOut2",
+					slides: [
+							{ src: '../app/uploads/landings/<?php echo $agent['bg_img1']?>' },
+							{ src: '../app/uploads/landings/<?php echo $agent['bg_img2']?>' },
+							{ src: '../app/uploads/landings/<?php echo $agent['bg_img3']?>' }
           ]
       });
       function getParameterByName( name ){

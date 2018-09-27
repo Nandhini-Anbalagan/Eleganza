@@ -37,20 +37,20 @@
 							<input type="text" class="form-control" id="LP1_EN_BTN" name="LP1_EN_BTN" placeholder="<?php echo $tr['btn_label'] ?> 5" required>
 	</div>
 	<div class="form-group">
-		<label for="LP3_EN_FB_URL"><?php echo $tr['FB_label'] ?></label>
-		<input type="text" class="form-control" id="LP3_EN_FB_URL" name="LP3_EN_FB_URL" placeholder="<?php echo $tr['FB_label'] ?> 5" required>
+		<label for="LP1_EN_FB_URL"><?php echo $tr['FB_label'] ?></label>
+		<input type="text" class="form-control" id="LP1_EN_FB_URL" name="LP1_EN_FB_URL" placeholder="<?php echo $tr['FB_label'] ?> 5" required>
 	</div>
 	<div class="form-group">
-		<label for="LP3_EN_TW_URL"><?php echo $tr['TW_label'] ?></label>
-		<input type="text" class="form-control" id="LP3_EN_TW_URL" name="LP3_EN_TW_URL" placeholder="<?php echo $tr['TW_label'] ?> 5" required>
+		<label for="LP1_EN_TW_URL"><?php echo $tr['TW_label'] ?></label>
+		<input type="text" class="form-control" id="LP1_EN_TW_URL" name="LP1_EN_TW_URL" placeholder="<?php echo $tr['TW_label'] ?> 5" required>
 	</div>
 	<div class="form-group">
-		<label for="LP3_EN_INS_URL"><?php echo $tr['INS_label'] ?></label>
-		<input type="text" class="form-control" id="LP3_EN_INS_URL" name="LP3_EN_INS_URL" placeholder="<?php echo $tr['INS_label'] ?> 5" required>
+		<label for="LP1_EN_INS_URL"><?php echo $tr['INS_label'] ?></label>
+		<input type="text" class="form-control" id="LP1_EN_INS_URL" name="LP1_EN_INS_URL" placeholder="<?php echo $tr['INS_label'] ?> 5" required>
 	</div>
 	<div class="form-group">
-		<label for="LP3_EN_GP_URL"><?php echo $tr['GP_label'] ?></label>
-		<input type="text" class="form-control" id="LP3_EN_GP_URL" name="LP3_EN_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
+		<label for="LP1_EN_GP_URL"><?php echo $tr['GP_label'] ?></label>
+		<input type="text" class="form-control" id="LP1_EN_GP_URL" name="LP1_EN_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
 	</div>
 	<h3>Landing Page 2</h3>
 <div class="form-group">
@@ -59,20 +59,20 @@
 </div>
 
 <div class="form-group">
-	<label for="LP3_EN_FB_URL"><?php echo $tr['FB_label'] ?></label>
-	<input type="text" class="form-control" id="LP3_EN_FB_URL" name="LP3_EN_FB_URL" placeholder="<?php echo $tr['FB_label'] ?> 5" required>
+	<label for="LP2_EN_FB_URL"><?php echo $tr['FB_label'] ?></label>
+	<input type="text" class="form-control" id="LP2_EN_FB_URL" name="LP2_EN_FB_URL" placeholder="<?php echo $tr['FB_label'] ?> 5" required>
 </div>
 <div class="form-group">
-	<label for="LP3_EN_TW_URL"><?php echo $tr['TW_label'] ?></label>
-	<input type="text" class="form-control" id="LP3_EN_TW_URL" name="LP3_EN_TW_URL" placeholder="<?php echo $tr['TW_label'] ?> 5" required>
+	<label for="LP2_EN_TW_URL"><?php echo $tr['TW_label'] ?></label>
+	<input type="text" class="form-control" id="LP2_EN_TW_URL" name="LP2_EN_TW_URL" placeholder="<?php echo $tr['TW_label'] ?> 5" required>
 </div>
 <div class="form-group">
-	<label for="LP3_EN_INS_URL"><?php echo $tr['INS_label'] ?></label>
-	<input type="text" class="form-control" id="LP3_EN_INS_URL" name="LP3_EN_INS_URL" placeholder="<?php echo $tr['INS_label'] ?> 5" required>
+	<label for="LP2_EN_INS_URL"><?php echo $tr['INS_label'] ?></label>
+	<input type="text" class="form-control" id="LP2_EN_INS_URL" name="LP2_EN_INS_URL" placeholder="<?php echo $tr['INS_label'] ?> 5" required>
 </div>
 <div class="form-group">
-	<label for="LP3_EN_GP_URL"><?php echo $tr['GP_label'] ?></label>
-	<input type="text" class="form-control" id="LP3_EN_GP_URL" name="LP3_EN_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
+	<label for="LP2_EN_GP_URL"><?php echo $tr['GP_label'] ?></label>
+	<input type="text" class="form-control" id="LP2_EN_GP_URL" name="LP2_EN_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
 </div>
 <h3>Landing Page 3</h3>
 <div class="form-group">
@@ -145,20 +145,20 @@
 							<input type="text" class="form-control" id="LP1_FR_BTN" name="LP1_FR_BTN" placeholder="<?php echo $tr['btn_label'] ?> 5" required>
 	</div>
 	<div class="form-group">
-		<label for="LP3_FR_FB_URL"><?php echo $tr['FB_label'] ?></label>
-		<input type="text" class="form-control" id="LP3_FR_FB_URL" name="LP3_FR_FB_URL" placeholder="<?php echo $tr['FB_label'] ?> 5" required>
+		<label for="LP1_FR_FB_URL"><?php echo $tr['FB_label'] ?></label>
+		<input type="text" class="form-control" id="LP1_FR_FB_URL" name="LP1_FR_FB_URL" placeholder="<?php echo $tr['FB_label'] ?> 5" required>
 	</div>
 	<div class="form-group">
-		<label for="LP3_FR_TW_URL"><?php echo $tr['TW_label'] ?></label>
-		<input type="text" class="form-control" id="LP3_FR_TW_URL" name="LP3_FR_TW_URL" placeholder="<?php echo $tr['TW_label'] ?> 5" required>
+		<label for="LP1_FR_TW_URL"><?php echo $tr['TW_label'] ?></label>
+		<input type="text" class="form-control" id="LP1_FR_TW_URL" name="LP1_FR_TW_URL" placeholder="<?php echo $tr['TW_label'] ?> 5" required>
 	</div>
 	<div class="form-group">
-		<label for="LP3_FR_INS_URL"><?php echo $tr['INS_label'] ?></label>
-		<input type="text" class="form-control" id="LP3_FR_INS_URL" name="LP3_FR_INS_URL" placeholder="<?php echo $tr['INS_label'] ?> 5" required>
+		<label for="LP1_FR_INS_URL"><?php echo $tr['INS_label'] ?></label>
+		<input type="text" class="form-control" id="LP1_FR_INS_URL" name="LP1_FR_INS_URL" placeholder="<?php echo $tr['INS_label'] ?> 5" required>
 	</div>
 	<div class="form-group">
-		<label for="LP3_FR_GP_URL"><?php echo $tr['GP_label'] ?></label>
-		<input type="text" class="form-control" id="LP3_FR_GP_URL" name="LP3_FR_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
+		<label for="LP1_FR_GP_URL"><?php echo $tr['GP_label'] ?></label>
+		<input type="text" class="form-control" id="LP1_FR_GP_URL" name="LP1_FR_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
 	</div>
 	<h3>Landing Page 2</h3>
 <div class="form-group">
@@ -167,20 +167,20 @@
 </div>
 
 <div class="form-group">
-	<label for="LP3_FR_FB_URL"><?php echo $tr['FB_label'] ?></label>
-	<input type="text" class="form-control" id="LP3_FR_FB_URL" name="LP3_FR_FB_URL" placeholder="<?php echo $tr['FB_label'] ?> 5" required>
+	<label for="LP2_FR_FB_URL"><?php echo $tr['FB_label'] ?></label>
+	<input type="text" class="form-control" id="LP2_FR_FB_URL" name="LP2_FR_FB_URL" placeholder="<?php echo $tr['FB_label'] ?> 5" required>
 </div>
 <div class="form-group">
-	<label for="LP3_FR_TW_URL"><?php echo $tr['TW_label'] ?></label>
-	<input type="text" class="form-control" id="LP3_FR_TW_URL" name="LP3_FR_TW_URL" placeholder="<?php echo $tr['TW_label'] ?> 5" required>
+	<label for="LP2_FR_TW_URL"><?php echo $tr['TW_label'] ?></label>
+	<input type="text" class="form-control" id="LP2_FR_TW_URL" name="LP2_FR_TW_URL" placeholder="<?php echo $tr['TW_label'] ?> 5" required>
 </div>
 <div class="form-group">
-	<label for="LP3_FR_INS_URL"><?php echo $tr['INS_label'] ?></label>
-	<input type="text" class="form-control" id="LP3_FR_INS_URL" name="LP3_FR_INS_URL" placeholder="<?php echo $tr['INS_label'] ?> 5" required>
+	<label for="LP2_FR_INS_URL"><?php echo $tr['INS_label'] ?></label>
+	<input type="text" class="form-control" id="LP2_FR_INS_URL" name="LP2_FR_INS_URL" placeholder="<?php echo $tr['INS_label'] ?> 5" required>
 </div>
 <div class="form-group">
-	<label for="LP3_FR_GP_URL"><?php echo $tr['GP_label'] ?></label>
-	<input type="text" class="form-control" id="LP3_FR_GP_URL" name="LP3_FR_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
+	<label for="LP2_FR_GP_URL"><?php echo $tr['GP_label'] ?></label>
+	<input type="text" class="form-control" id="LP2_FR_GP_URL" name="LP2_FR_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
 </div>
 <h3>Landing Page 3</h3>
 <div class="form-group">
@@ -231,17 +231,157 @@
 	<label for="LP3_FR_GP_URL"><?php echo $tr['GP_label'] ?></label>
 	<input type="text" class="form-control" id="LP3_FR_GP_URL" name="LP3_FR_GP_URL" placeholder="<?php echo $tr['GP_label'] ?> 5" required>
 </div>
-					<div class="form-group">
-						<input type="file" class="filestyle" data-buttonbefore="true">
-						<em class="mutted"><?php echo $tr['upload_image'] ?></em>
-						<input type="hidden" name="uploadedBg">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-4">
+						<div class="form-group">
+											<label class="col-sm-12 control-label"><?php echo $tr['background'] ?> 1</label>
+											<div class="col-sm-6">
+												<div class="radio radio-warning">
+													<input type="radio" id="bg1" value="default.jpg" name="defaultBackground1">
+													<label for="bg1" class="imgMod" src="uploads/landings/default.jpg"> <?php echo $tr['background'] ?> 1 </label>
+												</div>
+												<div class="radio">
+													<input type="radio" id="bg2" value="default2.jpg" name="defaultBackground1">
+													<label for="bg2" class="imgMod" src="uploads/landings/default2.jpg"> <?php echo $tr['background'] ?> 2 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg3" value="default3.jpg" name="defaultBackground1">
+													<label for="bg3" class="imgMod" src="uploads/landings/default3.jpg"> <?php echo $tr['background'] ?> 3 </label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="radio radio-danger">
+													<input type="radio" id="bg4" value="default4.jpg" name="defaultBackground1">
+													<label for="bg4" class="imgMod" src="uploads/landings/default4.jpg"> <?php echo $tr['background'] ?> 4 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg5" value="default5.jpg" name="defaultBackground1">
+													<label for="bg5" class="imgMod" src="uploads/landings/default5.jpg"> <?php echo $tr['background'] ?> 5 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg6" value="default6.jpg" name="defaultBackground1">
+													<label for="bg6" class="imgMod" src="uploads/landings/default6.jpg"> <?php echo $tr['background'] ?> 6 </label>
+												</div>
+											</div>
+											<div class="col-sm-12">
+											<div class="radio radio-info">
+												<input type="radio" id="custom_background1" value="" name="defaultBackground1">
+												<label for="bg7"> <?php echo $tr['custom_background'] ?> </label>
+											</div>
+										</div>
+										<div class="col-sm-12">
+										<div class="form-group">
+											<input type="file" id="upload_image1" class="filestyle" data-buttonbefore="true">
+											<em class="mutted"><?php echo $tr['upload_image'] ?></em>
+											<input type="hidden" name="uploadedBg1">
+										</div>
+									</div>
+										</div>
 					</div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary waves-effect waves-light pull-right"><?php echo $tr['submit'] ?></button>
+					<div class="col-md-4">
+						<div class="form-group">
+											<label class="col-sm-12 control-label"><?php echo $tr['background'] ?> 2</label>
+											<div class="col-sm-6">
+												<div class="radio radio-warning">
+													<input type="radio" id="bg1" value="default.jpg" name="defaultBackground2">
+													<label for="bg1" class="imgMod" src="uploads/landings/default.jpg"> <?php echo $tr['background'] ?> 1 </label>
+												</div>
+												<div class="radio">
+													<input type="radio" id="bg2" value="default2.jpg" name="defaultBackground2">
+													<label for="bg2" class="imgMod" src="uploads/landings/default2.jpg"> <?php echo $tr['background'] ?> 2 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg3" value="default3.jpg" name="defaultBackground2">
+													<label for="bg3" class="imgMod" src="uploads/landings/default3.jpg"> <?php echo $tr['background'] ?> 3 </label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="radio radio-danger">
+													<input type="radio" id="bg4" value="default4.jpg" name="defaultBackground2">
+													<label for="bg4" class="imgMod" src="uploads/landings/default4.jpg"> <?php echo $tr['background'] ?> 4 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg5" value="default5.jpg" name="defaultBackground2">
+													<label for="bg5" class="imgMod" src="uploads/landings/default5.jpg"> <?php echo $tr['background'] ?> 5 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg6" value="default6.jpg" name="defaultBackground2">
+													<label for="bg6" class="imgMod" src="uploads/landings/default6.jpg"> <?php echo $tr['background'] ?> 6 </label>
+												</div>
+											</div>
+											<div class="col-sm-12">
+											<div class="radio radio-info">
+												<input type="radio" id="custom_background2" value="" name="defaultBackground2">
+												<label for="bg7"> <?php echo $tr['custom_background'] ?> </label>
+											</div>
+										</div>
+										<div class="col-sm-12">
+										<div class="form-group">
+											<input type="file" id="upload_image2" class="filestyle" data-buttonbefore="true">
+											<em class="mutted"><?php echo $tr['upload_image'] ?></em>
+											<input type="hidden" name="uploadedBg2">
+										</div>
+									</div>
+										</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+											<label class="col-sm-12  control-label"><?php echo $tr['background'] ?> 3</label>
+											<div class="col-sm-6">
+												<div class="radio radio-warning">
+													<input type="radio" id="bg1" value="default.jpg" name="defaultBackground3">
+													<label for="bg1" class="imgMod" src="uploads/landings/default.jpg"> <?php echo $tr['background'] ?> 1 </label>
+												</div>
+												<div class="radio">
+													<input type="radio" id="bg2" value="default2.jpg" name="defaultBackground3">
+													<label for="bg2" class="imgMod" src="uploads/landings/default2.jpg"> <?php echo $tr['background'] ?> 2 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg3" value="default3.jpg" name="defaultBackground3">
+													<label for="bg3" class="imgMod" src="uploads/landings/default3.jpg"> <?php echo $tr['background'] ?> 3 </label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="radio radio-danger">
+													<input type="radio" id="bg4" value="default4.jpg" name="defaultBackground3">
+													<label for="bg4" class="imgMod" src="uploads/landings/default4.jpg"> <?php echo $tr['background'] ?> 4 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg5" value="default5.jpg" name="defaultBackground3">
+													<label for="bg5" class="imgMod" src="uploads/landings/default5.jpg"> <?php echo $tr['background'] ?> 5 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg6" value="default6.jpg" name="defaultBackground3">
+													<label for="bg6" class="imgMod" src="uploads/landings/default6.jpg"> <?php echo $tr['background'] ?> 6 </label>
+												</div>
+											</div>
+											<div class="col-sm-12">
+											<div class="radio radio-info">
+												<input type="radio" id="custom_background3" value="" name="defaultBackground3">
+												<label for="bg7"> <?php echo $tr['custom_background'] ?> </label>
+											</div>
+										</div>
+										<div class="col-sm-12">
+										<div class="form-group">
+											<input type="file" id="upload_image3" class="filestyle" data-buttonbefore="true">
+											<em class="mutted"><?php echo $tr['upload_image'] ?></em>
+											<input type="hidden" name="uploadedBg3">
+										</div>
+									</div>
+										</div>
 					</div>
 				</div>
 			</div>
-
+			<div class="row">
+				<div class="col-md-12">
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary waves-effect waves-light pull-right"><?php echo $tr['submit'] ?></button>
+			</div>
+			</div>
+			</div>
 		</form>
 
 	<div class="row" id="view">
@@ -252,25 +392,25 @@
 			<h4><?php echo $tr['title'] ?>: <span target="LP1_EN_TITLE" class="small"></span></h4>
 			<h4><?php echo $tr['sub_title'] ?> : <span target="LP1_EN_SUB2" class="small"></span></h4>
 			<h4><?php echo $tr['btn_label'] ?>  : <span target="LP1_EN_BTN" class="small"></span></h4>
-			<h4><?php echo $tr['FB_label'] ?>: <span target="LP3_EN_FB_URL" class="small"></span></h4>
-			<h4><?php echo $tr['TW_label'] ?>: <span target="LP3_EN_TW_URL" class="small"></span></h4>
-			<h4><?php echo $tr['INS_label'] ?>: <span target="LP3_EN_INS_URL" class="small"></span></h4>
-			<h4><?php echo $tr['GP_label'] ?>: <span target="LP3_EN_GP_URL" class="small"></span></h4>
+			<h4><?php echo $tr['FB_label'] ?>: <span target="LP1_EN_FB_URL" class="small"></span></h4>
+			<h4><?php echo $tr['TW_label'] ?>: <span target="LP1_EN_TW_URL" class="small"></span></h4>
+			<h4><?php echo $tr['INS_label'] ?>: <span target="LP1_EN_INS_URL" class="small"></span></h4>
+			<h4><?php echo $tr['GP_label'] ?>: <span target="LP1_EN_GP_URL" class="small"></span></h4>
 
 			<h3>Landing Page 2</h3>
 			<h4><?php echo $tr['title'] ?>: <span target="LP2_EN_TITLE" class="small"></span></h4>
-			<h4><?php echo $tr['FB_label'] ?>: <span target="LP3_EN_FB_URL" class="small"></span></h4>
-			<h4><?php echo $tr['TW_label'] ?>: <span target="LP3_EN_TW_URL" class="small"></span></h4>
-			<h4><?php echo $tr['INS_label'] ?>: <span target="LP3_EN_INS_URL" class="small"></span></h4>
-			<h4><?php echo $tr['GP_label'] ?>: <span target="LP3_EN_GP_URL" class="small"></span></h4>
+			<h4><?php echo $tr['FB_label'] ?>: <span target="LP2_EN_FB_URL" class="small"></span></h4>
+			<h4><?php echo $tr['TW_label'] ?>: <span target="LP2_EN_TW_URL" class="small"></span></h4>
+			<h4><?php echo $tr['INS_label'] ?>: <span target="LP2_EN_INS_URL" class="small"></span></h4>
+			<h4><?php echo $tr['GP_label'] ?>: <span target="LP2_EN_GP_URL" class="small"></span></h4>
 			<h3>Landing Page 3</h3>
 			<h4><?php echo $tr['title'] ?>: <span target="LP3_EN_TITLE" class="small"></span></h4>
-			<h4><?php echo $tr['name_label'] ?> : <span target="LP2_EN_NAME_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['phone_label'] ?> : <span target="LP2_EN_PHONE_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['email_label'] ?> : <span target="LP2_EN_EMAIL_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['area_label'] ?> : <span target="LP2_EN_AREA_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['company_label'] ?> : <span target="LP2_EN_AREA_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['message_label'] ?> : <span target="LP2_EN_MESSAGE_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['name_label'] ?> : <span target="LP3_EN_NAME_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['phone_label'] ?> : <span target="LP3_EN_PHONE_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['email_label'] ?> : <span target="LP3_EN_EMAIL_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['area_label'] ?> : <span target="LP3_EN_AREA_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['company_label'] ?> : <span target="LP3_EN_AREA_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['message_label'] ?> : <span target="LP3_EN_MESSAGE_LBL" class="small"></span></h4>
 			<h4><?php echo $tr['btn_label'] ?> : <span target="LP3_EN_BTN" class="small"></span></h4>
 			<h4><?php echo $tr['FB_label'] ?>: <span target="LP3_EN_FB_URL" class="small"></span></h4>
 			<h4><?php echo $tr['TW_label'] ?>: <span target="LP3_EN_TW_URL" class="small"></span></h4>
@@ -289,25 +429,25 @@
 			<h4><?php echo $tr['title'] ?>: <span target="LP1_FR_TITLE" class="small"></span></h4>
 			<h4><?php echo $tr['sub_title'] ?> : <span target="LP1_FR_SUB2" class="small"></span></h4>
 			<h4><?php echo $tr['btn_label'] ?>  : <span target="LP1_FR_BTN" class="small"></span></h4>
-			<h4><?php echo $tr['FB_label'] ?>: <span target="LP3_EN_FB_URL" class="small"></span></h4>
-			<h4><?php echo $tr['TW_label'] ?>: <span target="LP3_EN_TW_URL" class="small"></span></h4>
-			<h4><?php echo $tr['INS_label'] ?>: <span target="LP3_EN_INS_URL" class="small"></span></h4>
-			<h4><?php echo $tr['GP_label'] ?>: <span target="LP3_EN_GP_URL" class="small"></span></h4>
+			<h4><?php echo $tr['FB_label'] ?>: <span target="LP1_FR_FB_URL" class="small"></span></h4>
+			<h4><?php echo $tr['TW_label'] ?>: <span target="LP1_FR_TW_URL" class="small"></span></h4>
+			<h4><?php echo $tr['INS_label'] ?>: <span target="LP1_FR_INS_URL" class="small"></span></h4>
+			<h4><?php echo $tr['GP_label'] ?>: <span target="LP1_FR_GP_URL" class="small"></span></h4>
 
 			<h3>Landing Page 2</h3>
 			<h4><?php echo $tr['title'] ?>: <span target="LP2_FR_TITLE" class="small"></span></h4>
-			<h4><?php echo $tr['FB_label'] ?>: <span target="LP3_EN_FB_URL" class="small"></span></h4>
-			<h4><?php echo $tr['TW_label'] ?>: <span target="LP3_EN_TW_URL" class="small"></span></h4>
-			<h4><?php echo $tr['INS_label'] ?>: <span target="LP3_EN_INS_URL" class="small"></span></h4>
-			<h4><?php echo $tr['GP_label'] ?>: <span target="LP3_EN_GP_URL" class="small"></span></h4>
+			<h4><?php echo $tr['FB_label'] ?>: <span target="LP2_EN_FB_URL" class="small"></span></h4>
+			<h4><?php echo $tr['TW_label'] ?>: <span target="LP2_EN_TW_URL" class="small"></span></h4>
+			<h4><?php echo $tr['INS_label'] ?>: <span target="LP2_EN_INS_URL" class="small"></span></h4>
+			<h4><?php echo $tr['GP_label'] ?>: <span target="LP2_EN_GP_URL" class="small"></span></h4>
 			<h3>Landing Page 3</h3>
 			<h4><?php echo $tr['title'] ?>: <span target="LP3_FR_TITLE" class="small"></span></h4>
-			<h4><?php echo $tr['name_label'] ?> : <span target="LP2_FR_NAME_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['phone_label'] ?>: <span target="LP2_FR_PHONE_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['email_label'] ?>: <span target="LP2_FR_EMAIL_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['area_label'] ?> : <span target="LP2_FR_AREA_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['company_label'] ?> : <span target="LP2_FR_AREA_LBL" class="small"></span></h4>
-			<h4><?php echo $tr['message_label'] ?> : <span target="LP2_FR_MESSAGE_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['name_label'] ?> : <span target="LP3_FR_NAME_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['phone_label'] ?>: <span target="LP3_FR_PHONE_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['email_label'] ?>: <span target="LP3_FR_EMAIL_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['area_label'] ?> : <span target="LP3_FR_AREA_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['company_label'] ?> : <span target="LP3_FR_AREA_LBL" class="small"></span></h4>
+			<h4><?php echo $tr['message_label'] ?> : <span target="LP3_FR_MESSAGE_LBL" class="small"></span></h4>
 			<h4><?php echo $tr['btn_label'] ?> : <span target="LP3_FR_BTN" class="small"></span></h4>
 			<h4><?php echo $tr['FB_label'] ?>: <span target="LP3_EN_FB_URL" class="small"></span></h4>
 			<h4><?php echo $tr['TW_label'] ?>: <span target="LP3_EN_TW_URL" class="small"></span></h4>
@@ -319,9 +459,17 @@
 			<h4 class="clickable"><?php echo $tr['facebook'] ?>: <span target="homeEval_facebook_fr" class="small" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['click_copy'] ?>"></span></h4>
 			<h4 class="clickable"><?php echo $tr['google_adword'] ?>: <span target="homeEval_google_fr" class="small" data-toggle="tooltip" data-placement="right" data-original-title="<?php echo $tr['click_copy'] ?>"></span></h4>
 		</div>
-		<div class="col-md-12 text-center">
-			<img src="" target="background" class="img-thumbnail img-responsive" alt="" width="600">
+		<div class="col-md-4 text-center">
+					<img src="" target="background1" class="img-thumbnail img-responsive" alt="" width="600">
+				</div>
+				<div class="col-md-4 text-center">
+					<img src="" target="background2" class="img-thumbnail img-responsive" alt="" width="600">
+				</div>
+				<div class="col-md-4 text-center">
+					<img src="" target="background3" class="img-thumbnail img-responsive" alt="" width="600">
+				</div>
 		</div>
+
 	</div>
 </div>
 
