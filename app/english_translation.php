@@ -228,6 +228,8 @@
 		"name_field" => "Name Field",
 		"phone_label" => "Phone Label",
 		"phone_field" => "Phone Field",
+		"address_label" => "Address Label",
+		"email_label" => "Email Label",
 		"thank_you_label" => "Thank You Label",
 		"click_copy" => "Click to copy",
 		"copied" => "Link Copied",
@@ -246,6 +248,7 @@
 		"recover" => "Recover Selected",
 		"no_beds" => "# of Bedrooms",
 		"subscription" => "Subscription Status",
-		"industry" => "Industry"
+		"industry" => "Industry",
+		"btn_label" => "Button Label"
 	);
 ?>

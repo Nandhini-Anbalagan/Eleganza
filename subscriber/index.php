@@ -21,6 +21,7 @@ if(!empty($_SESSION['got'])){
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="assets/css/form.css" >
+		<link rel="stylesheet" type="text/css" href="assets/css/vegas.min.css">
     <script src="assets/form.js"></script>
     <link rel="stylesheet" href="assets/css/main.css"/>
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -43,54 +44,57 @@ line-height: 56px;
 	<body style="color:white !important;">
 
 		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
+			<div class="bg-wraper vegas-overlay has-vignette">
+	      <div id="example" class="slider opacity-50 vegas-container " style="height: 983px;"></div>
+	    </div>
+			<!-- <div id="bg"></div> -->
+			<!-- <div id="overlay"></div> -->
 			<div id="main">
         <header id="header">
     <fieldset id="head">
 				<!-- Header -->
 
-						<h1>ELEGANZA</h1>
-						      <p>The Art of Living Well is what we celebrate at Eleganza Magazine.</p>
-                  <p>The Finer things in life give us a passion to work hard and enjoy our accomplishments.</p>
-                  <p><b>Fashion | Luxury | Travel | Design | Beauty | Automobile | Food & Drink</b></p>
-                  <p>Eleganza Magazine is your guide to Indulgence.</p>
-                  <p>Receive a free copy of Eleganza Magazine's first edition, and become part of the Eleganza Magazine Community.</p>
-                  <p><button type="button" id="free" class="btn btn-primary btn-lg btn-next" >I want the FREE copy !</button></p>
+						<h1><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_TITLE']:$agent['LP1_FR_TITLE']?></h1>
+						      <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB1']:$agent['LP1_FR_SUB1']?></p>
+                  <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB2']:$agent['LP1_FR_SUB2']?></p>
+                  <p><?php echo html_entity_decode($_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB3']:$agent['LP1_FR_SUB3'])?></p>
+                  <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB4']:$agent['LP1_FR_SUB4']?></p>
+                  <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB5']:$agent['LP1_FR_SUB5']?></p>
+                  <p><button type="button" id="free" class="btn btn-primary btn-lg btn-next" ><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_BTN']:$agent['LP1_FR_BTN']?></button></p>
 
 					<!-- part info -->
 </fieldset>
 <fieldset id="cta" hidden>
   <div class="container">
-                <div class="form-container z-depth-5" style="color: black;">
-<h3>Receive your one-time FREE digital copy today.</h3>
-        <div class="row">
+                <div class="form-container z-depth-5" >
+<h3><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_TITLE']:$agent['LP2_FR_TITLE']?></h3>
+				<div class="row">
             <div class="input-field col s12">
                 <input id="name" required type="text" name="name" class="validate">
-                <label for="name">Name<sup style="color:red">*</sup></label>
+                <label for="name"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_NAME_LBL']:$agent['LP2_FR_NAME_LBL']?><sup style="color:red">*</sup></label>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field col s12">
                 <input id="mail" type="text" name="mail" required class="validate">
-                <label for="mail">Mailing Address<sup style="color:red">*</sup></label>
+                <label for="mail"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_ADDRESS_LBL']:$agent['LP2_FR_ADDRESS_LBL']?><sup style="color:red">*</sup></label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="email" type="email" name="email" required class="validate">
-                <label for="email">Email<sup style="color:red">*</sup></label>
+                <label for="email"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_EMAIL_LBL']:$agent['LP2_FR_EMAIL_LBL']?><sup style="color:red">*</sup></label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="tel" type="tel" name="tel" class="validate">
-                <label for="tel">Telephone</label>
+                <label for="tel"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_PHONE_LBL']:$agent['LP2_FR_PHONE_LBL']?></label>
             </div>
         </div>
         <div>
-          <button type="button" id="submit" class="waves-effect waves-light btn submitbtn btn-next" >Submit</button>
+          <button type="button" id="submit" class="waves-effect waves-light btn submitbtn btn-next" ><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_BTN']:$agent['LP2_FR_BTN']?></button>
             <!--<button class="waves-effect waves-light btn submitbtn" type="submit">Submit</button>-->
         </div>
       </div>
@@ -98,9 +102,9 @@ line-height: 56px;
 </fieldset>
 <fieldset id="subscribe" hidden>
       <!-- Header -->
-          <h1>Subscribing is easy! </h1>
-          <p>Choose digital or hard copy versions and your Eleganza Maagzine collection today!</p>
-<p><a href="https://eleganzamagazine.com/subscribe-buy-now/?t=un" style="text-decoration:none"><button type="button" class="btn btn-primary btn-lg" >Subscribe</button></a></p>
+          <h1><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TITLE']:$agent['LP3_FR_TITLE']?></h1>
+          <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_SUB1']:$agent['LP3_FR_SUB1']?></p>
+<p><a href="https://eleganzamagazine.com/subscribe-buy-now/?t=un" style="text-decoration:none"><button type="button" class="btn btn-primary btn-lg" ><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_SUB2']:$agent['LP3_FR_SUB2']?></button></a></p>
 
 </fieldset>
 </header>
@@ -124,12 +128,23 @@ line-height: 56px;
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-
+		<script src="assets/vegas.min.js"></script>
 		<script>
+
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
-
+			$("#example").vegas({
+					timer: false,
+					delay: 6000,
+					transitionDuration: 2000,
+					transition: "zoomOut2",
+					slides: [
+							{ src: '../app/uploads/landings/<?php echo $agent['bg_img1']?>' },
+							{ src: '../app/uploads/landings/<?php echo $agent['bg_img2']?>' },
+							{ src: '../app/uploads/landings/<?php echo $agent['bg_img3']?>' }
+					]
+			});
     $(document).ready(function () {
     var d = new Date();
     var n = d.getFullYear();

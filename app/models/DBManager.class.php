@@ -698,7 +698,7 @@ class DBManager extends MySQLConnection{
 			$this->funnelPerAgent($agent_id, 'sponsor');
 		}else if($data['lead_type'] == 'subscriber'){
 			$city = $data['lead_areas'];
-			$this->myDB->query("INSERT INTO buyers_landing_page(agent_fk, city) VALUES ($agent_id, '$city')");
+			$this->myDB->query("INSERT INTO subscriber_landing_page(agent_fk, city_en) VALUES ($agent_id, '$city')");
 			$this->funnelPerAgent($agent_id, 'subscriber');
 		}
 
@@ -999,7 +999,7 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function getBuyerLandingPage($id){
-		$query = $this->myDB->prepare("SELECT * FROM buyers_landing_page AS l JOIN agents AS a ON a.agent_id = l.agent_fk WHERE l.agent_fk = ?");
+		$query = $this->myDB->prepare("SELECT * FROM subscriber_landing_page AS l JOIN agents AS a ON a.agent_id = l.agent_fk WHERE l.agent_fk = ?");
 		$query->execute(array($id));
 		return $query->fetch(PDO::FETCH_ASSOC);
 	}
@@ -1010,8 +1010,8 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function editBuyerLandingPage($data){
-		$query = $this->myDB->prepare("UPDATE buyers_landing_page SET title_en = ?, title_fr = ?, sub_title_en = ?, sub_title_fr = ?, email_field_en = ?, email_field_fr = ?, next_button_en = ?, next_button_fr = ?, bedroom_label_en = ?, bedroom_label_fr = ?, buying_frame_en = ?, buying_frame_fr = ?, city = ?, name_label_en = ?, name_label_fr = ?, name_field_en = ?, name_field_fr = ?, phone_label_en = ?, phone_label_fr = ?, phone_field_en = ?, phone_field_fr = ?, thank_you_en = ?, thank_you_fr = ?, bg_img = ? WHERE id = ?");
-		return $query->execute(array($data["title_en"], $data["title_fr"], $data["sub_title_en"], $data["sub_title_fr"], $data["email_field_en"], $data["email_field_fr"], $data["next_button_en"], $data["next_button_fr"], $data["bedroom_label_en"], $data["bedroom_label_fr"], $data["buying_frame_en"], $data["buying_frame_fr"], $data["city_fr"], $data["name_label_en"], $data["name_label_fr"], $data["name_field_en"], $data["name_field_fr"], $data["phone_label_en"], $data["phone_label_fr"], $data["phone_field_en"], $data["phone_field_fr"], $data["thank_you_en"], $data["thank_you_fr"], $data["defaultBackground"], $data['id']));
+		$query = $this->myDB->prepare("UPDATE subscriber_landing_page SET LP1_EN_TITLE=?,LP1_EN_SUB1=?,LP1_EN_SUB2=?,LP1_EN_SUB3=?,LP1_EN_SUB4=?,LP1_EN_SUB5=?,LP1_EN_BTN=?,LP2_EN_TITLE=?,LP2_EN_NAME_LBL=?,LP2_EN_ADDRESS_LBL=?,LP2_EN_EMAIL_LBL=?,LP2_EN_PHONE_LBL=?,LP2_EN_BTN=?,LP3_EN_TITLE=?,LP3_EN_SUB1=?,LP3_EN_SUB2=?,LP3_EN_SUB3=?,LP1_FR_TITLE=?,LP1_FR_SUB1=?,LP1_EN_SUB2=?,LP1_EN_SUB3=?,LP1_EN_SUB4=?,LP1_EN_SUB5=?,LP1_EN_BTN=?,LP2_EN_TITLE=?,LP2_EN_NAME_LBL=?,LP2_EN_ADDRESS_LBL=?,LP2_EN_EMAIL_LBL=?,LP2_EN_PHONE_LBL=?,LP2_EN_BTN=?,LP3_EN_TITLE=?,LP3_EN_SUB1=?,LP3_EN_SUB2=?,LP3_EN_SUB3=?,bg_img1=?,bg_img2=?,bg_img3=?, WHERE id = ?");
+		return $query->execute(array($data["LP1_EN_TITLE"],$data["LP1_EN_SUB1"],$data["LP1_EN_SUB2"],$data["LP1_EN_SUB3"],$data["LP1_EN_SUB4"],$data["LP1_EN_SUB5"],$data["LP1_EN_BTN"],$data["LP2_EN_TITLE"],$data["LP2_EN_NAME_LBL"],$data["LP2_EN_ADDRESS_LBL"],$data["LP2_EN_EMAIL_LBL"],$data["LP2_EN_PHONE_LBL"],$data["LP2_EN_BTN"],$data["LP3_EN_TITLE"],$data["LP3_EN_SUB1"],$data["LP3_EN_SUB2"],$data["LP3_EN_SUB3"],$data["LP1_FR_TITLE"],$data["LP1_FR_SUB1"],$data["LP1_EN_SUB2"],$data["LP1_EN_SUB3"],$data["LP1_EN_SUB4"],$data["LP1_EN_SUB5"],$data["LP1_EN_BTN"],$data["LP2_EN_TITLE"],$data["LP2_EN_NAME_LBL"],$data["LP2_EN_ADDRESS_LBL"],$data["LP2_EN_EMAIL_LBL"],$data["LP2_EN_PHONE_LBL"],$data["LP2_EN_BTN"],$data["LP3_EN_TITLE"],$data["LP3_EN_SUB1"],$data["LP3_EN_SUB2"],$data["LP3_EN_SUB3"],$data["bg_img1"],$data["bg_img2"],$data["bg_img3"], $data['id']));
 	}
 
 	/**

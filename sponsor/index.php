@@ -68,7 +68,7 @@
           </p>
             <div class="button-group">
               <button onclick="redirectPage()" class="btn btn-common">Find out more</button>
-              <a href="#" class="btn btn-border">Reach Us</a>
+              <!-- <a href="#" class="btn btn-border">Reach Us</a> -->
             </div>
             <div class="social mt-4">
               <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
@@ -99,15 +99,18 @@
 					</div>
 				</div>
 				<div class="col-md-12 form-row ">
-			 <div class="col-md-8">
-	 						<select class="form-control form-control-lg" id="industry">
+					<div class="col-md-3">
+
+					</div>
+			 <div class="col-md-6">
+	 						<select style="border-radius:15px;border:2px; solid #AAAAAA;" class="form-control form-control-lg" id="industry">
 	 						 <option>Service Industry</option>
 	 						 <option>Manufacturing Industry</option>
 	 						 <option>Retail Industry</option>
 	 						</select>
 	 					</div>
 	 					<div class="col-md-3">
-	 						<button type="button" id="submitInd" class="btn btn-block btn-primary">Submit!</button>
+	 						<!-- <button type="button" id="submitInd" class="btn btn-block btn-primary">Submit!</button> -->
 	 					</div>
 					</div>
 					<div class="col-md-12 social mt-4">
@@ -122,7 +125,7 @@
 	</section>
 </fieldset>
 <fieldset id="contact" hidden>
-	<section class="countdown-timer">
+	<section class="countdown-timer" style="top:6% !important;">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-md-12 col-sm-12 col-xs-12">
@@ -130,13 +133,13 @@
 						<h3>Leave us your name and email to receive your FREE industry specific lead generation tips and information on how to partner with Eleganza Media for your next campaign.</h3>
 					</div>
 				</div>
-				<div class="col-md-12 form-row ">
+				<div class="col-md-12 form-row " style="background: #0000008a;margin: 20px;padding: 30px;border-radius: 20px;">
 					<div class="col-xs-6 col-sm-6 col-md-6 form-group">
 	 				 <input type="text" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-rule="required" data-msg="Please enter at least 4 chars" >
 	 				 <div class="validate"></div>
 	 			 </div>
 	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
-	 				<input type="phoneno" required name="phoneno" id="phoneno" class="form-control input-sm" placeholder="phoneno" data-rule="minlen:8" data-rule="required" data-msg="Please enter at least 8 chars">
+	 				<input type="phoneno" required name="phoneno" id="phoneno" class="form-control input-sm" placeholder="Your Phone Number" data-rule="minlen:8" data-rule="required" data-msg="Please enter at least 8 chars">
 	 				 <div class="validate"></div>
 	 			 </div>
 	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
@@ -159,7 +162,7 @@
 	 				 <div class="validate"></div>
 	 			 </div>
 
-	 			 <div class="col-12 col-xs-offset-3 form-row">
+	 			 <div class="col-12 col-xs-offset-3 text-center">
 	 				 <button type="submit" id="submitcontact" class="btn btn-large btn-primary">Send Message</button>
 	 			 </div>
 					</div>
@@ -173,6 +176,27 @@
 			</div>
 		</div>
 	</section>
+</fieldset>
+<fieldset id="thankyou" hidden>
+	<section class="countdown-timer">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="heading-count">
+						<h3>Thank you <span id="thankyouname"></span> will get back to you shortly !!</h3>
+					</div>
+				</div>
+			 		<div class="col-md-12  social mt-4">
+						<a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+						<a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+						<a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
+						<a class="google" href="#"><i class="lni-google-plus"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 </fieldset>
 <input type="hidden" id="leadId"/>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -219,7 +243,7 @@
       $('#industryPage').removeAttr('hidden');
       $('#intro').empty();
     }
-    $('#submitInd').on('click', function(){
+    $('#industry').on('change', function(){
       var industry = $('#industry :selected').text();
       $.post("core.php", {action: "insertField", industry: industry, agent: <?php echo $agent['agent_fk']?>, src: "<?php echo $_SESSION['got']['s'] ?>", lang: "<?php echo $_SESSION['got']['l'] ?>"}).done(function(data){
            lead_id = data.trim();
@@ -237,11 +261,32 @@
      var contactcompany = $('#contact-company').val();
      var contactsubject = $('#contact-subject').val();
      var lead_id =  $('#leadId').val();
+		 next_step=true;
+	   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		 $('#contact-name ~ .validate').html('');
+		 $('#phoneno ~ .validate').html('');
+		 $('#contact-email ~ validate').html('');
+	   if (contactname == "") {
+	 						$('#contact-name ~ .validate').html('Please enter name to proceed');
+	 						next_step = false;
+	 	} else if (phoneno == "") {
+	 						$('#phoneno ~ .validate').html('Please enter phone number to proceed');
+	 						next_step = false;
+	 	}else if (contactemail== '' || !re.test(contactemail)) {
+	 						$('#contact-email ~ .validate').html('Please enter valid email to proceed');
+	 						next_step = false;
+	 	}
+			if(next_step){
       $.post("core.php", {action: "updateField", contactname: contactname, phoneno: phoneno, contactemail: contactemail, contactarea: contactarea, contactcompany: contactcompany, contactsubject: contactsubject,lead_id:lead_id }).done(function(data){
            lead_id = data.trim();
+					 $('#thankyouname').html(contactname);
+					 $('#thankyou').removeAttr('hidden');
+					 $('#contact').empty();
+
 
            console.log(lead_id);
          });
+			 }
     });
     </script>
 

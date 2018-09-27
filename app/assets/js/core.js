@@ -300,7 +300,7 @@ function executeAction(action, data){
 
 			//English Section
 			content.find('span[target="city_en"]').html(data['city_en']);
-			content.find('span[target="title_en"]').html(data['title_en']);
+			content.find('span[target="LP1_EN_TITLE"]').html(data['LP1_EN_TITLE']);
 			content.find('span[target="sub_title_1_en"]').html(data['sub_title_1_en']);
 			content.find('span[target="sub_title_2_en"]').html(data['sub_title_2_en']);
 			content.find('span[target="agent_name"]').html(data['agent_name']);
@@ -360,71 +360,100 @@ function executeAction(action, data){
 			var form = $('#landingForm');
 
 			//English Section
-			content.find('span[target="city_en"]').html(data['city']);
-			content.find('span[target="title_en"]').html(data['title_en']);
-			content.find('span[target="sub_title_en"]').html(data['sub_title_en']);
-			content.find('span[target="next_button_en"]').html(data['next_button_en']);
-			content.find('span[target="email_field_en"]').html(data['email_field_en']);
-			content.find('span[target="bedroom_label_en"]').html(data['bedroom_label_en']);
-			content.find('span[target="buying_frame_en"]').html(data['buying_frame_en']);
-			content.find('span[target="name_label_en"]').html(data['name_label_en']);
-			content.find('span[target="name_field_en"]').html(data['name_field_en']);
-			content.find('span[target="phone_label_en"]').html(data['phone_label_en']);
-			content.find('span[target="phone_field_en"]').html(data['phone_field_en']);
-			content.find('span[target="thank_you_en"]').html(data['thank_you_en']);
+			content.find('span[target="city_en"]').html(data['city_en']);
+			content.find('span[target="LP1_EN_TITLE"]').html(data['LP1_EN_TITLE']);
+			content.find('span[target="LP1_EN_SUB1"]').html(data['LP1_EN_SUB1']);
+			content.find('span[target="LP1_EN_SUB2"]').html(data['LP1_EN_SUB2']);
+			content.find('span[target="LP1_EN_SUB3"]').html(data['LP1_EN_SUB3']);
+			content.find('span[target="LP1_EN_SUB4"]').html(data['LP1_EN_SUB4']);
+			content.find('span[target="LP1_EN_SUB5"]').html(data['LP1_EN_SUB5']);
+			content.find('span[target="LP1_EN_BTN"]').html(data['LP1_EN_BTN']);
+			content.find('span[target="LP2_EN_TITLE"]').html(data['LP2_EN_TITLE']);
+			content.find('span[target="LP2_EN_NAME_LBL"]').html(data['LP2_EN_NAME_LBL']);
+			content.find('span[target="LP2_EN_ADDRESS_LBL"]').html(data['LP2_EN_ADDRESS_LBL']);
+			content.find('span[target="LP2_EN_EMAIL_LBL"]').html(data['LP2_EN_EMAIL_LBL']);
+			content.find('span[target="LP2_EN_PHONE_LBL"]').html(data['LP2_EN_PHONE_LBL']);
+			content.find('span[target="LP2_EN_BTN"]').html(data['LP2_EN_BTN']);
+			content.find('span[target="LP3_EN_TITLE"]').html(data['LP3_EN_TITLE']);
+			content.find('span[target="LP3_EN_SUB1"]').html(data['LP3_EN_SUB1']);
+			content.find('span[target="LP3_EN_SUB2"]').html(data['LP3_EN_SUB2']);
+			content.find('span[target="LP3_EN_SUB3"]').html(data['LP3_EN_SUB3']);
 			content.find('span[target="homeEval_web_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=w");
 			content.find('span[target="homeEval_facebook_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=f");
 			content.find('span[target="homeEval_google_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=g");
 
 			//French Section
-			content.find('span[target="city_fr"]').html(data['city']);
-			content.find('span[target="title_fr"]').html(data['title_fr']);
-			content.find('span[target="sub_title_fr"]').html(data['sub_title_fr']);
-			content.find('span[target="next_button_fr"]').html(data['next_button_fr']);
-			content.find('span[target="email_field_fr"]').html(data['email_field_fr']);
-			content.find('span[target="bedroom_label_fr"]').html(data['bedroom_label_fr']);
-			content.find('span[target="buying_frame_fr"]').html(data['buying_frame_fr']);
-			content.find('span[target="name_label_fr"]').html(data['name_label_fr']);
-			content.find('span[target="name_field_fr"]').html(data['name_field_fr']);
-			content.find('span[target="phone_label_fr"]').html(data['phone_label_fr']);
-			content.find('span[target="phone_field_fr"]').html(data['phone_field_fr']);
-			content.find('span[target="thank_you_fr"]').html(data['thank_you_fr']);
+			content.find('span[target="city_fr"]').html(data['city_fr']);
+			content.find('span[target="LP1_FR_TITLE"]').html(data['LP1_FR_TITLE']);
+			content.find('span[target="LP1_FR_SUB1"]').html(data['LP1_FR_SUB1']);
+			content.find('span[target="LP1_FR_SUB2"]').html(data['LP1_FR_SUB2']);
+			content.find('span[target="LP1_FR_SUB3"]').html(data['LP1_FR_SUB3']);
+			content.find('span[target="LP1_FR_SUB4"]').html(data['LP1_FR_SUB4']);
+			content.find('span[target="LP1_FR_SUB5"]').html(data['LP1_FR_SUB5']);
+			content.find('span[target="LP1_FR_BTN"]').html(data['LP1_FR_BTN']);
+			content.find('span[target="LP2_FR_TITLE"]').html(data['LP2_FR_TITLE']);
+			content.find('span[target="LP2_FR_NAME_LBL"]').html(data['LP2_FR_NAME_LBL']);
+			content.find('span[target="LP2_FR_ADDRESS_LBL"]').html(data['LP2_FR_ADDRESS_LBL']);
+			content.find('span[target="LP2_FR_EMAIL_LBL"]').html(data['LP2_FR_EMAIL_LBL']);
+			content.find('span[target="LP2_FR_PHONE_LBL"]').html(data['LP2_FR_PHONE_LBL']);
+			content.find('span[target="LP2_FR_BTN"]').html(data['LP2_FR_BTN']);
+			content.find('span[target="LP3_FR_TITLE"]').html(data['LP3_FR_TITLE']);
+			content.find('span[target="LP3_FR_SUB1"]').html(data['LP3_FR_SUB1']);
+			content.find('span[target="LP3_FR_SUB2"]').html(data['LP3_FR_SUB2']);
+			content.find('span[target="LP3_FR_SUB3"]').html(data['LP3_FR_SUB3']);
 			content.find('span[target="homeEval_web_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=w");
 			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=f");
 			content.find('span[target="homeEval_google_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=g");
 			//Background Image
-			content.find('img[target="background"]').attr("src", "uploads/landings/" + data['bg_img']);
+			content.find('img[target="background1"]').attr("src", "uploads/landings/" + data['bg_img1']);
+			content.find('img[target="background2"]').attr("src", "uploads/landings/" + data['bg_img2']);
+			content.find('img[target="background3"]').attr("src", "uploads/landings/" + data['bg_img3']);
 
 			//Form English Section
 			form.find('input[name="id"]').val(data['id']);
-			form.find('input[name="city_en"]').val(data['city']);
-			form.find('input[name="title_en"]').val(data['title_en']);
-			form.find('input[name="sub_title_en"]').val(data['sub_title_en']);
-			form.find('input[name="next_button_en"]').val(data['next_button_en']);
-			form.find('input[name="email_field_en"]').val(data['email_field_en']);
-			form.find('input[name="bedroom_label_en"]').val(data['bedroom_label_en']);
-			form.find('input[name="buying_frame_en"]').val(data['buying_frame_en']);
-			form.find('input[name="name_label_en"]').val(data['name_label_en']);
-			form.find('input[name="name_field_en"]').val(data['name_field_en']);
-			form.find('input[name="phone_label_en"]').val(data['phone_label_en']);
-			form.find('input[name="phone_field_en"]').val(data['phone_field_en']);
-			form.find('input[name="thank_you_en"]').val(data['thank_you_en']);
+			form.find('input[name="city_en"]').val(data['city_en']);
+			form.find('input[name="LP1_EN_TITLE"]').val(data['LP1_EN_TITLE']);
+			form.find('input[name="LP1_EN_SUB1"]').val(data['LP1_EN_SUB1']);
+			form.find('input[name="LP1_EN_SUB2"]').val(data['LP1_EN_SUB2']);
+			form.find('input[name="LP1_EN_SUB3"]').val(data['LP1_EN_SUB3']);
+			form.find('input[name="LP1_EN_SUB4"]').val(data['LP1_EN_SUB4']);
+			form.find('input[name="LP1_EN_SUB5"]').val(data['LP1_EN_SUB5']);
+			form.find('input[name="LP1_EN_BTN"]').val(data['LP1_EN_BTN']);
 
+			form.find('input[name="LP2_EN_TITLE"]').val(data['LP2_EN_TITLE']);
+			form.find('input[name="LP2_EN_NAME_LBL"]').val(data['LP2_EN_NAME_LBL']);
+			form.find('input[name="LP2_EN_ADDRESS_LBL"]').val(data['LP2_EN_ADDRESS_LBL']);
+			form.find('input[name="LP2_EN_EMAIL_LBL"]').val(data['LP2_EN_EMAIL_LBL']);
+			form.find('input[name="LP2_EN_PHONE_LBL"]').val(data['LP2_EN_PHONE_LBL']);
+			form.find('input[name="LP2_EN_BTN"]').val(data['LP2_EN_BTN']);
+
+			form.find('input[name="LP3_EN_TITLE"]').val(data['LP3_EN_TITLE']);
+			form.find('input[name="LP3_EN_SUB1"]').val(data['LP3_EN_SUB1']);
+			form.find('input[name="LP3_EN_SUB2"]').val(data['LP3_EN_SUB2']);
+			form.find('input[name="LP3_EN_SUB3"]').val(data['LP3_EN_SUB3']);
 
 			//Form French Section
 			form.find('input[name="id"]').val(data['id']);
-			form.find('input[name="city_fr"]').val(data['city']);
-			form.find('input[name="title_fr"]').val(data['title_fr']);
-			form.find('input[name="sub_title_fr"]').val(data['sub_title_fr']);
-			form.find('input[name="next_button_fr"]').val(data['next_button_fr']);
-			form.find('input[name="email_field_fr"]').val(data['email_field_fr']);
-			form.find('input[name="bedroom_label_fr"]').val(data['bedroom_label_fr']);
-			form.find('input[name="buying_frame_fr"]').val(data['buying_frame_fr']);
-			form.find('input[name="name_label_fr"]').val(data['name_label_fr']);
-			form.find('input[name="name_field_fr"]').val(data['name_field_fr']);
-			form.find('input[name="phone_label_fr"]').val(data['phone_label_fr']);
-			form.find('input[name="phone_field_fr"]').val(data['phone_field_fr']);
-			form.find('input[name="thank_you_fr"]').val(data['thank_you_fr']);
+			form.find('input[name="city_fr"]').val(data['city_fr']);
+			form.find('input[name="LP1_FR_TITLE"]').val(data['LP1_FR_TITLE']);
+			form.find('input[name="LP1_FR_SUB1"]').val(data['LP1_FR_SUB1']);
+			form.find('input[name="LP1_FR_SUB2"]').val(data['LP1_FR_SUB2']);
+			form.find('input[name="LP1_FR_SUB3"]').val(data['LP1_FR_SUB3']);
+			form.find('input[name="LP1_FR_SUB4"]').val(data['LP1_FR_SUB4']);
+			form.find('input[name="LP1_FR_SUB5"]').val(data['LP1_FR_SUB5']);
+			form.find('input[name="LP1_FR_BTN"]').val(data['LP1_FR_BTN']);
+
+			form.find('input[name="LP2_FR_TITLE"]').val(data['LP2_FR_TITLE']);
+			form.find('input[name="LP2_FR_NAME_LBL"]').val(data['LP2_FR_NAME_LBL']);
+			form.find('input[name="LP2_FR_ADDRESS_LBL"]').val(data['LP2_FR_ADDRESS_LBL']);
+			form.find('input[name="LP2_FR_EMAIL_LBL"]').val(data['LP2_FR_EMAIL_LBL']);
+			form.find('input[name="LP2_FR_PHONE_LBL"]').val(data['LP2_FR_PHONE_LBL']);
+			form.find('input[name="LP2_FR_BTN"]').val(data['LP2_FR_BTN']);
+
+			form.find('input[name="LP3_FR_TITLE"]').val(data['LP3_FR_TITLE']);
+			form.find('input[name="LP3_FR_SUB1"]').val(data['LP3_FR_SUB1']);
+			form.find('input[name="LP3_FR_SUB2"]').val(data['LP3_FR_SUB2']);
+			form.find('input[name="LP3_FR_SUB3"]').val(data['LP3_FR_SUB3']);
 
 			//Form Background Image
 			form.find('input:radio[name="defaultBackground"]').val([data['bg_img']]);
