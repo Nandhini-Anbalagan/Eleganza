@@ -249,6 +249,13 @@
 		"no_beds" => "# of Bedrooms",
 		"subscription" => "Subscription Status",
 		"industry" => "Industry",
-		"btn_label" => "Button Label"
+		"btn_label" => "Button Label",
+		"company_label" => "Company",
+		"message_label" => "Message",
+		"FB_label" => "Facebook",
+		"TW_label" => "Twitter",
+		"INS_label" => "Instagram",
+		"GP_label" => "Google",
+		"area_label" => "Area"
 	);
 ?>

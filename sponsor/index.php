@@ -7,8 +7,8 @@
 	if(!empty($_SESSION['got'])){
 		include("../app/head.php");
 		$agent = $db->getSellerLandingPage($_SESSION['got']['a']);
-		$final_text_en = explode(" - ", $agent['final_text_en']);
-		$final_text_fr = explode(" - ", $agent['final_text_fr']);
+		// $final_text_en = explode(" - ", $agent['final_text_en']);
+		// $final_text_fr = explode(" - ", $agent['final_text_fr']);
 	}
 ?>
 <!DOCTYPE html>
@@ -55,7 +55,7 @@
         <div class="row text-center">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="heading-count">
-              <h3>Are you having a difficult time generating new customers for your  business?</h3>
+              <h3><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_TITLE']:$agent['LP1_FR_TITLE']?></h3>
             </div>
           </div>
          <div class="col-md-12 col-sm-12 col-xs-12">
@@ -63,18 +63,17 @@
               <div id="clock" class="time-count"></div>
             </div> -->
             <p style="font-size: 20px">
-            Partner with Eleganza Media and find out how you can increase your brand awareness<br>
-            and revenue by targeting the right audience!
+            <?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB2']:$agent['LP1_FR_SUB2']?>
           </p>
             <div class="button-group">
-              <button onclick="redirectPage()" class="btn btn-common">Find out more</button>
+              <button onclick="redirectPage()" class="btn btn-common"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_BTN']:$agent['LP1_FR_BTN']?></button>
               <!-- <a href="#" class="btn btn-border">Reach Us</a> -->
             </div>
             <div class="social mt-4">
-              <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-              <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-              <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-              <a class="google" href="#"><i class="lni-google-plus"></i></a>
+              <a class="facebook" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_FB_URL']:$agent['LP3_FR_FB_URL']?>"><i class="lni-facebook-filled"></i></a>
+              <a class="twitter" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TW_URL']:$agent['LP3_FR_TW_URL']?>"><i class="lni-twitter-filled"></i></a>
+              <a class="instagram" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_INS_URL']:$agent['LP3_FR_INS_URL']?>"><i class="lni-instagram-filled"></i></a>
+              <a class="google" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_GP_URL']:$agent['LP3_FR_GP_URL']?>"><i class="lni-google-plus"></i></a>
             </div>
           </div>
         </div>
@@ -95,7 +94,7 @@
 			<div class="row text-center">
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="heading-count">
-						<h2>Let us know what industry your are in<br/> and we'll provide you with FREE  industry specific tips on how you can increase your business revenue!</h2>
+						<h2><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_TITLE']:$agent['LP2_FR_TITLE']?></h2>
 					</div>
 				</div>
 				<div class="col-md-12 form-row ">
@@ -114,10 +113,10 @@
 	 					</div>
 					</div>
 					<div class="col-md-12 social mt-4">
-						<a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-						<a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-						<a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-						<a class="google" href="#"><i class="lni-google-plus"></i></a>
+						<a class="facebook" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_FB_URL']:$agent['LP3_FR_FB_URL']?>"><i class="lni-facebook-filled"></i></a>
+						<a class="twitter" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TW_URL']:$agent['LP3_FR_TW_URL']?>"><i class="lni-twitter-filled"></i></a>
+						<a class="instagram" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_INS_URL']:$agent['LP3_FR_INS_URL']?>"><i class="lni-instagram-filled"></i></a>
+						<a class="google" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_GP_URL']:$agent['LP3_FR_GP_URL']?>"><i class="lni-google-plus"></i></a>
 					</div>
 				</div>
 			</div>
@@ -130,47 +129,47 @@
 			<div class="row text-center">
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="heading-count">
-						<h3>Leave us your name and email to receive your FREE industry specific lead generation tips and information on how to partner with Eleganza Media for your next campaign.</h3>
+						<h3><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TITLE']:$agent['LP3_FR_TITLE']?></h3>
 					</div>
 				</div>
 				<div class="col-md-12 form-row " style="background: #0000008a;margin: 20px;padding: 30px;border-radius: 20px;">
 					<div class="col-xs-6 col-sm-6 col-md-6 form-group">
-	 				 <input type="text" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-rule="required" data-msg="Please enter at least 4 chars" >
+	 				 <input type="text" name="name" class="form-control" id="contact-name" placeholder="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_NAME_LBL']:$agent['LP3_EN_NAME_LBL'] ?>" data-rule="minlen:4" data-rule="required" data-msg="Please enter at least 4 chars" >
 	 				 <div class="validate"></div>
 	 			 </div>
 	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
-	 				<input type="phoneno" required name="phoneno" id="phoneno" class="form-control input-sm" placeholder="Your Phone Number" data-rule="minlen:8" data-rule="required" data-msg="Please enter at least 8 chars">
+	 				<input type="phone" required name="phone" id="phone" class="form-control input-sm" placeholder="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_PHONE_LBL']:$agent['LP3_EN_PHONE_LBL'] ?>" data-rule="minlen:8" data-rule="required" data-msg="Please enter at least 8 chars">
 	 				 <div class="validate"></div>
 	 			 </div>
 	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
-	 				 <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-rule="required" data-msg="Please enter a valid email">
-	 				 <div class="validate"></div>
-	 			 </div>
-
-	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
-	 				 <input type="text" name="area" class="form-control" id="contact-area" placeholder="Your area" data-rule="area" data-rule="required" data-msg="Please enter a valid area">
+	 				 <input type="Email" name="Email" class="form-control" id="contact-email" placeholder="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_EMAIL_LBL']:$agent['LP3_EN_EMAIL_LBL'] ?>" data-rule="Email" data-rule="required" data-msg="Please enter a valid email">
 	 				 <div class="validate"></div>
 	 			 </div>
 
 	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
-	 				 <input type="text" name="company" class="form-control" id="contact-company" placeholder="Your company" data-rule="company" data-rule="required" data-msg="Please enter a valid company">
+	 				 <input type="text" name="area" class="form-control" id="contact-area" placeholder="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_AREA_LBL']:$agent['LP3_EN_AREA_LBL'] ?>" data-rule="area" data-rule="required" data-msg="Please enter a valid area">
 	 				 <div class="validate"></div>
 	 			 </div>
 
 	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
-	 				 <input type="text" name="message" class="form-control" id="contact-subject" placeholder="Your message" data-msg="Please enter at least 8 chars of subject">
+	 				 <input type="text" name="company" class="form-control" id="contact-company" placeholder="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_COMPANY_LBL']:$agent['LP3_EN_COMPANY_LBL'] ?>" data-rule="company" data-rule="required" data-msg="Please enter a valid company">
+	 				 <div class="validate"></div>
+	 			 </div>
+
+	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
+	 				 <input type="text" name="message" class="form-control" id="contact-subject" placeholder="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_MESSAGE_LBL']:$agent['LP3_EN_MESSAGE_LBL'] ?>" data-msg="Please enter at least 8 chars of subject">
 	 				 <div class="validate"></div>
 	 			 </div>
 
 	 			 <div class="col-12 col-xs-offset-3 text-center">
-	 				 <button type="submit" id="submitcontact" class="btn btn-large btn-primary">Send Message</button>
+	 				 <button type="submit" id="submitcontact" class="btn btn-large btn-primary"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_BTN']:$agent['LP3_FR_BTN']?></button>
 	 			 </div>
 					</div>
 					<div class="col-md-12 social mt-4">
-						<a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-						<a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-						<a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-						<a class="google" href="#"><i class="lni-google-plus"></i></a>
+						<a class="facebook" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_FB_URL']:$agent['LP3_FR_FB_URL']?>"><i class="lni-facebook-filled"></i></a>
+						<a class="twitter" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TW_URL']:$agent['LP3_FR_TW_URL']?>"><i class="lni-twitter-filled"></i></a>
+						<a class="instagram" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_INS_URL']:$agent['LP3_FR_INS_URL']?>"><i class="lni-instagram-filled"></i></a>
+						<a class="google" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_GP_URL']:$agent['LP3_FR_GP_URL']?>"><i class="lni-google-plus"></i></a>
 					</div>
 				</div>
 			</div>

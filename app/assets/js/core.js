@@ -301,13 +301,29 @@ function executeAction(action, data){
 			//English Section
 			content.find('span[target="city_en"]').html(data['city_en']);
 			content.find('span[target="LP1_EN_TITLE"]').html(data['LP1_EN_TITLE']);
-			content.find('span[target="sub_title_1_en"]').html(data['sub_title_1_en']);
-			content.find('span[target="sub_title_2_en"]').html(data['sub_title_2_en']);
-			content.find('span[target="agent_name"]').html(data['agent_name']);
-			content.find('span[target="agent_phone"]').html(data['agent_phone']);
-			content.find('span[target="agent_email"]').html(data['agent_email']);
-			content.find('span[target="agent_title_en"]').html(data['agent_title_en']);
-			//content.find('span[target="final_text_en"]').html(data['final_text_en']);
+			content.find('span[target="LP1_EN_SUB2"]').html(data['LP1_EN_SUB2']);
+			content.find('span[target="LP1_EN_BTN"]').html(data['LP1_EN_BTN']);
+			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
+			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
+			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
+			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP2_EN_TITLE"]').html(data['LP2_EN_TITLE']);
+			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
+			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
+			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
+			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP3_EN_TITLE"]').html(data['LP3_EN_TITLE']);
+			content.find('span[target="LP3_EN_NAME_LBL"]').html(data['LP3_EN_NAME_LBL']);
+			content.find('span[target="LP3_EN_PHONE_LBL"]').html(data['LP3_EN_PHONE_LBL']);
+			content.find('span[target="LP3_EN_EMAIL_LBL"]').html(data['LP3_EN_EMAIL_LBL']);
+			content.find('span[target="LP3_EN_AREA_LBL"]').html(data['LP3_EN_AREA_LBL']);
+			content.find('span[target="LP3_EN_COMPANY_LBL"]').html(data['LP3_EN_COMPANY_LBL']);
+			content.find('span[target="LP3_EN_MESSAGE_LBL"]').html(data['LP3_EN_MESSAGE_LBL']);
+			content.find('span[target="LP3_EN_BTN"]').html(data['LP3_EN_BTN']);
+			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
+			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
+			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
+			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
 			content.find('span[target="industry"]').html((data['industry']=='SI')?"Service Industry":((data['industry']=='MI')?"Manufacturing Industry":"Retail Industry"));
 			content.find('span[target="homeEval_web_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=w");
 			content.find('span[target="homeEval_facebook_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=f");
@@ -315,14 +331,31 @@ function executeAction(action, data){
 
 			//French Section
 			content.find('span[target="city_fr"]').html(data['city_fr']);
-			content.find('span[target="title_fr"]').html(data['title_fr']);
-			content.find('span[target="sub_title_1_fr"]').html(data['sub_title_1_fr']);
-			content.find('span[target="sub_title_2_fr"]').html(data['sub_title_2_fr']);
-			content.find('span[target="agent_name"]').html(data['agent_name']);
-			content.find('span[target="agent_phone"]').html(data['agent_phone']);
-			content.find('span[target="agent_email"]').html(data['agent_email']);
-			content.find('span[target="agent_title_fr"]').html(data['agent_title_fr']);
-			content.find('span[target="final_text_fr"]').html(data['final_text_fr']);
+			content.find('span[target="LP1_FR_TITLE"]').html(data['LP1_FR_TITLE']);
+			content.find('span[target="LP1_FR_SUB2"]').html(data['LP1_FR_SUB2']);
+			content.find('span[target="LP1_FR_BTN"]').html(data['LP1_FR_BTN']);
+			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
+			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
+			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
+			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP2_FR_TITLE"]').html(data['LP2_FR_TITLE']);
+			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
+			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
+			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
+			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="LP3_FR_TITLE"]').html(data['LP3_FR_TITLE']);
+			content.find('span[target="LP3_FR_NAME_LBL"]').html(data['LP3_FR_NAME_LBL']);
+			content.find('span[target="LP3_FR_PHONE_LBL"]').html(data['LP3_FR_PHONE_LBL']);
+			content.find('span[target="LP3_FR_EMAIL_LBL"]').html(data['LP3_FR_EMAIL_LBL']);
+			content.find('span[target="LP3_FR_AREA_LBL"]').html(data['LP3_FR_AREA_LBL']);
+			content.find('span[target="LP3_FR_COMPANY_LBL"]').html(data['LP3_FR_COMPANY_LBL']);
+			content.find('span[target="LP3_FR_MESSAGE_LBL"]').html(data['LP3_FR_MESSAGE_LBL']);
+			content.find('span[target="LP3_FR_BTN"]').html(data['LP3_FR_BTN']);
+			content.find('span[target="LP3_EN_FB_URL"]').html(data['LP3_EN_FB_URL']);
+			content.find('span[target="LP3_EN_TW_URL"]').html(data['LP3_EN_TW_URL']);
+			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
+			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
+			content.find('span[target="industry"]').html((data['industry']=='SI')?"Service Industry":((data['industry']=='MI')?"Manufacturing Industry":"Retail Industry"));
 			content.find('span[target="homeEval_web_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=w");
 			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=f");
 			content.find('span[target="homeEval_google_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=g");
@@ -332,25 +365,61 @@ function executeAction(action, data){
 			//Form English Section
 			form.find('input[name="id"]').val(data['id']);
 			form.find('input[name="city_en"]').val(data['city_en']);
-			form.find('input[name="title_en"]').val(data['title_en']);
-			form.find('input[name="sub_title_1_en"]').val(data['sub_title_1_en']);
-			form.find('input[name="sub_title_2_en"]').val(data['sub_title_2_en']);
-			form.find('input[name="agent_name"]').val(data['agent_name']);
-			form.find('input[name="agent_phone"]').val(data['agent_phone']);
-			form.find('input[name="agent_email"]').val(data['agent_email']);
-			form.find('input[name="agent_title_en"]').val(data['agent_title_en']);
-			form.find('textarea[name="final_text_en"]').val(data['final_text_en']);
+			form.find('input[name="LP1_EN_TITLE"]').val(data['LP1_EN_TITLE']);
+			form.find('input[name="LP1_EN_SUB2"]').val(data['LP1_EN_SUB2']);
+			form.find('input[name="LP1_EN_BTN"]').val(data['LP1_EN_BTN']);
+			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
+			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
+			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
+			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
+
+			form.find('input[name="LP2_EN_TITLE"]').val(data['LP2_EN_TITLE']);
+			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
+			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
+			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
+			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
+
+			form.find('input[name="LP3_EN_TITLE"]').val(data['LP3_EN_TITLE']);
+			form.find('input[name="LP3_EN_NAME_LBL"]').val(data['LP3_EN_NAME_LBL']);
+			form.find('input[name="LP3_EN_PHONE_LBL"]').val(data['LP3_EN_PHONE_LBL']);
+			form.find('input[name="LP3_EN_EMAIL_LBL"]').val(data['LP3_EN_EMAIL_LBL']);
+			form.find('input[name="LP3_EN_AREA_LBL"]').val(data['LP3_EN_AREA_LBL']);
+			form.find('input[name="LP3_EN_COMPANY_LBL"]').val(data['LP3_EN_COMPANY_LBL']);
+			form.find('input[name="LP3_EN_MESSAGE_LBL"]').val(data['LP3_EN_MESSAGE_LBL']);
+			form.find('input[name="LP3_EN_BTN"]').val(data['LP3_EN_BTN']);
+			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
+			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
+			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
+			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
 
 			//Form French Section
 			form.find('input[name="city_fr"]').val(data['city_fr']);
-			form.find('input[name="title_fr"]').val(data['title_fr']);
-			form.find('input[name="sub_title_1_fr"]').val(data['sub_title_1_fr']);
-			form.find('input[name="sub_title_2_fr"]').val(data['sub_title_2_fr']);
-			form.find('input[name="agent_name"]').val(data['agent_name']);
-			form.find('input[name="agent_phone"]').val(data['agent_phone']);
-			form.find('input[name="agent_email"]').val(data['agent_email']);
-			form.find('input[name="agent_title_fr"]').val(data['agent_title_fr']);
-			form.find('textarea[name="final_text_fr"]').val(data['final_text_fr']);
+			form.find('input[name="LP1_FR_TITLE"]').val(data['LP1_FR_TITLE']);
+			form.find('input[name="LP1_FR_SUB2"]').val(data['LP1_FR_SUB2']);
+			form.find('input[name="LP1_FR_BTN"]').val(data['LP1_FR_BTN']);
+			form.find('input[name="LP3_FR_FB_URL"]').val(data['LP3_FR_FB_URL']);
+			form.find('input[name="LP3_FR_TW_URL"]').val(data['LP3_EN_TW_URL']);
+			form.find('input[name="LP3_FR_INS_URL"]').val(data['LP3_EN_INS_URL']);
+			form.find('input[name="LP3_FR_GP_URL"]').val(data['LP3_EN_GP_URL']);
+
+			form.find('input[name="LP2_FR_TITLE"]').val(data['LP2_FR_TITLE']);
+			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
+			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
+			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
+			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
+
+			form.find('input[name="LP3_FR_TITLE"]').val(data['LP3_FR_TITLE']);
+			form.find('input[name="LP3_FR_NAME_LBL"]').val(data['LP3_FR_NAME_LBL']);
+			form.find('input[name="LP3_FR_PHONE_LBL"]').val(data['LP3_FR_PHONE_LBL']);
+			form.find('input[name="LP3_FR_EMAIL_LBL"]').val(data['LP3_FR_EMAIL_LBL']);
+			form.find('input[name="LP3_FR_AREA_LBL"]').val(data['LP3_FR_AREA_LBL']);
+			form.find('input[name="LP3_FR_COMPANY_LBL"]').val(data['LP3_FR_COMPANY_LBL']);
+			form.find('input[name="LP3_FR_MESSAGE_LBL"]').val(data['LP3_FR_MESSAGE_LBL']);
+			form.find('input[name="LP3_FR_BTN"]').val(data['LP3_FR_BTN']);
+			form.find('input[name="LP3_EN_FB_URL"]').val(data['LP3_EN_FB_URL']);
+			form.find('input[name="LP3_EN_TW_URL"]').val(data['LP3_EN_TW_URL']);
+			form.find('input[name="LP3_EN_INS_URL"]').val(data['LP3_EN_INS_URL']);
+			form.find('input[name="LP3_EN_GP_URL"]').val(data['LP3_EN_GP_URL']);
 
 			//Form Background Image
 			form.find('input:radio[name="defaultBackground"]').val([data['bg_img']]);

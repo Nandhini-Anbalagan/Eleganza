@@ -694,7 +694,7 @@ class DBManager extends MySQLConnection{
 		}
 
 		if($data['lead_type'] == 'sponsor'){
-			$this->myDB->query("INSERT INTO agent_landing_page(agent_fk) VALUES ($agent_id)");
+			$this->myDB->query("INSERT INTO advertiser_landing_page(agent_fk) VALUES ($agent_id)");
 			$this->funnelPerAgent($agent_id, 'sponsor');
 		}else if($data['lead_type'] == 'subscriber'){
 			$city = $data['lead_areas'];
@@ -993,7 +993,7 @@ class DBManager extends MySQLConnection{
 	*/
 
 	public function getSellerLandingPage($id){
-		$query = $this->myDB->prepare("SELECT * FROM agent_landing_page AS l JOIN agents AS a ON a.agent_id = l.agent_fk WHERE l.agent_fk = ?");
+		$query = $this->myDB->prepare("SELECT * FROM advertiser_landing_page AS l JOIN agents AS a ON a.agent_id = l.agent_fk WHERE l.agent_fk = ?");
 		$query->execute(array($id));
 		return $query->fetch(PDO::FETCH_ASSOC);
 	}
@@ -1005,7 +1005,7 @@ class DBManager extends MySQLConnection{
 	}
 
 	public function editSellerLandingPage($data){
-		$query = $this->myDB->prepare("UPDATE agent_landing_page SET city_fr = ?, city_en = ?, title_fr = ?, title_en = ?, sub_title_1_fr = ?, sub_title_1_en = ?, sub_title_2_fr = ?, sub_title_2_en = ?, bg_img = ?, agent_title_fr = ?, agent_title_en = ?, final_text_fr = ?, final_text_en = ? WHERE id = ?");
+		$query = $this->myDB->prepare("UPDATE advertiser_landing_page SET city_fr = ?, city_en = ?, title_fr = ?, title_en = ?, sub_title_1_fr = ?, sub_title_1_en = ?, sub_title_2_fr = ?, sub_title_2_en = ?, bg_img = ?, agent_title_fr = ?, agent_title_en = ?, final_text_fr = ?, final_text_en = ? WHERE id = ?");
 		return $query->execute(array($data['city_fr'], $data['city_en'], $data['title_fr'], $data['title_en'], $data['sub_title_1_fr'], $data['sub_title_1_en'], $data['sub_title_2_fr'], $data['sub_title_2_en'], $data['defaultBackground'], $data['agent_title_fr'], $data['agent_title_en'], $data['final_text_fr'], $data['final_text_en'], $data['id']));
 	}
 
