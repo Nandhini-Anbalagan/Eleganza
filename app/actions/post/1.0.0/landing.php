@@ -26,11 +26,11 @@
 				$resultObj['error'] = "Unknown Agent.";
 		break;
 		case "edit-seller":
-			/*if(Functions::isValidFields($_POST, 
+			/*if(Functions::isValidFields($_POST,
 				array('name', 'email', 'phone', 'areas', 'agency'),
 				array(5, 'email', 9, 'empty', 2),
 				$resultObj['error'])){*/
-				
+
 				if(isset($_POST["uploadedBg"]) && !empty($_POST["uploadedBg"])){
 					Functions::moveFile("temp/" . $_POST["uploadedBg"], "uploads/landings/" . $_POST["uploadedBg"]);
 					$_POST["defaultBackground"] = $_POST["uploadedBg"];
@@ -41,21 +41,29 @@
 				else
 					$resultObj['success'] = "Landing page edited successfully.";
 			//}
-			
+
 			if($resultObj['error'] == "-1"){
 				//$resultObj['callback'] = "reload-landing";
 				Tokenizer::delete(array('post-action-lead','post-action-lead-edit'));
 			}
 		break;
 		case "edit-buyer":
-			/*if(Functions::isValidFields($_POST, 
+			/*if(Functions::isValidFields($_POST,
 				array('name', 'email', 'phone', 'areas', 'agency'),
 				array(5, 'email', 9, 'empty', 2),
 				$resultObj['error'])){*/
-				
-				if(isset($_POST["uploadedBg"]) && !empty($_POST["uploadedBg"])){
-					Functions::moveFile("temp/" . $_POST["uploadedBg"], "uploads/landings/" . $_POST["uploadedBg"]);
-					$_POST["defaultBackground"] = $_POST["uploadedBg"];
+
+				if(isset($_POST["uploadedBg1"]) && !empty($_POST["uploadedBg1"])){
+					Functions::moveFile("temp/" . $_POST["uploadedBg1"], "uploads/landings/" . $_POST["uploadedBg1"]);
+					$_POST["defaultBackground1"] = $_POST["uploadedBg1"];
+				}
+				if(isset($_POST["uploadedBg2"]) && !empty($_POST["uploadedBg2"])){
+					Functions::moveFile("temp/" . $_POST["uploadedBg2"], "uploads/landings/" . $_POST["uploadedBg2"]);
+					$_POST["defaultBackground2"] = $_POST["uploadedBg2"];
+				}
+				if(isset($_POST["uploadedBg3"]) && !empty($_POST["uploadedBg3"])){
+					Functions::moveFile("temp/" . $_POST["uploadedBg3"], "uploads/landings/" . $_POST["uploadedBg3"]);
+					$_POST["defaultBackground3"] = $_POST["uploadedBg3"];
 				}
 
 				if(!$db->editBuyerLandingPage($_POST))
@@ -63,9 +71,9 @@
 				else
 					$resultObj['success'] = "Landing page edited successfully.";
 			//}
-			
+
 			if($resultObj['error'] == "-1"){
-				//$resultObj['callback'] = "reload-landing";
+				$resultObj['callback'] = "get-buyer-landing-page";
 				Tokenizer::delete(array('post-action-lead','post-action-lead-edit'));
 			}
 		break;

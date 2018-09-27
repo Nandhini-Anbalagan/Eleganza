@@ -125,7 +125,6 @@ body {
 
     <!-- Header -->
     <header class="masthead">
-			<div id="overlay"></div>
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in"><img src="<?php echo  Config::WEBSITE_URL . "/assets/img/tiny_logo.png" ?>" alt="Logo"></div>

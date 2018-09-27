@@ -175,60 +175,159 @@
 								<label for="LP3_FR_SUB3"><?php echo $tr['sub_title'] ?> 3</label>
 								<input type="text" class="form-control" id="LP3_FR_SUB3" name="LP3_FR_SUB3" placeholder="<?php echo $tr['sub_title'] ?> 3" required>
 		</div>
-					<div class="form-group">
-						<input type="file" class="filestyle" data-buttonbefore="true">
-						<em class="mutted"><?php echo $tr['upload_image'] ?></em>
-						<input type="hidden" name="uploadedBg">
-					</div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary waves-effect waves-light pull-right"><?php echo $tr['submit'] ?></button>
-					</div>
+
+
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="col-md-4"></div>
-					<div class="col-md-4"></div>
 					<div class="col-md-4">
 						<div class="form-group">
-											<label class="control-label"><?php echo $tr['background'] ?> 3</label>
+											<label class="col-sm-12 control-label"><?php echo $tr['background'] ?> 1</label>
 											<div class="col-sm-6">
 												<div class="radio radio-warning">
-													<input type="radio" id="bg1" value="default.jpg" name="defaultBackground">
+													<input type="radio" id="bg1" value="default.jpg" name="defaultBackground1">
 													<label for="bg1" class="imgMod" src="uploads/landings/default.jpg"> <?php echo $tr['background'] ?> 1 </label>
 												</div>
 												<div class="radio">
-													<input type="radio" id="bg2" value="default2.jpg" name="defaultBackground">
+													<input type="radio" id="bg2" value="default2.jpg" name="defaultBackground1">
 													<label for="bg2" class="imgMod" src="uploads/landings/default2.jpg"> <?php echo $tr['background'] ?> 2 </label>
 												</div>
 												<div class="radio radio-danger">
-													<input type="radio" id="bg3" value="default3.jpg" name="defaultBackground">
+													<input type="radio" id="bg3" value="default3.jpg" name="defaultBackground1">
 													<label for="bg3" class="imgMod" src="uploads/landings/default3.jpg"> <?php echo $tr['background'] ?> 3 </label>
 												</div>
 											</div>
 											<div class="col-sm-6">
 												<div class="radio radio-danger">
-													<input type="radio" id="bg4" value="default4.jpg" name="defaultBackground">
+													<input type="radio" id="bg4" value="default4.jpg" name="defaultBackground1">
 													<label for="bg4" class="imgMod" src="uploads/landings/default4.jpg"> <?php echo $tr['background'] ?> 4 </label>
 												</div>
 												<div class="radio radio-danger">
-													<input type="radio" id="bg5" value="default5.jpg" name="defaultBackground">
+													<input type="radio" id="bg5" value="default5.jpg" name="defaultBackground1">
 													<label for="bg5" class="imgMod" src="uploads/landings/default5.jpg"> <?php echo $tr['background'] ?> 5 </label>
 												</div>
 												<div class="radio radio-danger">
-													<input type="radio" id="bg6" value="default6.jpg" name="defaultBackground">
+													<input type="radio" id="bg6" value="default6.jpg" name="defaultBackground1">
 													<label for="bg6" class="imgMod" src="uploads/landings/default6.jpg"> <?php echo $tr['background'] ?> 6 </label>
 												</div>
-												<div class="radio radio-info">
-													<input type="radio" id="bg7" value="" name="defaultBackground">
-													<label for="bg7"> <?php echo $tr['custom_background'] ?> </label>
+											</div>
+											<div class="col-sm-12">
+											<div class="radio radio-info">
+												<input type="radio" id="custom_background1" value="" name="defaultBackground1">
+												<label for="bg7"> <?php echo $tr['custom_background'] ?> </label>
+											</div>
+										</div>
+										<div class="col-sm-12">
+										<div class="form-group">
+											<input type="file" id="upload_image1" class="filestyle" data-buttonbefore="true">
+											<em class="mutted"><?php echo $tr['upload_image'] ?></em>
+											<input type="hidden" name="uploadedBg1">
+										</div>
+									</div>
+										</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+											<label class="col-sm-12 control-label"><?php echo $tr['background'] ?> 2</label>
+											<div class="col-sm-6">
+												<div class="radio radio-warning">
+													<input type="radio" id="bg1" value="default.jpg" name="defaultBackground2">
+													<label for="bg1" class="imgMod" src="uploads/landings/default.jpg"> <?php echo $tr['background'] ?> 1 </label>
+												</div>
+												<div class="radio">
+													<input type="radio" id="bg2" value="default2.jpg" name="defaultBackground2">
+													<label for="bg2" class="imgMod" src="uploads/landings/default2.jpg"> <?php echo $tr['background'] ?> 2 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg3" value="default3.jpg" name="defaultBackground2">
+													<label for="bg3" class="imgMod" src="uploads/landings/default3.jpg"> <?php echo $tr['background'] ?> 3 </label>
 												</div>
 											</div>
+											<div class="col-sm-6">
+												<div class="radio radio-danger">
+													<input type="radio" id="bg4" value="default4.jpg" name="defaultBackground2">
+													<label for="bg4" class="imgMod" src="uploads/landings/default4.jpg"> <?php echo $tr['background'] ?> 4 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg5" value="default5.jpg" name="defaultBackground2">
+													<label for="bg5" class="imgMod" src="uploads/landings/default5.jpg"> <?php echo $tr['background'] ?> 5 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg6" value="default6.jpg" name="defaultBackground2">
+													<label for="bg6" class="imgMod" src="uploads/landings/default6.jpg"> <?php echo $tr['background'] ?> 6 </label>
+												</div>
+											</div>
+											<div class="col-sm-12">
+											<div class="radio radio-info">
+												<input type="radio" id="custom_background2" value="" name="defaultBackground2">
+												<label for="bg7"> <?php echo $tr['custom_background'] ?> </label>
+											</div>
+										</div>
+										<div class="col-sm-12">
+										<div class="form-group">
+											<input type="file" id="upload_image2" class="filestyle" data-buttonbefore="true">
+											<em class="mutted"><?php echo $tr['upload_image'] ?></em>
+											<input type="hidden" name="uploadedBg2">
+										</div>
+									</div>
+										</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+											<label class="col-sm-12  control-label"><?php echo $tr['background'] ?> 3</label>
+											<div class="col-sm-6">
+												<div class="radio radio-warning">
+													<input type="radio" id="bg1" value="default.jpg" name="defaultBackground3">
+													<label for="bg1" class="imgMod" src="uploads/landings/default.jpg"> <?php echo $tr['background'] ?> 1 </label>
+												</div>
+												<div class="radio">
+													<input type="radio" id="bg2" value="default2.jpg" name="defaultBackground3">
+													<label for="bg2" class="imgMod" src="uploads/landings/default2.jpg"> <?php echo $tr['background'] ?> 2 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg3" value="default3.jpg" name="defaultBackground3">
+													<label for="bg3" class="imgMod" src="uploads/landings/default3.jpg"> <?php echo $tr['background'] ?> 3 </label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="radio radio-danger">
+													<input type="radio" id="bg4" value="default4.jpg" name="defaultBackground3">
+													<label for="bg4" class="imgMod" src="uploads/landings/default4.jpg"> <?php echo $tr['background'] ?> 4 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg5" value="default5.jpg" name="defaultBackground3">
+													<label for="bg5" class="imgMod" src="uploads/landings/default5.jpg"> <?php echo $tr['background'] ?> 5 </label>
+												</div>
+												<div class="radio radio-danger">
+													<input type="radio" id="bg6" value="default6.jpg" name="defaultBackground3">
+													<label for="bg6" class="imgMod" src="uploads/landings/default6.jpg"> <?php echo $tr['background'] ?> 6 </label>
+												</div>
+											</div>
+											<div class="col-sm-12">
+											<div class="radio radio-info">
+												<input type="radio" id="custom_background3" value="" name="defaultBackground3">
+												<label for="bg7"> <?php echo $tr['custom_background'] ?> </label>
+											</div>
+										</div>
+										<div class="col-sm-12">
+										<div class="form-group">
+											<input type="file" id="upload_image3" class="filestyle" data-buttonbefore="true">
+											<em class="mutted"><?php echo $tr['upload_image'] ?></em>
+											<input type="hidden" name="uploadedBg3">
+										</div>
+									</div>
 										</div>
 					</div>
 				</div>
 			</div>
-
+			<div class="row">
+				<div class="col-md-12">
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary waves-effect waves-light pull-right"><?php echo $tr['submit'] ?></button>
+			</div>
+		</div>
+	</div>
 		</form>
 
 	<div class="row" id="view">

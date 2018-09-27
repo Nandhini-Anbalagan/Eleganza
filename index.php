@@ -319,19 +319,19 @@
     <section id="contact">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center">
+          <div class="col-md-12 text-center">
             <h2 class="section-heading text-uppercase">Claim your spot before it's too late!</h2>
             <h3 class="section-subheading text-muted">Seeking Guidance!! We're here to help you out!!</h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-md-12">
             <form id="contactForm" name="sentMessage" novalidate="novalidate">
               <input type="hidden" name="signUp">
 							<input type="hidden" name="lang" value="EN">
-              <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
+              <div class="col-md-12 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
               <div class="row">
-                <div class="col-sm-12">
+                <div class="col-lg-12">
                   <div class="form-group">
                     <input class="form-control" id="name"  name="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
                     <p class="help-block text-danger"></p>
@@ -341,13 +341,13 @@
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-lg-6">
                   <div class="form-group">
                     <input class="form-control" id="phone" type="tel" name="phone" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
-                  <div class="col-sm-6">
+                  <div class="col-lg-6">
                     <div class="form-group">
                       <select class="form-control" name="industry" id="industry">
                        <option value="SI">Service Industry</option>
@@ -358,9 +358,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
+            <div class="col-lg-12 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
 								<div class="row">
-									<div class="col-sm-12">
+									<div class="col-lg-12">
 										<div class="form-group">
 											<input class="form-control" type="text" name="areas" id="inputAreas1" placeholder="Enter desired city, town or Zip/Postal code" required>
 										</div>
@@ -442,12 +442,12 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-lg-6">
 										<div class="form-group">
 											<input class="form-control" type="text" name="agency" id="inputAgency1" placeholder="Enter your Agency" required>
 										</div>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-lg-6">
 										<div class="form-group">
 											<input class="form-control" type="text" name="ref" id="inputRef1" placeholder="Refence Code (optional)">
 										</div>
@@ -460,7 +460,7 @@
                   <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" >Send Message</button>
                 </div>
 
-              <div class="col-xs-12 text-center">
+              <div class="col-lg-12 text-center">
 								<div id="success">Registration successful! Please verify your email for further instructions.</div>
 								<div id="error"></div>
 							</div>

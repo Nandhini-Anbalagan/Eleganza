@@ -77,6 +77,7 @@ $postCaseLandingPic = Tokenizer::add('post-case-landing-picture', 30, 'picture')
 			});
 
 			$(':file').change(function(){
+				var id=this.id;
 				var file = this.files[0],
 					type = file.type,
 					types = ["image/png", "image/jpg", "image/jpeg"],
@@ -95,8 +96,18 @@ $postCaseLandingPic = Tokenizer::add('post-case-landing-picture', 30, 'picture')
 						processData: false,
 						contentType: false,
 						success: function (response) {
-							$('#bg4').prop("checked", true);
-							$('input[name="uploadedBg"]').val(response);
+							if(id == 'upload_image1'){
+								$('#custom_background1').prop("checked", true);
+								$('input[name="uploadedBg1"]').val(response.trim());
+							}
+							if(id == 'upload_image2'){
+								$('#custom_background2').prop("checked", true);
+								$('input[name="uploadedBg2"]').val(response.trim());
+							}
+							if(id == 'upload_image3'){
+								$('#custom_background3').prop("checked", true);
+								$('input[name="uploadedBg3"]').val(response.trim());
+							}
 						}
 					});
 				}else{
