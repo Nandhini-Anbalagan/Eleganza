@@ -11,32 +11,44 @@
   min-height: 62px;
 }
 #topnav .active a {
-  color: #E51937 !important;
+  color: #ffbd4a  !important;
 }
 #topnav .active a i {
-  color: #E51937 !important;
+  color: #ffbd4a  !important;
 }
 #topnav .has-submenu.active a {
-  color: #E51937;
+  color: black ;
 }
 #topnav .has-submenu.active a i {
-  color: #E51937;
+  color: black ;
 }
 #topnav .has-submenu.active .submenu li.active a {
-  color: #E51937;
+  color: black ;
 }
 
 #topnav .has-submenu.active .submenu li.active{
-  background-color: #eee;
+  background-color: #ffbd4a ;
 }
 
 #topnav .topbar-main {
-  background-color: #F4F8FB;
-  border-bottom: 2px solid #ddd;
+  background-color: #101010cc;
+  border-bottom: 2px solid #101010cc;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #topnav .menu-extras{
   display: inline-block;
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333 !important;
+    white-space: nowrap;
 }
 
 #topnav .topbar-main .logo {
@@ -47,7 +59,7 @@
   margin-top: 12px;
   text-transform: uppercase;
   float: left;
-  margin-right: 10px;
+  margin-right: 25px;
 }
 #topnav .topbar-main .logo h1 {
   margin: 0px auto;
@@ -223,7 +235,7 @@
 }
 #topnav .navigation-menu > li > a {
   display: block;
-  color: #36404a;
+  color: #f4f8fb;
   font-weight: bold;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -232,29 +244,29 @@
   padding-right: 10px;
 }
 #topnav .navigation-menu > li > a:hover {
-  color: #E51937;
+  color: #ffbd4a;
 }
 #topnav .navigation-menu > li > a:hover i {
-  color: #E51937;
+  color: #ffbd4a;
 }
 #topnav .navigation-menu > li > a:focus {
-  color: #E51937;
+  color: #ffbd4a;
 }
 #topnav .navigation-menu > li > a:focus i {
-  color: #E51937;
+  color: #ffbd4a;
 }
 #topnav .navigation-menu > li > a:active {
-  color: #E51937;
+  color: #ffbd4a;
 }
 #topnav .navigation-menu > li > a:active i {
-  color: #E51937;
+  color: #ffbd4a;
 }
 #topnav .navigation-menu > li > a i {
   display: block;
   font-size: 18px;
   margin-bottom: 5px;
   text-align: center;
-  color: #98a6ad;
+  color: #ddd;
 }
 #topnav .navigation-menu > li > a:hover,
 #topnav .navigation-menu > li > a:focus {
@@ -284,10 +296,10 @@
     padding-left: 0px;
   }
   #topnav .navigation-menu > li:hover a {
-    color: #E51937;
+    color: #ffbd4a;
   }
   #topnav .navigation-menu > li:hover a i {
-    color: #E51937;
+    color: #ffbd4a;
   }
   #topnav .navigation-menu > li .submenu {
     position: absolute;
