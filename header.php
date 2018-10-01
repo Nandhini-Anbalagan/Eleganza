@@ -12,11 +12,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ELEGANZA</title>
+    <title>ELEGANZA Digital Media</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+<link href="favicon.png" type="image/x-icon" rel="shortcut icon">
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />

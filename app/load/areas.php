@@ -27,7 +27,7 @@ $postCaseAreaSingle = Tokenizer::add('post-case-area-single', 30, 'single');
 <div class="clearfix"></div>
 <div class="p-t-20">
 	<?php include "buyerSellerBullets.php" ?>
-	<br><span class="label label-table label-primary">Leading Agent</span> &nbsp;&nbsp; <span class="label label-table label-danger">Subscribed Agent</span>
+	<!-- <br><span class="label label-table label-primary">Leading Agent</span> &nbsp;&nbsp; <span class="label label-table label-danger">Subscribed Agent</span> -->
 </div>
 <div class="p-20">
 	<table class="table table-striped table-responsive m-0" id="datatable-editable">
