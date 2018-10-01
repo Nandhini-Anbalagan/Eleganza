@@ -83,8 +83,8 @@ font-family:  Arial, sans-serif;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
+  background-color: #d1af78 !important;
+  border-color: #d1af78 !important;
   color: white;
 }
 
@@ -131,7 +131,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fec503;
+  color: #d1af78;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
