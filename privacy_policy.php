@@ -1,6 +1,6 @@
 <?php include("header.php") ?>
 
-<div class="section" style="margin-top: 20px;">
+<div class="section" id="privacy" style="margin-top: 20px;">
 	<div class="row">
 		<div class="large-12 columns">
 			<h2>Privacy Policy</h2>
@@ -8,7 +8,7 @@
 				<div class="small-12 columns">
 					<h3>Personal identification information</h3>
 					<p>We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, register on the site, subscribe to the newsletter, fill out a form, and in connection with other activities, services, features or resources we make available on our Site. Users may be asked for, as appropriate, name, email address, mailing address, phone number. Users may, however, visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.</p>
-					
+
 					<h3>Non-personal identification information</h3>
 					<p>We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information.</p>
 

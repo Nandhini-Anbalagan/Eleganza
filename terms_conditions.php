@@ -1,6 +1,6 @@
 <?php include("header.php") ?>
 
-<div class="section" style="margin-top: 20px;">
+<div class="section" id="termsofuse" style="margin-top: 20px;">
 	<div class="container">
 	<div class="row">
 		<div class="large-12 columns">
