@@ -13,11 +13,11 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: #d1af78;
 }
 
 a:hover {
-  color: #fec503;
+  color: #d1af78;
 }
 
 .text-primary {
@@ -78,8 +78,8 @@ font-family:  Arial, sans-serif;
 }
 
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #d1af78;;
+  border-color: #d1af78;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
@@ -93,12 +93,12 @@ font-family:  Arial, sans-serif;
 }
 
 ::-moz-selection {
-  background: #fed136;
+  background: #d1af78;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fed136;
+  background: #d1af78;
   text-shadow: none;
 }
 
@@ -121,12 +121,12 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #fed136;
+  background-color: #d1af78;
   font-family:  Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
+  color: #d1af78;
   font-family: Lato;
 }
 
@@ -144,7 +144,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: #d1af78;
 }
 
 @media (min-width: 992px) {
@@ -595,7 +595,7 @@ header.masthead .intro-text .intro-mid {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: #d1af78;
 }
 
 .timeline > li .timeline-image h4 {
@@ -779,7 +779,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-  border-color: #fed136;
+  border-color: #d1af78;
   box-shadow: none;
 }
 
@@ -850,5 +850,5 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #fed136;
+  background-color: #d1af78;
 }
