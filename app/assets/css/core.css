@@ -97,7 +97,7 @@ a:focus {
 }
 
 .wrapper_info {
-  margin-top: 110px;
+  margin-top: 150px;
   text-align: center;
 }
 
@@ -557,7 +557,7 @@ a:focus {
   color: #ffffff;
 }
 .text-danger {
-  color: #f05050;
+  color: #d1af78  ;
 }
 .text-muted {
   color: #98a6ad;

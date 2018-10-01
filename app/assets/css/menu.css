@@ -23,7 +23,7 @@
   color: black ;
 }
 #topnav .has-submenu.active .submenu li.active a {
-  color: black ;
+  color: black !important;
 }
 
 #topnav .has-submenu.active .submenu li.active{
@@ -355,7 +355,7 @@
     clear: both;
     white-space: nowrap;
     font-weight: 500;
-    color: #494e53;
+    color: #333 !important;
   }
   #topnav .navigation-menu > li .submenu li a:hover {
     color: #E51937;

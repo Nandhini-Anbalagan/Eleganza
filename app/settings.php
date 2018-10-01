@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-4">
-				<div class="p-20">
+				<div class="p-20 panel panel-default">
 					<h4 class="page-title"><?php echo $tr['settings'] ?></h4>
 					<div class="list-group mail-list  m-t-20">
 						<input type="hidden" value ="<?php echo $_GET['settings'] ?>"/>
