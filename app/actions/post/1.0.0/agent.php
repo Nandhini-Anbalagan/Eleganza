@@ -123,7 +123,7 @@
 		case "feedback":
 
 			$from = $_POST['email'];
-			$subject = "Unbeleadsable feedback from " . $_POST['name'] . " on " . Functions::userFriendlyDate(time());
+			$subject = "Eleganza feedback from " . $_POST['name'] . " on " . Functions::userFriendlyDate(time());
 			$message = "<h3>". $_POST['subject'] ."</h3><br>";
 			$message .= $_POST['message'];
 

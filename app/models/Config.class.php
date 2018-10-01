@@ -14,7 +14,7 @@ abstract class Config{
 		CONST WEBSITE_URL = "https://eleganza.test/app";
 
 		# Website title / Name of the website
-		CONST WEBSITE_TITLE = "Unbeleadsable";
+		CONST WEBSITE_TITLE = "Eleganza";
 
         # The duration of the password reset key in hours (Default: 24)
         # Set to zero to have no expiration.

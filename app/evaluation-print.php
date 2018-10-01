@@ -1,4 +1,4 @@
-<?php 
+<?php
 	require_once('head.php');
 	require_once('header.php');
 
@@ -16,7 +16,7 @@
 <head>
 	<base href="<?php echo WEBSITE_URL ?>/">
 	<meta charset="utf-8">
-	<title>Unbeleadsable</title>
+	<title>Eleganza</title>
 
 	<!-- Print CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/print.css">

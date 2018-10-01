@@ -298,17 +298,17 @@ abstract class Functions{
 		public static function monthArray(){
 			$months = array();
 			$months["01"] = "January";
-			$months["02"] = "February"; 
-			$months["03"] = "March"; 
-			$months["04"] = "April"; 
-			$months["05"] = "May"; 
-			$months["06"] = "June"; 
-			$months["07"] = "July"; 
-			$months["08"] = "August"; 
-			$months["09"] = "September"; 
-			$months["10"] = "October"; 
-			$months["11"] = "November"; 
-			$months["12"] = "December"; 
+			$months["02"] = "February";
+			$months["03"] = "March";
+			$months["04"] = "April";
+			$months["05"] = "May";
+			$months["06"] = "June";
+			$months["07"] = "July";
+			$months["08"] = "August";
+			$months["09"] = "September";
+			$months["10"] = "October";
+			$months["11"] = "November";
+			$months["12"] = "December";
 
 			return $months;
 		}
@@ -603,7 +603,7 @@ abstract class Functions{
 					else {
 						throw new \Exception("Error retrieving image data");
 					}
-					$items->item($i)->setAttribute('src', "https://unbeleadsable.com/cdn/$att/{$filename}.jpg");
+					$items->item($i)->setAttribute('src', "https://eleganza.test/cdn/$att/{$filename}.jpg");
 				}
 			}
 			$string = $DOM->saveHTML();

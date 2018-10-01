@@ -131,7 +131,7 @@
 
 		$from = "support@unbeleadsable.com";
 
-		$subject = "Contact request from Unbeleadsable";
+		$subject = "Contact request from Eleganza Digital Media";
 		$message = "Hello there, You have a new message from your website.<br><br>";
 		$message .= "Name: " . $_POST['name'] . "<br>";
 		$message .= "Email: " . $_POST['email'] . "<br>";

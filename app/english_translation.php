@@ -166,7 +166,7 @@
 		"sms_noty" => "Completed Lead SMS Notifications",
 		"email_noty" => "Completed Lead EMAIL Notifications",
 		"upload_leads" => "Import Leads",
-		"upload_file" => "Import your leads into your Unbeleadsable account!",
+		"upload_file" => "Import your leads into your Eleganza account!",
 		"upload_leads_1" => "<b>Step 1</b>: Import CSV File",
 		"upload_leads_2" => "<b>Step 2</b>: Map Columns",
 		"upload_leads_3" => "<b>Step 3</b>: Validate Leads",
