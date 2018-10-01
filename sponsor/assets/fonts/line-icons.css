@@ -368,9 +368,11 @@
 }
 .lni-facebook-filled:before {
   content: "\e970";
+  align-items: left;
 }
 .lni-facebook:before {
   content: "\e971";
+
 }
 .lni-files:before {
   content: "\e972";
@@ -422,6 +424,7 @@
 }
 .lni-google-plus:before {
   content: "\e982";
+  padding: 60px;
 }
 .lni-graduation:before {
   content: "\e983";
@@ -494,6 +497,7 @@
 }
 .lni-instagram-filled:before {
   content: "\e99b";
+  padding: 30px;
 }
 .lni-instagram:before {
   content: "\e99c";
@@ -869,6 +873,7 @@
 }
 .lni-twitter-filled:before {
   content: "\ea19";
+  padding: 10px;
 }
 .lni-twitter:before {
   content: "\ea1a";
