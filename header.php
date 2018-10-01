@@ -108,8 +108,8 @@ body {
           About
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#team">Our team</a>
-          <a class="dropdown-item" href="#about">our partners</a>
+          <a class="dropdown-item" href="#team">About Us</a>
+          <a class="dropdown-item" href="#about">Our Partners</a>
         </div>
             </li>
             <li class="nav-item">
@@ -130,7 +130,7 @@ body {
           <div class="intro-lead-in"><img src="<?php echo  Config::WEBSITE_URL . "/assets/img/tiny_logo.png" ?>" alt="Logo"></div>
 					<div class="intro-mid">LEAD GENERATION SOFTWARE | MARKETING FUNNEL MANAGEMENT</div>
           <div class="intro-heading text-uppercase">Fashion | Luxury | Travel | Design | Beauty | Automobile | Food & Drink</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Get Free Marketing Tips</a>
         </div>
       </div>
     </header>

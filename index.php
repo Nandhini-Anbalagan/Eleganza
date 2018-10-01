@@ -229,7 +229,7 @@
 </section>
 
 <!-- Team -->
-<section class="bg-light" id="team">
+<!-- <section class="bg-light" id="team">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -313,7 +313,7 @@
     </div>
     </div>
   </div>
-</section>
+</section> -->
 
     <!-- Contact -->
     <section id="contact">
@@ -349,7 +349,7 @@
                 </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <select class="form-control" name="industry" id="industry">
+                      <select class="form-control" name="industry" id="industry" placholder="Choose ur Industry">
                        <option value="SI">Service Industry</option>
                        <option value="MI">Manufacturing Industry</option>
                        <option value="RI">Retail Industry</option>
