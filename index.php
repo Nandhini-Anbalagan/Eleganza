@@ -193,8 +193,40 @@
         </div>
       </div>
     </section>
+    <section id="aboutus">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">About Us</h2>
+            <h3 class="section-subheading text-muted">Eleganza Digital Media Network !</h3>
+          </div>
+        </div>
+        <div class="row">
+					<div class="col-sm-12 author-intro wow fadeIn">
+						<p class="text-justify">Eleganza Digital Media was created to provide lead generation and marketing funnel management support to businesses of all sizes and all industries.
 
-    <section id="partners">
+Founded by entrepreneurs such as yourselves, we know and understand how difficult it can be to generate quality leads for your business.
+
+Whether you work in the retail, service, or manufacturing industry, the objective for all companies and entrepreneurs is to generate new leads and increase revenue and profits for the business.
+
+Where did it all begin?
+
+From the onset, Eleganza Digital Media, established a series of criteria aimed at generating new leads for our own business.
+
+Having started with the creation of Eleganza Magazine (link to www.eleganzamagazine.com), we had the opportunity to become partners with some of the most influential people and businesses in a variety of sectors. We listened to our clients’ needs, and we created Eleganza Digital Media to fulfill those needs to the best of our capability.
+
+As a business owner, you don’t have the time to manage digital marketing as well. You don’t have the time to figure out how Facebook advertising works, or how to create the perfect landing page for your company.
+
+We do. It’s our mandate. We will help you achieve your business goals by bringing you your desired audience. You can focus on your business.
+
+Eleganza Digital Media has become a must-have tool for so many businesses and we would be honoured to become an integral part of your success.
+
+Eleganza Digital Magazine Team</p>
+</div>
+</div>
+      </div>
+    </section>
+    <section class="bg-light" id="partners">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
