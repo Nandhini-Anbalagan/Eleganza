@@ -103,7 +103,13 @@ body {
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
             </li>
-            <li class="nav-item dropdown">
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#aboutus">About Us</a>
+            </li>
+						<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#partners">Our Partners</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           About
         </a>
@@ -111,7 +117,7 @@ body {
           <a class="dropdown-item" href="#team">About Us</a>
           <a class="dropdown-item" href="#about">Our Partners</a>
         </div>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Contact Us</a>
             </li>

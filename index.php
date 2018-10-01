@@ -194,7 +194,7 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="partners">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
