@@ -320,8 +320,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h2 class="section-heading text-uppercase">Claim your spot before it's too late!</h2>
-            <h3 class="section-subheading text-muted">Seeking Guidance!! We're here to help you out!!</h3>
+            <h2 class="section-heading text-uppercase" style="font-size: 30px; color:#d1af78">Leave you information for free industry specific<br/> marketing tips</h2>
+            <h3 class="section-subheading text-muted">Seeking Guidance? We're here to help you Generate Leads!!</h3>
           </div>
         </div>
         <div class="row">
@@ -341,28 +341,13 @@
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" name="phone" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <select class="form-control" name="industry" id="industry" placholder="Choose ur Industry">
-                       <option value="SI">Service Industry</option>
-                       <option value="MI">Manufacturing Industry</option>
-                       <option value="RI">Retail Industry</option>
-                      </select>
-                    </div>
-                </div>
               </div>
             </div>
             <div class="col-lg-12 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-xxs-12">
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="form-group">
-											<input class="form-control" type="text" name="areas" id="inputAreas1" placeholder="Enter desired city, town or Zip/Postal code" required>
+											<input class="form-control" type="text" name="areas" id="inputAreas1" placeholder="Enter Your Address" required>
 										</div>
 
 										<div class="form-group">
@@ -442,7 +427,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<!-- <div class="col-lg-6">
 										<div class="form-group">
 											<input class="form-control" type="text" name="agency" id="inputAgency1" placeholder="Enter your Agency" required>
 										</div>
@@ -451,7 +436,23 @@
 										<div class="form-group">
 											<input class="form-control" type="text" name="ref" id="inputRef1" placeholder="Refence Code (optional)">
 										</div>
-									</div>
+									</div> -->
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input class="form-control" id="phone" type="tel" name="phone" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <select class="form-control" name="industry" id="industry" placholder="Choose ur Industry">
+                        <option value="" disabled selected>Choose your industry</option>
+                         <option value="SI">Service Industry</option>
+                         <option value="MI">Manufacturing Industry</option>
+                         <option value="RI">Retail Industry</option>
+                        </select>
+                      </div>
+                  </div>
 								</div>
 							</div>
                 <div class="clearfix"></div>
