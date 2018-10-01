@@ -7,7 +7,7 @@
         <h2 class="section-heading text-center">Features</h2>
         <p class="section-lead text-center"><b>Your Net worth is Your Network! Start Building Your Client Database</b></p>
         <div class="divider">
-          <i class="fa fa-user bg-white"></i>
+          <i class="fa fa-user bg-white" style="color:#d1af78;"></i>
         </div>
       </div>
       <div class="row wow fadeInUp">
@@ -145,7 +145,7 @@
             </a>
             <div class="portfolio-caption">
               <h4>Service Industry</h4>
-              <p class="text-muted">Earn Revenue through Intangible Products/Services</p>
+              <p class="text-muted">Earn Revenue through Products/Services</p>
             </div>
           </div>
           <!-- <div class="col-md-4 col-sm-6 portfolio-item">
@@ -203,24 +203,16 @@
         </div>
         <div class="row">
 					<div class="col-sm-12 author-intro wow fadeIn">
-						<p class="text-justify">Eleganza Digital Media was created to provide lead generation and marketing funnel management support to businesses of all sizes and all industries.
-
-Founded by entrepreneurs such as yourselves, we know and understand how difficult it can be to generate quality leads for your business.
-
-Whether you work in the retail, service, or manufacturing industry, the objective for all companies and entrepreneurs is to generate new leads and increase revenue and profits for the business.
-
-Where did it all begin?
-
-From the onset, Eleganza Digital Media, established a series of criteria aimed at generating new leads for our own business.
-
-Having started with the creation of Eleganza Magazine (link to www.eleganzamagazine.com), we had the opportunity to become partners with some of the most influential people and businesses in a variety of sectors. We listened to our clients’ needs, and we created Eleganza Digital Media to fulfill those needs to the best of our capability.
-
-As a business owner, you don’t have the time to manage digital marketing as well. You don’t have the time to figure out how Facebook advertising works, or how to create the perfect landing page for your company.
-
-We do. It’s our mandate. We will help you achieve your business goals by bringing you your desired audience. You can focus on your business.
-
-Eleganza Digital Media has become a must-have tool for so many businesses and we would be honoured to become an integral part of your success.
-
+						<p class="text-justify">Eleganza Digital Media was created to provide lead generation and marketing funnel management support to businesses of all sizes and all industries.<br><br>
+Founded by entrepreneurs such as yourselves, we know and understand how difficult it can be to generate quality leads for your business.<br><br>
+Whether you work in the retail, service, or manufacturing industry, the objective for all companies and entrepreneurs is to generate new leads and increase revenue and profits for the business.<br><br>
+<h3 class="service-heading">Where did it all begin?</h3><br>
+From the onset, Eleganza Digital Media, established a series of criteria aimed at generating new leads for our own business.<br><br>
+Having started with the creation of Eleganza Magazine (link to www.eleganzamagazine.com), we had the opportunity to become partners with some of the most influential people and businesses in a variety of sectors. We listened to our clients’ needs, and we created Eleganza Digital Media to fulfill those needs to the best of our capability.<br><br>
+As a business owner, you don’t have the time to manage digital marketing as well. You don’t have the time to figure out how Facebook advertising works, or how to create the perfect landing page for your company.<br><br>
+We do. It’s our mandate. We will help you achieve your business goals by bringing you your desired audience. You can focus on your business.<br><br>
+Eleganza Digital Media has become a must-have tool for so many businesses and we would be honoured to become an integral part of your success.<br><br>
+<img src="app/assets/img/tiny_logo.png" width="240" alt="Logo"><br>
 Eleganza Digital Magazine Team</p>
 </div>
 </div>
@@ -241,11 +233,11 @@ Eleganza Digital Magazine Team</p>
 </div>
 <div class="column">
 <img src="img/about/yul.png" style="width:100%">
-<img src="img/about/aquablu.jpg" style="width:100%">
+<img src="img/about/aquablu.jpg" style="width:100%;height:31%">
 </div>
 <div class="column">
 <img src="img/about/John-Scotty.png" style="width:100%">
-<img src="img/about/Aquabrass.png" style="width:100%">
+<img src="img/about/Aquabrass.png" style="width:100%;height:33%">
 </div>
 <div class="column">
 <img src="img/about/sapopa.jpg" style="width:100%">
@@ -352,8 +344,8 @@ Eleganza Digital Magazine Team</p>
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h2 class="section-heading text-uppercase" style="font-size: 30px; color:#d1af78">Leave you information for free industry specific<br/> marketing tips</h2>
-            <h3 class="section-subheading text-muted">Seeking Guidance? We're here to help you Generate Leads!!</h3>
+            <h2 class="section-heading text-uppercase" >Leave you information for free industry specific<br/> marketing tips</h2>
+            <h3 class="section-subheading text-muted" style="color: white !important;">Seeking Guidance? We're here to help you Generate Leads!!</h3>
           </div>
         </div>
         <div class="row">

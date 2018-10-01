@@ -17,7 +17,7 @@
 ============= */
 body {
   background: #ebeff2;
-  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding-bottom: 65px;
   overflow-x: hidden;
@@ -35,7 +35,7 @@ h4,
 h5,
 h6 {
   color: #505458;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   margin: 10px 0;
 }
 h1 {
@@ -870,7 +870,7 @@ textarea.form-control {
   letter-spacing: 0.03em;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
 }
 .nav.nav-tabs > li > a:hover,
 .nav.tabs-vertical > li > a:hover {

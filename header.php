@@ -34,7 +34,7 @@
 
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Lato';
 }
 
 .header {
@@ -90,7 +90,7 @@ body {
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" class="logo"><img src="<?php echo  Config::WEBSITE_URL . "/assets/img/tiny_logo.png" ?>" width="240" alt="Logo"></a>
+        <a class="navbar-brand" href="#page-top" class="logo"><img src="<?php echo  Config::WEBSITE_URL . "/assets/img/tiny_logo.png" ?>" width="240" alt="Logo"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -98,16 +98,16 @@ body {
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Features</a>
+              <a class="nav-link" href="#services">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
 						<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#aboutus">About Us</a>
+              <a class="nav-link" href="#aboutus">About Us</a>
             </li>
 						<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#partners">Our Partners</a>
+              <a class="nav-link" href="#partners">Our Partners</a>
             </li>
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -119,10 +119,10 @@ body {
         </div>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Contact Us</a>
+              <a class="nav-link" href="#contact">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="app/login.php">Login</a>
+              <a class="nav-link" href="app/login.php">Login</a>
             </li>
           </ul>
         </div>

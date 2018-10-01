@@ -1,13 +1,13 @@
 <?php include("header.php") ?>
-
-<div class="section" id="termsofuse" style="margin-top: 20px;">
+<section class="section" id="termsofuse">
 	<div class="container">
-	<div class="row">
-		<div class="large-12 columns">
-			<h2 class="text-center">Privacy Policy and Terms and Conditions</h2>
-			<div class="row" style="text-align: justify">
-				<div class="small-12 columns">
-
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2 class="section-heading text-uppercase">Privacy Policy and Terms and Conditions</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
 					<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;mso-outline-level:3;background:white'><b style='mso-bidi-font-weight:
 normal'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
@@ -17,12 +17,11 @@ EN-CA'>Our Policy<o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Welcome to
-the web site (the “<b>Site</b>“) of Unbeleadsable Group Inc. (“Unbeleadsable
-Group Inc<span class=GramE>. ”</span>, “we”, “us” and/or “our”). This Site is
-operated by Unbeleadsable Group Inc. and has been created to provide
-information about our Unbeleadsable Group Inc. and our services (together with
+the web site (the “<b>Site</b>“) of Eleganza Digital Media Inc. (“Eleganza Digital Media Inc<span class=GramE>. ”</span>, “we”, “us” and/or “our”). This Site is
+operated by Eleganza Digital Media Inc. and has been created to provide
+information about our Eleganza Digital Media Inc. and our services (together with
 the Site, the “<b>Services</b>“) to our Service visitors (“you”, “your”). This
-Privacy Policy sets forth Unbeleadsable Group Inc. policy with respect to
+Privacy Policy sets forth Eleganza Digital Media Inc. policy with respect to
 information including personally identifiable data (“<b>Personal Data</b>“) and
 other information that is collected from visitors to the Site and Services.<o:p></o:p></span></p>
 
@@ -49,7 +48,7 @@ white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>We collect
 Personal Data from you when you voluntarily provide such information, such as
 when you contact us with inquiries, respond to one of our surveys, register for
-access to the Services or use certain Services. Wherever Unbeleadsable Group
+access to the Services or use certain Services. Wherever Eleganza Digital Media
 Inc. collects Personal Data we make an effort to provide a link to this Privacy
 Policy.<o:p></o:p></span></p>
 
@@ -59,7 +58,7 @@ mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>By
 voluntarily providing us with Personal Data, you are consenting to our use of
 it in accordance with this Privacy Policy. If you provide Personal Data to the
 Services, you acknowledge and agree that such Personal Data may be transferred
-from your current location to the offices and servers of Unbeleadsable Group
+from your current location to the offices and servers of Eleganza Digital Media
 Inc. and the authorized third parties referred to herein located in the United
 States.</span></b><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'><o:p></o:p></span></p>
@@ -79,12 +78,12 @@ EN-CA'>Non-Identifiable Data<o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>When you
-interact with Unbeleadsable Group Inc. through the Services, we receive and
+interact with Eleganza Digital Media Inc. through the Services, we receive and
 store certain personally non-identifiable information. Such information, which
 is collected passively using various technologies, cannot presently be used to
-specifically identify you. Unbeleadsable Group Inc. may store such information
+specifically identify you. Eleganza Digital Media Inc. may store such information
 itself or such information may be included in databases owned and maintained by
-Unbeleadsable Group Inc. affiliates, agents or service providers. The Services
+Eleganza Digital Media Inc. affiliates, agents or service providers. The Services
 may use such information and pool it with other information to track, for example,
 the total number of visitors to our Site, the number of visitors to each page
 of our Site, and the domain names of our visitors’ Internet service providers.
@@ -117,13 +116,11 @@ EN-CA'>Aggregated Personal Data<o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>In an
-ongoing effort to better understand and serve the users of the Services, Unbeleadsable
-Group Inc. often conducts research on its customer demographics, interests and
+ongoing effort to better understand and serve the users of the Services, Eleganza Digital Media Inc. often conducts research on its customer demographics, interests and
 behavior based on the Personal Data and other information provided to us. This
-research may be compiled and analyzed on an aggregate basis, and Unbeleadsable
-Group Inc. may share this aggregate data with its affiliates, agents and
+research may be compiled and analyzed on an aggregate basis, and Eleganza Digital Media Inc. may share this aggregate data with its affiliates, agents and
 business partners. This aggregate information does not identify you personally.
-Unbeleadsable Group Inc. may also disclose aggregated user statistics in order
+Eleganza Digital Media Inc. may also disclose aggregated user statistics in order
 to describe our services to current and prospective business partners, and to
 other third parties for other lawful purposes.<o:p></o:p></span></p>
 
@@ -135,20 +132,19 @@ EN-CA'>Our Use of Your Personal Data and Other Information<o:p></o:p></span></b>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
-mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Unbeleadsable
-Group Inc. uses the Personal Data you provide in a manner that is consistent with
+mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. uses the Personal Data you provide in a manner that is consistent with
 this Privacy Policy. If you provide Personal Data for a certain reason, we may
 use the Personal Data in connection with the reason for which it was provided.
 For instance, if you contact us by email, we will use the Personal Data you
 provide to answer your question or resolve your problem. Also, if you provide
 Personal Data in order to obtain access to the Services, we will use your
 Personal Data to provide you with access to such services and to monitor your
-use of such services. Unbeleadsable Group Inc. and its subsidiaries and
-affiliates (the “Unbeleadsable Group Inc. <span
+use of such services. Eleganza Digital Media Inc. and its subsidiaries and
+affiliates (the “Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>Related Companies”) may also use your Personal
 Data and other personally non-identifiable information collected through the
 Services to help us improve the content and functionality of the Services, to
-better understand our users and to improve the Services. Unbeleadsable Group
+better understand our users and to improve the Services. Eleganza Digital Media
 Inc. and its affiliates may use this information to contact you in the future
 to tell you about services we believe will be of interest to you. If we do so,
 each marketing communication we send you will contain instructions permitting
@@ -159,8 +155,7 @@ indicated below.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
-mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>If Unbeleadsable
-Group Inc. <span style='mso-spacerun:yes'> </span>intends on using any Personal
+mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>If Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span>intends on using any Personal
 Data in any manner that is not consistent with this Privacy Policy, you will be
 informed of such anticipated use prior to or at the time at which the Personal
 Data is collected.<o:p></o:p></span></p>
@@ -181,8 +176,7 @@ EN-CA'>Our Disclosure of Your Personal Data and Other Information<o:p></o:p></sp
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
-mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Unbeleadsable
-Group Inc. is not in the business of selling your information. We consider this
+mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. is not in the business of selling your information. We consider this
 information to be a vital part of our relationship with you. There are,
 however, certain circumstances in which we may share your Personal Data with
 certain third parties without further notice to you, as set forth below:<o:p></o:p></span></p>
@@ -221,7 +215,7 @@ EN-CA'>Agents, Consultants and Related Third Parties<o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;
 margin-left:0cm;line-height:normal;mso-outline-level:4;background:white'><span
 style='font-size:12.0pt;mso-fareast-font-family:"inherit";mso-bidi-font-family:
-"inherit";mso-fareast-language:EN-CA'>Unbeleadsable Group Inc. like
+"inherit";mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. like
 many businesses, sometimes hires other companies to perform certain
 business-related functions. Examples of such functions include mailing
 information, maintaining databases and processing payments. When we employ
@@ -237,11 +231,10 @@ EN-CA'>Legal Requirements<o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-top:7.5pt;margin-right:0cm;margin-bottom:7.5pt;
 margin-left:0cm;line-height:normal;mso-outline-level:4;background:white'><span
 style='font-size:12.0pt;mso-fareast-font-family:"inherit";mso-bidi-font-family:
-"inherit";mso-fareast-language:EN-CA'>Unbeleadsable Group Inc. may
+"inherit";mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. may
 disclose your Personal Data if required to do so by law or in the good faith
 belief that such action is necessary to (<span class=SpellE>i</span>) comply
-with a legal obligation, (ii) protect and defend the rights or property of Unbeleadsable
-Group Inc. <span style='mso-spacerun:yes'> </span>(iii<span class=GramE>)act</span>
+with a legal obligation, (ii) protect and defend the rights or property of Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span>(iii<span class=GramE>)act</span>
 in urgent circumstances to protect the personal safety of users of the Services
 or the public, or (iv) protect against legal liability.<o:p></o:p></span></p>
 
@@ -269,15 +262,13 @@ EN-CA'>Exclusions<o:p></o:p></span></b></p>
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>This Privacy
-Policy does not apply to any Personal Data collected by Unbeleadsable Group
+Policy does not apply to any Personal Data collected by Eleganza Digital Media
 Inc. other than Personal Data collected through the Services. This Privacy
-Policy shall not apply to any unsolicited information you provide to Unbeleadsable
-Group Inc. through the Services or through any other means. This includes, but
+Policy shall not apply to any unsolicited information you provide to Eleganza Digital Media Inc. through the Services or through any other means. This includes, but
 is not limited to, information posted to any public areas of the Services, such
 as forums, any ideas for new products or modifications to existing products,
 and other unsolicited submissions (collectively, “Unsolicited Information”).
-All Unsolicited Information shall be deemed to be non-confidential and Unbeleadsable
-Group Inc. <span style='mso-spacerun:yes'> </span><span class=GramE>shall</span>
+All Unsolicited Information shall be deemed to be non-confidential and Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span><span class=GramE>shall</span>
 be free to reproduce, use, disclose, and distribute such Unsolicited
 Information to others without limitation or attribution.<o:p></o:p></span></p>
 
@@ -289,14 +280,13 @@ EN-CA'>Children<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
-mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Unbeleadsable
-Group Inc. does not knowingly collect Personal Data from children under the age
+mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. does not knowingly collect Personal Data from children under the age
 of 13. If you are under the age of 13, please do not submit any Personal Data
 through the Services. We encourage parents and legal guardians to monitor their
 children’s Internet usage and to help enforce our Privacy Policy by instructing
 their children never to provide Personal Data on the Services without their
 permission. If you have reason to believe that a child under the age of 13 has
-provided Personal Data to Unbeleadsable Group Inc. through the Services, please
+provided Personal Data to Eleganza Digital Media Inc. through the Services, please
 contact us, and we will endeavor to delete that information from our databases.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -309,10 +299,9 @@ EN-CA'>Links to Other Web Sites<o:p></o:p></span></b></p>
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>This Privacy
 Policy applies only to the Services. The Services may contain links to other
-web sites not operated or controlled by Unbeleadsable Group Inc. (the “Third
+web sites not operated or controlled by Eleganza Digital Media Inc. (the “Third
 Party Sites”). The policies and procedures we described here do not apply to
-the Third Party Sites. The links from the Services do not imply that Unbeleadsable
-Group Inc. endorses or has reviewed the Third Party Sites. We suggest
+the Third Party Sites. The links from the Services do not imply that Eleganza Digital Media Inc. endorses or has reviewed the Third Party Sites. We suggest
 contacting those sites directly for information on their privacy policies.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -338,7 +327,7 @@ certain information that you have provided to the Social Networking Service,
 and we will use, store and disclose such information in accordance with this
 Privacy Policy. However, please remember that the manner in which Social Networking
 Services use, store and disclose your information is governed by the policies
-of such third parties, and Unbeleadsable Group Inc. shall have no liability or
+of such third parties, and Eleganza Digital Media Inc. shall have no liability or
 responsibility for the privacy practices or other actions of any Social
 Networking Services that may be enabled within the Service.<o:p></o:p></span></p>
 
@@ -364,14 +353,13 @@ EN-CA'>Security<o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
-mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Unbeleadsable
-Group Inc. takes reasonable steps to protect the Personal Data provided via the
+mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. takes reasonable steps to protect the Personal Data provided via the
 Services from loss, misuse, and unauthorized access, disclosure, alteration, or
 destruction. However, no Internet or email transmission is ever fully secure or
 error free. In particular, email sent to or from the Services may not be
 secure. Therefore, you should take special care in deciding what information
 you send to us via email. Please keep this in mind when disclosing any Personal
-Data to Unbeleadsable Group Inc. via the Internet.<o:p></o:p></span></p>
+Data to Eleganza Digital Media Inc. via the Internet.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;mso-outline-level:3;background:white'><b style='mso-bidi-font-weight:
@@ -399,13 +387,12 @@ mso-bidi-font-family:"inherit";mso-fareast-language:EN-CA'><o:p></o:p></span></b
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Welcome
-to the&nbsp;<b>Unbeleadsable Group Inc.</b>&nbsp;website (the “Site”).
-&nbsp;Unbeleadsable.com is a division of <b>Unbeleadsable Group Inc.</b>, a
-Quebec limited liability company&nbsp;(“the&nbsp;<b>Unbeleadsable Group Inc</b>”).
-&nbsp;This Site is owned and developed by the&nbsp;<b>Unbeleadsable Group Inc</b>.&nbsp;This
+to the&nbsp;<b>Eleganza Digital Media Inc.</b>&nbsp;website (the “Site”).
+&nbsp;Unbeleadsable.com is a division of <b>Eleganza Digital Media Inc.</b>, a
+Quebec limited liability company&nbsp;(“the&nbsp;<b>Eleganza Digital Media Inc</b>”).
+&nbsp;This Site is owned and developed by the&nbsp;<b>Eleganza Digital Media Inc</b>.&nbsp;This
 page explains the terms by which you may use our website and online services
-provided on or in connection with the services provided by the&nbsp;<b>Unbeleadsable
-Group Inc</b> (collectively the “Services”).<o:p></o:p></span></p>
+provided on or in connection with the services provided by the&nbsp;<b>Eleganza Digital Media Inc</b> (collectively the “Services”).<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
@@ -446,9 +433,9 @@ white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>The
 material provided on this Site is protected by law, including, but not limited
 to, Canadian copyright law and international treaties. This Site is controlled
-and operated by <span style='mso-bidi-font-weight:bold'>Unbeleadsable Group
+and operated by <span style='mso-bidi-font-weight:bold'>Eleganza Digital Media
 Inc.</span> from its offices within Canada. <span style='mso-bidi-font-weight:
-bold'>Unbeleadsable Group Inc</span> makes no representation that materials in
+bold'>Eleganza Digital Media Inc</span> makes no representation that materials in
 the Site are appropriate or available for use in other locations, and access to
 them from territories where their contents are illegal is prohibited. Those who
 choose to access this Site from other locations do so on their own initiative
@@ -458,7 +445,7 @@ and are responsible for compliance with all applicable local laws.<o:p></o:p></s
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Information
 on this Site may be changed or updated without notice. <span style='mso-bidi-font-weight:
-bold'>Unbeleadsable Group Inc</span> may also make improvements and/or changes
+bold'>Eleganza Digital Media Inc</span> may also make improvements and/or changes
 in the products and/or services described on the Site or herein at any time
 without notice.<o:p></o:p></span></p>
 
@@ -491,10 +478,10 @@ the account name and password and for restricting access to your computer, and
 you agree to accept responsibility for all activities that occur under your
 account or password. &nbsp;You may not assign or otherwise transfer your
 account to any other person or entity in order to use the Services. You
-acknowledge that <span style='mso-bidi-font-weight:bold'>Unbeleadsable Group
+acknowledge that <span style='mso-bidi-font-weight:bold'>Eleganza Digital Media
 Inc.</span> is not responsible for third party access to your account that
 results from theft or misappropriation of your account. <span style='mso-bidi-font-weight:
-bold'>Unbeleadsable Group Inc.</span> and its associates reserve the right to
+bold'>Eleganza Digital Media Inc.</span> and its associates reserve the right to
 refuse or cancel service, terminate accounts, or remove or edit content in our
 sole discretion.&nbsp;<o:p></o:p></span></p>
 
@@ -577,7 +564,7 @@ mso-fareast-language:EN-CA'><o:p></o:p></span></p>
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>This
 Site may contain links to other sites that are not owned or controlled by <span
-style='mso-bidi-font-weight:bold'>Unbeleadsable Group Inc.</span> &nbsp;Please
+style='mso-bidi-font-weight:bold'>Eleganza Digital Media Inc.</span> &nbsp;Please
 be aware that we are not responsible for the privacy practices of such other
 sites. We encourage you to be aware when you leave our Site and to read the
 privacy statements of each and every website that collects personally
@@ -593,13 +580,13 @@ style='font-size:12.0pt;mso-fareast-font-family:"inherit";mso-bidi-font-family:
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA;
-mso-bidi-font-weight:bold'>Unbeleadsable Group Inc.</span><span
+mso-bidi-font-weight:bold'>Eleganza Digital Media Inc.</span><span
 style='font-size:12.0pt;mso-fareast-font-family:"inherit";mso-bidi-font-family:
 "inherit";color:#333333;mso-fareast-language:EN-CA'> agrees to offer
 advertising services for clients as well as use of proprietary CRM, training,
 drip systems, landing pages, and support services. Pro packages&nbsp;are
 exclusive by zip code, postal code or in some cases, city. Packages offer no
-exclusivity and <span style='mso-bidi-font-weight:bold'>Unbeleadsable Group
+exclusivity and <span style='mso-bidi-font-weight:bold'>Eleganza Digital Media
 Inc.</span> does not offer managed advertising for users.<o:p></o:p></span></p>
 
 <h3 style='margin-top:2.4pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
@@ -612,14 +599,14 @@ mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;color:#222222'>Payme
 mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
 Arial;color:#222222'>To the extent the Services or any portion thereof is made
 available for any fee, you will be required to select a payment plan and
-provide Unbeleadsable Inc. information regarding your credit card or another
-payment instrument. You represent and warrant to Unbeleadsable Inc. that such
+provide Eleganza Digital Media Inc. information regarding your credit card or another
+payment instrument. You represent and warrant to Eleganza Digital Media Inc. that such
 information is true and that you are authorized to use the payment instrument.
 You will promptly update your account information with any changes (for
 example, a change in your billing address or credit card expiration date) that
-may occur. You agree to pay Unbeleadsable Inc. the amount that is specified in
+may occur. You agree to pay Eleganza Digital Media Inc. the amount that is specified in
 the payment plan in accordance with the terms of such plan and this TOS. You
-hereby authorize Unbeleadsable Inc. to bill your payment instrument in advance
+hereby authorize Eleganza Digital Media Inc. to bill your payment instrument in advance
 on a periodic basis in accordance with the terms of the applicable payment plan
 until you terminate your account, and you further agree to pay any charges so
 incurred. Your subscription payment will not change for the life of the
@@ -699,9 +686,9 @@ white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Certain
 services made available via the Services are delivered by third party sites and
 organizations. By using any product, service or functionality originating from
-the Services, you hereby acknowledge and consent that Unbeleadsable Group Inc. <span
+the Services, you hereby acknowledge and consent that Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span><span class=GramE>may</span> share such
-information and data with any third party with whom Unbeleadsable Group Inc. <span
+information and data with any third party with whom Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>has a contractual relationship to provide the
 requested product, service or functionality on behalf of Services users and
 customers.&nbsp;<o:p></o:p></span></p>
@@ -718,7 +705,7 @@ white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>You
 are granted a non-exclusive, non-transferable, revocable license to access and
 use the Services strictly in accordance with these Terms and Conditions. As a
-condition of your use of the Services, you warrant to Unbeleadsable Group Inc. <span
+condition of your use of the Services, you warrant to Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>that you will not use the Services for any
 purpose that is unlawful or prohibited by these Terms and Conditions. You may
 not use the Services in any manner which could damage, disable, overburden, or
@@ -737,7 +724,7 @@ white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>All
 content contained on the Site or included as part of the Services, such as
 text, graphics, logos, images, as well as the compilation thereof, and any
-software used for the Services is the property of Unbeleadsable Group Inc. <span
+software used for the Services is the property of Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>or its suppliers and protected by copyright
 and other laws that protect intellectual property and proprietary rights. You
 agree to observe and abide by all copyright, trademark and other proprietary
@@ -752,8 +739,7 @@ transfer or sale, create derivative works, or in any way exploit the software
 and services that makeup the Services.&nbsp;You will not upload, post or
 otherwise make available on this Site any material protected by copyright, trademark
 or other proprietary right without the express permission of the owner of the
-copyright, trademark or other proprietary right. You will indemnify Unbeleadsable
-Group Inc. <span style='mso-spacerun:yes'> </span>for any claims by third
+copyright, trademark or other proprietary right. You will indemnify Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span>for any claims by third
 parties of infringement of copyrights, trademarks, proprietary rights or any
 other harm resulting from such a submission of material by you.<o:p></o:p></span></p>
 
@@ -764,23 +750,22 @@ Services are not for resale. Your use of the Services does not entitle you to
 make any unauthorized use of any protected content, and in particular you will
 not delete or alter any proprietary rights or attribution notices in any
 content. We do not grant you any licenses, express or implied, to the
-intellectual property of Unbeleadsable Group Inc. <span
+intellectual property of Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>or our licensors except as expressly
-authorized by these Terms and Conditions.&nbsp;No Unbeleadsable Group Inc. service
-or product available through this Site, or any part of any Unbeleadsable Group
+authorized by these Terms and Conditions.&nbsp;No Eleganza Digital Media Inc. service
+or product available through this Site, or any part of any Eleganza Digital Media
 Inc. service or product, may be reproduced, duplicated, copied, sold, resold,
 visited, or otherwise exploited for any commercial purpose without express
-written consent of Unbeleadsable Group Inc<span class=GramE>. .</span> You may
+written consent of Eleganza Digital Media Inc<span class=GramE>. .</span> You may
 not frame or utilize framing techniques to enclose any trademark, logo, or
 other proprietary information (including images, text, page layout, or form) of
-Unbeleadsable Group Inc. <span style='mso-spacerun:yes'> </span>without express
+Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span>without express
 written consent. You may not use any meta tags or any other “hidden text”
-utilizing Unbeleadsable Group Inc.’s name or trademarks without the express
-written consent of Unbeleadsable Group Inc<span class=GramE>. .</span> You may
-not misuse the Unbeleadsable Group Inc. <span
-style='mso-spacerun:yes'> </span>services and products. You may use the Unbeleadsable
-Group Inc. <span style='mso-spacerun:yes'> </span>services and products only as
-permitted by law. The licenses granted by Unbeleadsable Group Inc. <span
+utilizing Eleganza Digital Media Inc.’s name or trademarks without the express
+written consent of Eleganza Digital Media Inc<span class=GramE>. .</span> You may
+not misuse the Eleganza Digital Media Inc. <span
+style='mso-spacerun:yes'> </span>services and products. You may use the Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span>services and products only as
+permitted by law. The licenses granted by Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>terminate if you do not comply with this
 Agreement.<o:p></o:p></span></p>
 
@@ -802,7 +787,7 @@ you agree to use the Communication Services only to post, send and receive
 messages and material that are proper and related to the particular
 Communication Services.&nbsp;&nbsp;Any material, information, or idea you transmit
 to or post on this Site by any means will be treated as non-confidential and
-non-proprietary, and may be disseminated or used by Unbeleadsable Group Inc. <span
+non-proprietary, and may be disseminated or used by Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>or its affiliates for any purpose whatsoever,
 including, but not limited to, developing and marketing its products and
 services.<o:p></o:p></span></p>
@@ -836,12 +821,11 @@ applicable laws or regulations.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
-mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Unbeleadsable
-Group Inc. <span style='mso-spacerun:yes'> </span>has no obligation to monitor
-the Communication Services. However, Unbeleadsable Group Inc. <span
+mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span>has no obligation to monitor
+the Communication Services. However, Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>reserves the right to review materials posted
 to a Communication Services and to remove any materials in its sole discretion.
-Unbeleadsable Group Inc. <span style='mso-spacerun:yes'> </span>reserves the
+Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span>reserves the
 right to terminate your access to any or all of the Communication Services at
 any time without notice for any reason whatsoever.<o:p></o:p></span></p>
 
@@ -851,8 +835,7 @@ mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>We
 do not assume any liability for any content posted by you or any other third
 party users of our website. However, any content posted by you using any open
 communication tools on our Site, provided that it doesn’t violate or infringe
-on any third party copyrights or trademarks, becomes the property of Unbeleadsable
-Group Inc<span class=GramE>. ,</span> and as such, gives us a perpetual,
+on any third party copyrights or trademarks, becomes the property of Eleganza Digital Media Inc<span class=GramE>. ,</span> and as such, gives us a perpetual,
 irrevocable, worldwide, royalty-free, exclusive license to reproduce, modify,
 adapt, translate, publish, publicly display and/or distribute as we see fit.
 This only refers and applies to content posted via open communication tools as
@@ -873,18 +856,15 @@ consent to waive any claim against us.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
-mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Unbeleadsable
-Group Inc. <span style='mso-spacerun:yes'> </span>reserves the right at all
+mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. <span style='mso-spacerun:yes'> </span>reserves the right at all
 times to disclose any information as necessary to satisfy any applicable law,
 regulation, legal process or governmental request, or to edit, refuse to post
-or to remove any information or materials, in whole or in part, in Unbeleadsable
-Group Inc. ’s sole discretion.<o:p></o:p></span></p>
+or to remove any information or materials, in whole or in part, in Eleganza Digital Media Inc. ’s sole discretion.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
-mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Unbeleadsable
-Group Inc. does not control or endorse the content, messages or information
-found in any Communication Services and, therefore, Unbeleadsable Group Inc. <span
+mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Eleganza Digital Media Inc. does not control or endorse the content, messages or information
+found in any Communication Services and, therefore, Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>specifically disclaims any liability with
 regard to the Communication Services and any actions resulting from your participation
 in any Communication Services.&nbsp;<o:p></o:p></span></p>
@@ -905,16 +885,15 @@ style='font-size:12.0pt;mso-fareast-font-family:"inherit";mso-bidi-font-family:
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>You
-agree to indemnify, defend and hold harmless Unbeleadsable Group Inc. , its
+agree to indemnify, defend and hold harmless Eleganza Digital Media Inc. , its
 officers, directors, employees, agents and third parties, for any losses,
 costs, liabilities and expenses (including reasonable attorneys’ fees) relating
 to or arising out of your violation of these Terms and Conditions, use of or
 inability to use the Services, any user postings made by you, your violation of
 any terms of this Agreement or your violation of any rights of a third party,
-or your violation of any applicable laws, rules or regulations. Unbeleadsable
-Group Inc. reserves the right, at its own cost, to assume the exclusive defense
+or your violation of any applicable laws, rules or regulations. Eleganza Digital Media Inc. reserves the right, at its own cost, to assume the exclusive defense
 and control of any matter otherwise subject to indemnification by you, in which
-event you will fully cooperate with Unbeleadsable Group Inc. <span
+event you will fully cooperate with Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>in asserting any available defenses.&nbsp;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
@@ -940,7 +919,7 @@ FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.&nbsp;<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>WITHOUT
-LIMITING THE FOREGOING, UNBELEADSABLE GROUP INC., ITS SUBSIDIARIES, AND ITS
+LIMITING THE FOREGOING, Eleganza Digital Media INC., ITS SUBSIDIARIES, AND ITS
 LICENSORS DO NOT WARRANT THAT THE CONTENT IS ACCURATE, RELIABLE OR CORRECT;
 THAT THE SERVICE WILL MEET YOUR REQUIREMENTS; THAT THE SERVICE WILL BE
 AVAILABLE AT ANY PARTICULAR TIME OR LOCATION, UNINTERRUPTED OR SECURE; THAT ANY
@@ -955,7 +934,7 @@ white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>IN
 CONJUNCTION WITH THE LIMITATION OF WARRANTIES AS EXPLAINED ABOVE, YOU EXPRESSLY
 UNDERSTAND AND AGREE THAT ANY CLAIM AGAINST US SHALL BE LIMITED TO THE AMOUNT
-YOU PAID, IF ANY, FOR USE OF PRODUCTS AND/OR SERVICES. UNBELEADSABLE GROUP INC.
+YOU PAID, IF ANY, FOR USE OF PRODUCTS AND/OR SERVICES. Eleganza Digital Media INC.
 <span style='mso-spacerun:yes'> </span>WILL NOT BE LIABLE FOR ANY DIRECT,
 INDIRECT, INCIDENTAL, CONSEQUENTIAL OR EXEMPLARY LOSS OR DAMAGES WHICH MAY BE
 INCURRED BY YOU AS A RESULT OF USING OUR RESOURCES, OR AS A RESULT OF ANY
@@ -988,16 +967,14 @@ Conditions, including, without limitation, this section.&nbsp;<o:p></o:p></span>
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>You
 agree that no joint venture, partnership, employment, or agency relationship
-exists between&nbsp;you and Unbeleadsable Group Inc. <span
+exists between&nbsp;you and Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>as a result of this agreement or use of the
 Services. &nbsp;If any provision of this Agreement is determined to be invalid,
 all other provisions shall remain in full force and effect. No waiver of any
 breach or default hereunder shall be deemed to be a waiver of any preceding or
 subsequent breach or default. The section headings used herein are for
 convenience only and shall not be given any legal import. These Terms and
-Conditions constitute the entire and only agreements between you and Unbeleadsable
-Group Inc. respect to the Services and products and services provided by Unbeleadsable
-Group Inc<span class=GramE>. ,</span> and supersede all other communications
+Conditions constitute the entire and only agreements between you and Eleganza Digital Media Inc. respect to the Services and products and services provided by Eleganza Digital Media Inc<span class=GramE>. ,</span> and supersede all other communications
 and agreements with respect to the subject matter thereof.&nbsp;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
@@ -1031,8 +1008,8 @@ mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'><o:p></
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>The
-Services is controlled, operated and administered by Unbeleadsable Group Inc.
-from facilities within the Canada. Unbeleadsable Group Inc. makes no
+Services is controlled, operated and administered by Eleganza Digital Media Inc.
+from facilities within the Canada. Eleganza Digital Media Inc. makes no
 representations that the Services is appropriate for use in other locations. If
 you access the Services from a location outside Canada you are responsible for
 compliance with all local laws. You agree that you will not use the service in
@@ -1049,7 +1026,7 @@ mso-fareast-language:EN-CA'>&nbsp;<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-bottom:7.5pt;line-height:normal;background:
 white'><span style='font-size:12.0pt;mso-fareast-font-family:"inherit";
 mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Visiting
-this Site or sending emails to Unbeleadsable Group Inc. <span
+this Site or sending emails to Eleganza Digital Media Inc. <span
 style='mso-spacerun:yes'> </span>constitutes electronic communications. You
 consent to receive electronic communications and you agree that all agreements,
 notices, disclosures and other communications that we provide to you
@@ -1139,7 +1116,7 @@ mso-bidi-font-family:"inherit";color:#333333;mso-fareast-language:EN-CA'>Contact
 <span class=GramE>Us</span></span></b><span style='font-size:12.0pt;mso-fareast-font-family:
 "inherit";mso-bidi-font-family:"inherit";color:#333333;
 mso-fareast-language:EN-CA'><br>
-www.unbeleadsable.com a division of Unbeleadsable Group Inc. <b><br><br>Phone: +1 (514) 923-5323
+www.unbeleadsable.com a division of Eleganza Digital Media Inc. <b><br><br>Phone: +1 (514) 923-5323
 </b><br><b style='mso-bidi-font-weight:normal'>Email: </b><a href="mailTo:support@unbeleadsable.com">support@unbeleadsable.com</a><o:p></o:p></span></p>
 
 <p class=MsoNormal align=right style='text-align:right'><span style='font-size:

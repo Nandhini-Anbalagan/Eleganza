@@ -106,8 +106,8 @@
 .btn-primary:focus,
 .btn-primary:hover,
 .open > .dropdown-toggle.btn-primary {
-  background-color: #5d9cec !important;
-  border: 1px solid #5d9cec !important;
+  background-color: #d1af78  !important;
+  border: 1px solid #d1af78  !important;
 }
 .btn-success,
 .btn-success:hover,

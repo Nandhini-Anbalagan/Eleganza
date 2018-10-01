@@ -1,11 +1,14 @@
 <?php include("header.php") ?>
 
-<div class="section" id="privacy" style="margin-top: 20px;">
-	<div class="row">
-		<div class="large-12 columns">
-			<h2>Privacy Policy</h2>
-			<div class="row" style="text-align: justify">
-				<div class="small-12 columns">
+<section class="section" id="privacy">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2 class="section-heading text-uppercase">Privacy Policy</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
 					<h3>Personal identification information</h3>
 					<p>We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, register on the site, subscribe to the newsletter, fill out a form, and in connection with other activities, services, features or resources we make available on our Site. Users may be asked for, as appropriate, name, email address, mailing address, phone number. Users may, however, visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.</p>
 
@@ -33,6 +36,6 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <?php include("footer.php") ?>
