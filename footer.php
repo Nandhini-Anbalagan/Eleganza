@@ -27,10 +27,10 @@
       <div class="col-md-4">
         <ul class="list-inline quicklinks">
           <li class="list-inline-item">
-            <a href="#">Privacy Policy</a>
+            <a href="/privacy_policy" style="margin-left: 10px">Privacy Policy</a>
           </li>
           <li class="list-inline-item">
-            <a href="#">Terms of Use</a>
+            <a href="/terms_conditions">Terms of Use</a>
           </li>
         </ul>
       </div>
