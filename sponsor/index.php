@@ -53,28 +53,28 @@
     <section class="countdown-timer">
       <div class="container">
         <div class="row text-center">
-          <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="col-xs-12">
             <div class="heading-count">
-              <h3><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_TITLE']:$agent['LP1_FR_TITLE']?></h3>
+              <h3 style="font-weight: 700; font-family: 'Lato', sans-serif; padding: 10px"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_TITLE']:$agent['LP1_FR_TITLE']?></h3>
             </div>
           </div>
          <div class="col-md-12 col-sm-12 col-xs-12">
         <!--    <div class="row time-countdown justify-content-center">
               <div id="clock" class="time-count"></div>
             </div> -->
-            <p style="font-size: 20px">
-            <?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB2']:$agent['LP1_FR_SUB2']?>
-          </p>
+            <h5 style="font-weight: 700; font-family: 'Lato', sans-serif; color:white; line-height: 2rem">
+            <?php echo html_entity_decode($_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB2']:$agent['LP1_FR_SUB2'])?>
+          </h5>
             <div class="button-group">
               <button onclick="redirectPage()" class="btn btn-common"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_BTN']:$agent['LP1_FR_BTN']?></button>
               <!-- <a href="#" class="btn btn-border">Reach Us</a> -->
             </div>
-            <div class="social mt-4">
+            <!-- <div class="social mt-4">
               <a class="facebook" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_FB_URL']:$agent['LP3_FR_FB_URL']?>"><i class="lni-facebook-filled"></i></a>
               <a class="twitter" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TW_URL']:$agent['LP3_FR_TW_URL']?>"><i class="lni-twitter-filled"></i></a>
               <a class="instagram" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_INS_URL']:$agent['LP3_FR_INS_URL']?>"><i class="lni-instagram-filled"></i></a>
               <a class="google" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_GP_URL']:$agent['LP3_FR_GP_URL']?>"><i class="lni-google-plus"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -102,8 +102,9 @@
 
 					</div>
 			 <div class="col-md-6">
-	 						<select style="border-radius:15px;border:2px; solid #AAAAAA;" class="form-control form-control-lg" id="industry">
-	 						 <option>Service Industry</option>
+	 						<select style="border-radius:15px;border:2px; solid #AAAAAA; height: 50px;" class="form-control form-control-lg" id="industry">
+               <option value="" disabled selected style="font-family: 'Lato', sans-serif; font-size: 16px; font-weight: 500; ">Choose your industry</option>
+							 <option>Service Industry</option>
 	 						 <option>Manufacturing Industry</option>
 	 						 <option>Retail Industry</option>
 	 						</select>
@@ -112,12 +113,12 @@
 	 						<!-- <button type="button" id="submitInd" class="btn btn-block btn-primary">Submit!</button> -->
 	 					</div>
 					</div>
-					<div class="col-md-12 social mt-4">
+					<!-- <div class="col-md-12 social mt-4">
 						<a class="facebook" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_FB_URL']:$agent['LP3_FR_FB_URL']?>"><i class="lni-facebook-filled"></i></a>
 						<a class="twitter" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TW_URL']:$agent['LP3_FR_TW_URL']?>"><i class="lni-twitter-filled"></i></a>
 						<a class="instagram" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_INS_URL']:$agent['LP3_FR_INS_URL']?>"><i class="lni-instagram-filled"></i></a>
 						<a class="google" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_GP_URL']:$agent['LP3_FR_GP_URL']?>"><i class="lni-google-plus"></i></a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
