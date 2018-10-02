@@ -26,10 +26,10 @@ if(!empty($_SESSION['got'])){
     <link rel="stylesheet" href="assets/css/main.css"/>
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
 <style>
 nav {
 color: #fff;
@@ -59,19 +59,18 @@ line-height: 56px;
                   <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB2']:$agent['LP1_FR_SUB2']?></p>
                   <p><?php echo html_entity_decode($_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB3']:$agent['LP1_FR_SUB3'])?></p>
                   <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB4']:$agent['LP1_FR_SUB4']?></p>
-                  <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB5']:$agent['LP1_FR_SUB5']?></p>
-                  <p><button type="button" id="free" class="btn btn-primary btn-lg btn-next" ><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_BTN']:$agent['LP1_FR_BTN']?></button></p>
+                  <p style="color:#d1af78;font-weight: 700 !important;"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB5']:$agent['LP1_FR_SUB5']?></p>
+                  <p><button type="button" id="free" style="background-color:#d1af78;" class="btn btn-primary btn-lg btn-next" ><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_BTN']:$agent['LP1_FR_BTN']?></button></p>
 
 					<!-- part info -->
 </fieldset>
 <fieldset id="cta" hidden>
-  <div class="container">
-                <div class="form-container z-depth-5" >
-<h3><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_TITLE']:$agent['LP2_FR_TITLE']?></h3>
+<div class="container">
+	<p style="color:#d1af78;font-weight: 700 !important;"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_TITLE']:$agent['LP2_FR_TITLE']?></p>
 				<div class="row">
             <div class="input-field col s12">
                 <input id="name" required type="text" name="name" class="validate">
-                <label for="name"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_NAME_LBL']:$agent['LP2_FR_NAME_LBL']?><sup style="color:red">*</sup></label>
+                <label for="name" data-error="Please enter your name."><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_NAME_LBL']:$agent['LP2_FR_NAME_LBL']?><sup style="color:red">*</sup></label>
             </div>
         </div>
 
@@ -98,23 +97,24 @@ line-height: 56px;
             <!--<button class="waves-effect waves-light btn submitbtn" type="submit">Submit</button>-->
         </div>
       </div>
-    </div>
+
 </fieldset>
 <fieldset id="subscribe" hidden>
       <!-- Header -->
           <h1><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TITLE']:$agent['LP3_FR_TITLE']?></h1>
           <p><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_SUB1']:$agent['LP3_FR_SUB1']?></p>
-<p><a href="https://eleganzamagazine.com/subscribe-buy-now/?t=un" style="text-decoration:none"><button type="button" class="btn btn-primary btn-lg" ><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_SUB2']:$agent['LP3_FR_SUB2']?></button></a></p>
+					<p><a href="https://eleganzamagazine.com/subscribe-buy-now/?t=un" style="text-decoration:none" target="_blank"><button type="button" class="btn btn-primary btn-lg" ><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_SUB2']:$agent['LP3_FR_SUB2']?></button></a></p>
 
 </fieldset>
 </header>
-<nav>
+</div>
+<!-- <nav>
   <ul>
     <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
     <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
     <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
   </ul>
-</nav>
+</nav> -->
 
 </div>
 </div>
@@ -157,20 +157,29 @@ line-height: 56px;
 
 $('#free').on('click', function () {
   $('#cta').removeAttr('hidden');
-  $('#head').empty();
+  $('#head').remove();
   //$('#subscribe').attr('hiiden');
 });
 $('#submit').on('click', function () {
   next_step=true;
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if ($('#name').val() == "") {
-						$('#name').addClass('input-error');
+						$("#name").next("label").attr('data-error','The name field is required');
+						$("#name").removeClass("valid");
+						$("#name").addClass("invalid");
+						$('#name').addClass('data-error');
 						next_step = false;
 	} else if ($('#mail').val() == "") {
-						$('#mail').addClass('input-error');
+						$("#mail").next("label").attr('data-error','The address field is required');
+						$("#mail").removeClass("valid");
+						$("#mail").addClass("invalid");
+						$('#mail').addClass('data-error');
 						next_step = false;
 	}else if (!re.test($('#email').val())) {
-						$('#email').addClass('input-error');
+						$("#email").next("label").attr('data-error','The email field is required');
+						$("#email").removeClass("valid");
+						$("#email").addClass("invalid");
+						$('#email').addClass('data-error');
 						next_step = false;
 	}
 
@@ -179,7 +188,7 @@ $('#submit').on('click', function () {
 						lead_id = data.trim();
 						console.log(lead_id);
 					});
-  $('#cta').empty();
+  $('#cta').remove();
   $('#subscribe').removeAttr('hidden');
 }
   //$('#subscribe').attr('hiiden');
