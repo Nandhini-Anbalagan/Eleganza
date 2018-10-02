@@ -208,7 +208,7 @@ Founded by entrepreneurs such as yourselves, we know and understand how difficul
 Whether you work in the retail, service, or manufacturing industry, the objective for all companies and entrepreneurs is to generate new leads and increase revenue and profits for the business.<br><br>
 <h3 class="service-heading">Where did it all begin?</h3><br>
 From the onset, Eleganza Digital Media, established a series of criteria aimed at generating new leads for our own business.<br><br>
-Having started with the creation of Eleganza Magazine (link to www.eleganzamagazine.com), we had the opportunity to become partners with some of the most influential people and businesses in a variety of sectors. We listened to our clients’ needs, and we created Eleganza Digital Media to fulfill those needs to the best of our capability.<br><br>
+Having started with the creation of <a href="https://eleganzamagazine.com/" target="_blank">Eleganza Magazine</a> , we had the opportunity to become partners with some of the most influential people and businesses in a variety of sectors. We listened to our clients’ needs, and we created Eleganza Digital Media to fulfill those needs to the best of our capability.<br><br>
 As a business owner, you don’t have the time to manage digital marketing as well. You don’t have the time to figure out how Facebook advertising works, or how to create the perfect landing page for your company.<br><br>
 We do. It’s our mandate. We will help you achieve your business goals by bringing you your desired audience. You can focus on your business.<br><br>
 Eleganza Digital Media has become a must-have tool for so many businesses and we would be honoured to become an integral part of your success.<br><br>
