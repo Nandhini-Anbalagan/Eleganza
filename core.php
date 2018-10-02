@@ -4,7 +4,7 @@
 	if(isset($_POST['signUp'])){
 		$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 
-		if(trim($_POST['name']) == "" || trim($_POST['email']) == "" || trim($_POST['phone']) == "" || trim($_POST['areas']) == "" || trim($_POST['state']) == "" || trim($_POST['agency']) == ""){
+		if(trim($_POST['name']) == "" || trim($_POST['email']) == "" || trim($_POST['phone']) == "" || trim($_POST['areas']) == "" || trim($_POST['state']) == "" ){
 			$msg = $_POST['lang'] == 'EN'?'Sorry, all fields are required!':'Désolé, tous les champs sont nécessaires!';
 			header('Content-type: text/json');
 			echo json_encode(array("error"=>'1', "msg"=>$msg));
@@ -22,7 +22,10 @@
 
 			$_POST['country'] = explode(",", $_POST['state'])[1];
 			$_POST['state'] = explode(",", $_POST['state'])[0];
-
+			$_POST['buyer_option']=0;
+			$_POST['seller_option']=1;
+			$_POST['agency']='';
+			$_POST['ref']='';
 			if($db->addToAgentLeads($_POST)){
 				$to = $_POST['email'];
 				$from = "support@unbeleadsable.com";

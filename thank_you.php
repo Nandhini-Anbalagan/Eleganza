@@ -3,22 +3,21 @@
 
 	<!-- HEADER
 	============================================== -->
-	<header class="home-header" style="height: 300px;"><h1 style="padding-top: 100px;font-size: 80px;">Unbeleadsable!</h1></header>
-	
-	<div id="contact" class="content" role="main">
-			<div class="section bg-shiney padding-sm">
-				<div class="container">
-					<div class="row text-center">
-						<div class="col-sm-12">
-							<h2>Registration successful!</h2>
-							<p style="font-size: 200px; color: #e51937;"><i class="fa fa-paper-plane-o"></i></p>
-							<h4>Thank You for signing up! Please verify your email for further instructions.</h4>
-							<br>
-						</div>
-					</div>
+	<section id="aboutus">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading text-uppercase">Registration successful!</h2>
+					<h3 class="section-subheading text-muted">Eleganza Digital Media Network !</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-center author-intro wow fadeIn">
+					<h4>Thank You for signing up! Please verify your email for further instructions.</h4>
 				</div>
 			</div>
 		</div>
+	</section>
 
 <!-- Google Code for Signup Conversion Page -->
 <script type="text/javascript">

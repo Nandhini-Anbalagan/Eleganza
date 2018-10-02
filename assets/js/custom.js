@@ -133,8 +133,8 @@ $(document).ready(function() {
     $('html, body').scrollTo($('#sign'), 'fast');
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:8010/Eleganza/core.php',
-      data: $('#signUpForm').serialize(),
+      url: 'https://eleganza.test/core.php',
+      data: $('#contactForm').serialize(),
       datatype: 'json',
       success: function(res) {
         if (res.success == '1') {

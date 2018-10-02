@@ -487,7 +487,7 @@ Eleganza Digital Magazine Team</p>
 
               <div class="col-lg-12 text-center">
 								<div id="success">Registration successful! Please verify your email for further instructions.</div>
-								<div id="error"></div>
+								<h3 class="service-heading" id="error"></h3>
 							</div>
             </form>
           </div>

@@ -5478,12 +5478,12 @@ h1,h2,h3,h4,h5,h6,.h1,.section-header .section-title,.counter-item .counter-valu
     font-family:"Roboto Slab", serif;
     font-weight:400;
     line-height:1.4;
-    color:#fed136
+    color:#d1af78
 }
 h1 small,h1 .small,h2 small,h2 .small,h3 small,h3 .small,h4 small,h4 .small,h5 small,h5 .small,h6 small,h6 .small,.h1 small,.section-header .section-title small,.counter-item .counter-value small,.tablet-menu .title small,.countdown-time small,.h1 .small,.section-header .section-title .small,.counter-item .counter-value .small,.tablet-menu .title .small,.countdown-time .small,.h2 small,.h2 .small,.h3 small,.h3 .small,.h4 small,.h4 .small,.h5 small,.h5 .small,.h6 small,.footer-widgets .widget-title small,.h6 .small,.footer-widgets .widget-title .small{
     font-weight:normal;
     line-height:1;
-    color:#777777
+    color:#d1af78
 }
 h1,.h1,.section-header .section-title,.counter-item .counter-value,.tablet-menu .title,.countdown-time,h2,.h2,h3,.h3{
     margin-top:28px;
@@ -7104,7 +7104,7 @@ a.btn.disabled,fieldset[disabled] a.btn{
 }
 .btn-primary{
     color:#fff;
-    background-color:#fed136;
+    background-color:#d1af78  ;
     border-color:transparent
 }
 .btn-primary:focus,.btn-primary.focus{
@@ -11924,7 +11924,7 @@ section.padding-xs,.section.padding-xs{
     }
 }
 .pricing-table .panel-heading .plan-price{
-    background-color:#fed136;
+    background-color:#d1af78  ;
     color:#fff;
     font-size:72px;
     font-family:"Roboto Slab", serif;
@@ -11963,7 +11963,7 @@ section.padding-xs,.section.padding-xs{
     margin-top:0
 }
 .pricing-table.emphasized .panel-heading .plan-price{
-    background-color:#fed136;
+    background-color:#d1af78  ;
     color:#fff;
     font-size:86px;
     font-family:"Roboto Slab", serif;
