@@ -6,6 +6,7 @@
 
 	if(!empty($_SESSION['got'])){
 		include("../app/head.php");
+		require_once('../app/models/Functions.class.php');
 		$agent = $db->getSellerLandingPage($_SESSION['got']['a']);
 		// $final_text_en = explode(" - ", $agent['final_text_en']);
 		// $final_text_fr = explode(" - ", $agent['final_text_fr']);
@@ -55,7 +56,13 @@
         <div class="row text-center">
           <div class="col-xs-12">
             <div class="heading-count">
-              <h3 style="font-weight: 700; font-family: 'Lato', sans-serif; padding: 10px"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP1_EN_TITLE']:$agent['LP1_FR_TITLE']?></h3>
+              <h3 style="font-weight: 700; font-family: 'Lato', sans-serif; padding: 10px">
+								<?php
+									if(isset($_SESSION['got']['ind'])){
+										echo html_entity_decode($_SESSION['got']['l'] == 'e'?str_replace('[industry]', Functions::retrieveIndustry($_SESSION['got']['ind'],'e'), $agent['LP1_EN_TITLE']):str_replace('[industry]', Functions::retrieveIndustry($_SESSION['got']['ind'],'f'), $agent['LP1_FR_TITLE']));
+									}else{
+										echo html_entity_decode($_SESSION['got']['l'] == 'e'?$agent['LP1_EN_TITLE']:$agent['LP1_FR_TITLE']);
+								}?>
             </div>
           </div>
          <div class="col-md-12 col-sm-12 col-xs-12">
@@ -139,7 +146,7 @@
 	 				 <div class="validate"></div>
 	 			 </div>
 	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
-	 				<input type="phone" required name="phone" id="phone" class="form-control input-sm" placeholder="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_PHONE_LBL']:$agent['LP3_EN_PHONE_LBL'] ?>" data-rule="minlen:8" data-rule="required" data-msg="Please enter at least 8 chars">
+	 				<input type="phone" required name="phone" id="phoneno" class="form-control input-sm" placeholder="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_PHONE_LBL']:$agent['LP3_EN_PHONE_LBL'] ?>" data-rule="minlen:8" data-rule="required" data-msg="Please enter at least 8 chars">
 	 				 <div class="validate"></div>
 	 			 </div>
 	 			 <div class="col-xs-6 col-sm-6 col-md-6 form-group">
@@ -223,9 +230,25 @@
           transitionDuration: 2000,
 					transition: "zoomOut2",
 					slides: [
+						<?php if(isset($_SESSION['got']['ind'])){
+										if($_SESSION['got']['ind'] == 'r'){?>
+											{ src: '../app/uploads/landings/adridefault1.jpg' },
+											{ src: '../app/uploads/landings/adridefault2.jpg' },
+											{ src: '../app/uploads/landings/adridefault3.jpg' }
+										<?php } else if($_SESSION['got']['ind'] == 's'){ ?>
+											{ src: '../app/uploads/landings/adsidefault1.jpg' },
+											{ src: '../app/uploads/landings/adsidefault2.jpg' },
+											{ src: '../app/uploads/landings/adsidefault3.jpg' }
+									 <?php } else if($_SESSION['got']['ind'] == 'm'){ ?>
+										 	{ src: '../app/uploads/landings/admidefault1.jpg' },
+										 	{ src: '../app/uploads/landings/admidefault2.jpg' },
+										 	{ src: '../app/uploads/landings/admidefault3.jpg' }
+									 <?php }?>
+						<?php } else {?>
 							{ src: '../app/uploads/landings/<?php echo $agent['bg_img1']?>' },
 							{ src: '../app/uploads/landings/<?php echo $agent['bg_img2']?>' },
 							{ src: '../app/uploads/landings/<?php echo $agent['bg_img3']?>' }
+							<?php }?>
           ]
       });
       function getParameterByName( name ){
@@ -261,6 +284,7 @@
      var contactcompany = $('#contact-company').val();
      var contactsubject = $('#contact-subject').val();
      var lead_id =  $('#leadId').val();
+		 alert(lead_id);
 		 next_step=true;
 	   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		 $('#contact-name ~ .validate').html('');

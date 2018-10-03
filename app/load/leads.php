@@ -58,6 +58,7 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 				<th width="10%">Phone</th>
 				<th width="10%">Areas</th>
 				<th width="10%">Company</th>
+				<th width="10%">Industry</th>
 				<th width="15%">Comments</th>
 				<th width="5%" class="text-center">Ref</th>
 				<th width="15%" class="text-center">Actions</th>
@@ -85,6 +86,7 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 					<td name="email"><?php echo $value['lead_phone'] ?></td>
 					<td name="areas"><?php echo $value['lead_areas'] ?></td>
 					<td name="agency"><?php echo $value['lead_agency'] ?></td>
+					<td name="industry"><?php echo $value['industry'] == 'SI'?"Service Industry" : ($value['industry'] == 'RI'?"Retail Industry" : "Manufacturing Industry") ?></td>
 					<td name="comments"><textarea data-id="<?php echo $value['lead_id'] ?>" name="comments" class="comments"><?php echo $value['lead_comments'] ?></textarea></td>
 					<td name="lang" class="text-center"><?php echo $value['lead_ref'] ?></td>
 					<td class="actions text-center">

@@ -609,5 +609,17 @@ abstract class Functions{
 			$string = $DOM->saveHTML();
 			return $string;
 		}
+
+		public static function retrieveIndustry($ind,$lang){
+			$string='';
+			if($ind =='r'){
+				$string=($lang =='e')?'retail':'vente au détail';
+			}else if($ind == 'm'){
+				$string=($lang =='e')?'manufacturing':'fabrication';
+			}else{
+				$string=($lang =='e')?'service':'un service';
+			}
+			return $string;
+		}
 	}
 	?>

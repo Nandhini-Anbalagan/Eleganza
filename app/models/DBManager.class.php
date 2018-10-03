@@ -1159,7 +1159,7 @@ ADD SUBSCRIBER
   public function updateEntries($name, $phoneno, $email, $area, $company, $subject,$id){
 		$query = $this->myDB->prepare("UPDATE sponsor SET name = ?, phone = ?, email = ?, address = ?, company = ?, messages = ?  WHERE id = ?");
 		$res = $query->execute(array($name, $phoneno, $email, $area, $company, $subject,$id));
-
+		print_r($name);
 		$query = $this->myDB->prepare("SELECT * FROM sponsor WHERE id = ?");
 	  $query->execute(array($id));
 		$res = $query->fetch();

@@ -3,9 +3,16 @@
 	include("../app/head.php");
 
 	if(isset($_POST['action']) && $_POST['action'] == 'insertField'){
-
-		$frenchID = $db->getFunnelCatByTitle('Home Evaluation FR', $_POST['agent'])['id'];
-		$englishID = $db->getFunnelCatByTitle('Home Evaluation EN', $_POST['agent'])['id'];
+		if($_POST['industry'] == 'Service Industry'){
+		$frenchID = $db->getFunnelCatByTitle('Service Industry FR', $_POST['agent'])['id'];
+		$englishID = $db->getFunnelCatByTitle('Service Industry EN', $_POST['agent'])['id'];
+	}else if($_POST['industry'] == 'Manufacturing Industry'){
+		$frenchID = $db->getFunnelCatByTitle('Manufacturing Industry FR', $_POST['agent'])['id'];
+		$englishID = $db->getFunnelCatByTitle('Manufacturing Industry EN', $_POST['agent'])['id'];
+	}else{
+		$frenchID = $db->getFunnelCatByTitle('Retail Industry FR', $_POST['agent'])['id'];
+		$englishID = $db->getFunnelCatByTitle('Retail Industry EN', $_POST['agent'])['id'];
+	}
 
 		if($_POST['lang'] == 'e')
 			$funnelID = $englishID;
@@ -16,6 +23,23 @@
 	}else if(isset($_POST['action']) && $_POST['action'] == 'updateField'){
 		$res = $db->updateEntries($_POST['contactname'], $_POST['phoneno'], $_POST['contactemail'], $_POST['contactarea'], $_POST['contactcompany'], $_POST['contactsubject'], $_POST['lead_id']);
 		echo json_encode($_POST['lead_id']);
+		if(!$db->getAgentLeadsByEmail($res['email'])){
+			$_POST['name']=$res['name'];
+			$_POST['email']=$res['email'];
+			$_POST['phone']=$res['phone'];
+			$_POST['areas']=$res['address'];
+			$_POST['country']='';
+			$_POST['state']='';
+			$_POST['lang']=$res['lang'];
+			$_POST['industry']=(($res['industry'] == 'Service Industry') ? "SI":(($res['industry']=='Retail Industry')?"RI":"MI"));
+			//$_POST['country'] = explode(",", $_POST['state'])[1];
+			//$_POST['state'] = explode(",", $_POST['state'])[0];
+			$_POST['buyer_option']=0;
+			$_POST['seller_option']=1;
+			$_POST['agency']=$res['company'];
+			$_POST['ref']='';
+			echo $db->addToAgentLeads($_POST);
+		}
 		if($res && !isset($_SESSION['emailSent'])){
 			$agent = $db->getSellerLandingPage($_SESSION['got']['a']);
 			$from = "support@unbeleadsable.com";
@@ -34,7 +58,7 @@
 							<br><b>Email: </b>".$res['email']."
 							<br><b>Phone: </b>".$res['phone']."
 							<br><b>Address: </b>".$res['address']."
-							<br><b>Selling In: </b>".Functions::getSellingIn($res['selling'], 'EN');
+							<br><b>Industry: </b>".$res['industry'];
 				$message .= "<br><br>To login in your account in order to view your leads <a href='".WEBSITE_URL."'>Click here</a>.<br>";
 			}else if($agent['agent_lang'] == "FR"){
 				$subject = "Nouveau prospect";
@@ -43,7 +67,7 @@
 							<br><b>Courriel: </b>".$res['email']."
 							<br><b>Téléphone: </b>".$res['phone']."
 							<br><b>Adresse: </b>".$res['address']."
-							<br><b>Date de vente: </b>".Functions::getSellingIn($res['selling'], 'FR');
+							<br><b>Industrie: </b>".$res['industry'];
 				$message .= "<br><br>Pour vous connecter à votre compte afin de voir vos prospects <a href='".WEBSITE_URL."'>Cliquez ici</a>.<br>";
 			}
 
@@ -59,9 +83,9 @@
 			$to = "+1".str_replace(array(" ", "(", ")", "-", "."), array("", "", "", "", ""), $agent['agent_phone']);
 
 			if($agent['agent_lang'] == "EN")
-				$body = "New leads registration\nName: ".$res['name']."\nPhone: ".$res['phone']."\nEmail: ".$res['email']."\nAddress: ".$res['address'] ."\nSelling In: " .Functions::getSellingIn($res['selling'], 'EN'). "\n\nUnbeleadsable";
+				$body = "New leads registration\nName: ".$res['name']."\nPhone: ".$res['phone']."\nEmail: ".$res['email']."\nAddress: ".$res['address'] ."\nIndustry: ".$res['industry']. "\n\nEleganza Digital Media";
 			else
-				$body = "Un nouveau prospect\nNom: ".$res['name']."\nTéléphone: ".$res['phone']."\nCourriel: ".$res['email']."\nAdresse: ".$res['address'] ."\nDate de vente: ".Functions::getSellingIn($res['selling'], 'FR'). "\n\nUnbeleadsable";
+				$body = "Un nouveau prospect\nNom: ".$res['name']."\nTéléphone: ".$res['phone']."\nCourriel: ".$res['email']."\nAdresse: ".$res['address'] ."\nIndustrie: ".$res['industry']. "\n\Eleganza Digital Media";
 
 			$data = array (
 				'From' => $from,
