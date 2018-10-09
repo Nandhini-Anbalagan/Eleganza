@@ -173,12 +173,12 @@
 	 				 <button type="submit" id="submitcontact" class="btn btn-large btn-primary"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_BTN']:$agent['LP3_FR_BTN']?></button>
 	 			 </div>
 					</div>
-					<div class="col-md-12 social mt-4">
+					<!-- <div class="col-md-12 social mt-4">
 						<a class="facebook" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_FB_URL']:$agent['LP3_FR_FB_URL']?>"><i class="lni-facebook-filled"></i></a>
 						<a class="twitter" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TW_URL']:$agent['LP3_FR_TW_URL']?>"><i class="lni-twitter-filled"></i></a>
 						<a class="instagram" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_INS_URL']:$agent['LP3_FR_INS_URL']?>"><i class="lni-instagram-filled"></i></a>
 						<a class="google" href="<?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_GP_URL']:$agent['LP3_FR_GP_URL']?>"><i class="lni-google-plus"></i></a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -193,12 +193,12 @@
 						<h3>Thank you <span id="thankyouname"></span> will get back to you shortly !!</h3>
 					</div>
 				</div>
-			 		<div class="col-md-12  social mt-4">
+			 		<!-- <div class="col-md-12  social mt-4">
 						<a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
 						<a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
 						<a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
 						<a class="google" href="#"><i class="lni-google-plus"></i></a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
