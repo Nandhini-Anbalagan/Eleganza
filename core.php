@@ -27,6 +27,27 @@
 			$_POST['agency']='';
 			$_POST['ref']='';
 			if($db->addToAgentLeads($_POST)){
+				print_r("Insssssss");
+			if($_POST['industry'] == 'SI'){
+				$frenchID = $db->getFunnelCatByTitle('Service Industry FR', 2)['id'];
+				$englishID = $db->getFunnelCatByTitle('Service Industry EN', 2)['id'];
+			}else if($_POST['industry'] == 'MI'){
+				$frenchID = $db->getFunnelCatByTitle('Manufacturing Industry FR', 2)['id'];
+				$englishID = $db->getFunnelCatByTitle('Manufacturing Industry EN', 2)['id'];
+			}else{
+				$frenchID = $db->getFunnelCatByTitle('Retail Industry FR', 2)['id'];
+				$englishID = $db->getFunnelCatByTitle('Retail Industry EN', 2)['id'];
+			}
+
+			if($_POST['lang'] == 'EN'){
+				$_POST['lang']='e';
+				$funnelID = $englishID;
+			}else{
+				$_POST['lang']='f';
+				$funnelID = $frenchID;
+			}
+		    $lead_id= $db->insertSponsor($_POST['industry'], 2, 'w', $_POST['lang'], $funnelID,$_POST['name'], $_POST['phone'], $_POST['email'], $_POST['areas'], '', '');
+				//echo $db->updateEntries($_POST['name'], $_POST['phone'], $_POST['email'], $_POST['areas'], '', '', $lead_id);
 				$to = $_POST['email'];
 				$from = "support@unbeleadsable.com";
 

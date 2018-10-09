@@ -481,12 +481,12 @@ Eleganza Digital Magazine Team</p>
 							</div>
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
-                  <div id="success"></div>a
+                  <div class="service-heading" id="success"></div>
                   <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" >Send Message</button>
                 </div>
 
               <div class="col-lg-12 text-center">
-								<div id="success">Registration successful! Please verify your email for further instructions.</div>
+								<h3 class="service-heading" id="success"></h3>
 								<h3 class="service-heading" id="error"></h3>
 							</div>
             </form>

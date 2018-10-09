@@ -10,6 +10,7 @@ $(function() {
         data: $('#contactForm').serialize(),
         datatype: 'json',
         success: function(res) {
+
           if (res.success == '1') {
             if (res.lang == 'EN')
               window.location = "/thank_you";
@@ -17,18 +18,19 @@ $(function() {
               window.location = "/fr/thank_you";
 
           } else {
-            $('#sendMessageButton').html('<i class="fa fa-send"></i> Submit');
+            //$('#sendMessageButton').html('<i class="fa fa-send"></i> Submit');
             $('#error').html(res.msg);
             $('#error').show();
             $('#success').hide();
           }
         },
         error: function(e) {
-          $('#sendMessageButton').html('<i class="fa fa-send"></i> Submit');
+          //$('#sendMessageButton').html('<i class="fa fa-send"></i> Submit');
           $('#error').show("Database Error. Please standby!");
           console.log(e);
         }
       });
+      $('#sendMessageButton').html('Message sent Successfully');
     });
 
 //

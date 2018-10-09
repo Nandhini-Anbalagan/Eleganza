@@ -3,7 +3,13 @@
 	include("../app/head.php");
 
 	if(isset($_POST['action']) && $_POST['action'] == 'addSubscriber'){
-		$res = $db->addSubscriber($_POST['name'],$_POST['mail'],$_POST['email'],$_POST['tel'], $_POST['agent'], $_POST['src'], $_POST['lang'], 12);
+		$frenchID = $db->getFunnelCatByTitle('Subscriber FR', $_POST['agent'])['id'];
+		$englishID = $db->getFunnelCatByTitle('Subscriber EN', $_POST['agent'])['id'];
+		if($_POST['lang'] == 'e')
+			$funnelID = $englishID;
+		else
+			$funnelID = $frenchID;
+		$res = $db->addSubscriber($_POST['name'],$_POST['mail'],$_POST['email'],$_POST['tel'], $_POST['agent'], $_POST['src'], $_POST['lang'], $funnelID);
 		$_SESSION['current_lead'] = $res['id'];
 		echo  $res['id'];
 		if($res && !isset($_SESSION['emailSent'])){

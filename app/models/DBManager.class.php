@@ -1921,5 +1921,13 @@ ADD SUBSCRIBER
 		fclose ($fp ); // close file
 		chmod (LOG_FILE , 0600);
 	}
+
+	public function insertSponsor($industry, $agent, $src, $lang, $funnelID,$name, $phoneno, $email, $area, $company, $subject){
+				$id = -1;
+				$query = $this->myDB->prepare("INSERT INTO sponsor (industry, funnels, agent_fk, source, type, lang, name, phone, email, address, company, messages,status) VALUES(?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?,?)");
+				$query->execute(array(($industry == 'SI'?'Service Industry':($industry =='MI'?'Manufacturing Industry':'Retail Industry')), $funnelID, $agent, $src, 'sponsor', $lang,$name, $phoneno, $email, $area, $company, $subject,1));
+				$id = $this->myDB->lastInsertId();
+			return $id;
+	}
 }
 ?>
