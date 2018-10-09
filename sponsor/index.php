@@ -56,7 +56,7 @@
         <div class="row text-center">
           <div class="col-xs-12">
             <div class="heading-count">
-              <h3 style="font-weight: 700; font-family: 'Lato', sans-serif; padding: 10px">
+              <h3 style="font-weight: 300; color: #d1af78; font-family: 'Lato'; padding: 10px; font-size: 3.15em; letter-spacing: -0.035em;">
 								<?php
 									if(isset($_SESSION['got']['ind'])){
 										echo html_entity_decode($_SESSION['got']['l'] == 'e'?str_replace('[industry]', Functions::retrieveIndustry($_SESSION['got']['ind'],'e'), $agent['LP1_EN_TITLE']):str_replace('[industry]', Functions::retrieveIndustry($_SESSION['got']['ind'],'f'), $agent['LP1_FR_TITLE']));
@@ -69,7 +69,7 @@
         <!--    <div class="row time-countdown justify-content-center">
               <div id="clock" class="time-count"></div>
             </div> -->
-            <h5 style="font-weight: 700; font-family: 'Lato', sans-serif; color:white; line-height: 2rem">
+            <h5 style="font-weight: 300; color: white; font-family: 'Lato'; padding: 10px; font-size: 2.00em; letter-spacing: -0.035em;">
             <?php echo html_entity_decode($_SESSION['got']['l'] == 'e'?$agent['LP1_EN_SUB2']:$agent['LP1_FR_SUB2'])?>
           </h5>
             <div class="button-group">
@@ -101,7 +101,7 @@
 			<div class="row text-center">
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="heading-count">
-						<h2><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_TITLE']:$agent['LP2_FR_TITLE']?></h2>
+						<h2 style="font-weight: 300; color: #d1af78; font-family: 'Lato'; padding: 10px; font-size: 3.15em; letter-spacing: -0.035em;"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP2_EN_TITLE']:$agent['LP2_FR_TITLE']?></h2>
 					</div>
 				</div>
 				<div class="col-md-12 form-row ">
@@ -137,7 +137,7 @@
 			<div class="row text-center">
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="heading-count">
-						<h3><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TITLE']:$agent['LP3_FR_TITLE']?></h3>
+						<h3 style="font-weight: 300; color: #d1af78; font-family: 'Lato'; padding: 10px; font-size: 2.75em; letter-spacing: -0.035em;"><?php echo $_SESSION['got']['l'] == 'e'?$agent['LP3_EN_TITLE']:$agent['LP3_FR_TITLE']?></h3>
 					</div>
 				</div>
 				<div class="col-md-12 form-row " style="background: #0000008a;margin: 20px;padding: 30px;border-radius: 20px;">
