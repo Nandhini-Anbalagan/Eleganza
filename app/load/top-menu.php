@@ -102,11 +102,11 @@
 						<a href="agents"><i class="md md-perm-identity"></i>Customer</a>
 					</li>
 					<li class="dropdown <?php echo in_array($page, array('agent_buyer_budget', 'agent_seller_budget'))?'active':''; ?>" id="dropdownMenu1">
-						<a href="agent_budget" class="dropdown-toggle" data-toggle="dropdown"><i class="md md-shopping-basket"></i>Budgets</a>
-						<ul class="dropdown-menu">
+						<a href="agent_seller_budget"><i class="md md-shopping-basket"></i>Budgets</a>
+						<!-- <ul class="dropdown-menu">
 							<li><a href="agent_buyer_budget"><img style="width: 20px;" src="assets/img/sub.png" alt="buyer"> Subscriber</a></li>
 							<li><a href="agent_seller_budget"><img style="width: 20px;" src="assets/img/sub.png" alt="buyer"> Advertiser</a></li>
-						</ul>
+						</ul> -->
 					</li>
 					<?php if($_SESSION['user']["level"] != 0): ?>
 					<li class="<?php echo in_array($page, array('invoices', 'paypal', 'reccurent_overview', 'subscriptions', 'any_payment'))?'active':''; ?>">
