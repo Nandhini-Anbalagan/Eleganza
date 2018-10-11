@@ -213,7 +213,7 @@ As a business owner, you don’t have the time to manage digital marketing as we
 We do. It’s our mandate. We will help you achieve your business goals by bringing you your desired audience. You can focus on your business.<br><br>
 Eleganza Digital Media has become a must-have tool for so many businesses and we would be honoured to become an integral part of your success.<br><br>
 <img src="app/assets/img/tiny_logo.png" width="240" alt="Logo"><br>
-Eleganza Digital Magazine Team</p>
+Eleganza Digital Media Team</p>
 </div>
 </div>
       </div>

@@ -425,9 +425,12 @@ function executeAction(action, data){
 			form.find('input[name="LP3_FR_GP_URL"]').val(data['LP3_FR_GP_URL']);
 
 			//Form Background Image
-			form.find('input:radio[name="defaultBackground1"]').val([data['bg_img1']]);
-			form.find('input:radio[name="defaultBackground2"]').val([data['bg_img2']]);
-			form.find('input:radio[name="defaultBackground3"]').val([data['bg_img3']]);
+			form.find('#custom_background1').val(data['bg_img1']);
+			form.find('#custom_background1').prop("checked", true);
+			form.find('#custom_background2').val(data['bg_img2']);
+			form.find('#custom_background2').prop("checked", true);
+			form.find('#custom_background3').val(data['bg_img3']);
+			form.find('#custom_background3').prop("checked", true);
 			break;
 		case "get-buyer-landing-page":
 			var content = $('#landingAgentPage');
@@ -530,9 +533,12 @@ function executeAction(action, data){
 			form.find('input[name="LP3_FR_SUB3"]').val(data['LP3_FR_SUB3']);
 
 			//Form Background Image
-			form.find('input:radio[name="defaultBackground1"]').val([data['bg_img1']]);
-			form.find('input:radio[name="defaultBackground2"]').val([data['bg_img2']]);
-			form.find('input:radio[name="defaultBackground3"]').val([data['bg_img3']]);
+			form.find('#custom_background1').val(data['bg_img1']);
+			form.find('#custom_background1').prop("checked", true);
+			form.find('#custom_background2').val(data['bg_img2']);
+			form.find('#custom_background2').prop("checked", true);
+			form.find('#custom_background3').val(data['bg_img3']);
+			form.find('#custom_background3').prop("checked", true);
 			break;
 		case "show-evaluation-preview":
 			$('#preview-wrapper').html(data);

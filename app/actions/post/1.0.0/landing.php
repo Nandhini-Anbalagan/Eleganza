@@ -51,7 +51,7 @@
 			//}
 
 			if($resultObj['error'] == "-1"){
-				//$resultObj['callback'] = "reload-landing";
+				$resultObj['callback'] = "get-seller-landing-page";
 				Tokenizer::delete(array('post-action-lead','post-action-lead-edit'));
 			}
 		break;

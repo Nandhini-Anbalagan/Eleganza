@@ -1602,7 +1602,7 @@ ADD SUBSCRIBER
 	public function getNextFunnel($time, $funnels, $agent){
 		$backTime = $time - 24;
 
-		if(!empty($time) && !empty($funnels) && !empty($agent)){
+		if(!empty($funnels) && !empty($agent)){
 			$query = $this->myDB->query("SELECT * FROM funnels WHERE agent = $agent AND category = '$funnels' AND `interval` BETWEEN $backTime AND $time AND  status > 0 ORDER BY `interval` LIMIT 1");
 			return $query->fetch(PDO::FETCH_ASSOC);
 		}else
