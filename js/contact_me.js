@@ -31,6 +31,7 @@ $(function() {
         }
       });
       $('#sendMessageButton').html('Message sent Successfully');
+      $('#contactForm').trigger("reset");
     });
 
 //
