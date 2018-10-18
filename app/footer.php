@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6">
-				Copyright &copy; <a href="http://eleganza.test" target="_blank">Eleganza digital media</a> <?php echo date('Y') ?>
+				Copyright &copy; <a href="http://eleganzadigitalmedia.unbeleadsable.com" target="_blank">Eleganza digital media</a> <?php echo date('Y') ?>
 			</div>
 			<div class="col-xs-6">
 				<ul class="pull-right list-inline m-b-0">

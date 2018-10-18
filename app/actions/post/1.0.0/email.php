@@ -201,7 +201,7 @@
 				$resultObj['error'] = "The email cannot be empty.";
 			else{
 				$content = str_replace("&lt;p&gt;&nbsp;&lt;/p&gt;", "", $_POST['content']);
-				$content = str_replace("../cdn/attached/", "https://eleganza.test/cdn/attached/", $content);
+				$content = str_replace("../cdn/attached/", "https://eleganzadigitalmedia.unbeleadsable.com/cdn/attached/", $content);
 
 				$to = array();
 
@@ -279,7 +279,7 @@
 			else{
 				$content = str_replace("&lt;p&gt;&nbsp;&lt;/p&gt;", "", $_POST['content']);
 				//$content = Functions::save_images("attached", $_POST['content']);
-				$content = str_replace("../cdn/attached/", "https://eleganza.test/cdn/attached/", $content);
+				$content = str_replace("../cdn/attached/", "https://eleganzadigitalmedia.unbeleadsable.com/cdn/attached/", $content);
 
 				$to = explode(",", $_POST['to']);
 				$sentEmails = 0;
@@ -325,7 +325,7 @@
 				$resultObj['error'] = "The email cannot be empty.";
 			else{
 				$content = str_replace("&lt;p&gt;&nbsp;&lt;/p&gt;", "", $_POST['content']);
-				$content = str_replace("../cdn/attached/", "https://eleganza.test/cdn/attached/", $content);
+				$content = str_replace("../cdn/attached/", "https://eleganzadigitalmedia.unbeleadsable.com/cdn/attached/", $content);
 
 				$lead = $db->getSingleAgentsLead((int)trim(IDObfuscator::decode($_POST['leadID'])));
 				$content = str_replace(array('[NAME]', '[FIRSTNAME]', '[SHORTADDRESS]'), array($lead['name'], $lead['name'], $lead['address']), $content);
@@ -362,7 +362,7 @@
 				$resultObj['error'] = "The email cannot be empty.";
 			else{
 				$content = str_replace("&lt;p&gt;&nbsp;&lt;/p&gt;", "", $_POST['content']);
-				$content = str_replace("../cdn/attached/", "https://eleganza.test/cdn/attached/", $content);
+				$content = str_replace("../cdn/attached/", "https://eleganzadigitalmedia.unbeleadsable.com/cdn/attached/", $content);
 
 				$to = explode(",", $_POST['to']);
 				$ids = explode(",", $_POST['ids']);

@@ -1,7 +1,7 @@
 RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTPS} !=on
-#RewriteCond %{SERVER_NAME} =eleganza.test
+#RewriteCond %{SERVER_NAME} =eleganzadigitalmedia.unbeleadsable.com
 RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 #Undermaintenance Block
@@ -22,7 +22,7 @@ RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.+?)/?$ $1.php [L]
 
 # Error pages
-ErrorDocument 404 https://eleganza.test/app/404
+ErrorDocument 404 https://eleganzadigitalmedia.unbeleadsable.com/app/404
 
 ## EXPIRES CACHING ##
 Header set Cache-Control "max-age=2592000, public"

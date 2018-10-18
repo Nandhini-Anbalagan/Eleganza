@@ -325,9 +325,9 @@ function executeAction(action, data){
 			content.find('span[target="LP3_EN_INS_URL"]').html(data['LP3_EN_INS_URL']);
 			content.find('span[target="LP3_EN_GP_URL"]').html(data['LP3_EN_GP_URL']);
 			content.find('span[target="industry"]').html((data['industry']=='SI')?"Service Industry":((data['industry']=='MI')?"Manufacturing Industry":"Retail Industry"));
-			content.find('span[target="homeEval_web_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=w");
-			content.find('span[target="homeEval_facebook_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=f");
-			content.find('span[target="homeEval_google_en"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=e&s=g");
+			content.find('span[target="homeEval_web_en"]').html("https://eleganzadigitalmedia.unbeleadsable.com/sponsor/?a="+data['agent_fk']+"&l=e&s=w");
+			content.find('span[target="homeEval_facebook_en"]').html("https://eleganzadigitalmedia.unbeleadsable.com/sponsor/?a="+data['agent_fk']+"&l=e&s=f");
+			content.find('span[target="homeEval_google_en"]').html("https://eleganzadigitalmedia.unbeleadsable.com/sponsor/?a="+data['agent_fk']+"&l=e&s=g");
 
 			//French Section
 			content.find('span[target="city_fr"]').html(data['city_fr']);
@@ -356,9 +356,9 @@ function executeAction(action, data){
 			content.find('span[target="LP3_FR_INS_URL"]').html(data['LP3_FR_INS_URL']);
 			content.find('span[target="LP3_FR_GP_URL"]').html(data['LP3_FR_GP_URL']);
 			content.find('span[target="industry"]').html((data['industry']=='SI')?"Service Industry":((data['industry']=='MI')?"Manufacturing Industry":"Retail Industry"));
-			content.find('span[target="homeEval_web_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=w");
-			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=f");
-			content.find('span[target="homeEval_google_fr"]').html("https://eleganza.test/sponsor/?a="+data['agent_fk']+"&l=f&s=g");
+			content.find('span[target="homeEval_web_fr"]').html("https://eleganzadigitalmedia.unbeleadsable.com/sponsor/?a="+data['agent_fk']+"&l=f&s=w");
+			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganzadigitalmedia.unbeleadsable.com/sponsor/?a="+data['agent_fk']+"&l=f&s=f");
+			content.find('span[target="homeEval_google_fr"]').html("https://eleganzadigitalmedia.unbeleadsable.com/sponsor/?a="+data['agent_fk']+"&l=f&s=g");
 			//Background Image
 			content.find('img[target="background1"]').attr("src", "uploads/landings/" + data['bg_img1']);
 			content.find('img[target="background2"]').attr("src", "uploads/landings/" + data['bg_img2']);
@@ -455,9 +455,9 @@ function executeAction(action, data){
 			content.find('span[target="LP3_EN_SUB1"]').html(data['LP3_EN_SUB1']);
 			content.find('span[target="LP3_EN_SUB2"]').html(data['LP3_EN_SUB2']);
 			content.find('span[target="LP3_EN_SUB3"]').html(data['LP3_EN_SUB3']);
-			content.find('span[target="homeEval_web_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=w");
-			content.find('span[target="homeEval_facebook_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=f");
-			content.find('span[target="homeEval_google_en"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=e&s=g");
+			content.find('span[target="homeEval_web_en"]').html("https://eleganzadigitalmedia.unbeleadsable.com/subscriber/?a="+data['agent_fk']+"&l=e&s=w");
+			content.find('span[target="homeEval_facebook_en"]').html("https://eleganzadigitalmedia.unbeleadsable.com/subscriber/?a="+data['agent_fk']+"&l=e&s=f");
+			content.find('span[target="homeEval_google_en"]').html("https://eleganzadigitalmedia.unbeleadsable.com/subscriber/?a="+data['agent_fk']+"&l=e&s=g");
 
 			//French Section
 			content.find('span[target="city_fr"]').html(data['city_fr']);
@@ -478,9 +478,9 @@ function executeAction(action, data){
 			content.find('span[target="LP3_FR_SUB1"]').html(data['LP3_FR_SUB1']);
 			content.find('span[target="LP3_FR_SUB2"]').html(data['LP3_FR_SUB2']);
 			content.find('span[target="LP3_FR_SUB3"]').html(data['LP3_FR_SUB3']);
-			content.find('span[target="homeEval_web_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=w");
-			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=f");
-			content.find('span[target="homeEval_google_fr"]').html("https://eleganza.test/subscriber/?a="+data['agent_fk']+"&l=f&s=g");
+			content.find('span[target="homeEval_web_fr"]').html("https://eleganzadigitalmedia.unbeleadsable.com/subscriber/?a="+data['agent_fk']+"&l=f&s=w");
+			content.find('span[target="homeEval_facebook_fr"]').html("https://eleganzadigitalmedia.unbeleadsable.com/subscriber/?a="+data['agent_fk']+"&l=f&s=f");
+			content.find('span[target="homeEval_google_fr"]').html("https://eleganzadigitalmedia.unbeleadsable.com/subscriber/?a="+data['agent_fk']+"&l=f&s=g");
 			//Background Image
 			content.find('img[target="background1"]').attr("src", "uploads/landings/" + data['bg_img1']);
 			content.find('img[target="background2"]').attr("src", "uploads/landings/" + data['bg_img2']);

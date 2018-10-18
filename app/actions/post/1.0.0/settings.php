@@ -22,7 +22,7 @@ switch ($_POST['case']) {
 				else
 					$_POST['email_notification'] = 0;
 
-				$_POST['signature'] = str_replace("/cdn/attached/", "https://eleganza.test/cdn/attached/", $_POST['signature']);
+				$_POST['signature'] = str_replace("/cdn/attached/", "https://eleganzadigitalmedia.unbeleadsable.com/cdn/attached/", $_POST['signature']);
 
 				$db->editAgent($_POST);
 				$db->editAgentUser($_POST['email'], $_POST['name'], $_SESSION['user']['user_id']);

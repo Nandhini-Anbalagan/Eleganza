@@ -133,7 +133,7 @@ $(document).ready(function() {
     $('html, body').scrollTo($('#sign'), 'fast');
     $.ajax({
       type: 'POST',
-      url: 'https://eleganza.test/core.php',
+      url: 'https://eleganzadigitalmedia.unbeleadsable.com/core.php',
       data: $('#contactForm').serialize(),
       datatype: 'json',
       success: function(res) {

@@ -6,7 +6,7 @@ $(function() {
       $('html, body').scrollTo($('#contact'), 'fast');
       $.ajax({
         type: 'POST',
-        url: 'https://eleganza.test/core.php',
+        url: 'https://eleganzadigitalmedia.unbeleadsable.com/core.php',
         data: $('#contactForm').serialize(),
         datatype: 'json',
         success: function(res) {

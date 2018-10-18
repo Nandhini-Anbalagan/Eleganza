@@ -603,7 +603,7 @@ abstract class Functions{
 					else {
 						throw new \Exception("Error retrieving image data");
 					}
-					$items->item($i)->setAttribute('src', "https://eleganza.test/cdn/$att/{$filename}.jpg");
+					$items->item($i)->setAttribute('src', "https://eleganzadigitalmedia.unbeleadsable.com/cdn/$att/{$filename}.jpg");
 				}
 			}
 			$string = $DOM->saveHTML();
