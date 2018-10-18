@@ -4,9 +4,9 @@ abstract class MySQLConnection{
 	protected $myDB;
 	public function __construct(){
 		$host = "localhost";
-		$db = 'unbeleadsablev1';
-		$username = 'root';
-		$password = '';
+		$db = 'unbeleadsable_eleganza';
+		$username = 'unbeleadsable_eleganzau';
+		$password = 'Eleganza';
 
 		try {
 			$this->myDB = new PDO("mysql:host=$host;dbname=$db", $username, $password);
