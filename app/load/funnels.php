@@ -473,10 +473,17 @@ $zeAgent = isset($_SESSION['user']['agent_id'])?$_SESSION['user']['agent_id']:0;
 				height:200,
 				menubar: false,
 				plugins: [
-				'advlist autolink  lists linkcharmap  anchor ',
-				' visualblocks  paste jbimagestextcolorjbimages'
+					"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+					"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+					"save table contextmenu directionality emoticons template paste textcolor"
 				],
-				toolbar: "fontsizeselectforecolor bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent| link jbimages"
+				toolbar: "forecolor bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent, link"
+			});
+			
+			$(document).on('focusin', function(e) {
+				if ($(e.target).closest(".mce-window").length) {
+					e.stopImmediatePropagation();
+				}
 			});
 
 	$('body').on('click', '#disable', function(e){
