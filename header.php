@@ -101,7 +101,7 @@ body {
               <a class="nav-link" href="#services">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Industries</a>
             </li>
 						<li class="nav-item">
               <a class="nav-link" href="#aboutus">About Us</a>
