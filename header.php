@@ -95,13 +95,13 @@ body {
           Menu
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse" id="navbarResponsive" data-toggle="collapse"  data-target=".navbar-collapse collapse">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="#services">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Industries</a>
             </li>
 						<li class="nav-item">
               <a class="nav-link" href="#aboutus">About Us</a>

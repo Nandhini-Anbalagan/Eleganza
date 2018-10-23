@@ -1,0 +1,16 @@
+[18-Oct-2018 11:35:45 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 11:40:04 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 11:42:54 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 11:43:51 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 11:47:47 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 11:56:27 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 12:21:06 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 12:21:41 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 12:21:48 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 12:24:18 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 12:25:28 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[18-Oct-2018 13:25:02 America/Montreal] PHP Warning:  PDOStatement::execute(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'unbeleadsable_eleganza.messageHistory' doesn't exist in /home/unbeleadsable/eleganzadigitalmedia/app/models/DBManager.class.php on line 1753
+[20-Oct-2018 12:25:02 America/Montreal] PHP Warning:  PDOStatement::execute(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'unbeleadsable_eleganza.messageHistory' doesn't exist in /home/unbeleadsable/eleganzadigitalmedia/app/models/DBManager.class.php on line 1753
+[20-Oct-2018 15:12:29 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[20-Oct-2018 15:12:53 America/Montreal] PHP Notice:  Undefined variable: emails in /home/unbeleadsable/eleganzadigitalmedia/app/load/emailAllAgents.php on line 20
+[22-Oct-2018 12:25:03 America/Montreal] PHP Warning:  PDOStatement::execute(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'unbeleadsable_eleganza.messageHistory' doesn't exist in /home/unbeleadsable/eleganzadigitalmedia/app/models/DBManager.class.php on line 1753

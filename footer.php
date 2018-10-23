@@ -246,7 +246,7 @@
 
 <!-- Core Js -->
 <script src="assets/js/jquery-1.8.2.min.js"></script>
-<script src="assets/js/bootstrap.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Contact form JavaScript -->
 <script src="js/jqBootstrapValidation.js"></script>
@@ -297,6 +297,11 @@
 		 $("#agent_manuel").change(function() {
 			window.location.href="manuel_fees?id="+$(this).val();
 		});
+		$(function () {
+            $('.navbar-collapse ul li a:not(.dropdown-toggle)').bind('click touchstart', function () {
+                    $('.navbar-toggle:visible').click();
+            });
+    });
 		});
 	</script>
 	<noscript>
