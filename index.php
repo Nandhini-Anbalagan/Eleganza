@@ -102,7 +102,11 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Select Your Business Industry</h2>
+<<<<<<< HEAD
             <h3 class="section-subheading text-muted"></h3>
+=======
+            <!-- <h3 class="section-subheading text-muted">Select Your Business Industry</h3> -->
+>>>>>>> 6668727bf87d76a0fc7f20c9e25dd3fab5202c5b
           </div>
         </div>
         <div class="row">
