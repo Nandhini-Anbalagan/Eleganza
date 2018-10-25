@@ -64,6 +64,7 @@ $totalAgents = count($agents);
 <?php include "buyerSellerBullets.php" ?>
 </div>
 <div class="p-20">
+	<div class="table-responsive">
 	<table class="table table-striped table-responsive m-0" id="datatable-editable">
 		<thead>
 			<tr>
@@ -125,6 +126,7 @@ $totalAgents = count($agents);
 				<?php } ?>
 			</tbody>
 		</table>
+	</div>
 	</div>
 
 	<div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
