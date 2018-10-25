@@ -49,6 +49,7 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 	<?php include "buyerSellerBullets.php" ?>
 </div>
 <div class="p-20">
+	<div class="table-responsive">
 	<table class="table table-striped table-responsive m-0" id="datatable-editable">
 		<thead>
 			<tr>
@@ -109,6 +110,7 @@ echo "<script>console.log('".IDObfuscator::encode(237)."')</script>";
 			?>
 		</tbody>
 	</table>
+</div>
 </div>
 
 
@@ -342,7 +344,17 @@ $(document).ready(function(){
 		],
 		fixedHeader: true,
 		autoWidth: false,
-		responsive: true,
+		responsive: {
+            details: {
+                display: $.fn.dataTable.Responsive.display.modal( {
+                    header: function ( row ) {
+                        var data = row.data();
+                        return 'Details for '+data[0]+' '+data[1];
+                    }
+                } ),
+                renderer: $.fn.dataTable.Responsive.renderer.tableAll()
+            }
+        },
 		"bStateSave": true
 	});
 

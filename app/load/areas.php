@@ -30,6 +30,7 @@ $postCaseAreaSingle = Tokenizer::add('post-case-area-single', 30, 'single');
 	<!-- <br><span class="label label-table label-primary">Leading Agent</span> &nbsp;&nbsp; <span class="label label-table label-danger">Subscribed Agent</span> -->
 </div>
 <div class="p-20">
+	<div class="table-responsive">
 	<table class="table table-striped table-responsive m-0" id="datatable-editable">
 		<thead>
 			<tr>
@@ -86,7 +87,7 @@ $postCaseAreaSingle = Tokenizer::add('post-case-area-single', 30, 'single');
 			?>
 		</tbody>
 	</table>
-
+</div>
 	<br><br>
 </div>
 
